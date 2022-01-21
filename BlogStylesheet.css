@@ -1,0 +1,140 @@
+body {
+	background-color: #e0fffe;
+	margin: 0;
+	min-height: 98vh;
+	position: relative;
+	overflow-x: hidden;
+	}
+header {
+	font-family: Monotype Corsiva, Marck Script; /*gabriola, harrington, harlow solid, Lucida Calligraphy, Lucida Handwriting, Monotype Corsiva*/
+	font-style: italic;
+	text-align: center;
+	color: #f55e61;
+	font-size: 3em;
+	padding: 0;
+	margin: 0;
+	/*google fonts
+	pacifico\\, cookie\\, courgette\\, playball, marck script, Carattere*/
+	margin-top:15px;
+	margin-bottom:25px;
+	}
+h1 {
+	margin: 0;
+	text-decoration: underline;
+}
+h1::first-letter {
+	font-size: 1.2em;
+}
+h1 a {
+	color: inherit;
+	transition-duration: 0.4s;
+}
+h1 a:visited {
+	color: inherit;
+}
+h1 a:hover {
+	color: #490078;
+	
+}
+h1 a:active {
+	color: inherit;
+	transition-duration: 0.1s;
+}
+
+header h2 {
+margin: inherit;
+font-size: 0.7em;
+}
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	max-width: 44em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px
+	
+}
+nav a {
+	font-family: Verdana;
+	background-color: #490078;
+	color: white;
+	margin-left: 2px;
+	padding: 5px;
+	border-radius: 4px;
+	font-size:0.9em;
+	transition-duration: 0.4s;
+	text-decoration: none;
+}
+nav a:hover {
+	background-color: #f55e61;
+	color: white;
+}
+nav a:active {
+	background-color: #490078;
+	color: #e0fffe;
+	transition-duration: 0.1s;
+}
+article, section {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 44em;
+	padding-bottom: 25px;
+	height: auto;
+	position: relative;
+	display: flow-root;
+	}
+h2, h2 a {
+	font-family: Lucida Sans Unicode, ABeeZee, Verdana;
+	color: #f55e61;
+	font-weight: bold;
+	transition-duration: 0.4s;
+	
+	}
+h2 a:hover{
+	color: #490078;
+}
+h2 a:active{
+	color: #f55e61;
+}
+p {
+	font: 1.3em Verdana;
+	color: #490078;}
+.read {
+	font: 1.3em Verdana;
+	bottom:25px; /*same value as article's bottom padding*/
+	position: absolute;
+	transition-duration: 0.4s;
+}
+a {
+	transition-duration: 0.4s;
+	color: DodgerBlue;
+}
+
+a:hover{
+	color: #490078;
+}
+a:active {
+	color: DodgerBlue;
+	transition-duration: 0.1s;
+}
+span {
+	white-space: nowrap;
+	}
+hr {
+	bottom: 0;
+	//width: 100%;
+	position: absolute;
+	border: 5px solid #f55e61;
+	background-color: #f55e61;
+	left: 0.8%;
+	right: 0.8%;
+	}
+img {
+	//margin-left: auto;
+	//margin-right: auto;
+	//display: block;
+	float: right;
+	width: auto;
+	height: 100%;
+}
