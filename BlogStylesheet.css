@@ -1,7 +1,7 @@
 body {
 	background-color: #e0fffe;
 	margin: 0;
-	min-height: 98vh;
+	min-height: 100vh;
 	position: relative;
 	overflow-x: hidden;
 	}
@@ -15,7 +15,7 @@ header {
 	margin: 0;
 	/*google fonts
 	pacifico\\, cookie\\, courgette\\, playball, marck script, Carattere*/
-	margin-top:15px;
+	padding-top:15px;
 	margin-bottom:25px;
 	}
 h1 {
@@ -101,6 +101,10 @@ p {
 	font: 1.3em Verdana;
 	color: #490078;}
 .read {
+	width:100%;
+	height:25px;
+}
+.read a {
 	font: 1.3em Verdana;
 	bottom:25px; /*same value as article's bottom padding*/
 	position: absolute;
