@@ -1,3 +1,13 @@
+@font-face {
+	font-family:Compagnon;
+	font-style:normal;
+	src:url(Compagnon-Roman.woff2);
+}
+@font-face {
+	font-family:Compagnon;
+	font-style:italic;
+	src:url(Compagnon-Italic.woff2);
+}
 :root {
 	--bg:#e0fffe;
 	--txt:#490078;
@@ -17,10 +27,10 @@ html {
     background-size:0.75rem;
     background-position:center bottom;
 }
-::-webkit-scrollbar-button:single-button:vertical:decrement {
+::-webkit-scrollbar-button:vertical:decrement {
   background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23e0fffe'><polygon points='0,50 100,50 50,0'/></svg>");
 }
-::-webkit-scrollbar-button:single-button:vertical:increment {
+::-webkit-scrollbar-button:vertical:increment {
   background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23e0fffe'><polygon points='0,0 100,0 50,50'/></svg>");
 }
 ::-webkit-scrollbar-thumb {
@@ -35,19 +45,19 @@ body {
 	margin:0;
 	min-height:100vh;
 	position:relative;
-	font-family:Verdana;
+	font-family:Kiwi Maru,Mali,Nunito;
+	overflow-x:hidden;
 }
 header, header a {
 	padding:0;
 	margin:0;
-	padding-top:2vh;
-	margin-bottom:1vh;
 	display:flex;
 	justify-content:center;
 	align-items:center;
 }
-header a {
-	padding:0;
+header {
+	padding-top:2vh;
+	margin-bottom:1vh;
 }
 header img {
 	float:none;
@@ -84,7 +94,6 @@ nav {
 	max-width:44rem;
 	margin-left:auto;
 	margin-right:auto;
-	margin-bottom:1vh;
 }
 nav > a, nav > details {
 	background-color:var(--txt);
@@ -94,6 +103,7 @@ nav > a, nav > details {
 	font-size:0.9rem;
 	text-decoration:none;
 	align-items:center;
+	font-weight:bold;
 }
 nav a:hover {
 	background-color:#f55e61;
@@ -119,8 +129,17 @@ article, section {
 	display:flow-root;
 }
 h2, h2 a {
-	font-family:Lucida Sans Unicode, Verdana;
+	font-size:2rem;
+	font-family:Compagnon,Kaisei Decol;
 	color:#f55e61;
+	margin-top:1rem;
+	margin-bottom:1rem;
+}
+h2:lang(en), h2 a:lang(en) {
+	font-style:italic;
+	-webkit-text-stroke:0.08rem;
+	word-spacing:-0.5rem;
+	font-weight:normal;
 }
 h2 a:active{
 	color:#f55e61;
@@ -138,9 +157,12 @@ h2 a:active{
 	flex:200px;
 }
 .gallery article, .gallery article > p, .gallery article > h2 {
-	font-size:0.8rem;
+	font:0.8rem Kiwi Maru;
 	float:none;
 	margin:0;
+}
+.gallery article {
+	padding-bottom:0;
 }
 .gallery > a {
 	flex:100px;
@@ -159,13 +181,13 @@ h2 a:active{
 }
 .gallery div, .gallery > a {
 	margin:0.5rem;
+	margin-top:0;
 	border:solid;
 	border-radius:0.4rem;
 	position:relative;
 }
 .gallery > div > a {
 	padding:2px;
-	font-family:Verdana;
 	float:right;
 }
 p, figcaption, blockquote {
@@ -188,20 +210,23 @@ a:active {
 span {
 	white-space:nowrap;
 }
-hr {
-	bottom:0;
+abbr {
+	text-decoration:none;
+}
+footer {
+	bottom:0.4rem;
 	position:absolute;
-	border:0.3rem solid #f55e61;
 	background-color:#f55e61;
 	left:0.8%;
 	right:0.8%;
+	color:#490078;
+	font-size:0.6rem;
 }
 img {
 	display:block;
 	float:right;
 	max-width:100%;
 	height:auto;
-	font:1.2rem Verdana;
 	object-fit:contain;
 	min-width:0;
 	min-height:0;
@@ -220,11 +245,27 @@ article img {
 .pixl {
 	image-rendering:pixelated;
 	width:100%;
+	object-fit:fill;
+	aspect-ratio:calc(var(--w)*8)/calc(var(--h)*7);
+	--w:nothing;
+	--h:nothing;
 }
 .L {
 	float:left;
 	margin-left:0;
 	margin-right:0.5vw;
+}
+#pixfriends {
+	display:flex;
+	align-items:flex-end;
+	float:right;
+	margin-left:0.5vw;
+	width:100%;
+	max-width:400px;
+}
+#pixfriends img {
+	float:none;
+	margin-left:0;
 }
 @media (prefers-color-scheme:dark) {
 	:root {
@@ -237,10 +278,10 @@ article img {
 	header a:hover {
 		filter:brightness(230%) hue-rotate(-160deg);
 	}
-	html::-webkit-scrollbar-button:single-button:vertical:decrement {
+	::-webkit-scrollbar-button:vertical:decrement {
 	  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23490078'><polygon points='0,50 100,50 50,0'/></svg>");
 	}
-	html::-webkit-scrollbar-button:single-button:vertical:increment {
+	::-webkit-scrollbar-button:vertical:increment {
 	  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23490078'><polygon points='0,0 100,0 50,50'/></svg>");
 	}
 }
