@@ -5,6 +5,11 @@
 }
 @font-face {
 	font-family:Compagnon;
+	font-weight:900;
+	src:url(Compagnon-Roman.woff2);
+}
+@font-face {
+	font-family:Compagnon;
 	font-style:italic;
 	src:url(Compagnon-Italic.woff2);
 }
@@ -68,6 +73,7 @@ header img {
 	flex-basis:7rem;
 	padding-right:5px;
 	margin:0;
+	background-color:initial;
 }
 #blogtitle {
 	max-width:30rem;
@@ -156,6 +162,11 @@ h2 a:active{
 .gsvg div {
 	flex:200px;
 }
+.gsvg img {
+	background-color:white;
+	padding:1rem;
+	cursor:pointer;
+}
 .gallery article, .gallery article > p, .gallery article > h2 {
 	font:0.8rem Kiwi Maru;
 	float:none;
@@ -193,7 +204,7 @@ h2 a:active{
 	padding:2px;
 	float:right;
 }
-p, figcaption, blockquote {
+p, figcaption, blockquote, pre {
 	font-size:1.3rem;
 }
 p {
@@ -237,6 +248,8 @@ img {
 	min-width:0;
 	min-height:0;
 	margin-left:0.5vw;
+	background-color:var(--txt);
+	color:var(--bg);
 }
 .restrictsize {
 	max-width:var(--w);
@@ -256,6 +269,9 @@ article img {
 	--w:nothing;
 	--h:nothing;
 }
+.websitecolor {
+	background-color:initial;
+}
 .L {
 	float:left;
 	margin-left:0;
@@ -272,6 +288,7 @@ article img {
 #pixfriends img {
 	float:none;
 	margin-left:0;
+	background-color:initial;
 }
 #modal {
 	position:fixed;
@@ -284,10 +301,20 @@ article img {
 	justify-content:center;
 	align-items:center;
 }
+#modal p {
+	position:fixed;
+	bottom:5%;
+	right:10%;
+	color:#490078;
+}
 #modal img {
 	width:80%;
 	height:80%;
 	float:none;
+	background-color:white;
+	padding:3%;
+	border-radius:1rem;
+	margin:0;
 }
 @media (prefers-color-scheme:dark) {
 	:root {
