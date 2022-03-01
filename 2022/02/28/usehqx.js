@@ -1,0 +1,1 @@
+function geny(imgy){console.log("go"); let ding=hqx(imgy,2);console.log(ding);ding.innerHTML="screenshot of kirby's adventure with ai smooth scaling.";ding.ariaLabel="screenshot of kirby's adventure with ai smooth scaling.";ding.role="img";document.querySelector("section").insertBefore(ding, imgy.nextSibling)};

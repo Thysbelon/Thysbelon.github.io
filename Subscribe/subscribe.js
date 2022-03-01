@@ -3,7 +3,7 @@ import { getMessaging, getToken } from "https://www.gstatic.com/firebasejs/9.6.7
 
 let butty=document.querySelector("button")
 butty.addEventListener("click", subby)
-function subby() {
+async function subby() {
 	this.disabled=true;
 	const firebaseConfig = {
 	  apiKey: "AIzaSyDJ0COCb3j22bfOlEnvsNbOBiyJFGkPZvU",
@@ -15,7 +15,8 @@ function subby() {
 	};
 	const app = initializeApp(firebaseConfig);
 	const messaging = getMessaging();
-	getToken(messaging, { vapidKey: 'BBObvpZmk4P2_HY84Sk6w6aGQM_TKT9L45FdnNs9nRBh3xkrFwsduyOMlFzFti1qXySLNlOQRNgwatxRpjnfctI' }).then((currentToken) => {
+	const regis=await navigator.serviceWorker.register('/firebase-messaging-sw.js')
+	getToken(messaging, { vapidKey: 'BBObvpZmk4P2_HY84Sk6w6aGQM_TKT9L45FdnNs9nRBh3xkrFwsduyOMlFzFti1qXySLNlOQRNgwatxRpjnfctI' , serviceWorkerRegistration:regis }).then((currentToken) => {
 	  if (currentToken) {
 		console.log(currentToken)
 		console.log('bopis');

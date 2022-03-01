@@ -1,4 +1,4 @@
-let elementsArray = document.querySelectorAll(".gallery div img");
+let elementsArray = document.querySelectorAll(".gallery img");
 var modal = document.getElementById("modal");
 var modalImg = document.querySelector("#modal img");
 modal.addEventListener("click",function(){
