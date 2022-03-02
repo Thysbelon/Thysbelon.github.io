@@ -1,13 +1,11 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
 import { getMessaging, getToken } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-messaging.js";
 
-navigator.serviceWorker.getRegistration('/firebase-cloud-messaging-push-scope').then(function(registration) {
-	if (registration) {registration.unregister();}
-});
-
 let butty=document.querySelector("button")
 butty.addEventListener("click", subby)
 async function subby() {
+	let registration=await navigator.serviceWorker.getRegistration('/firebase-cloud-messaging-push-scope')
+	if (registration) {registration.unregister();}
 	this.disabled=true;
 	const firebaseConfig = {
 	  apiKey: "AIzaSyDJ0COCb3j22bfOlEnvsNbOBiyJFGkPZvU",

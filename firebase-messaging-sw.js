@@ -28,15 +28,18 @@ self.addEventListener('push', function(e){
 self.addEventListener('notificationclick', function(event){
 	console.log(event)
 	console.log(event.notification.data)
-	event.waitUntil(clients.matchAll().then(function(clents){
-		console.log(clents)
-		console.log(clents.length)
-		if (clents.length > 0) {
-			clents[0].navigate(event.notification.data)
-		} else {
-			self.clients.openWindow(event.notification.data)
-		}
-		event.notification.close()
+	event.waitUntil(clients.claim().then(function(){
+		event.waitUntil(clients.matchAll().then(function(clents){
+			console.log(clents)
+			console.log(clents.length)
+			if (clents.length > 0) {
+				clents[0].focus()
+				clents[0].navigate(event.notification.data)
+			} else {
+				self.clients.openWindow(event.notification.data)
+			}
+			event.notification.close()
+		}))
 	}))
 })
 
