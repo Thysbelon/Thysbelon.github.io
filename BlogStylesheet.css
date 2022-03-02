@@ -109,6 +109,8 @@ nav > a, nav > details, button {
 	font-size:clamp(.1rem,3vw,.9rem);
 	text-decoration:none;
 	align-items:center;
+}
+nav > details, button:lang(en), nav > a:lang(en) {
 	font-weight:bold;
 }
 nav a:hover, button:hover {
