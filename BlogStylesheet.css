@@ -100,24 +100,28 @@ nav {
 	max-width:44rem;
 	margin-left:auto;
 	margin-right:auto;
+	position:relative;
 }
-nav > a, nav > details, button {
+nav > a, nav > details, button, .nxt {
 	background-color:var(--txt);
 	margin-left:0.4%;
-	padding:0.4rem;
+	padding:0.4rem; /*change to a different value*/
 	border-radius:0.4rem;
 	font-size:clamp(.1rem,3vw,.9rem);
 	text-decoration:none;
 	align-items:center;
 }
-nav > details, button:lang(en), nav > a:lang(en) {
+.nxt {
+	float:right;
+}
+nav > details, button:lang(en), nav > a:lang(en), .nxt:lang(en) {
 	font-weight:bold;
 }
-nav a:hover, button:hover {
+nav a:hover, button:hover, .nxt:hover {
 	background-color:#f55e61;
 	color:white;
 }
-nav a:active, button:active {
+nav a:active, button:active, .nxt:active {
 	background-color:var(--txt);
 	color:var(--bg);
 }
@@ -214,6 +218,10 @@ h2 a:active{
 p, figcaption, blockquote, pre {
 	font-size:1.3rem;
 }
+blockquote {
+	margin-left:3vw;
+	margin-right:3vw;
+}
 p {
 	margin-top:0;
 }
@@ -286,6 +294,11 @@ article img {
 	float:left;
 	margin-left:0;
 	margin-right:0.5vw;
+}
+iframe[title~=YouTube] {
+	width:100%;
+	height:100%;
+	aspect-ratio:16/9;
 }
 #pixfriends {
 	display:flex;
