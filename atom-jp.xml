@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja">
+  <title>シズビロン</title>
+  <link rel="self" href="https://thysbelon.github.io/atom-jp.xml"/>
+  <link href="https://thysbelon.github.io/ホーム"/>
+  <updated>2022-03-08T17:00:00Z</updated>
+  <subtitle>僕の独自なブログで興味を持ってるもの何でもを投稿するのです</subtitle>
+  <id>thysbelon-jp</id>
+  <icon>https://thysbelon.github.io/thysbelonicon.svg</icon>
+  <logo>https://thysbelon.github.io/ThysbelonTitle.svg</logo>
+  <author>
+    <name>シズビロン</name>
+  </author>
+
+  <entry>
+    <title>感化についてを話してる</title>
+	<id>/2022/01/30/感化についてを話してる</id>
+    <link href="/2022/01/30/%E6%84%9F%E5%8C%96%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%82%92%E8%A9%B1%E3%81%97%E3%81%A6%E3%82%8B"/>
+    <summary type="html"><![CDATA[<a href="/2022/01/30/%25E6%2584%259F%25E5%258C%2596%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E3%2582%2592%25E8%25A9%25B1%25E3%2581%2597%25E3%2581%25A6%25E3%2582%258B"><img alt="僕が3冊の本の表紙を見ているの挿絵です。" src="/2022/01/30/%25E6%2584%259F%25E5%258C%2596%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E3%2582%2592%25E8%25A9%25B1%25E3%2581%2597%25E3%2581%25A6%25E3%2582%258B/../post2illunano.svg" style="max-height:80vh;float:right" /></a>]]>こんにちは！今日はちょっともっとどうして前書き込みで選んだデザイナーをしたについて話す。コレクションの中で一番大好きな表紙は「Everything Matters!」と言った。この表紙の僕が一番目に気に入っているのは、4色しか使っていないことだ。 僕は描くたびに、使う色の数を限るようにして、僕は3色しか使うキャラクターのデザインが好きんだよ。それようのデザインはシンプルややさしく覚えるんだ。少ない色しかでデザインする時、色が色に浮き出るのを確かめるのは大切だ。これではデザインが…</summary>
+	<updated>2022-01-30T17:00:00Z</updated>
+	<published>2022-01-30T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>僕を動かすデザイナー</title>
+	<id>/2022/01/25/僕を動かすデザイナー</id>
+    <link href="/2022/01/25/%E5%83%95%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99%E3%83%87%E3%82%B6%E3%82%A4%E3%83%8A%E3%83%BC"/>
+    <summary type="html"><![CDATA[<a href="/2022/01/25/%25E5%2583%2595%25E3%2582%2592%25E5%258B%2595%25E3%2581%258B%25E3%2581%2599%25E3%2583%2587%25E3%2582%25B6%25E3%2582%25A4%25E3%2583%258A%25E3%2583%25BC"><img alt="本の「Everything Matters」の表紙です。" src="/2022/01/25/%25E5%2583%2595%25E3%2582%2592%25E5%258B%2595%25E3%2581%258B%25E3%2581%2599%25E3%2583%2587%25E3%2582%25B6%25E3%2582%25A4%25E3%2583%258A%25E3%2583%25BC/../102273_or.webp" style="max-height:80vh;float:right" /></a>]]>初めまして！これは僕の一番目のカキコです。ディジタル・デザインに最初の宿題の一部として、AIGA Design Archivesから三人の僕を動かすデザイナーを選ばなきゃいけなかった。資料が多いから選ぶのが難しかったが、本の表紙が好きだったから、そこからデザイナーを選らんだ。選らんだデザイナーは…</summary>
+	<updated>2022-01-25T17:00:00Z</updated>
+	<published>2022-01-25T17:00:00Z</published>
+  </entry>
+
+</feed>

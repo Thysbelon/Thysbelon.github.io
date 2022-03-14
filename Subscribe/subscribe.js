@@ -7,6 +7,11 @@ async function subby() {
 	let registration=await navigator.serviceWorker.getRegistration('/firebase-cloud-messaging-push-scope')
 	if (registration) {registration.unregister();}
 	this.disabled=true;
+	if (navigator.language==='ja') {
+		butty.innerHTML='購読しています…'
+	} else {
+		butty.innerHTML='Subscribing...'
+	}
 	const firebaseConfig = {
 	  apiKey: "AIzaSyDJ0COCb3j22bfOlEnvsNbOBiyJFGkPZvU",
 	  authDomain: "thysbelon.firebaseapp.com",
@@ -34,6 +39,10 @@ async function subby() {
 	}).catch((err) => {
 	  console.log('An error occurred while retrieving token. ', err);
 	  this.disabled=false;
-	  // ...
+	  if (navigator.language==='ja') {
+	　　	butty.innerHTML='誤りでした'
+	　　} else {
+	　　	butty.innerHTML='Error'
+	　　}
 	});
 }

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Thysbelon</title>
+  <link rel="self" href="https://thysbelon.github.io/atom-en.xml"/>
+  <link href="https://thysbelon.github.io/Home"/>
+  <updated>2022-03-08T17:00:00Z</updated>
+  <subtitle>My personal blog where I post about whatever interests me</subtitle>
+  <id>thysbelon-en</id>
+  <icon>https://thysbelon.github.io/thysbelonicon.svg</icon>
+  <logo>https://thysbelon.github.io/ThysbelonTitle.svg</logo>
+  <author>
+    <name>Thysbelon</name>
+  </author>
+
+  <entry>
+    <title>Donut County and Other Games I Played Recently</title>
+	<id>/2022/03/01/Donut-County-and-Other-Games-I-Played-Recently</id>
+    <link href="/2022/03/01/Donut-County-and-Other-Games-I-Played-Recently"/>
+    <summary type="html"><![CDATA[<a href="/2022/03/01/Donut-County-and-Other-Games-I-Played-Recently"><img alt="Title screen of Donut County." src="/2022/03/01/Donut-County-and-Other-Games-I-Played-Recently/../2-80.webp" style="max-height:80vh;float:right" /></a>]]>Out of the new games I've played recently (which isn't that many), Donut County probably has my favorite art direction. While playing it, I realized that it has many of the design points that I mentioned liking in "Talking About My Inspirations". It uses simple shapes with flat pastel colors....</summary>
+	<updated>2022-03-01T17:00:00Z</updated>
+	<published>2022-03-01T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>My Thoughts on Illustrator's Image Trace</title>
+	<id>/2022/02/28/My-Thoughts-on-Illustrator's-Image-Trace</id>
+    <link href="/2022/02/28/My-Thoughts-on-Illustrator's-Image-Trace"/>
+    <summary type="html"><![CDATA[<a href="/2022/02/28/My-Thoughts-on-Illustrator%27s-Image-Trace"><img alt="An SVG of the character Amitie." src="/2022/02/28/My-Thoughts-on-Illustrator%27s-Image-Trace/../amitrace.svg" style="max-height:80vh;float:right" /></a>]]>When I saw the Image Trace feature, I thought it would be an easy way to take low resolution art and convert it into high quality, perfect SVG. Yes, it had the limitation of only tracing images in black and white, but I could simply adjust the colors to work...</summary>
+	<updated>2022-02-28T17:00:00Z</updated>
+	<published>2022-02-28T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>How to Easily Play Custom Songs in Vib-Ribbon</title>
+	<id>/2022/02/19/How-to-Easily-Play-Custom-Songs-in-Vib-Ribbon</id>
+    <link href="/2022/02/19/How-to-Easily-Play-Custom-Songs-in-Vib-Ribbon"/>
+    <summary type="html"><![CDATA[<a href="/2022/02/19/How-to-Easily-Play-Custom-Songs-in-Vib-Ribbon"><img alt="Vibri, a rabbit character made of straight lines." src="/2022/02/19/How-to-Easily-Play-Custom-Songs-in-Vib-Ribbon/../VibriasciiUbuntuMono.svg" style="max-height:80vh;float:right" /></a>]]>Vib-Ribbon is a game that released on the PS1 in 1999, and the PS3 and PS Vita in 2014. It has an innovative feature that allows players to insert their own Music CD into their PlayStation, and play a level generated from that CD. Players may use a PC emulator...</summary>
+	<updated>2022-02-19T17:00:00Z</updated>
+	<published>2022-02-19T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>Talking About Video Games Now Because I was too Scared to Earlier</title>
+	<id>/2022/02/08/Talking-About-Video-Games-Now-Because-I-was-too-Scared-to-Earlier</id>
+    <link href="/2022/02/08/Talking-About-Video-Games-Now-Because-I-was-too-Scared-to-Earlier"/>
+    <summary type="html"><![CDATA[<a href="/2022/02/08/Talking-About-Video-Games-Now-Because-I-was-too-Scared-to-Earlier"><img alt="screenshot of Mario Party Superstars" src="/2022/02/08/Talking-About-Video-Games-Now-Because-I-was-too-Scared-to-Earlier/../supmarioparty.webp" style="max-height:80vh;float:right" /></a>]]>Hello! There were a few times when I was writing my previous posts that I wanted to talk about video games, but I was worried that doing so would come across as unprofessional. Well, considering that the course I'm in teaches game design, I figured it's time to stop being...</summary>
+	<updated>2022-02-08T17:00:00Z</updated>
+	<published>2022-02-08T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>Talking About My Inspirations</title>
+	<id>/2022/01/30/Talking-About-My-Inspirations</id>
+    <link href="/2022/01/30/Talking-About-My-Inspirations"/>
+    <summary type="html"><![CDATA[<a href="/2022/01/30/Talking-About-My-Inspirations"><img alt="An illustration of me looking at three book covers." src="/2022/01/30/Talking-About-My-Inspirations/../post2illunano.svg" style="max-height:80vh;float:right" /></a>]]>Hello! Today I'm going to talk a bit more about why I chose the designers that I did in my previous post. I mentioned that my favorite cover in the collection was Everything Matters!. The first thing I like about this cover is that it uses only four colors. Whenever...</summary>
+	<updated>2022-01-30T17:00:00Z</updated>
+	<published>2022-01-30T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>Designers that Inspire Me</title>
+	<id>/2022/01/25/Designers-that-Inspire-Me</id>
+    <link href="/2022/01/25/Designers-that-Inspire-Me"/>
+    <summary type="html"><![CDATA[<a href="/2022/01/25/Designers-that-Inspire-Me"><img alt="The cover of the book Everything Matters" src="/2022/01/25/Designers-that-Inspire-Me/../102273_or.webp" style="max-height:80vh;float:right" /></a>]]>Hello, this is my first blog post!As part of my first assignment in Digital Design, I was told to pick three designers from the AIGA Design Archives that inspire me. It was hard to choose when there was so much material, but I really liked the book covers, so I...</summary>
+	<updated>2022-01-25T17:00:00Z</updated>
+	<published>2022-01-25T17:00:00Z</published>
+  </entry>
+
+</feed>
