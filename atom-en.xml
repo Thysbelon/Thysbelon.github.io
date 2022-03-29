@@ -13,6 +13,15 @@
   </author>
 
   <entry>
+    <title>New Color Scheme</title>
+	<id>/2022/03/29/New-Color-Scheme</id>
+    <link href="/2022/03/29/New-Color-Scheme"/>
+    <summary type="html"><![CDATA[<a href="/2022/03/29/New-Color-Scheme"><img alt="Illustration of a hummingbird moth wearing a beret and holding a palette and paintbrush." src="/2022/03/29/New-Color-Scheme/../thumb.png" style="max-height:80vh;float:right" /></a>]]>I spent a lot of time this week trying to make my website more accessible. I changed a lot of elements to lists, to make them better for screen readers, and I adjusted the color palette of my website to meet the WCAG AA accessibility guidelines. I'm happy I was...</summary>
+	<updated>2022-03-29T17:00:00Z</updated>
+	<published>2022-03-29T17:00:00Z</published>
+  </entry>
+
+  <entry>
     <title>Kirby and the Lovely Colors</title>
 	<id>/2022/03/28/Kirby-and-the-Lovely-Colors</id>
     <link href="/2022/03/28/Kirby-and-the-Lovely-Colors"/>
