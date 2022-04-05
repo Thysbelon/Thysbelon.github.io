@@ -13,10 +13,19 @@
   </author>
 
   <entry>
+    <title>Trouble with Spacing Objects Evenly in Illustrator</title>
+	<id>/2022/04/03/Trouble-with-Spacing-Objects-Evenly-in-Illustrator</id>
+    <link href="/2022/04/03/Trouble-with-Spacing-Objects-Evenly-in-Illustrator"/>
+    <summary type="html"><![CDATA[<a href="/2022/04/03/Trouble-with-Spacing-Objects-Evenly-in-Illustrator"><img alt="A hawkmoth sitting in front of a computer and looking frustrated." src="/2022/04/03/Trouble-with-Spacing-Objects-Evenly-in-Illustrator/../thumb.png" style="max-height:80vh;float:right" /></a>]]>Today, I was working on the social media ads for RCP and I needed to space out the numbers in "1,500,000,000". I first clicked "create outlines" so I could move the individual digits around. I knew there had to be a tool to space them automatically, but I didn't know...</summary>
+	<updated>2022-04-03T17:00:00Z</updated>
+	<published>2022-04-03T17:00:00Z</published>
+  </entry>
+
+  <entry>
     <title>New Color Scheme</title>
 	<id>/2022/03/29/New-Color-Scheme</id>
     <link href="/2022/03/29/New-Color-Scheme"/>
-    <summary type="html"><![CDATA[<a href="/2022/03/29/New-Color-Scheme"><img alt="Illustration of a hummingbird moth wearing a beret and holding a palette and paintbrush." src="/2022/03/29/New-Color-Scheme/../thumb.png" style="max-height:80vh;float:right" /></a>]]>I spent a lot of time this week trying to make my website more accessible. I spent a lot of time reading the web accessibility tutorials at MDN. I changed a lot of elements to lists, to make them better for screen readers, and I adjusted the color palette of...</summary>
+    <summary type="html"><![CDATA[<a href="/2022/03/29/New-Color-Scheme"><img alt="Illustration of a hummingbird moth wearing a beret and holding a palette and paintbrush." src="/2022/03/29/New-Color-Scheme/../thumb.png" style="max-height:80vh;float:right" /></a>]]>I spent a lot of time this week reading the web accessibility tutorials at MDN and trying to make my website more accessible. I changed the tags, categories, navbar, related posts, and archive to list elements, to make them better for screen readers. I also adjusted the color palette of...</summary>
 	<updated>2022-03-29T17:00:00Z</updated>
 	<published>2022-03-29T17:00:00Z</published>
   </entry>
