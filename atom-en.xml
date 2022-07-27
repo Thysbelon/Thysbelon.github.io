@@ -13,6 +13,43 @@
   </author>
 
   <entry>
+    <title>Origin of Every Photo from "Mmm yes moth" youtube video</title>
+	<id>/2022/07/13/Origin-of-Every-Photo-from-Mmm-yes-moth-youtube-video</id>
+    <link href="/2022/07/13/Origin-of-Every-Photo-from-Mmm-yes-moth-youtube-video"/>
+    <summary type="html"><![CDATA[<a href="/2022/07/13/Origin-of-Every-Photo-from-Mmm-yes-moth-youtube-video"><img alt="" src="/2022/07/13/Origin-of-Every-Photo-from-Mmm-yes-moth-youtube-video/../" style="max-height:80vh;float:right" /></a>]]>Mmm yes moth
+Every photo appears to be of the Rosy Maple Moth (Dryocampa rubicunda).
+
+Heather Burditt
+MCTRA
+Jozlyn_Moonlight
+Ann F.
+Author Unknown; highest resolution version here.
+Garrett Krause
+kylecharles42
+</summary>
+	<updated>2022-07-13T17:00:00Z</updated>
+	<published>2022-07-13T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>Animated SVGs Use High CPU and Freeze when used as an Image</title>
+	<id>/2022/07/13/Animated-SVGs-Use-High-CPU-and-Freeze-when-used-as-an-Image</id>
+    <link href="/2022/07/13/Animated-SVGs-Use-High-CPU-and-Freeze-when-used-as-an-Image"/>
+    <summary type="html"><![CDATA[<a href="/2022/07/13/Animated-SVGs-Use-High-CPU-and-Freeze-when-used-as-an-Image"><img alt="" src="/2022/07/13/Animated-SVGs-Use-High-CPU-and-Freeze-when-used-as-an-Image/../" style="max-height:80vh;float:right" /></a>]]>An SVG animated with CSS @keyframes defined in the SVG itself (not the page's CSS) will use high CPU on Firefox if the SVG is linked to in the src attribute of an &lt;img&gt; tag, or linked to in a background-image CSS property on the page. In addition, an animated...</summary>
+	<updated>2022-07-13T17:00:00Z</updated>
+	<published>2022-07-13T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>Taiko no Tatsujin Beatmap of "... Vista" by Guadalcanal Diary</title>
+	<id>/2022/07/01/Taiko-no-Tatsujin-Beatmap-of-Vista-by-Guadalcanal-Diary</id>
+    <link href="/2022/07/01/Taiko-no-Tatsujin-Beatmap-of-Vista-by-Guadalcanal-Diary"/>
+    <summary type="html"><![CDATA[<a href="/2022/07/01/Taiko-no-Tatsujin-Beatmap-of-Vista-by-Guadalcanal-Diary"><img alt="don-chan, the cat-like taiko drum mascot, sitting on a cat bed in loaf position." src="/2022/07/01/Taiko-no-Tatsujin-Beatmap-of-Vista-by-Guadalcanal-Diary/../donchan.svg" style="max-height:80vh;float:right" /></a>]]>Hello! Recently, I discovered a very cool web port of Taiko no Tatsujin called "Taiko Web". You can play both official charts and custom charts on it! It inspired me to make my own custom chart of "... Vista". I don't have much experience with making charts, so it's probably...</summary>
+	<updated>2022-07-01T17:00:00Z</updated>
+	<published>2022-07-01T17:00:00Z</published>
+  </entry>
+
+  <entry>
     <title>SplatHex displays Damage Up for All Gear</title>
 	<id>/2022/06/09/SplatHex-displays-Damage-Up-for-All-Gear</id>
     <link href="/2022/06/09/SplatHex-displays-Damage-Up-for-All-Gear"/>
