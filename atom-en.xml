@@ -13,6 +13,15 @@
   </author>
 
   <entry>
+    <title>NoScript Blocks the &lt;object&gt; Tag when it Blocks Scripts</title>
+	<id>/2022/09/06/NoScript-Blocks-the-Object-Tag-when-it-Blocks-Scripts</id>
+    <link href="/2022/09/06/NoScript-Blocks-the-Object-Tag-when-it-Blocks-Scripts"/>
+    <summary type="html"><![CDATA[<a href="/2022/09/06/NoScript-Blocks-the-Object-Tag-when-it-Blocks-Scripts"><img alt="A screenshot of NoScript's settings. Under the title 'Enable these capabilities', script is unchecked and object is checked." src="/2022/09/06/NoScript-Blocks-the-Object-Tag-when-it-Blocks-Scripts/../noscript5.webp" style="max-height:80vh;float:right" /></a>]]>NoScript has separate checkboxes for blocking "scripts" and "objects". I assumed that unchecking "scripts" would only block &lt;script&gt; tags on a page; and that leaving "object" checked would allow all &lt;object&gt; tags to work as normal. When I was adjusting the CSS of my Vib-Ribbon post, I noticed the animated...</summary>
+	<updated>2022-09-06T17:00:00Z</updated>
+	<published>2022-09-06T17:00:00Z</published>
+  </entry>
+
+  <entry>
     <title>Origin of Every Photo from "Mmm yes moth" youtube video</title>
 	<id>/2022/07/13/Origin-of-Every-Photo-from-Mmm-yes-moth-youtube-video</id>
     <link href="/2022/07/13/Origin-of-Every-Photo-from-Mmm-yes-moth-youtube-video"/>
