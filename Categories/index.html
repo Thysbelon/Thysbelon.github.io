@@ -1,1 +1,27 @@
-<!DOCTYPE html> <html> <head> <meta charset=UTF-8> <link rel=preload href=/ThysbelonTitle.svg as=image> <link rel=preload href=/thysbelonicon.svg as=image> <meta name=robots content=noindex> <title>Categories - Thysbelon/シズビロン</title> <meta name=viewport content=width=device-width,initial-scale=1.0> <link rel=icon type=image/x-icon href=/thysbelonicon.svg> <link rel=stylesheet href=/BlogStylesheet.css> <meta name=theme-color media=(prefers-color-scheme:light) content=#e0fffe> <meta name=theme-color media=(prefers-color-scheme:dark) content=#490078> </head> <body> <header><a href=/><img id=blogtitle src=/ThysbelonTitle.svg alt=""><img src=/thysbelonicon.svg alt=""></a></header> <nav><ul> <li><a href=/Archive/ lang=en>Archive</a> <li><a href=/アーカイブ/ lang=ja>アーカイブ</a> </ul></nav> <section> <ul> <li lang=ja><a href=ディジタル-デザイン>ディジタル・デザイン | 6</a></li> <li lang=en><a href=Web-Development>Web Development | 4</a></li> <li lang=en><a href=Design>Design | 3</a></li> <li lang=ja><a href=デザイン>デザイン | 2</a></li> <li lang=ja><a href=ゲーム>ゲーム | 2</a></li> <li lang=en><a href=Video-Games>Video Games | 11</a></li> <li lang=en><a href=Digital-Design>Digital Design | 10</a></li> <li lang=en><a href=Misc>Misc | 1</a></li> </ul> </section> <script src=/Archive/hidelang.js></script> <footer></footer></body></html>
+---
+noindex: true
+nonav: true
+layout: default
+---
+<section>
+<ul>
+{% assign sorted = '' %}
+{% for category in site.categories %} 
+    {% assign sorted = sorted | append: category[1].size | append: "," %} 
+{% endfor %}
+{% assign sorted = sorted | split: "," | uniq | sort %}
+{% for size in sorted reversed %}
+	{% for category in site.categories %}
+		{% assign compare = size | to_integer %}
+		{% if category[1].size == compare %}
+			{% if category[1][0].layout == "post-en" %}
+				<li lang=en><a href={{ category[0] | slugify }}>{{ category[0] }} | {{ category[1].size }}</a></li>
+			{% else %}
+				<li lang=ja><a href={{ category[0] | slugify }}>{{ category[0] }} | {{ category[1].size }}</a></li>
+			{% endif %}
+		{% endif %}
+	{% endfor %}
+{% endfor %}
+</ul>
+</section>
+<script src=/Archive/hidelang.js></script>

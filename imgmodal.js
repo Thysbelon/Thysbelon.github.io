@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		elem.addEventListener("click", function() {
 			console.log(this)
 			modalImg.src = this.src;
+			if (this.className.includes("pixl")) {
+				modal.style.imageRendering="pixelated"
+			} else {modal.style.imageRendering="auto"}
 			modal.showModal()
 		});
 		elem.addEventListener("keydown", function(e) {

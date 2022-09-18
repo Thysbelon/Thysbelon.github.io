@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<ul class="gallery padt padb">
+{% for post in page.posts %}
+{% assign outputpost = post.excerpt %}
+{% comment %}
+	{% assign imgattr = outputpost | split:'<img ' %}
+	{% for i2 in imgattr offset:1 %}
+	{% assign var2 = i2 | split:'>' | first %}
+	{% assign outputpost = outputpost | remove: var2 %}
+	{% endfor %}
+	{% assign ahref = outputpost | split:'href=' %}
+	{% for i3 in ahref offset:1 %}
+	{% assign var2 = i3 | split:' target=_blank>' | first %}
+	{% assign outputpost = outputpost | remove: var2 %}
+	{% endfor %}
+	{% assign sourceattr = outputpost | split:'<source ' %}
+	{% for i2 in sourceattr offset:1 %}
+	{% assign var2 = i2 | split:'>' | first %}
+	{% assign outputpost = outputpost | remove: var2 %}
+	{% endfor %}
+	{% assign outputpost = outputpost | remove: "<a href= target=_blank>" | remove: "<img >" | remove: "</a>" | remove:"<source >" | remove:"<picture>" | remove:"</picture>" | remove: "<section>" | remove: "</section>" %}
+{% endcomment %}
+{% if post.layout == "post-en" %}
+<li lang=en><a href={{ post.url | remove: page.url }}>
+{% if custmheader %}{{ post.custmheader }}{% else %}{{ post.title }}{% endif %}<br>
+<p>{{ outputpost | replace: "</p><p>"," " | strip_html | truncatewords: 20 }}</p>
+</a>
+{% else %}
+<li lang=ja><a href={{ post.url | remove: page.url }}>
+{% if custmheader %}{{ post.custmheader }}{% else %}{{ post.title }}{% endif %}<br>
+<p>{{ outputpost | strip_html | truncate: 85, "…" }}</p>
+</a>
+{% endif %}
+{% endfor %}
+</ul>
+<script src=/Archive/hidelang.js></script>

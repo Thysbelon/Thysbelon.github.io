@@ -1,5 +1,17 @@
-<!DOCTYPE html> <html lang=en> <head> <meta charset=UTF-8> <link rel=preload href=/ThysbelonTitle.svg as=image type=image/svg+xml> <link rel=preload href=/thysbelonicon.svg as=image type=image/svg+xml> <link rel=preload href=/BlogStylesheet.css as=style> <meta name="color-scheme" content="dark light"> <meta name=robots content=noindex> <title>404 - Thysbelon</title> <meta name=theme-color content=#ff4c60> <meta name=viewport content=width=device-width,initial-scale=1.0> <link rel=icon type=image/x-icon href=/thysbelonicon.svg> <link rel=stylesheet href=/BlogStylesheet.css> <noscript><style>.jsonly{display:none}</style></noscript> </head> <body> <header><a href=/Home><img id=blogtitle src=/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280></a></header> <nav><ul> <li><a href=/Archive/>Archive</a> <li><a href=/About/>About</a> <li><a href=/Subscribe/>Subscribe</a> <li><a href=/Portfolio/>Portfolio</a> <li><details><summary>Art</summary><ul><li><a href=/Digital-Art/>Digital Art</a><li><a href=/Photography/>Photography</a></details> <li><a href=/>Language/言語</a> </ul></nav> <section> <h1>404: Page not found</h1> <noscript><p>Turn on Javascript to see a list of suggestions.</p></noscript> <p class=jsonly>Loading suggestions...</p> </section> <script>
+---
+permalink: /404.html
+noindex: true
+style: "<noscript><style>.jsonly{display:none}</style></noscript>"
+title: 404
+---
+<section>
+	<h1>404: Page not found</h1>
+	<noscript><p>Turn on Javascript to see a list of suggestions.</p></noscript>
+	<p class=jsonly>Loading suggestions...</p>
+	<!--<img class="websitecolor fri" src=/workingmoth.webp> replace this with a magnifying glass moth-->
+</section>
+<script>
 (function(){const suggestor=new Worker('/404-2.js')
 suggestor.postMessage(window.location.pathname)
 suggestor.addEventListener('message', function(e){document.querySelector("p.jsonly").outerHTML="<p>Maybe this list will help? (make sure there are no typos in the url!)</p>"+e.data; suggestor.terminate()}, {once:true})})()
-</script> <footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer></body></html>
+</script>

@@ -1,4 +1,31 @@
-<!DOCTYPE html> <html> <head> <meta charset=UTF-8> <link rel=preload href=/ThysbelonTitle.svg as=image> <link rel=preload href=/thysbelonicon.svg as=image> <meta name=robots content=noindex> <title>Tags - Thysbelon/シズビロン</title> <meta name=viewport content=width=device-width,initial-scale=1.0> <link rel=icon type=image/x-icon href=/thysbelonicon.svg> <link rel=stylesheet href=/BlogStylesheet.css> <meta name=theme-color media=(prefers-color-scheme:light) content=#e0fffe> <meta name=theme-color media=(prefers-color-scheme:dark) content=#490078> </head> <body> <header><a href=/><img id=blogtitle src=/ThysbelonTitle.svg alt=""><img src=/thysbelonicon.svg alt=""></a></header> <nav><ul> <li><a href=/Archive/ lang=en>Archive</a> <li><a href=/アーカイブ/ lang=ja>アーカイブ</a> </ul></nav> <section> <ul> <li lang=en><a href=Guides>Guides | 8</a></li> <li lang=en><a href=Nintendo>Nintendo | 6</a></li> <li lang=en><a href=Colors>Colors | 4</a></li> <li lang=ja><a href=色>色 | 3</a></li> <li lang=ja><a href=ガイド>ガイド | 3</a></li> <li lang=en><a href=Illustrator>Illustrator | 3</a></li> <li lang=en><a href=Books>Books | 2</a></li> <li lang=ja><a href=本>本 | 2</a></li> <li lang=ja><a href=Mario-Party>Mario Party | 2</a></li> <li lang=ja><a href=PSX>PSX | 2</a></li> <li lang=ja><a href=DuckStation>DuckStation | 2</a></li> <li lang=en><a href=Vector-Graphics>Vector Graphics | 2</a></li> <li lang=en><a href=Pokémon>Pokémon | 2</a></li> <li lang=en><a href=Kirby>Kirby | 2</a></li> <li lang=en><a href=AIGA-Design-Archives>AIGA Design Archives | 1</a></li> <li lang=ja><a href=AIGA>AIGA | 1</a></li> <li lang=en><a href=User-Interface>User Interface | 1</a></li> <li lang=ja><a href=UI>UI | 1</a></li> <li lang=en><a href=Vib-Ribbon>Vib-Ribbon | 1</a></li> <li lang=en><a href=Emulators>Emulators | 1</a></li> <li lang=ja><a href=ビブリボン>ビブリボン | 1</a></li> <li lang=ja><a href=エミュレータ>エミュレータ | 1</a></li> <li lang=en><a href=Puyo-Puyo>Puyo Puyo | 1</a></li> <li lang=en><a href=Hideyuki-Takenami>Hideyuki Takenami | 1</a></li> <li lang=en><a href=Donut-County>Donut County | 1</a></li> <li lang=en><a href=Untitled-Goose-Game>Untitled Goose Game | 1</a></li> <li lang=en><a href=Pokémon-Legends-Arceus>Pokémon Legends: Arceus | 1</a></li> <li lang=en><a href=Kirby-and-the-Forgotten-Land>Kirby and the Forgotten Land | 1</a></li> <li lang=en><a href=Kirby-Star-Allies>Kirby Star Allies | 1</a></li> <li lang=en><a href=Typography>Typography | 1</a></li> <li lang=ja><a href=タイポグラフィ>タイポグラフィ | 1</a></li> <li lang=en><a href=Klonoa>Klonoa | 1</a></li> <li lang=en><a href=Marketing>Marketing | 1</a></li> <li lang=en><a href=3DS>3DS | 1</a></li> <li lang=en><a href=Splatoon>Splatoon | 1</a></li> <li lang=en><a href=Taiko-no-Tatsujin>Taiko no Tatsujin | 1</a></li> <li lang=en><a href=Bugs>Bugs | 1</a></li> </ul> </section> <script>
+---
+noindex: true
+nonav: true
+layout: default
+---
+<section>
+<ul>
+{% assign sorted = '' %}
+{% for tag in site.tags %} 
+    {% assign sorted = sorted | append: tag[1].size | append: "," %} 
+{% endfor %}
+{% assign sorted = sorted | split: "," | uniq | sort %}
+{% for size in sorted reversed %}
+	{% for tag in site.tags %}
+		{% assign compare = size | to_integer %}
+		{% if tag[1].size == compare %}
+			{% if tag[1][0].layout == "post-en" %}
+				<li lang=en><a href={{ tag[0] | slugify }}>{{ tag[0] }} | {{ tag[1].size }}</a></li>
+			{% else %}
+				<li lang=ja><a href={{ tag[0] | slugify }}>{{ tag[0] }} | {{ tag[1].size }}</a></li>
+			{% endif %}
+		{% endif %}
+	{% endfor %}
+{% endfor %}
+</ul>
+</section>
+<!--<script src=/Archive/hidelang.js></script>-->
+<script>
 //move this bakc to top and make this activate on list load
 function slugify(string) { //by hagemann
   const a = 'àáâäæãåāăąçćčđďèêëēėęěğǵḧîïíīįìıİłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;'
@@ -14,7 +41,7 @@ function slugify(string) { //by hagemann
     .replace(/^-+/, '') // Trim - from start of text
     .replace(/-+$/, '') // Trim - from end of text
 }
-var taglist=[{tagname:"Books", enpostnum:2, jpostnum:0 },{tagname:"Colors", enpostnum:4, jpostnum:0 },{tagname:"AIGA Design Archives", enpostnum:1, jpostnum:0 },{tagname:"本", enpostnum:0, jpostnum:2 },{tagname:"色", enpostnum:0, jpostnum:3 },{tagname:"AIGA", enpostnum:0, jpostnum:1 },{tagname:"Mario Party", enpostnum:1, jpostnum:1 },{tagname:"Nintendo", enpostnum:5, jpostnum:1 },{tagname:"User Interface", enpostnum:1, jpostnum:0 },{tagname:"UI", enpostnum:0, jpostnum:1 },{tagname:"Guides", enpostnum:8, jpostnum:0 },{tagname:"Vib-Ribbon", enpostnum:1, jpostnum:0 },{tagname:"PSX", enpostnum:1, jpostnum:1 },{tagname:"Emulators", enpostnum:1, jpostnum:0 },{tagname:"DuckStation", enpostnum:1, jpostnum:1 },{tagname:"ガイド", enpostnum:0, jpostnum:3 },{tagname:"ビブリボン", enpostnum:0, jpostnum:1 },{tagname:"エミュレータ", enpostnum:0, jpostnum:1 },{tagname:"Puyo Puyo", enpostnum:1, jpostnum:0 },{tagname:"Vector Graphics", enpostnum:2, jpostnum:0 },{tagname:"Illustrator", enpostnum:2, jpostnum:1 },{tagname:"Hideyuki Takenami", enpostnum:1, jpostnum:0 },{tagname:"Donut County", enpostnum:1, jpostnum:0 },{tagname:"Untitled Goose Game", enpostnum:1, jpostnum:0 },{tagname:"Pokémon", enpostnum:2, jpostnum:0 },{tagname:"Pokémon Legends: Arceus", enpostnum:1, jpostnum:0 },{tagname:"Kirby", enpostnum:2, jpostnum:0 },{tagname:"Kirby and the Forgotten Land", enpostnum:1, jpostnum:0 },{tagname:"Kirby Star Allies", enpostnum:1, jpostnum:0 },{tagname:"Typography", enpostnum:1, jpostnum:0 },{tagname:"タイポグラフィ", enpostnum:0, jpostnum:1 },{tagname:"Klonoa", enpostnum:1, jpostnum:0 },{tagname:"Marketing", enpostnum:1, jpostnum:0 },{tagname:"3DS", enpostnum:1, jpostnum:0 },{tagname:"Splatoon", enpostnum:1, jpostnum:0 },{tagname:"Taiko no Tatsujin", enpostnum:1, jpostnum:0 },{tagname:"Bugs", enpostnum:1, jpostnum:0 }]
+var taglist=[{% for tag in site.tags %}{% unless forloop.first == true %},{% endunless %}{tagname:"{{ tag[0] }}", enpostnum:{% assign enposts = tag[1] | where: "layout", "post-en" %}{{ enposts.size }}, jpostnum:{% assign jposts = tag[1] | where: "layout", "post-jp" %}{{ jposts.size }} }{% endfor %}]
 let thelist=document.querySelector("section>ul")
 if (navigator.language=="ja") {
 	taglist.sort(function(a, b){return b.jpostnum - a.jpostnum})
@@ -33,4 +60,4 @@ if (navigator.language=="ja") {
 		thelist.innerHTML+="<li><a href="+slugify(taglist[i].tagname)+">"+taglist[i].tagname+" | "+taglist[i].enpostnum+"</a></li>"
 	}
 }
-</script> <footer></footer></body></html>
+</script>

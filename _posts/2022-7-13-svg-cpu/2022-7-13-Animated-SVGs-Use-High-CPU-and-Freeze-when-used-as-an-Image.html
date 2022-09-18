@@ -1,0 +1,12 @@
+---
+locale: en_US
+tags:
+  - Vector Graphics
+  - Guides
+categories:
+  - Web Development
+short: true
+---
+<p>An SVG animated with CSS <code>@keyframes</code> defined in the SVG itself (not the page's CSS) will use high CPU on Firefox if the SVG is linked to in the <code>src</code> attribute of an <code>&lt;img&gt;</code> tag, or linked to in a <code>background-image</code> CSS property on the page. In addition, an animated SVG in a <code>background-image</code> may freeze on chromium.
+<p>I tested different ways of putting an animated SVG on a page; the option that performed best was the <code>&lt;object&gt;</code> tag, inline svg was a close second.
+<!--<p>My post <a href={% post_url 2022-2-19-How-to-Play-Custom-Songs-in-Vib-Ribbon-on-an-Emulator %}>"How to Play Custom Songs in Vib-Ribbon on an Emulator"</a> has an animated background. In terms of what makes the most sense, the best way to put a background on a page is to set the <code>&lt;body&gt;</code>'s background-image property to the url of the background image. Putting an <code>&lt;img&gt;</code> tag on the page itself is not ideal because HTML is supposed to be used for content, and CSS is for decoration. -->

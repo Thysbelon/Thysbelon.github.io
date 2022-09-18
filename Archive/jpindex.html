@@ -1,0 +1,35 @@
+---
+title: アーカイブ
+layout: default-jp
+permalink: /アーカイブ/
+noindex: true
+style: "nav>ul>li>a{align-self:flex-start;}"
+---
+<ul class="gallery padt padb">
+{% assign posts = site.posts | where: "layout", "post-jp" %}
+{% for post in posts %}
+{% assign outputpost = post.excerpt %}
+{% comment %}
+	{% assign imgattr = outputpost | split:'<img ' %}
+	{% for i2 in imgattr offset:1 %}
+	{% assign var2 = i2 | split:'>' | first %}
+	{% assign outputpost = outputpost | remove: var2 %}
+	{% endfor %}
+	{% assign ahref = outputpost | split:'href=' %}
+	{% for i3 in ahref offset:1 %}
+	{% assign var2 = i3 | split:' target=_blank>' | first %}
+	{% assign outputpost = outputpost | remove: var2 %}
+	{% endfor %}
+	{% assign sourceattr = outputpost | split:'<source ' %}
+	{% for i2 in sourceattr offset:1 %}
+	{% assign var2 = i2 | split:'>' | first %}
+	{% assign outputpost = outputpost | remove: var2 %}
+	{% endfor %}
+	{% assign outputpost = outputpost | remove: "<a href= target=_blank>" | remove: "<img >" | remove: "</a>" | remove:"<source >" | remove:"<picture>" | remove:"</picture>" | remove: "<section>" | remove: "</section>" | truncate: 85 %}
+{% endcomment %}
+<li><a href={{ post.url }}>
+{% if custmheader %}{{ post.custmheader }}{% else %}{{ post.title }}{% endif %}<br>
+<p>{{ outputpost | strip_html | truncate: 85, "…" }}</p>
+</a>
+{% endfor %}
+</ul>
