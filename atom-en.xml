@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Thysbelon</title>
+  <link rel="self" href="https://thysbelon.github.io/atom-en.xml"/>
+  <link href="https://thysbelon.github.io/Home"/>
+  <updated>2022-03-08T17:00:00Z</updated>
+  <subtitle>My personal blog where I post about whatever interests me</subtitle>
+  <id>thysbelon-en</id>
+  <icon>https://thysbelon.github.io/thysbelonicon.svg</icon>
+  <logo>https://thysbelon.github.io/ThysbelonTitle.svg</logo>
+  <author>
+    <name>Thysbelon</name>
+  </author>
+
+  <entry>
+    <title>I Moved My Jekyll Website from Windows to WSL2 Ubuntu</title>
+	<id>/2022/09/17/I-Moved-My-Jekyll-Website-from-Windows-to-WSL2-Ubuntu</id>
+    <link href="/2022/09/17/I-Moved-My-Jekyll-Website-from-Windows-to-WSL2-Ubuntu"/>
+    <summary type="html"><![CDATA[<a href="/2022/09/17/I-Moved-My-Jekyll-Website-from-Windows-to-WSL2-Ubuntu"><img alt="" src="/2022/09/17/I-Moved-My-Jekyll-Website-from-Windows-to-WSL2-Ubuntu/../" style="max-height:80vh;float:right" /></a>]]>Hello! I got a new laptop, and this one has Windows 11 on it, so I finally decided to stop procrastinating and actually install WSL2. (WSL2 is also available on Windows 10, but when I last checked you needed to sign up for the Windows Insider Program, but that may...</summary>
+	<updated>2022-09-17T17:00:00Z</updated>
+	<published>2022-09-17T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>NoScript Blocks the &lt;object&gt; Tag when it Blocks Scripts</title>
+	<id>/2022/09/06/NoScript-Blocks-the-Object-Tag-when-it-Blocks-Scripts</id>
+    <link href="/2022/09/06/NoScript-Blocks-the-Object-Tag-when-it-Blocks-Scripts"/>
+    <summary type="html"><![CDATA[<a href="/2022/09/06/NoScript-Blocks-the-Object-Tag-when-it-Blocks-Scripts"><img alt="A screenshot of NoScript's settings. Under the title 'Enable these capabilities', script is unchecked and object is checked." src="/2022/09/06/NoScript-Blocks-the-Object-Tag-when-it-Blocks-Scripts/../noscript5.webp" style="max-height:80vh;float:right" /></a>]]>NoScript has separate checkboxes for blocking "scripts" and "objects". I assumed that unchecking "scripts" would only block &lt;script&gt; tags on a page; and that leaving "object" checked would allow all &lt;object&gt; tags to work as normal. When I was adjusting the CSS of my Vib-Ribbon post, I noticed the animated...</summary>
+	<updated>2022-09-06T17:00:00Z</updated>
+	<published>2022-09-06T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>Origin of Every Photo from "Mmm yes moth" youtube video</title>
+	<id>/2022/07/13/Origin-of-Every-Photo-from-Mmm-yes-moth-youtube-video</id>
+    <link href="/2022/07/13/Origin-of-Every-Photo-from-Mmm-yes-moth-youtube-video"/>
+    <summary type="html"><![CDATA[<a href="/2022/07/13/Origin-of-Every-Photo-from-Mmm-yes-moth-youtube-video"><img alt="" src="/2022/07/13/Origin-of-Every-Photo-from-Mmm-yes-moth-youtube-video/../" style="max-height:80vh;float:right" /></a>]]>Mmm yes moth
+Every photo appears to be of the Rosy Maple Moth (Dryocampa rubicunda).
+
+Heather Burditt
+MCTRA
+Jozlyn_Moonlight
+Ann F.
+Author Unknown; highest resolution version here.
+Garrett Krause
+kylecharles42
+</summary>
+	<updated>2022-07-13T17:00:00Z</updated>
+	<published>2022-07-13T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>Animated SVGs Use High CPU and Freeze when used as an Image</title>
+	<id>/2022/07/13/Animated-SVGs-Use-High-CPU-and-Freeze-when-used-as-an-Image</id>
+    <link href="/2022/07/13/Animated-SVGs-Use-High-CPU-and-Freeze-when-used-as-an-Image"/>
+    <summary type="html"><![CDATA[<a href="/2022/07/13/Animated-SVGs-Use-High-CPU-and-Freeze-when-used-as-an-Image"><img alt="" src="/2022/07/13/Animated-SVGs-Use-High-CPU-and-Freeze-when-used-as-an-Image/../" style="max-height:80vh;float:right" /></a>]]>An SVG animated with CSS @keyframes defined in the SVG itself (not the page's CSS) will use high CPU on Firefox if the SVG is linked to in the src attribute of an &lt;img&gt; tag, or linked to in a background-image CSS property on the page. In addition, an animated...</summary>
+	<updated>2022-07-13T17:00:00Z</updated>
+	<published>2022-07-13T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>Taiko no Tatsujin Beatmap of "... Vista" by Guadalcanal Diary</title>
+	<id>/2022/07/01/Taiko-no-Tatsujin-Beatmap-of-Vista-by-Guadalcanal-Diary</id>
+    <link href="/2022/07/01/Taiko-no-Tatsujin-Beatmap-of-Vista-by-Guadalcanal-Diary"/>
+    <summary type="html"><![CDATA[<a href="/2022/07/01/Taiko-no-Tatsujin-Beatmap-of-Vista-by-Guadalcanal-Diary"><img alt="don-chan, the cat-like taiko drum mascot, sitting on a cat bed in loaf position." src="/2022/07/01/Taiko-no-Tatsujin-Beatmap-of-Vista-by-Guadalcanal-Diary/../donchan.svg" style="max-height:80vh;float:right" /></a>]]>Hello! Recently, I discovered a very cool web port of Taiko no Tatsujin called "Taiko Web". You can play both official charts and custom charts on it! It inspired me to make my own custom chart of "... Vista". I don't have much experience with making charts, so it's probably...</summary>
+	<updated>2022-07-01T17:00:00Z</updated>
+	<published>2022-07-01T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>SplatHex displays Damage Up for All Gear</title>
+	<id>/2022/06/09/SplatHex-displays-Damage-Up-for-All-Gear</id>
+    <link href="/2022/06/09/SplatHex-displays-Damage-Up-for-All-Gear"/>
+    <summary type="html"><![CDATA[<a href="/2022/06/09/SplatHex-displays-Damage-Up-for-All-Gear"><img alt="Screenshot of SplatHex" src="/2022/06/09/SplatHex-displays-Damage-Up-for-All-Gear/../thumb-1.avif" style="max-height:80vh;float:right" /></a>]]></summary>
+	<updated>2022-06-09T17:00:00Z</updated>
+	<published>2022-06-09T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>The Original Mew Glitch</title>
+	<id>/2022/06/06/The-Original-Mew-Glitch</id>
+    <link href="/2022/06/06/The-Original-Mew-Glitch"/>
+    <summary type="html"><![CDATA[<a href="/2022/06/06/The-Original-Mew-Glitch"><img alt="🙋" src="/2022/06/06/The-Original-Mew-Glitch/..//emoji/%F0%9F%99%8B.svg" style="max-height:80vh;float:right" /></a>]]>On November 6th 2021, Did You Know Gaming uploaded a video about the origins of Mew. This video made me aware of an Iwata Asks interview with GameFreak published after the release of HeartGold and SoulSilver. They began by talking about how the Pokémon series became popular. Ishihara said that...</summary>
+	<updated>2022-06-06T17:00:00Z</updated>
+	<published>2022-06-06T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>How to Make Custom 3DS Mega Badges</title>
+	<id>/2022/05/27/How-to-Make-Custom-3DS-Mega-Badges</id>
+    <link href="/2022/05/27/How-to-Make-Custom-3DS-Mega-Badges"/>
+    <summary type="html"><![CDATA[<a href="/2022/05/27/How-to-Make-Custom-3DS-Mega-Badges"><img alt="Screenshot of a Daroach mega badge in the 3DS home menu." src="/2022/05/27/How-to-Make-Custom-3DS-Mega-Badges/../badge2D-80.webp" style="max-height:80vh;float:right" /></a>]]>Nintendo Badge Arcade is a free-to-play game for the 3DS in which you play a crane game to unlock badges to decorate your 3DS's home menu with. By Installing custom firmware to the 3DS users can make their own custom badges out of 64 by 64 pixel PNGs. There is...</summary>
+	<updated>2022-05-27T17:00:00Z</updated>
+	<published>2022-05-27T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>If you're learning marketing and you're worried you're not good enough, know you're better than these Klonoa ads</title>
+	<id>/2022/05/02/You-Know-More-About-Marketing-than-the-Klonoa-Ad-People</id>
+    <link href="/2022/05/02/You-Know-More-About-Marketing-than-the-Klonoa-Ad-People"/>
+    <summary type="html"><![CDATA[<a href="/2022/05/02/You-Know-More-About-Marketing-than-the-Klonoa-Ad-People"><img alt="Two magazine ads for Klonoa, a mascot platforming game. The first ad has a greyscale photo of two adults kissing. The second ad has large text that says: Quite possibly the only thing weirder than your sister." src="/2022/05/02/You-Know-More-About-Marketing-than-the-Klonoa-Ad-People/../thumb6.webp" style="max-height:80vh;float:right" /></a>]]>I just finished my marketing course, which was required for my itech degree. I've always been wary of business, so I was worried that I wouldn't "get" marketing at all. I had no idea what to write in my paper... then I remembered something that gave me confidence; these advertisements.Someone...</summary>
+	<updated>2022-05-02T17:00:00Z</updated>
+	<published>2022-05-02T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>The Origin Of Every Kirby Song on the Kirby or Touhou Song Title Quiz</title>
+	<id>/2022/04/16/The-Origin-Of-Every-Kirby-Song-on-the-Kirby-or-Touhou-Song-Title-Quiz</id>
+    <link href="/2022/04/16/The-Origin-Of-Every-Kirby-Song-on-the-Kirby-or-Touhou-Song-Title-Quiz"/>
+    <summary type="html"><![CDATA[<a href="/2022/04/16/The-Origin-Of-Every-Kirby-Song-on-the-Kirby-or-Touhou-Song-Title-Quiz"><img alt="Kirby and Reimu. Kirby is wearing Reimu's ribbon and holding her gohei. Reimu is holding the star rod." src="/2022/04/16/The-Origin-Of-Every-Kirby-Song-on-the-Kirby-or-Touhou-Song-Title-Quiz/../thumb.png" style="max-height:80vh;float:right" /></a>]]>Last week, I came across a quiz that asks the quizzee, "Is this song title from Kirby or Touhou?". I thought that I would do very well at the quiz, because of how many Kirby songs I know, but I only got 66%. Then I wondered, &ldquo;Are all of these...</summary>
+	<updated>2022-04-16T17:00:00Z</updated>
+	<published>2022-04-16T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>Android 5.0 Lollipop: the Best Emoji</title>
+	<id>/2022/04/09/Android-5.0-Lollipop-the-Best-Emoji</id>
+    <link href="/2022/04/09/Android-5.0-Lollipop-the-Best-Emoji"/>
+    <summary type="html"><![CDATA[<a href="/2022/04/09/Android-5.0-Lollipop-the-Best-Emoji"><img alt="Smiling face with smiling eyes emoji." src="/2022/04/09/Android-5.0-Lollipop-the-Best-Emoji/..//emoji/%F0%9F%98%8A.svg" style="max-height:80vh;float:right" /></a>]]>I've never been that big of a fan of most emoji. Apple popularized the the use of gradients in emoji, but I think it just looks so ugly . Gradients look nice in a background, but the moment they're put into a character design they just look tacky. The reason...</summary>
+	<updated>2022-04-09T17:00:00Z</updated>
+	<published>2022-04-09T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>Trouble with Spacing Objects Evenly in Illustrator</title>
+	<id>/2022/04/03/Trouble-with-Spacing-Objects-Evenly-in-Illustrator</id>
+    <link href="/2022/04/03/Trouble-with-Spacing-Objects-Evenly-in-Illustrator"/>
+    <summary type="html"><![CDATA[<a href="/2022/04/03/Trouble-with-Spacing-Objects-Evenly-in-Illustrator"><img alt="A hawkmoth sitting in front of a computer and looking frustrated." src="/2022/04/03/Trouble-with-Spacing-Objects-Evenly-in-Illustrator/../thumb.png" style="max-height:80vh;float:right" /></a>]]>Today, I was working on the social media ads for RCP and I needed to space out the numbers in "1,500,000,000". I first clicked "create outlines" so I could move the individual digits around. I knew there had to be a tool to space them automatically, but I didn't know...</summary>
+	<updated>2022-04-03T17:00:00Z</updated>
+	<published>2022-04-03T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>New Color Scheme</title>
+	<id>/2022/03/29/New-Color-Scheme</id>
+    <link href="/2022/03/29/New-Color-Scheme"/>
+    <summary type="html"><![CDATA[<a href="/2022/03/29/New-Color-Scheme"><img alt="Illustration of a hummingbird moth wearing a beret and holding a palette and paintbrush." src="/2022/03/29/New-Color-Scheme/../thumb.png" style="max-height:80vh;float:right" /></a>]]>I spent a lot of time this week reading the web accessibility tutorials at MDN and trying to make my website more accessible. I changed the tags, categories, navbar, related posts, and archive to list elements, to make them better for screen readers. I also adjusted the color palette of...</summary>
+	<updated>2022-03-29T17:00:00Z</updated>
+	<published>2022-03-29T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>Kirby and the Lovely Colors</title>
+	<id>/2022/03/28/Kirby-and-the-Lovely-Colors</id>
+    <link href="/2022/03/28/Kirby-and-the-Lovely-Colors"/>
+    <summary type="html"><![CDATA[<a href="/2022/03/28/Kirby-and-the-Lovely-Colors"><img alt="A monochromatic painted green banner that reads Downtown Grasslands. Inside the circle at the center is an illustration of a cityscape covered in greenery and surrounded by trees." src="/2022/03/28/Kirby-and-the-Lovely-Colors/../1.jpg" style="max-height:80vh;float:right" /></a>]]>Kirby and the Forgotten Land released last friday, and it's a lot of fun so far. I love the flat color, monochromatic graphics that display during the level loading screens. I've spoken before about how I like flat colors. The definition of a "flat color" appears to be a color...</summary>
+	<updated>2022-03-28T17:00:00Z</updated>
+	<published>2022-03-28T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>Donut County and Other Games I Played Recently</title>
+	<id>/2022/03/01/Donut-County-and-Other-Games-I-Played-Recently</id>
+    <link href="/2022/03/01/Donut-County-and-Other-Games-I-Played-Recently"/>
+    <summary type="html"><![CDATA[<a href="/2022/03/01/Donut-County-and-Other-Games-I-Played-Recently"><img alt="Title screen of Donut County." src="/2022/03/01/Donut-County-and-Other-Games-I-Played-Recently/../2-80.webp" style="max-height:80vh;float:right" /></a>]]>Out of the new games I've played recently (which isn't that many), Donut County probably has my favorite art direction. While playing it, I realized that it has many of the design points that I mentioned liking in "Talking About My Inspirations". It uses simple shapes with flat pastel colors....</summary>
+	<updated>2022-03-01T17:00:00Z</updated>
+	<published>2022-03-01T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>My Thoughts on Illustrator's Image Trace</title>
+	<id>/2022/02/28/My-Thoughts-on-Illustrator's-Image-Trace</id>
+    <link href="/2022/02/28/My-Thoughts-on-Illustrator's-Image-Trace"/>
+    <summary type="html"><![CDATA[<a href="/2022/02/28/My-Thoughts-on-Illustrator%27s-Image-Trace"><img alt="An SVG of the character Amitie." src="/2022/02/28/My-Thoughts-on-Illustrator%27s-Image-Trace/../amitrace.svg" style="max-height:80vh;float:right" /></a>]]>When I saw the Image Trace feature, I thought it would be an easy way to take low resolution art and convert it into high quality, perfect SVG. Yes, it had the limitation of only tracing images in black and white, but I could simply adjust the colors to work...</summary>
+	<updated>2022-02-28T17:00:00Z</updated>
+	<published>2022-02-28T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>How to Play Custom Songs in Vib-Ribbon on an Emulator</title>
+	<id>/2022/02/19/How-to-Play-Custom-Songs-in-Vib-Ribbon-on-an-Emulator</id>
+    <link href="/2022/02/19/How-to-Play-Custom-Songs-in-Vib-Ribbon-on-an-Emulator"/>
+    <summary type="html"><![CDATA[<a href="/2022/02/19/How-to-Play-Custom-Songs-in-Vib-Ribbon-on-an-Emulator"><img alt="Vibri, a rabbit character made of straight lines." src="/2022/02/19/How-to-Play-Custom-Songs-in-Vib-Ribbon-on-an-Emulator/../Vibriasciimonospace.svg" style="max-height:80vh;float:right" /></a>]]>Vib-Ribbon is a game that released on the PS1 in 1999, and the PS3 and PS Vita in 2014. It has an innovative feature that allows players to insert their own Music CD into their PlayStation, and play a level generated from that CD. Players occasionally use a PC emulator...</summary>
+	<updated>2022-02-19T17:00:00Z</updated>
+	<published>2022-02-19T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>Talking About Video Games Now Because I was too Scared to Earlier</title>
+	<id>/2022/02/08/Talking-About-Video-Games-Now-Because-I-was-too-Scared-to-Earlier</id>
+    <link href="/2022/02/08/Talking-About-Video-Games-Now-Because-I-was-too-Scared-to-Earlier"/>
+    <summary type="html"><![CDATA[<a href="/2022/02/08/Talking-About-Video-Games-Now-Because-I-was-too-Scared-to-Earlier"><img alt="screenshot of Mario Party Superstars" src="/2022/02/08/Talking-About-Video-Games-Now-Because-I-was-too-Scared-to-Earlier/../supmarioparty.webp" style="max-height:80vh;float:right" /></a>]]>Hello! There were a few times when I was writing my previous posts that I wanted to talk about video games, but I was worried that doing so would come across as unprofessional. Well, considering that the course I'm in teaches game design, I figured it's time to stop being...</summary>
+	<updated>2022-02-08T17:00:00Z</updated>
+	<published>2022-02-08T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>Talking About My Inspirations</title>
+	<id>/2022/01/30/Talking-About-My-Inspirations</id>
+    <link href="/2022/01/30/Talking-About-My-Inspirations"/>
+    <summary type="html"><![CDATA[<a href="/2022/01/30/Talking-About-My-Inspirations"><img alt="An illustration of me looking at three book covers." src="/2022/01/30/Talking-About-My-Inspirations/../post2illunano.svg" style="max-height:80vh;float:right" /></a>]]>Hello! Today I'm going to talk a bit more about why I chose the designers that I did in my previous post. I mentioned that my favorite cover in the collection was Everything Matters!. The first thing I like about this cover is that it uses only four colors. Whenever...</summary>
+	<updated>2022-01-30T17:00:00Z</updated>
+	<published>2022-01-30T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>Designers that Inspire Me</title>
+	<id>/2022/01/25/Designers-that-Inspire-Me</id>
+    <link href="/2022/01/25/Designers-that-Inspire-Me"/>
+    <summary type="html"><![CDATA[<a href="/2022/01/25/Designers-that-Inspire-Me"><img alt="The cover of the book Everything Matters" src="/2022/01/25/Designers-that-Inspire-Me/../102273_or.webp" style="max-height:80vh;float:right" /></a>]]>Hello, this is my first blog post!As part of my first assignment in Digital Design, I was told to pick three designers from the AIGA Design Archives that inspire me. It was hard to choose when there was so much material, but I really liked the book covers, so I...</summary>
+	<updated>2022-01-25T17:00:00Z</updated>
+	<published>2022-01-25T17:00:00Z</published>
+  </entry>
+
+</feed>

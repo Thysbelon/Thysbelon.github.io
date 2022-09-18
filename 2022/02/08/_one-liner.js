@@ -1,0 +1,1 @@
+//document.querySelector("[href='https://youtu.be/bE_ZuNp1CTI?t=569']").outerHTML='<iframe width=560 height=315 src=https://www.youtube-nocookie.com/embed/bE_ZuNp1CTI?start=569 title="YouTube video player" frameborder=0 allowfullscreen></iframe>'

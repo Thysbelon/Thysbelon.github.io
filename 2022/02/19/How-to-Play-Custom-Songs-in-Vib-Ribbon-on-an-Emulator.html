@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<link rel=preload href=/ThysbelonTitle.svg as=image type=image/svg+xml>
+<link rel=preload href=/thysbelonicon.svg as=image type=image/svg+xml>
+<link rel=preload href=/BlogStylesheet.css as=style>
+<meta name="color-scheme" content="dark light">
+
+<link rel=alternate hreflang=ja href=https://thysbelon.github.io/2022/02/19/ビブリボンにエミュレータでお好み音楽で遊び方>
+<title>How to Play Custom Songs in Vib-Ribbon on an Emulator - Thysbelon</title>
+<meta name=theme-color content=#ff4c60>
+<link rel=author href=/About/>
+<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="description" content="Vib-Ribbon is a game that released on the PS1 in 1999, and the PS3 and PS Vita in 2014. It has an innovative feature that allows players to insert their own Music CD into their PlayStation, and play a level generated from that CD. Players occasionally use a PC emulator...">
+
+
+<link rel=icon type=image/x-icon href=thyslogo5-min.gif>
+<link rel=stylesheet href=/BlogStylesheet.css>
+<style> @font-face{font-family:Vibri;src:url(vibri.woff2);} @font-face{font-family:Vib-main;src:url(Vib-Ribbon_Main.woff2);} @font-face{font-family:zekton;src:url(zekton-rg.woff2);} #vibspeech{position:relative;max-width:640px;aspect-ratio:640/480;overflow:clip;} #vibspeech img,#vibspeech video[loop]{margin:0;} #vibspeech video:not(video[loop]), svg, #vibspeech button{padding:0;margin:0;position:absolute;top:25%;right:20%;width:45%;height:30%;border-radius:initial;} ::cue{font-family:Vibri;font-size:clamp(.1rem,5vw,2.4rem);background-color:transparent;} body{overflow-anchor:none;}/*if scroll anchoring is on, the page will jump down when the video is played, putting the video out of view. Ironic*/ h1:lang(en),h2:lang(en){font:2.5rem Vib-main;color:white;word-spacing:.1rem;-webkit-text-stroke:0;text-transform:lowercase} nav>ul>li>a:lang(en),nav>ul>li>a:hover,nav details{
+ color:white;
+ background-color:black;
+ font-family:Vibri;
+ transition-duration:0;
+ border-radius:0;
+ font-weight:normal;
+ align-self:auto
+} nav details a:lang(en){color:white;font-family:Vibri;font-weight:normal} nav details a:hover{color:var(--link);background-color:transparent} nav>ul>li>a:hover{
+ outline:white solid 1px
+} ::selection{background-color:white;color:black} :root{--txt:white;--link:var(--robin);--pink:var(--robin)} time{font-family:Vibri} section,div,ul.gallery,h2{background-color:black} body{background-color:black;overflow-x:hidden} object{height:99vh;z-index:-3;position:fixed;left:0;right:0;top:0;margin:auto} @media (prefers-reduced-motion){
+ body{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800' stroke='white' stroke-width='3'%3E%3Cg style='display:none'%3E%3Cg id='a'%3E%3Cpath d='M10 0 V20'/%3E%3Cpath d='M2 4 L18 16'/%3E%3Cpath d='M2 16 L18 4'/%3E%3C/g%3E%3C/g%3E%3Cuse href='%23a' x='769' y='229'/%3E%3Cuse href='%23a' x='539' y='269' style='transform:scale(1.5);transform-origin:539px 269px'/%3E%3Cuse href='%23a' x='603' y='493'/%3E%3Cuse href='%23a' x='731' y='737'/%3E%3Cuse href='%23a' x='520' y='660' style='transform:scale(1.5);transform-origin:520px 660px'/%3E%3Cuse href='%23a' x='309' y='538'/%3E%3Cuse href='%23a' x='295' y='764'/%3E%3Cuse href='%23a' x='40' y='599' style='transform:scale(1.5);transform-origin:40px 599px'/%3E%3Cuse href='%23a' x='102' y='382'/%3E%3Cuse href='%23a' x='127' y='80'/%3E%3Cuse href='%23a' x='370' y='105' style='transform:scale(1.5);transform-origin:370px 105px'/%3E%3Cuse href='%23a' x='578' y='42'/%3E%3Cuse href='%23a' x='237' y='261'/%3E%3Cuse href='%23a' x='390' y='382' style='transform:scale(1.5);transform-origin:390px 382px'/%3E%3C/svg%3E") black;/* background by SVGBackgrounds.com */}
+ object{display:none}
+} p,a{
+ font-family:zekton;
+ transition-duration:initial;
+} p{font-size:1.4rem} @media (orientation: portrait){
+ body{background-image:none}
+ object{display:none}
+ p{font-size:clamp(1.1rem,3vw,1.4rem)}
+} header img{flex-basis:11rem;max-width:11rem} header a{max-width:41.5rem} header a:hover{filter:none} .tags{font-family:Vibri} .gallery>li>a{border-radius:0} html{scrollbar-color:#fff123 seagreen} ::-webkit-scrollbar{background-color:seagreen} ::-webkit-scrollbar-button{display:none} ::-webkit-scrollbar-thumb{background:#fff123} ::-webkit-scrollbar-track-piece:start{background-color:#fff123}</style> <noscript><style>::cue{font-size:clamp(.1rem,1.8vw,1.5rem);}</style></noscript>
+
+</head>
+<body>
+<header><a href=/Home><img id=blogtitle src=thystitle2-min.gif alt=Thysbelon. width=484 height=154><img src=thyslogo5-min.gif alt="Logo of a Hummingbird moth drawn with angular lines." width=281 height=281></a></header>
+<nav><ul>
+
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				<li><a href=/Archive/>Archive</a>
+			
+		
+	
+		
+		
+			
+				<li><a href=/Portfolio/>Portfolio</a>
+			
+		
+	
+		
+		
+			
+				<li><a href=/About/>About</a>
+			
+		
+	
+		
+		
+			
+				<li><a href=/Subscribe/>Subscribe</a>
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+			
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+	<li><details><summary>Art</summary><ul><li><a href=/Digital-Art/>Digital Art</a><li><a href=/Photography/>Photography</a></details>
+	<li><a href=/>Language/言語</a>
+</ul></nav>
+<main itemscope itemtype=https://schema.org/BlogPosting>
+<section>
+<h1 itemprop=headline>How to Play Custom Songs in <span class=nowrap>Vib-Ribbon</span> on an Emulator</h1>
+<time itemprop=datePublished datetime=2022-02-19>19 February 2022</time>
+	<img itemprop=image src=Vibriasciimonospace.svg style=margin:0; title="This acii art appears at the end of my batch script." alt="Vibri, a rabbit character made of straight lines.">
+	<p>Vib-Ribbon is a game that released on the PS1 in 1999, and the PS3 and PS Vita in 2014. It has an innovative feature that allows players to insert their own Music CD into their PlayStation, and play a level generated from that CD. Players occasionally use a PC emulator to play their copy of the game so they can see 4K graphics, among other things, but the available guides on how to play custom songs on an emulator tell the reader to download disc burning software, which is completely uneccessary, because the Audio CD format is more simple than they think.</p>
+	<p>The Audio CD format consists of multiple files: one audio file for each song on the disc, and a cue sheet file containing text that states where on the cd each song is located, this allows CD players to play the disc. Converting an audio file to Audio CD format could be as simple as typing a cue sheet for it.</p>
+<object title="star-filled background." type=image/svg+xml data="data:image/svg+xml,%3Csvg width='1940' height='1080' viewBox='0 0 1940 1080' xmlns='http://www.w3.org/2000/svg' style='background-color:black' stroke='white' stroke-width='3'%3E%3Cdefs%3E%3Cstyle%3E@keyframes b {0%{transform:scale(0)}5%{transform:scale(var(--j))}10%{transform:scale(0)}100%{transform:scale(0)}}use{animation:var(--e) var(--g) infinite both b%3Btransform-origin:var(--h) var(--i)}%3C/style%3E%3C/defs%3E%3Cg style='display:none'%3E%3Cg id='a'%3E%3Cpath d='M10 0 V20'/%3E%3Cpath d='M2 4 L18 16'/%3E%3Cpath d='M2 16 L18 4'/%3E%3C/g%3E%3C/g%3E%3Cuse href='%23a' style='--e:5s%3B--g:2s%3B--h:287px%3B--i:192px%3B--j:2' id='tl' x='277' y='183'/%3E%3Cuse href='%23a' style='--e:5.2s%3B--g:1s%3B--h:328px%3B--i:908px%3B--j:2' id='bl' x='318' y='899'/%3E%3Cuse href='%23a' style='--e:5.4s%3B--g:3s%3B--h:90px%3B--i:539px%3B--j:1' id='ml' x='80' y='530'/%3E%3Cuse href='%23a' style='--e:5.6s%3B--g:4s%3B--h:1598px%3B--i:103px%3B--j:1' id='tr' x='1588' y='94'/%3E%3Cuse href='%23a' style='--e:5.8s%3B--g:5s%3B--h:1864px%3B--i:463px%3B--j:2' id='mr' x='1854' y='454'/%3E%3Cuse href='%23a' style='--e:6s%3B--g:6s%3B--h:1599px%3B--i:979px%3B--j:1' id='br' x='1589' y='970'/%3E%3C/svg%3E"></object>
+	<figure><pre>
+FILE "music.bin" BINARY
+  TRACK 01 AUDIO
+    INDEX 01 00:00:00
+</pre></figure>
+	<p>Here is an example cue sheet you can use. Change music.bin to whatever the file name of your audio file is. Make sure you keep the quotes around the name. If your file is in a format other than .bin, you'll have to change BINARY to your audio format, valid formats are WAVE, MP3, AIFF, BINARY, and MOTOROLA. You can use WavPack and FLAC files under the WAVE file type. If you want to put multiple audio files on the same "CD", simply repeat the first three lines, change music.bin to your file name, and change TRACK 01 AUDIO to TRACK 02 AUDIO. You can add as many tracks as you want as long as the total file size of all the audio files combined is less than 700 MB.</p>
+	<p>Different emulators support different file types. For example, DuckStation only supports Audio CD wav files with the file extension ".bin". Audio CD wav is a specific format that is different from the standard wav. I recommend using <a target=_blank href=https://www.videolan.org/vlc/>VLC Media Player</a> for all audio file converting purposes; because it is a great and stable media player. Simply click Media > Convert / Save..., add files, then under Profile, click "Audio - CD", or whatever audio format you want to convert to.</p>
+	<p>If you're converting all your files to wav, you may find yourself quickly losing space on your hard drive because wav is an uncompressed format. If you want to compress your songs while still being able to play them in DuckStation, you can use chdman, a command-line program that comes with <a target=_blank href=https://www.mamedev.org/>MAME</a>, to compress them to chd.</p>
+	<p>Converting many audio files to Audio CD format in this way will take a lot of time, so I wrote a batch script to speed up the process. You will still need to install VLC and chdman to use this batch script, because it's nothing more than a shortcut to do the steps I already told you about. You can <a target=_blank href=https://github.com/Thysbelon/ConvertToVibFormat>download the batch script for Windows at my GitHub repository.</a></p>
+	<p>That's the end of the tutorial. I'm going to talk about the game itself now.</p>
+	<p>If you read this post without knowing about the game, you may be wondering; "Just what <em>is</em> Vib-Ribbon?"</p>
+	<div id=vibspeech>
+	<img loading=lazy src=vib-min.gif title="I drew this using Shake Art DELUXE by nokoi" alt="An image of Vibri's head with a speech bubble.">
+	<video controls disableremoteplayback>
+		<source type=audio/mp3 src=vibConst32kbpsMono.mp3>
+		<track label=English kind=subtitles srclang=en src=vibtt.vtt default>
+	</video>
+	</div>
+	<p>Vib-Ribbon is a really interesting, experimental rhythm game. When you're not playing with your own songs, the Laugh & Peace tracks included on the disc will challenge the player's skills with their unorthodox tempo changes. When most songs would simply change the lyrics or the instruments to make the second verse interesting, Laugh & Peace either speeds up the song, slows it down to a crawl, or both of those things right after each other. It makes the stages really fun to play through.</p>
+	<p>While I say "fun", not everyone is going to have that experience with this game. The game uses a visual style in which everything is represented with thin white lines that constantly vibrate. It makes the menu text a little bit hard to read, but even worse is that the lines will vibrate more when you are failing at a stage, which just makes it harder to see what's coming next. To master this game requires the ability to stay calm under pressure. While some might say the shaking lines are a flaw of this game, I think they provide an interesting challenge, and you can disable them with <a target=_blank href=https://gamehacking.org>cheat codes</a> (DuckStation already comes with this kind of cheat code). Thinking about this reminds me of how <cite>Space Warlord Organ Trading Simulator</cite> was designed with friction in mind. Xalavier Nelson Jr., the lead director, talks about this in <a href=https://www.gamedeveloper.com/design/inside-space-warlord-organ-trading-simulator-s-deliberately-designed-friction target=_blank>an interview with <cite>Game Developer</cite></a>.</p>
+	<p>Although Vib-Ribbon doesn't have a world to immerse players in the same way that <abbr>SWOTS</abbr> does, maybe Vib-Ribbon's frustrating shaking lines are what make it so memorable. Maybe being a little bit scary is a good thing.</p>
+</section>
+<script src=vib.js></script>
+<section>
+	<p>At the same time, however, don't you think the lines also make the game a bit more fair?</p>
+	<img src=vib2.webp alt="screenshot of Vib-Ribbon" loading=lazy>
+	<p>As I mentioned in <a href=/2022/01/30/Talking-About-My-Inspirations>a previous post</a>, black and white are the two colors that contrast the most. While other rhythm games might have colorful backgrounds behind colorful arrows, Vib-Ribbon's black background with only white objects allows you to focus <em>exclusively</em> on the stage. Even when the lines are shaking at their maximum speed, you still have a chance thanks to this design choice.</p>
+	<p>Many people who call themselves "hardcore gamers" say that their favorite part of a game is the brutal difficulty, but difficulty is really a balancing act between challenging and helping the player. <cite>Dark Souls</cite>' enemy's attacks are highly telegraphed and easy to dodge. The final boss of <cite>Metroid Dread</cite> will heal the player if they destroy certain projectiles or parry the boss. <cite>Celeste</cite> will still allow the player to jump even if they walked off the ledge a few milliseconds before pressing the jump button. If a game was nothing but challenge, it would be unfair rather than exhilarating.</p>
+	<p>encouraging the player like this is important. It is also important to provide accessibility features for the disabled, so they're able to complete the game. This is why I linked to a place where you can find cheat codes. I hope they will allow you to enjoy games you were unable to play before.</p>
+	<a href=https://fontstruct.com/fontstructions/show/1732589/vibri-1 target=_blank>Vibri font by SonicFontsHD</a>
+</section>
+</section>
+<div class=tags>Tags:<ul><li><a href=/Tags/Guides rel=tag>Guides</a><li><a href=/Tags/Vib-Ribbon rel=tag>Vib-Ribbon</a><li><a href=/Tags/PSX rel=tag>PSX</a><li><a href=/Tags/Emulators rel=tag>Emulators</a><li><a href=/Tags/DuckStation rel=tag>DuckStation</a></ul></div>
+<div class=tags>Categories:<ul><li><a href=/Categories/Video-Games rel=category>Video Games</a><li><a href=/Categories/Digital-Design rel=category>Digital Design</a></ul></div>
+</main>
+<aside>
+<h2>Related Posts</h2><ul class="gallery ">
+
+
+
+
+<li><a href=/2022/09/17/I-Moved-My-Jekyll-Website-from-Windows-to-WSL2-Ubuntu>
+I Moved My Jekyll Website from Windows to WSL2 Ubuntu<br>
+<p>Hello! I got a new laptop, and this one has Windows 11 on it, so I finally decided to stop...</p>
+</a>
+
+
+
+<li><a href=/2022/09/06/NoScript-Blocks-the-Object-Tag-when-it-Blocks-Scripts>
+NoScript Blocks the &lt;object&gt; Tag when it Blocks Scripts<br>
+<p>NoScript has separate checkboxes for blocking "scripts" and "objects". I assumed that unchecking "scripts" would only block &lt;script&gt; tags on...</p>
+</a>
+
+
+
+<li><a href=/2022/07/13/Origin-of-Every-Photo-from-Mmm-yes-moth-youtube-video>
+Origin of Every Photo from "Mmm yes moth" youtube video<br>
+<p>Mmm yes moth Every photo appears to be of the Rosy Maple Moth (Dryocampa rubicunda). Heather Burditt MCTRA Jozlyn_Moonlight Ann...</p>
+</a>
+
+
+
+<li><a href=/2022/07/13/Animated-SVGs-Use-High-CPU-and-Freeze-when-used-as-an-Image>
+Animated SVGs Use High CPU and Freeze when used as an Image<br>
+<p>An SVG animated with CSS @keyframes defined in the SVG itself (not the page's CSS) will use high CPU on...</p>
+</a>
+
+
+
+<li><a href=/2022/07/01/Taiko-no-Tatsujin-Beatmap-of-Vista-by-Guadalcanal-Diary>
+Taiko no Tatsujin Beatmap of "... Vista" by Guadalcanal Diary<br>
+<p>Hello! Recently, I discovered a very cool web port of Taiko no Tatsujin called "Taiko Web". You can play both...</p>
+</a>
+
+
+
+<li><a href=/2022/06/09/SplatHex-displays-Damage-Up-for-All-Gear>
+SplatHex displays Damage Up for All Gear<br>
+<p>Watch out for this SplatHex bug! Even though octoglasses' main ability is last-ditch effort, SplatHex shows damage up as the...</p>
+</a>
+
+
+
+<li><a href=/2022/06/06/The-Original-Mew-Glitch>
+The Original Mew Glitch<br>
+<p>On November 6th 2021, Did You Know Gaming uploaded a video about the origins of Mew. This video made me...</p>
+</a>
+
+
+
+<li><a href=/2022/05/27/How-to-Make-Custom-3DS-Mega-Badges>
+How to Make Custom 3DS Mega Badges<br>
+<p>Nintendo Badge Arcade is a free-to-play game for the 3DS in which you play a crane game to unlock badges...</p>
+</a>
+
+
+
+<li><a href=/2022/05/02/You-Know-More-About-Marketing-than-the-Klonoa-Ad-People>
+If you're learning marketing and you're worried you're not good enough, know you're better than these Klonoa ads<br>
+<p>I just finished my marketing course, which was required for my itech degree. I've always been wary of business, so...</p>
+</a>
+
+
+
+<li><a href=/2022/04/16/The-Origin-Of-Every-Kirby-Song-on-the-Kirby-or-Touhou-Song-Title-Quiz>
+The Origin Of Every Kirby Song on the Kirby or Touhou Song Title Quiz<br>
+<p>Last week, I came across a quiz that asks the quizzee, "Is this song title from Kirby or Touhou?". I...</p>
+</a>
+</ul>
+</aside>
+</body></html>
