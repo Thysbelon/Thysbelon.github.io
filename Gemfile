@@ -16,7 +16,7 @@ group :jekyll_plugins do
     gem "jekyll-postfiles"
     gem "jekyll-paginate-v2"
 	gem "jekyll-archives", "~> 2.2.1"
-	gem "jekyll-minifier"
+#    gem "jekyll-minifier"
 #    gem "jekyll-feed", "~> 0.12"
 end
 

@@ -48,7 +48,7 @@ plugins:
    - jekyll-paginate-v2
    - jekyll-archives
    #  - jekyll-feed
-   - jekyll-minifier
+   #- jekyll-minifier
 
 pagination:
   enabled: true
@@ -59,14 +59,14 @@ pagination:
   sort_field: 'date'
   sort_reverse: true
 
-jekyll-minifier:
-  compress_javascript: false
-  compress_json: false
-  exclude: 
-    - 'atom-en.xml'
-    - 'atom-jp.xml'
-  uglifier_args:
-    harmony: true
+#jekyll-minifier:
+#  compress_javascript: false
+#  compress_json: false
+#  exclude: 
+#    - 'atom-en.xml'
+#    - 'atom-jp.xml'
+#  uglifier_args:
+#    harmony: true
    
 jekyll-archives:
   slug_mode: raw
