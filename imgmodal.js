@@ -42,4 +42,4 @@ document.addEventListener('DOMContentLoaded', function() {
 		})
 	})
 	document.head.innerHTML+='<style>.gallery img{cursor:pointer}.gallery img,.gallery>div{transition-duration:.4s}.gallery>img:hover,.gallery>img:focus{border-color:var(--pink)} #imgmodal img {width:80vw;max-height:80vh;background-color:white} dialog{background-color:white;border-radius:1rem} #imgmodal img[src$=".svg"]{padding:2vw} dialog::backdrop{background-color: rgb(255 255 255 / 50%)}</style>'
-}) //help?
+})
