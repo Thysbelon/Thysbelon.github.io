@@ -4,18 +4,20 @@
 <meta charset=UTF-8>
 <link rel=preload href=/ThysbelonTitle.svg as=image>
 <link rel=preload href=/thysbelonicon.svg as=image>
-{% if page.noindex or page.type %}<meta name=robots content=noindex>{% endif %}
-<title>{% if page.url != "/" %}{% if page.title %}{{ page.title }}{% else %}{{ page.url | split: "/" | last | replace: "-", " " }}{% endif %} - {% endif %}Thysbelon/シズビロン</title>
+{%- if page.noindex or page.type -%}<meta name=robots content=noindex>{%- endif -%}
+<title>{%- if page.url != "/" -%}{%- if page.title -%}{{ page.title }}{%- else -%}{{ page.url | split: "/" | last | replace: "-", " " }}{%- endif -%} - {%- endif -%}Thysbelon/シズビロン</title>
 <meta name=viewport content=width=device-width,initial-scale=1.0>
 <link rel=icon type=image/x-icon href=/thysbelonicon.svg>
 <link rel=stylesheet href=/BlogStylesheet.css>
-<meta name=theme-color media=(prefers-color-scheme:light) content=#e0fffe>
-<meta name=theme-color media=(prefers-color-scheme:dark) content=#490078>
-{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
-{% if page.style %}{% if page.style contains "<style>" %}{{ page.style }}{% else %}<style>{{ page.style }}</style>{% endif %}{% endif %}
-{% if page.script %}{{ page.script }}{% endif %}
-{% if page.type %}<style>nav > a {align-self:flex-start;}</style>{% endif %}
-{% if page.url == "/" %}
+<meta name=theme-color content=#ff4c60>
+{%- if page.description -%}<meta name="description" content="{{ page.description }}">{%- endif -%}
+{%- if page.style -%}{%- if page.style contains "<style>" -%}{{ page.style }}{%- else -%}<style>{{ page.style }}</style>{%- endif -%}{%- endif -%}
+{%- if page.script -%}{{ page.script }}{%- endif -%}
+{%- if page.type -%}<style>nav > a {align-self:flex-start;}</style>
+<script src=/Archive/hidelang.js></script>{%- endif -%} {% comment %}do not put a script in the front matter of archive.html. it is a layout, not a page.{% endcomment %}
+{%- if page.url == "/" -%}
+<!--what the hel-->
+<!--please god-->
 <style>
 /*@font-face {
 	font-family:Compagnon;
@@ -44,78 +46,78 @@ nav>ul,nav {
 	top:0;
 }
 </style>
-{% endif %}
+{%- endif -%}
 </head>
 <body>
-<header>{% if page.url != "/" %}<a href=/>{% endif %}<img id=blogtitle src=/ThysbelonTitle.svg alt=""><img src=/thysbelonicon.svg alt="">{% if page.url != "/" and page.url != "/Home" %}</a>{% endif %}</header>
+<header>{%- if page.url != "/" -%}<a href=/>{%- endif -%}<img id=blogtitle src=/ThysbelonTitle.svg alt=""><img src=/thysbelonicon.svg alt="">{%- if page.url != "/" and page.url != "/Home" -%}</a>{%- endif -%}</header>
 <nav><ul {% if page.type %}style=flex-wrap:wrap{% endif %}>
-{% if page.url == "/" %}
+{%- if page.url == "/" -%}
 	<li><a href=Home lang=en>English</a>
 	<li><a href=ホーム lang=ja>日本語</a>
-{% elsif page.type %}
-	{% if page.title %}<p style=margin:0;position:absolute;left:0;>{{ page.title }}</p>{% elsif page.type == "year" %}<p style=margin:0;position:absolute;left:0;>{{ page.date | date: "%Y" }}</p>{% else %}<p style=margin:0;position:absolute;left:0;>{{ page.date | date: "%Y-%m" }}</p>{% endif %}
-	{% for i in site.archives %}
-		{% if i.type == "year" %}
+{%- elsif page.type -%}
+	{%- if page.title -%}<p style=margin:0;position:absolute;left:0;>{{ page.title }}</p>{%- elsif page.type == "year" -%}<p style=margin:0;position:absolute;left:0;>{{ page.date | date: "%Y" }}</p>{%- else -%}<p style=margin:0;position:absolute;left:0;>{{ page.date | date: "%Y-%m" }}</p>{%- endif -%}
+	{%- for i in site.archives -%}
+		{%- if i.type == "year" -%}
 			<li><details><summary>{{ i.url | split: "/" | last }}</summary><ul><li><a href={{ i.url }}>all</a></li>
-			{% for i2 in site.archives %}
-				{% if i2.type == "month" and i2.url contains i.url %}<li><a href={{ i2.url }}>{{ i2.url | split: "/" | last }}</a></li>{% endif %}
-			{% endfor %}</ul></details></li>
-		{% endif %}
-	{% endfor %}
+			{%- for i2 in site.archives -%}
+				{%- if i2.type == "month" and i2.url contains i.url -%}<li><a href={{ i2.url }}>{{ i2.url | split: "/" | last }}</a></li>{%- endif -%}
+			{%- endfor -%}</ul></details></li>
+		{%- endif -%}
+	{%- endfor -%}
 	<li><a href=/Tags/>Tags</a>
 	<li><a href=/Categories/>Categories</a>
 	<li><a href=/Archive/ lang=en>Archive</a>
 	<li><a href=/アーカイブ/ lang=ja>アーカイブ</a>
-{% elsif page.url == "/Tags/" or page.url == "/Categories/" %}
+{%- elsif page.url == "/Tags/" or page.url == "/Categories/" -%}
 	<li><a href=/Archive/ lang=en>Archive</a>
 	<li><a href=/アーカイブ/ lang=ja>アーカイブ</a>
-{% elsif page.id %}
-	{% for i in site.pages %}
-		{% assign groupcheck = i.url | split: "/" %}
-		{% if groupcheck[2] == nil %}
-			{% unless i.url == page.url or i.url contains ".html" or i.url contains "css" or i.url == "/" or i.url == "/Home" or i.layout == "default-jp" or i.type or i.nonav %}
+{%- elsif page.id -%}
+	{%- for i in site.pages -%}
+		{%- assign groupcheck = i.url | split: "/" -%}
+		{%- if groupcheck[2] == nil -%}
+			{%- unless i.url == page.url or i.url contains ".html" or i.url contains "css" or i.url == "/" or i.url == "/Home" or i.layout == "default-jp" or i.type or i.nonav -%}
 				<li><a href={{ i.url }}>{{ i.url | split: "/" | last | replace: "-", " " }}</a>
-			{% endunless %}
-		{% endif %}
-	{% endfor %}
+			{%- endunless -%}
+		{%- endif -%}
+	{%- endfor -%}
 	<li><a href=/>Language/言語</a>
 	<li><a href=https://thysbelon.wordpress.com target=_blank>WordPress</a>
-{% else %}
-	{% assign groupcheck = page.url | split: "/" %}
-	{% if groupcheck[2] != nil %}
-		{% assign group = groupcheck[1] | prepend: "/" | append: "/" %}
+{%- else -%}
+	{%- assign groupcheck = page.url | split: "/" -%}
+	{%- if groupcheck[2] != nil -%}
+		{%- assign group = groupcheck[1] | prepend: "/" | append: "/" -%}
 		<li><a href={{ group }}>{{ groupcheck[1] | replace: "-", " " }}</a>
-		{% for i in site.pages %}
-			{% if i.url contains group and i.url != group and i.url != page.url %}
+		{%- for i in site.pages -%}
+			{%- if i.url contains group and i.url != group and i.url != page.url -%}
 				<li><a href={{ i.url | remove: group | prepend: "../" }}>{{ i.url | split: "/" | last | replace: "-", " " }}</a>
-			{% endif %}
-		{% endfor %}
-	{% else %}
-		{% for i in site.pages %}
-			{% if i.url contains page.url and i.url != page.url %}
-				{% assign group = true %}
-				{% break %}
-			{% endif %}
-		{% endfor %}
-		{% if group == true %}
-			{% for i in site.pages %}
-				{% if i.url contains page.url and i.url != page.url %}
+			{%- endif -%}
+		{%- endfor -%}
+	{%- else -%}
+		{%- for i in site.pages -%}
+			{%- if i.url contains page.url and i.url != page.url -%}
+				{%- assign group = true -%}
+				{%- break -%}
+			{%- endif -%}
+		{%- endfor -%}
+		{%- if group == true -%}
+			{%- for i in site.pages -%}
+				{%- if i.url contains page.url and i.url != page.url -%}
 					<li><a href={{ i.url | remove: page.url }}>{{ i.url | split: "/" | last | replace: "-", " " }}</a>
-				{% endif %}
-			{% endfor %}
-		{% else %}
-			{% for i in site.pages %}
-				{% assign groupcheck = i.url | split: "/" %}
-				{% if groupcheck[2] == nil %}
-					{% unless i.url == page.url or i.url contains ".html" or i.url contains "css" or i.url == "/" or i.url == "/Home" or i.layout == "default-jp" or i.type or i.nonav %}
+				{%- endif -%}
+			{%- endfor -%}
+		{%- else -%}
+			{%- for i in site.pages -%}
+				{%- assign groupcheck = i.url | split: "/" -%}
+				{%- if groupcheck[2] == nil -%}
+					{%- unless i.url == page.url or i.url contains ".html" or i.url contains "css" or i.url == "/" or i.url == "/Home" or i.layout == "default-jp" or i.type or i.nonav -%}
 						<li><a href={{ i.url }}>{{ i.url | split: "/" | last | replace: "-", " " }}</a>
-					{% endunless %}
-				{% endif %}
-			{% endfor %}
+					{%- endunless -%}
+				{%- endif -%}
+			{%- endfor -%}
 			<li><a href=/>Language/言語</a>
 			<li><a href=https://thysbelon.wordpress.com target=_blank>WordPress</a>
-		{% endif %}
-	{% endif %}
-{% endif %}</ul></nav>
+		{%- endif -%}
+	{%- endif -%}
+{%- endif -%}</ul></nav>
 {{ content }}
 <footer></footer></body></html>

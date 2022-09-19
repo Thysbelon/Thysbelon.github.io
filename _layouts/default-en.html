@@ -12,7 +12,7 @@
 <meta name=theme-color content=#ff4c60>
 {% if page.id %}<link rel=author href=/About/>{% endif %}
 <meta name=viewport content=width=device-width,initial-scale=1.0>
-{% if page.description %}<meta name="description" content="{{ page.description }}">{% elsif page.id %}<meta name="description" content="{% comment %}"{% endcomment %}{{ page.excerpt | replace: "<p>"," " | strip_html | replace: '"','&quot;' | truncatewords: 50 }}"{% comment %}"{% endcomment %}>{% endif %}
+{% if page.description %}<meta name="description" content="{{ page.description }}">{% elsif page.id %}<meta name="description" content="{{ page.excerpt | replace: "<p>"," " | strip_html | strip_newlines | replace: '"','&quot;' | truncatewords: 50 }}">{% endif %}
 {% if page.script %}{{ page.script }}{% endif %}
 {% if page.url == "/Home" or page.url == "/Subscribe/" %}<link rel="alternate" type="application/atom+xml" title="Thysbelon" href="/atom-en.xml">{% endif %}
 <link rel=icon type=image/x-icon href={% if page.custmicon %}{{ page.custmicon }}{% else %}/thysbelonicon.svg{% endif %}>

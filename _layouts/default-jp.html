@@ -6,81 +6,82 @@
 <link href=https://fonts.bunny.net/css?family=kaisei-decol:700|kiwi-maru:500 rel=stylesheet>-->
 <!--<link href=https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@700&family=Kiwi+Maru:wght@500&display=fallback rel=stylesheet>-->
 <!--<link href=https://api.fonts.coollabs.io/css2?family=Kaisei+Decol:wght@700&family=Kiwi+Maru:wght@500&display=fallback rel=stylesheet>-->
-<link rel=preload href=/Compagnon-Roman.woff2 as=font type="font/woff2" crossorigin>
 <link rel=preload href=/ThysbelonTitle.svg as=image type=image/svg+xml>
 <link rel=preload href=/thysbelonicon.svg as=image type=image/svg+xml>
 <link rel=preload href=/BlogStylesheet.css as=style>
-{% if page.noindex or page.url contains "/ページ/" %}<meta name=robots content=noindex>{% endif %}
-{% if page.alt %}<link rel=alternate hreflang=en href={{ page.alt | prepend: site.url }}>{% endif %}
-<title>{% unless page.url contains "/ホーム/" %}{% if page.title %}{{ page.title }}{% else %}{{ page.url | split: "/" | last | replace: "-", " " }}{% endif %} - {% endunless %}シズビロン</title>
+<meta name="color-scheme" content="dark light">
+{%- if page.noindex or page.url contains "/ページ/" -%}<meta name=robots content=noindex>{%- endif -%}
+{%- if page.alt -%}<link rel=alternate hreflang=en href={{- site.url -}}{{- page.alt -}}>{%- endif -%}
+<title>{%- unless page.url contains "/ホーム/" -%}{%- if page.title -%}{{- page.title -}}{%- else -%}{{- page.url | split: "/" | last | replace: "-", " " -}}{%- endif -%} - {%- endunless -%}シズビロン</title>
 <meta name=theme-color content=#ff4c60>
+{%- if page.id -%}<link rel=author href=/僕について/>{%- endif -%}
 <meta name=viewport content=width=device-width,initial-scale=1.0>
-{% if page.description %}<meta name="description" content="{{ page.description }}">{% elsif page.id %}<meta name="description" content="{% comment %}"{% endcomment %}{{ page.excerpt | strip_html | replace: '"','&quot;' | truncatewords: 50 }}"{% comment %}"{% endcomment %}>{% endif %}
-{% if page.script %}{{ page.script }}{% endif %}
-{% if page.title == "ホーム" or page.title == "購読する" %}<link rel="alternate" type="application/atom+xml" title="シズビロン" href="/atom-jp.xml">{% endif %}
-<link rel=icon type=image/x-icon href=/thysbelonicon.svg>
+{%- if page.description -%}<meta name="description" content="{{- page.description -}}">{%- elsif page.id -%}<meta name="description" content="{{- page.excerpt | strip_html | strip_newlines | strip | remove: "	" | replace: '"','&quot;' | append: "…" -}}">{%- endif -%}{%- comment -%}'{%- endcomment -%}
+{%- if page.script -%}{{- page.script -}}{%- endif -%}
+{%- if page.title == "ホーム" or page.title == "購読する" -%}<link rel="alternate" type="application/atom+xml" title="シズビロン" href="/atom-jp.xml">{%- endif -%}
+<link rel=icon type=image/x-icon href={%- if page.custmicon -%}{{- page.custmicon -}}{%- else -%}/thysbelonicon.svg{%- endif -%}>
 <link rel=stylesheet href=/BlogStylesheet.css>
-{% if page.style %}{% if page.style contains "<style>" %}{{ page.style }}{% else %}<style>{{ page.style }}</style>{% endif %}{% endif %}
+{%- if page.style -%}{%- if page.style contains "<style>" -%}{{- page.style -}}{%- else -%}<style>{{- page.style -}}</style>{%- endif -%}{%- endif -%}
 </head>
 <body>
-<header>{% if page.title != "ホーム" %}<a href=/ホーム>{% endif %}<img id=blogtitle src=/ThysbelonTitle.svg alt=シズビロン。 width=1002 height=272><img src=/thysbelonicon.svg alt=スズメガのロゴ。 width=280 height=280>{% if page.title != "ホーム" %}</a>{% endif %}</header>
+<header>{%- if page.url != "/ホーム/index.html" -%}<a href=/ホーム>{%- endif -%}{%- if page.custmlogo -%}{{- page.custmlogo -}}{%- else -%}<img id=blogtitle src=/ThysbelonTitle.svg alt=シズビロン。 width=1002 height=272><img src=/thysbelonicon.svg alt=スズメガのロゴ。 width=280 height=280>{% endif %}{%- if page.url != "/ホーム/index.html" -%}</a>{%- endif -%}</header>
 <nav><ul {% if page.title == "アーカイブ" %}style=flex-wrap:wrap{% endif %}>
-{% if page.title == "アーカイブ" %}
-	{% for i in site.archives %}
-		{% if i.type == "year" %}
-			<li><details><summary>{{ i.url | split: "/" | last }}</summary><ul><li><a href={{ i.url }}>all</a></li>
-			{% for i2 in site.archives %}
-				{% if i2.type == "month" and i2.url contains i.url %}<li><a href={{ i2.url }}>{{ i2.url | split: "/" | last }}</a></li>{% endif %}
-			{% endfor %}</ul></details></li>
-		{% endif %}
-	{% endfor %}
+{%- if page.title == "アーカイブ" -%}
+	{%- for i in site.archives -%}
+		{%- if i.type == "year" -%}
+			<li><details><summary>{{- i.url | split: "/" | last -}}</summary><ul><li><a href={{- i.url -}}>all</a></li>
+			{%- for i2 in site.archives -%}
+				{%- if i2.type == "month" and i2.url contains i.url -%}<li><a href={{- i2.url -}}>{{- i2.url | split: "/" | last -}}</a></li>{%- endif -%}
+			{%- endfor -%}</ul></details></li>
+		{%- endif -%}
+	{%- endfor -%}
 	<li><a href=/Tags/>Tags</a>
 	<li><a href=/Categories/>Categories</a>
-{% elsif page.id or page.url contains "/ホーム/" %}
-	{% for i in site.pages %}
-		{% assign groupcheck = i.url | split: "/" %}
-		{% if groupcheck[2] == nil %}
-			{% unless i.url == page.url or i.url contains ".html" or i.url contains "css" or i.url contains ".xml" or i.url == "/" or i.title == "ホーム" or i.layout contains "en" or i.type or i.nonav %}
-				<li><a href={{ i.url }}>{{ i.title }}</a>
-			{% endunless %}
-		{% endif %}
-	{% endfor %}
+{%- elsif page.id or page.url contains "/ホーム/" -%}
+	{%- for i in site.pages -%}
+		{%- assign groupcheck = i.url | split: "/" -%}
+		{%- if groupcheck[2] == nil -%}
+			{%- unless i.url == page.url or i.url contains ".html" or i.url contains "css" or i.url contains ".xml" or i.url == "/" or i.title == "ホーム" or i.layout contains "en" or i.type or i.nonav -%}
+				<li><a href={{- i.url -}}>{{- i.title -}}</a>
+			{%- endunless -%}
+		{%- endif -%}
+	{%- endfor -%}
 	<li><a href=/>言語/Language</a>
-{% else %}
-	{% assign groupcheck = page.url | split: "/" %}
-	{% if groupcheck[2] != nil %}
-		{% assign group = groupcheck[1] | prepend: "/" | append: "/" %}
-		<li><a href={{ group }}>{{ groupcheck[1] | replace: "-", " " }}</a>
-		{% for i in site.pages %}
-			{% if i.url contains group and i.url != group and i.url != page.url %}
-				<li><a href={{ i.url | remove: group | prepend: "../" }}>{{ i.title }}</a>
-			{% endif %}
-		{% endfor %}
-	{% else %}
-		{% for i in site.pages %}
-			{% if i.url contains page.url and i.url != page.url %}
-				{% assign group = true %}
-				{% break %}
-			{% endif %}
-		{% endfor %}
-		{% if group == true %}
-			{% for i in site.pages %}
-				{% if i.url contains page.url and i.url != page.url %}
-					<li><a href={{ i.url | remove: page.url }}>{{ i.title }}</a>
-				{% endif %}
-			{% endfor %}
-		{% else %}
-			{% for i in site.pages %}
-				{% assign groupcheck = i.url | split: "/" %}
-				{% if groupcheck[2] == nil %}
-					{% unless i.url == page.url or i.url contains ".html" or i.url contains "css" or i.url contains ".xml" or i.url == "/" or i.title == "ホーム" or i.layout contains "en" or i.type or i.nonav %}
-						<li><a href={{ i.url }}>{{ i.title }}</a>
-					{% endunless %}
-				{% endif %}
-			{% endfor %}
+{%- else -%}
+	{%- assign groupcheck = page.url | split: "/" -%}
+	{%- if groupcheck[2] != nil -%}
+		{%- assign group = groupcheck[1] | prepend: "/" | append: "/" -%}
+		<li><a href={{- group -}}>{{- groupcheck[1] | replace: "-", " " -}}</a>
+		{%- for i in site.pages -%}
+			{%- if i.url contains group and i.url != group and i.url != page.url -%}
+				<li><a href={{- i.url | remove: group | prepend: "../" -}}>{{- i.title -}}</a>
+			{%- endif -%}
+		{%- endfor -%}
+	{%- else -%}
+		{%- for i in site.pages -%}
+			{%- if i.url contains page.url and i.url != page.url -%}
+				{%- assign group = true -%}
+				{%- break -%}
+			{%- endif -%}
+		{%- endfor -%}
+		{%- if group == true -%}
+			{%- for i in site.pages -%}
+				{%- if i.url contains page.url and i.url != page.url -%}
+					<li><a href={{- i.url | remove: page.url -}}>{{- i.title -}}</a>
+				{%- endif -%}
+			{%- endfor -%}
+		{%- else -%}
+			{%- for i in site.pages -%}
+				{%- assign groupcheck = i.url | split: "/" -%}
+				{%- if groupcheck[2] == nil -%}
+					{%- unless i.url == page.url or i.url contains ".html" or i.url contains "css" or i.url contains ".xml" or i.url == "/" or i.title == "ホーム" or i.layout contains "en" or i.type or i.nonav -%}
+						<li><a href={{- i.url -}}>{{- i.title -}}</a>
+					{%- endunless -%}
+				{%- endif -%}
+			{%- endfor -%}
 			<li><a href=/>言語/Language</a>
-		{% endif %}
-	{% endif %}
-{% endif %}</ul></nav>
-{{ content }}
+		{%- endif -%}
+	{%- endif -%}
+{%- endif -%}</ul></nav>
+{{- content -}}
 <footer>ヘッダーの英語のフォントは<a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a>から。</footer></body></html>
