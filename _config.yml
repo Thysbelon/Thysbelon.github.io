@@ -40,6 +40,7 @@ defaults:
       type: "posts"
     values:
       layout: "post-en"
+      locale: "en_US"
       excerpt_separator: <!--more-->
   
 # Build settings
