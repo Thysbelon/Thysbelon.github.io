@@ -267,6 +267,11 @@ h2[itemprop], h1[itemprop], article > h1 {
 	grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 	gap:1rem
 }
+.siximagegrid {
+	display:grid;
+	gap:1vw;
+	grid-template-columns: auto auto
+}
 .padt {
 	padding-top:1rem;
 }
@@ -365,7 +370,7 @@ html:lang(en) .gallery article > p, html:lang(en) .gallery article > h2 {
 	30%{opacity:1}
 	33.33% {visibility: hidden; opacity:0}
 }
-section>details{margin-bottom:1rem}
+section>details,section>details>summary{margin-bottom:1rem}
 blockquote {
 	margin-left:3vw;
 	margin-right:3vw;
