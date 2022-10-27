@@ -525,6 +525,7 @@ img[src^="/emoji/"]{
 	margin:0;
 	vertical-align:-10%
 }
+summary{cursor:pointer}
 @media (prefers-color-scheme:dark) /*assuming that this media query will not activate if forced-colors is on*/ {
 	:root {
 		--bg:var(--purple);
