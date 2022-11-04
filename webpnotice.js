@@ -1,5 +1,5 @@
 let elementsArray = document.querySelectorAll("img[src$='.webp']");
-document.querySelector("nav").outerHTML+="<div id=webpnotice><div id=close style=width:1rem;height:1rem;background:var(--pink);float:right;display:flex;justify-content:center;align-items:center;cursor:pointer>X</div>Animated webp images aren't as compatible as animated gif images, but it's not impossible to convert webp to gif. <a href=https://ezgif.com/webp-to-gif target=_blank>Online converters are aplenty</a>. As for offline converters, I briefly tested the command line program <a href=https://imagemagick.org/ target=_blank>ImageMagick</a> and found it good at maintaining quality.</div>"
+document.querySelector("nav").outerHTML+="<div id=webpnotice><div id=close style=width:1rem;height:1rem;background:var(--pink);float:right;display:flex;justify-content:center;align-items:center;cursor:pointer>X</div>Webp images aren't as compatible as other formats, but it's not impossible to convert them. <a href=/2022/11/04/How-to-Convert-from-WebP-or-SVG-to-Formats-like-PNG-and-GIF>See my post on converting webp to more common formats like PNG and GIF</a>.</div>"
 var modal = document.getElementById("webpnotice");
 document.getElementById("close").addEventListener("click",function(){
 	modal.style.display="none"
