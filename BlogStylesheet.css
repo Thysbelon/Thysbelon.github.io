@@ -413,6 +413,12 @@ abbr {
 strong {
 	color: var(--pink);
 }
+code {
+	background:black;
+	color:white;
+	padding:.1rem;
+	border-radius:.4rem
+}
 footer {
 	bottom:.4rem;
 	position:absolute;
