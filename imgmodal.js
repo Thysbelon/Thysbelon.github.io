@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
 			if (e.key === "Enter") {
 				console.log(this)
 				modalImg.src = this.src;
+				if (this.className.includes("pixl")) {
+					modal.style.imageRendering="pixelated"
+				} else {modal.style.imageRendering="auto"}
 				modal.showModal()
 			}
 		});
