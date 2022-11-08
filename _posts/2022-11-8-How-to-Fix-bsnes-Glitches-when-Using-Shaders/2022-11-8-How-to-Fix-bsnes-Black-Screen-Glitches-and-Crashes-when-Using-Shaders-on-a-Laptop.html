@@ -1,0 +1,13 @@
+---
+tags:
+ - Guide
+ - Emulator
+ - bsnes
+ - SNES
+categories:
+ - Video Game
+short: true
+title: "How to Fix bsnes Black Screen, Glitches and Crashes when Using Shaders on a Laptop"
+---
+<img src=NTSC-Mame.webp class=fri alt="A screenshot of Kirby Super Star running in bsnes. the bottom two thirds of the screen are blue and green.">
+<p>Hello! When I used bsnes for the first time on my new laptop, I noticed that setting the shader to CRT-Royale just gave me a black screen (several other shaders also had weird issues). Looking at shader-related issues on bsnes's github page suggested that a faulty graphics driver was to blame. I tried switching from "Game-Ready Drivers" to "Studio Drivers" in GeForce Experience, but that made no difference. Then, I was struck by an idea, what if the problem was caused by my computer using integrated graphics for bsnes instead of the NVIDIA card? I used the NVIDIA Control Panel to switch bsnes from the automatic selection of integrated graphics to the NVIDIA card, and voilà! All the shaders work perfectly! I hope this story helps you, reader. <img src=/emoji/😊.svg alt=😊>
