@@ -13,6 +13,15 @@
   </author>
 
   <entry>
+    <title>How to Fix bsnes Black Screen, Glitches and Crashes when Using Shaders on a Laptop</title>
+	<id>/2022/11/08/How-to-Fix-bsnes-Black-Screen-Glitches-and-Crashes-when-Using-Shaders-on-a-Laptop</id>
+    <link href="/2022/11/08/How-to-Fix-bsnes-Black-Screen-Glitches-and-Crashes-when-Using-Shaders-on-a-Laptop"/>
+    <summary type="html"><![CDATA[<a href="/2022/11/08/How-to-Fix-bsnes-Black-Screen-Glitches-and-Crashes-when-Using-Shaders-on-a-Laptop"><img alt="A screenshot of Kirby Super Star running in bsnes. the bottom two thirds of the screen are blue and green." src="/2022/11/08/How-to-Fix-bsnes-Black-Screen-Glitches-and-Crashes-when-Using-Shaders-on-a-Laptop/../NTSC-Mame.webp" style="max-height:80vh;float:right" /></a>]]>Hello! When I used bsnes for the first time on my new laptop, I noticed that setting the shader to CRT-Royale just gave me a black screen (several other shaders also had weird issues). Looking at shader-related issues on bsnes's github page suggested that a faulty graphics driver was to...</summary>
+	<updated>2022-11-08T17:00:00Z</updated>
+	<published>2022-11-08T17:00:00Z</published>
+  </entry>
+
+  <entry>
     <title>How to Convert from WebP or SVG to Formats like PNG and GIF</title>
 	<id>/2022/11/04/How-to-Convert-from-WebP-or-SVG-to-Formats-like-PNG-and-GIF</id>
     <link href="/2022/11/04/How-to-Convert-from-WebP-or-SVG-to-Formats-like-PNG-and-GIF"/>
@@ -43,7 +52,7 @@
     <title>Kirby Super Star Ultra Everything Unlocked Save File</title>
 	<id>/2022/10/24/Kirby-Super-Star-Ultra-Everything-Unlocked-Save-File</id>
     <link href="/2022/10/24/Kirby-Super-Star-Ultra-Everything-Unlocked-Save-File"/>
-    <summary type="html">I had trouble finding a 100% save file for this game online, so I'm uploading mine! Actually, my save file is only at 90% completion, but it should have most of the content unlocked. You can also use the Action Replay cheat code 1205C170 0000ffff to unlock all movies. Are...</summary>
+    <summary type="html">I had trouble finding a 100% save file for this game online, so I'm uploading mine! Actually, my save file is only at 92% completion, but it should have most of the content unlocked. You can also use the Action Replay cheat code 1205C170 0000ffff to unlock all movies. Are...</summary>
 	<updated>2022-10-24T17:00:00Z</updated>
 	<published>2022-10-24T17:00:00Z</published>
   </entry>

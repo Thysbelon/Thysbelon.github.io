@@ -34,17 +34,20 @@
 </ul>
 <p>Offline Converters:
 <p>Just use <a target=_blank href=https://imagemagick.org/>ImageMagick</a>. It's a command-line tool, but converting is easy.
-<p>To convert a single image: <code>magick input.webp output.png</code>
+<p>To convert a single image: <code>magick input.webp output.png</code> or <code>convert input.webp output.png</code>
 <p>To convert all webp images in the directory to png: <br><code>mogrify -format png *.webp</code>
 <p>On Windows: <code>magick mogrify -format png *.webp</code>
-<p>To convert all SVG images to png with transparent backgrounds: <br><code>mogrify -background none -format png *.svg</code> (errors may appear even if the program works correctly)
+<p>To convert all SVG images to png with transparent backgrounds: <br><code>mogrify -background none -format png *.svg</code> (<strong>errors may appear even if the program works correctly</strong>)
+<p>The quality of svg to png conversions can be improved by adding <code>-density 400</code> to the command.
+<p>When installing ImageMagick on Windows, make sure you leave "add to system path" checked <img itemprop=image src=/emoji/✔.svg>. This allows you to use the program without needing to type the full file explorer path to ImageMagick every time.
+<p>Some Linux distributions only have ImageMagick-6 in their package repository. If you are using ImageMagick-6, svg conversions will have incorrect black strokes. This issue can be fixed by installing inkscape.
 <p>ImageMagick can be used on Android via <a target=_blank href=https://termux.dev/en/>Termux</a>.
 <ul><li><a target=_blank href=https://wiki.termux.com/wiki/Termux-setup-storage>Follow this guide to allow Termux to access your phone's storage</a>
 <li>Run <code>apt update</code> and <code>apt upgrade</code> to make sure the list of installable apps and installed apps are up to date.
 <li>Run <code>apt install imagemagick</code>
 <li>Linux Terminal tips: use <code>ls</code> to view the contents of the current directory. Subdirectories will usually be in color. Use <code>pwd</code> to show the current directory. Use <code>cd directoryname</code> to navigate to a different directory. Use just <code>cd</code> to return to the home directory.
 </section>
-<div class=tags>Tags:<ul><li><a href=/Tags/Guides rel=tag>Guides</a></ul></div>
+<div class=tags>Tags:<ul><li><a href=/Tags/Guide rel=tag>Guide</a></ul></div>
 <div class=tags>Categories:<ul><li><a href=/Categories/Web-Development rel=category>Web Development</a></ul></div>
 </main>
 <aside>
@@ -74,13 +77,6 @@ Android 5.0 Lollipop: the Best Emoji<br>
 
 
 
-<li><a href=/2022/10/07/Updated-Orchid-Theme-for-WiiFlow-Lite-(and-Wii-U-Icons)>
-Updated Orchid Theme for WiiFlow Lite (and Wii U Icons)<br>
-<p>WiiFlow is an app that displays Wii and GameCube games in a pretty coverflow view. The app used to have...</p>
-</a>
-
-
-
 <li><a href=/2022/02/28/My-Thoughts-on-Illustrator's-Image-Trace>
 My Thoughts on Illustrator's Image Trace<br>
 <p>When I saw the Image Trace feature, I thought it would be an easy way to take low resolution art...</p>
@@ -88,30 +84,16 @@ My Thoughts on Illustrator's Image Trace<br>
 
 
 
+<li><a href=/2022/10/07/Updated-Orchid-Theme-for-WiiFlow-Lite-(and-Wii-U-Icons)>
+Updated Orchid Theme for WiiFlow Lite (and Wii U Icons)<br>
+<p>WiiFlow is an app that displays Wii and GameCube games in a pretty coverflow view. The app used to have...</p>
+</a>
+
+
+
 <li><a href=/2022/01/30/Talking-About-My-Inspirations>
 Talking About My Inspirations<br>
 <p>Hello! Today I'm going to talk a bit more about why I chose the designers that I did in my...</p>
-</a>
-
-
-
-<li><a href=/2022/05/27/How-to-Make-Custom-3DS-Mega-Badges>
-How to Make Custom 3DS Mega Badges<br>
-<p>Nintendo Badge Arcade is a free-to-play game for the 3DS in which you play a crane game to unlock badges...</p>
-</a>
-
-
-
-<li><a href=/2022/07/13/Animated-SVGs-Use-High-CPU-and-Freeze-when-used-as-an-Image>
-Animated SVGs Use High CPU and Freeze when used as an Image<br>
-<p>An SVG animated with CSS @keyframes defined in the SVG itself (not the page's CSS) will use high CPU on...</p>
-</a>
-
-
-
-<li><a href=/2022/10/05/Top-5-Games-for-Game-Design-Class>
-Top 5 Games for Game Design Class<br>
-<p>I don't spend a lot of time thinking about what makes the games I play good, so I'm a bit...</p>
 </a>
 
 
@@ -126,6 +108,27 @@ The Origin Of Every Kirby Song on the Kirby or Touhou Song Title Quiz<br>
 <li><a href=/2022/03/28/Kirby-and-the-Lovely-Colors>
 Kirby and the Lovely Colors<br>
 <p>Kirby and the Forgotten Land released last friday, and it's a lot of fun so far. I love the flat...</p>
+</a>
+
+
+
+<li><a href=/2022/10/05/Top-5-Games-for-Game-Design-Class>
+Top 5 Games for Game Design Class<br>
+<p>I don't spend a lot of time thinking about what makes the games I play good, so I'm a bit...</p>
+</a>
+
+
+
+<li><a href=/2022/05/27/How-to-Make-Custom-3DS-Mega-Badges>
+How to Make Custom 3DS Mega Badges<br>
+<p>Nintendo Badge Arcade is a free-to-play game for the 3DS in which you play a crane game to unlock badges...</p>
+</a>
+
+
+
+<li><a href=/2022/03/01/Donut-County-and-Other-Games-I-Played-Recently>
+Donut County and Other Games I Played Recently<br>
+<p>Out of the new games I've played recently (which isn't that many), Donut County probably has my favorite art direction....</p>
 </a>
 </ul>
 </aside>
