@@ -131,7 +131,7 @@ header a, header h1 {
 	max-width:37.5rem;
 	flex-grow:1;
 }
-header a:hover, header a:focus {
+header a:hover, header a:focus-visible {
 	filter:hue-rotate(-80deg) brightness(58%) contrast(128%);
 }
 header a:active {
@@ -174,7 +174,7 @@ nav > ul > li > a, nav details, button, .nxt, .btnlink, button:hover:disabled, b
 nav details, button:lang(en), nav li > a:lang(en), .nxt:lang(en), .btnlink:lang(en) {
 	font-weight:bold;
 }
-nav a:hover, button:hover, .nxt:hover, .btnlink:hover, nav a:focus, button:focus, .nxt:focus, .btnlink:focus {
+nav a:hover, button:hover, .nxt:hover, .btnlink:hover, nav a:focus-visible, button:focus-visible, .nxt:focus-visible, .btnlink:focus-visible {
 	background-color:var(--pink);
 	color:white;
 	cursor:pointer;
@@ -194,7 +194,7 @@ nav details {
 	align-self:flex-start;
 }
 nav details ul a{text-decoration-color:transparent}
-nav details ul a:hover,nav details ul a:focus {
+nav details ul a:hover,nav details ul a:focus-visible {
 	background-color:transparent;
 	color:var(--pink)
 }
@@ -320,10 +320,10 @@ html:lang(en) .gallery article > p, html:lang(en) .gallery article > h2 {
 	color:var(--txt);
 	font-weight:initial;
 }
-.gallery > li > a:hover, .gallery > li > a:focus {
+.gallery > li > a:hover, .gallery > li > a:focus-visible {
 	color:var(--pink);
 }
-.gallery>li>a:hover, .gallery>li>a:focus {
+.gallery>li>a:hover, .gallery>li>a:focus-visible {
 	border-color:var(--pink);
 }
 .gallery img {
@@ -381,7 +381,7 @@ p {
 a, button, button:disabled:hover, button:disabled:active {
 	color:var(--link);
 }
-a:hover, a:focus {
+a:hover, a:focus-visible {
 	color:var(--txt);
 }
 a:active {
@@ -429,7 +429,7 @@ footer {
 	font-size:.6rem;
 	min-height:.6rem;
 }
-footer a, footer a:hover, footer a:active, footer a:focus {
+footer a, footer a:hover, footer a:active, footer a:focus-visible {
 	color:var(--purple);
 }
 img, canvas, video {
@@ -544,7 +544,7 @@ summary{cursor:pointer}
 	.websitecolor {
 		filter:invert(87%) sepia(98%) saturate(3651%) hue-rotate(173deg) brightness(116%) contrast(103%);
 	}
-	header a:hover, header a:focus {
+	header a:hover, header a:focus-visible {
 		filter:brightness(290%) hue-rotate(-110deg)
 	}
 	::-webkit-scrollbar-button:vertical:decrement {
