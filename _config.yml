@@ -24,6 +24,10 @@
 #  line in _config.yml. It will appear in your document head meta (for
 #  Google search results) and in your feed.xml site description.
 
+#deployment
+host: 0.0.0.0
+port: 4000
+
 url: https://thysbelon.github.io
 
 permalink: /:year/:month/:day/:title
