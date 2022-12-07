@@ -478,6 +478,9 @@ iframe[title~=Youtube] {
 	aspect-ratio:16/9;
 	border:none
 }
+figure {
+	margin-inline:3vw
+}
 #pixfriends {
 	display:flex;
 	align-items:flex-end;
