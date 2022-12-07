@@ -78,9 +78,6 @@ DEPENDENCIES
   jekyll-archives (~> 2.2.1)
   jekyll-paginate-v2
   jekyll-postfiles
-  tzinfo (~> 1.2)
-  tzinfo-data
-  wdm (~> 0.1.1)
   webrick (~> 1.7)
 
 BUNDLED WITH
