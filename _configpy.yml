@@ -1,2 +1,0 @@
-permalink: /:year/:month/:day/:title:output_ext
-#fix for python -m http.server. python's server does not support redirecting to "example.com/page.html" if the url is "example.com/page", it just gives a 404.

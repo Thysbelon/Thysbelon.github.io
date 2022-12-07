@@ -3,6 +3,7 @@ document.querySelector("nav").outerHTML+="<div id=webpnotice><div id=close style
 var modal = document.getElementById("webpnotice");
 let hold=false
 let noticestyles="<style>#webpnotice{display:none;position:fixed;z-index:1;background:var(--bg);border:solid 3px var(--txt);"
+let TimeoutID;
 document.getElementById("close").addEventListener("click",function(){
 	modal.style.display="none"
 	hold=false
@@ -12,12 +13,13 @@ if(navigator.maxTouchPoints>0 && window.matchMedia("(any-hover: none)").matches)
 		elem.addEventListener("pointerdown", function(e) { //do not use "click"
 			//document.body.style.backgroundColor="red"
 			hold=true
-			setTimeout(function(){if (hold==true){modal.style.display="block"}},1000)
+			TimeoutID=setTimeout(function(){if (hold==true){modal.style.display="block"}},1000)
 		});
 		elem.addEventListener("pointerup", function(){
 			hold=false
+			clearTimeout(TimeoutID)
 		})
-		document.addEventListener("scroll", function(){if(hold==true){hold=false}})
+		document.addEventListener("scroll", function(){if(hold==true){hold=false;clearTimeout(TimeoutID)}})
 	});
 	noticestyles+='bottom:3vh;max-width:80vw}</style>'
 } else {
