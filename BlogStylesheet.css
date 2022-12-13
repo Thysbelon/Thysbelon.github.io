@@ -481,6 +481,12 @@ iframe[title~=Youtube] {
 figure {
 	margin-inline:3vw
 }
+figure>img,figure>video,figure>iframe{
+	margin:auto
+}
+figure>img+figcaption,figure>video+figcaption,figure>iframe+figcaption{
+	text-align:center
+}
 #pixfriends {
 	display:flex;
 	align-items:flex-end;
