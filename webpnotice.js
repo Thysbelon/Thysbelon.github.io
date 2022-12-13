@@ -26,10 +26,11 @@ if(navigator.maxTouchPoints>0 && window.matchMedia("(any-hover: none)").matches)
 	elementsArray.forEach(function(elem) {
 		elem.addEventListener("mouseup", function(e) { //do not use "click"
 			console.log(e.button)
-			if(e.button==2){ //right click
-				console.log(this)
-				modal.style.display="block"
-			}
+			setTimeout(function(){
+				if(e.button==2){ //right click
+					modal.style.display="block"
+				}
+			}, 1)
 		});
 	});
 	noticestyles+='bottom:3vh;right:.5vw;max-width:25vw}</style>'
