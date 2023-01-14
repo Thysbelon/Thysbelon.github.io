@@ -387,6 +387,11 @@ a:hover, a:focus-visible {
 a:active {
 	color:var(--link);
 }
+a[target="_blank"]::after{
+	content: " [opens in new tab]";
+	position:absolute;
+	left:-9999px
+}
 a.yt {
 	background:url(https://www.youtube.com/s/desktop/cafdf09f/img/favicon_144x144.png) center/4.5rem auto no-repeat, var(--ytimgurl) center/100% no-repeat;
 	display:block;
