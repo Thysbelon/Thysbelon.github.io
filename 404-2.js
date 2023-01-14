@@ -1,7 +1,7 @@
 onmessage=async function(e) {
 var keywords=e.data
 keywords=keywords.replace(/\d\d\d\d\/\d\d\/\d\d\//, "")
-keywords=keywords.replace(/-/g, "/")//remove maybe?
+keywords=keywords.replace(/-/g, "/")// remove parenthesis as well?
 keywords=keywords.split('/')
 keywords.shift()
 console.log(keywords)
@@ -18,12 +18,13 @@ for (let keyword of keywordsComplete) {
 keywordsComplete.sort(function(a, b){return a.ranking - b.ranking})
 console.log(keywordsComplete);
 let progress=0;
+father_loop:
 for (let keyword of keywordsComplete) {
 	for (let posturl of keyword.PageMatches) {
 		if (tenposts.includes(posturl) == false) {
 			tenposts[progress]=posturl;
-			progress++;
-			if (progress==10) {break}
+			progress++
+			if (progress==10) {break father_loop} //https://stackoverflow.com/questions/1564818/how-to-break-nested-loops-in-javascript
 		}
 	}
 }

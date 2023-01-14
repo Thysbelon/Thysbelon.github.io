@@ -29,7 +29,7 @@ short: true
 In order to batch convert many webp images to png for static images and gif for animated images, please use this <a href=https://github.com/Thysbelon/webp2common target=_blank>webp2common script</a>.
 <p>To convert all SVG images to png with transparent backgrounds: <br><code>mogrify -background none -format png *.svg</code> (<strong>errors may appear even if the program works correctly</strong>)
 <p>The quality of svg to png conversions can be improved by adding <code>-density 400</code> to the command. Play around with the amount of density until you are happy with the result.
-<p>When installing ImageMagick on Windows, make sure you leave "add to system path" checked <img src=/emoji/✔.svg>. This allows you to use the program without needing to type the full file explorer path to ImageMagick every time.
+<p>When installing ImageMagick on Windows, make sure you leave "add to system path" checked <img src=/emoji/✔.svg alt=✔>. This allows you to use the program without needing to type the full file explorer path to ImageMagick every time.
 <p>Some Linux distributions only have ImageMagick-6 in their package repository. If you are using ImageMagick-6, svg conversions will have incorrect black strokes. This issue can be fixed by installing inkscape.
 <p>ImageMagick can be used on Android via <a target=_blank href=https://termux.dev/en/>Termux</a>.
 <ul><li><a target=_blank href=https://wiki.termux.com/wiki/Termux-setup-storage>Follow this guide to allow Termux to access your phone's storage</a>

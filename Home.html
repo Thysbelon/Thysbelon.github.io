@@ -40,6 +40,12 @@ pagination:
 		{%- endif -%}
 	{%- endif -%}
 	{%- if page.layout == "default-jp" -%}{%- assign outputpost = outputpost | strip_newlines -%}{%- endif -%}
+	{%- assign outputpost = outputpost | replace: "href=http", "PROTECTEXTERNLINK" -%}
+	{%- assign outputpost = outputpost | replace: "href=/", "PROTECTPOSTLINK" -%}
+	{%- assign outputpost = outputpost | replace: "href=", "href=posturlhere/../" -%}
+	{%- assign outputpost = outputpost | replace: "posturlhere", post.url -%}
+	{%- assign outputpost = outputpost | replace: "PROTECTEXTERNLINK", "href=http" -%}
+	{%- assign outputpost = outputpost | replace: "PROTECTPOSTLINK", "href=/" -%}
 	{%- assign outputpost = outputpost | replace: "protectemoji", "<img src=/emoji/" -%}
 	{%- assign outputpost = outputpost | replace: "protectrootimage","src=/" -%}
 	{%- assign outputpost = outputpost | replace: '<img src=/emoji/😊.svg style=width:initial;height:initial;display:block;float:right;max-width:250px alt="Smiling face with smiling eyes emoji.">','<a href=/2022/04/09/Android-5.0-Lollipop-the-Best-Emoji tabindex=-1><img src=/emoji/😊.svg style=width:initial;height:initial;display:block;float:right;max-width:250px alt="Smiling face with smiling eyes emoji."></a>' -%}
@@ -49,7 +55,7 @@ pagination:
 {%- if paginator.total_pages > 1 -%}
 	<div class=pnav>
 	{%- if paginator.previous_page -%}
-		<!--The Japanese version of this webpage gets ALL of its content from THIS page. The only difference jekyll sees is the front matter.-->
+		{%-comment-%}The Japanese version of this webpage gets ALL of its content from THIS page. The only difference jekyll sees is the front matter.{%-endcomment-%}
 		<a class="btnlink fli" href={{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}>{%- if page.layout contains "en" -%}Newer Posts{%- else -%}新しい投稿{%- endif -%}</a>
 	{%- endif -%}
 	{%- if paginator.next_page -%}

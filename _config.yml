@@ -74,7 +74,7 @@ pagination:
 #    harmony: true
    
 jekyll-archives:
-  slug_mode: raw
+  #slug_mode: pretty  Has no effect
   enabled: all
   layout: archive
   layouts:
