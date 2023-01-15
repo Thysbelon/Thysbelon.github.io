@@ -21,18 +21,23 @@ short: true
 <p>The best adblocking extension is uBlock Origin. To install extensions on Android, use either Firefox or Kiwi Browser.
 <p>Offline Converters:
 <p>Just use <a target=_blank href=https://imagemagick.org/>ImageMagick</a>. It's a command-line tool, but converting is easy.
-<p>On Windows, you can open a terminal by navigating to the folder your WebPs are stored in using File Explorer, then shift + right-click on an empty spot, then click "Open in PowerShell" or "Open in Command Prompt".
+<p>The easiest way is to run <a href=https://github.com/Thysbelon/webp2common target=_blank>this webp2common script</a> in the same folder as the WebPs you want to convert (after installing imagemagick)
+<p>When installing ImageMagick on Windows, make sure you leave "add to system path" checked <img src=/emoji/✔.svg alt=✔>. This allows you to use the program without needing to type the full file explorer path to ImageMagick every time (and it allows the webp2common script to function)
+<p>I will also tell you how to use ImageMagick on its own. On Windows, you can open a terminal by navigating to the folder your WebPs are stored in using File Explorer, then shift + right-click on an empty spot, then click "Open in PowerShell" or "Open in Command Prompt".
 <p>To convert a single image: <code>magick input.webp output.png</code> or <code>convert input.webp output.png</code>
 <p>To convert all webp images in the directory to png: <br><code>mogrify -format png *.webp</code>
 <p>On Windows: <code>magick mogrify -format png *.webp</code>
 <p>Do note that <em>animated</em> WebPs converted to png will be output as many still png images, <em>not</em> an animated png. To convert animated webps to an animated image format, use <code>apng</code> or <code>gif</code>. Before converting to apng, check your version with <code>magick -version</code>, any below 7.1.10-20 will incorrectly speed up or slow down the output; the only workaround is to fiddle with the <code>-delay</code> option for each animated image.
-In order to batch convert many webp images to png for static images and gif for animated images, please use this <a href=https://github.com/Thysbelon/webp2common target=_blank>webp2common script</a>.
-<p>To convert all SVG images to png with transparent backgrounds: <br><code>mogrify -background none -format png *.svg</code> (<strong>errors may appear even if the program works correctly</strong>)
-<p>The quality of svg to png conversions can be improved by adding <code>-density 400</code> to the command. Play around with the amount of density until you are happy with the result.
-<p>When installing ImageMagick on Windows, make sure you leave "add to system path" checked <img src=/emoji/✔.svg alt=✔>. This allows you to use the program without needing to type the full file explorer path to ImageMagick every time.
-<p>Some Linux distributions only have ImageMagick-6 in their package repository. If you are using ImageMagick-6, svg conversions will have incorrect black strokes. This issue can be fixed by installing inkscape.
+In order to batch convert many webp images to png for static images and gif for animated images, please use <a href=https://github.com/Thysbelon/webp2common target=_blank>the webp2common script</a>.
+<h2>How to Convert SVGs</h2>
+<p>To convert all SVG images to png with transparent backgrounds: <br><code>mogrify -background none -format png *.svg</code> (<strong>errors may appear even if the program works correctly</strong>). Remember that on Windows you need to add "magick" to the start of the command.
+<p>The quality of svg to png conversions can be improved by adding <code>-density 400</code> to the command (after "mogrify"). Play around with the amount of density until you are happy with the result.
+<h2>How to Use ImageMagick on Android</h2>
 <p>ImageMagick can be used on Android via <a target=_blank href=https://termux.dev/en/>Termux</a>.
 <ul><li><a target=_blank href=https://wiki.termux.com/wiki/Termux-setup-storage>Follow this guide to allow Termux to access your phone's storage</a>
 <li>Run <code>apt update</code> and <code>apt upgrade</code> to make sure the list of installable apps and installed apps are up to date.
 <li>Run <code>apt install imagemagick</code>
-<li>Linux Terminal tips: use <code>ls</code> to view the contents of the current directory. Subdirectories will usually be in color. Use <code>pwd</code> to show the current directory. Use <code>cd directoryname</code> to navigate to a different directory. Use just <code>cd</code> to return to the home directory.
+<li>Linux Terminal tips: use <code>ls</code> to view the contents of the current directory. Subdirectories will usually be in color. Use <code>pwd</code> to show the current directory. Use <code>cd directoryname</code> to navigate to a different directory. Use <code>cd ..</code> to back out of the current directory. Use just <code>cd</code> to return to the home directory.
+<li>You can use the <a href=https://github.com/Thysbelon/webp2common target=_blank>webp2common script</a> on Android.</ul>
+<h2>Miscellaneous Tips</h2>
+<p>Some Linux distributions only have ImageMagick-6 in their package repository. If you are using ImageMagick-6, svg conversions will have incorrect black strokes. This issue can be fixed by installing inkscape.
