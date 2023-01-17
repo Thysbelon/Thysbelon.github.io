@@ -237,7 +237,7 @@ h1 + time {
 }
 button, button:hover, button:active {
 	font-family:inherit;
-	border-style:hidden;
+	/*border-style:hidden;*/ /*why did i add this?*/
 }
 h2, h2 a, h1, h1 a {
 	font-family:Compagnon2,Kaisei Decol,American Typewriter, Hiragino Mincho Pro,Maiandra GD,BIZ UDPMincho;

@@ -15,12 +15,77 @@
 <header><img id=blogtitle src=/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280></a></header>
 <nav><ul><li><a href=/Subscribe/>Subscribe</a><li><a href=/Archive/>Archive</a><li><a href=/Portfolio/>Portfolio</a><li><a href=/About/>About</a><li><details><summary>Art</summary><ul><li><a href=/Digital-Art/>Digital Art</a><li><a href=/Photography/>Photography</a><li><a href=/Programs/>Programs</a></details>
 	<li><a href=/>Language/言語</a></ul></nav>
-<article><h1><a href=/2023/01/07/La-Follia-d'amore-Taiko-no-Tatsujin-Chart>La Follia d'amore Taiko no Tatsujin Chart</a></h1><time> 7 January 2023</time><p>I made a <a href=/2023/01/07/La-Follia-d'amore-Taiko-no-Tatsujin-Chart/../La-Follia-d'amore.zip>Taiko chart of Hyness' phase 2 battle theme (Oni difficulty only)</a>.</article><article><h1><a href=/2022/12/12/Kirby-Star-Allies-Assignment-Elements>Kirby Star Allies Assignment: Elements</a></h1><time>12 December 2022</time><p>This post contains spoilers for Kirby Star Allies. <p>When my professor spoke of what he wanted in this blog post, he talked at length about Red Dead Redemption; about how it creates an immersive experience of the Wild West that bridges the gap between fiction and reality. <p>Kirby is nothing like Red Dead Redemption. <p>There are very few Kirby games that could be described as immersive. Forgotten Land comes the closest, due to having a world modeled after Earth, and how minimalist the UI is. Kirby Canvas Curse also comes...</article><article><h1><a href=/2022/12/08/How-to-Take-a-Screenshot-of-a-YouTube-Video>How to Take a Screenshot of a YouTube Video</a></h1><time> 8 December 2022</time><ul>
+<article><h1><a href=/2023/01/16/Can-You-Play-Midi-with-SF2-on-the-Web>Can You Play Midi with SF2 on the Web?</a></h1><time>16 January 2023</time><style>
+#bopmoth{
+	width:301px;
+	height:303px;
+	object-fit:cover;
+	object-position:0;
+	shape-outside: polygon(2px 58.20%, 17.42% 48.29%, 47.79% -2px, 100% 0px, 100% 100%, 48.95% 100%, 44.83% 94.62%, 4px 68.11%);
+}
+@keyframes bop {
+0%{object-position:-602px;}
+50%{object-position:-301px;}
+}
+</style>
+<a href=/2023/01/16/Can-You-Play-Midi-with-SF2-on-the-Web tabindex=-1><img class=trans src=/2023/01/16/Can-You-Play-Midi-with-SF2-on-the-Web/../headbopsheet.png id=bopmoth alt="A hummingbird moth wearing headphones."></a>
+<script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js></script><script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js></script>
+<p>Yes.</p>
+<button onclick=this.onclick=null;StartJams() style=margin-bottom:1rem>Start Jams</button>
+<p><a href=https://github.com/jet2jet/js-synthesizer target=_blank>Thank you to jet2jet for making such an amazing tool!</a>
+<script>
+function StartJams(){
+console.log('startjams')
+var sfontBuffer;
+var smfBuffer;
+var context; //context.suspend() and context.resume() can be used to pause and play
+var synth; //this can be used to implement Pause and Play features with synth.stopPlayer() and synth.playPlayer(). Implementing this feature would require changing the loop code from a "while true" loop to a recursive named function.
+(async function(){
+	let response = await fetch('/2023/01/16/Can-You-Play-Midi-with-SF2-on-the-Web/../SEQ_GS_VS_RAIKOU.sf3') // I used the linux program "sf3convert" to compress to sf3.
+	sfontBuffer = await response.arrayBuffer()
+	response = await fetch('/2023/01/16/Can-You-Play-Midi-with-SF2-on-the-Web/../SEQ_GS_VS_RAIKOU.mid') // extracted using the latest version of vgmtrans
+	smfBuffer = await response.arrayBuffer()
+})();
+
+JSSynth.waitForReady().then(loadSynthesizer);
+
+async function loadSynthesizer() {
+	context = new AudioContext();
+	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js')
+	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.worklet.min.js');
+	// Create the synthesizer instance for AudioWorkletNode
+	synth = new JSSynth.AudioWorkletNodeSynthesizer();
+	synth.init(context.sampleRate);
+	// You must create AudioWorkletNode before using other methods
+	// (This is because the message port is not available until the
+	// AudioWorkletNode is created)
+	var audioNode = synth.createAudioNode(context);
+	audioNode.connect(context.destination); // or another node...
+	// After node creation, you can use Synthesizer methods
+	await synth.loadSFont(sfontBuffer)
+	await synth.addSMFDataToPlayer(smfBuffer);
+	let tempelem=document.getElementById('bopmoth')
+	await synth.playPlayer();
+	tempelem.style.animation="0.63157894736842105263157894736842s step-end infinite bop"
+	//let looptestseek= await synth.retrievePlayerTotalTicks() - 1000
+	//await synth.seekPlayer(looptestseek) //test loop
+	while (true) {
+		console.log("loop")
+		await synth.waitForPlayerStopped()
+		await synth.seekPlayer(1920) //loop once. tick 0 is the beginning of the song, keep this in mind while calculating. ticks is ticks-per-quarter-note * quarter notes. find tpq by reaper right click > source properties
+		await synth.playPlayer();
+	}
+}
+}
+</script>
+<!--style: "midi-player::part(play-button){color:black} midi-player::part(time){color:black}"
+<script src=/2023/01/16/Can-You-Play-Midi-with-SF2-on-the-Web/../"https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.5.0"></a></script>
+<midi-player sound-font src=/2023/01/16/Can-You-Play-Midi-with-SF2-on-the-Web/../Blue_Rondo_A_La_Turk.mid></midi-player>--></article><article><h1><a href=/2023/01/07/La-Follia-d'amore-Taiko-no-Tatsujin-Chart>La Follia d'amore Taiko no Tatsujin Chart</a></h1><time> 7 January 2023</time><p>I made a <a href=/2023/01/07/La-Follia-d'amore-Taiko-no-Tatsujin-Chart/../La-Follia-d'amore.zip>Taiko chart of Hyness' phase 2 battle theme (Oni difficulty only)</a>.</article><article><h1><a href=/2022/12/12/Kirby-Star-Allies-Assignment-Elements>Kirby Star Allies Assignment: Elements</a></h1><time>12 December 2022</time><p>This post contains spoilers for Kirby Star Allies. <p>When my professor spoke of what he wanted in this blog post, he talked at length about Red Dead Redemption; about how it creates an immersive experience of the Wild West that bridges the gap between fiction and reality. <p>Kirby is nothing like Red Dead Redemption. <p>There are very few Kirby games that could be described as immersive. Forgotten Land comes the closest, due to having a world modeled after Earth, and how minimalist the UI is. Kirby Canvas Curse also comes...</article><article><h1><a href=/2022/12/08/How-to-Take-a-Screenshot-of-a-YouTube-Video>How to Take a Screenshot of a YouTube Video</a></h1><time> 8 December 2022</time><ul>
 <li>Use Firefox
 <li>Right-click the video
 <li>Right-click the video <em>again</em> to open Firefox's context menu
 <li>Click "Take Snapshot..."
 </ul>
-<p>This works on all videos on the web. If a website disables Firefox's right click menu by default, press Shift + Right-Click to open it.</article><article><h1><a href=/2022/12/06/Kirby-Star-Allies-Assignment-Art>Kirby Star Allies Assignment: Art</a></h1><time> 6 December 2022</time><p>Kirby Star Allies uses high definition 3D models for characters and environments. User interface elements use flat vector art with lots of patterns and a limited palette of solid colors; gradients are only used in backgrounds. <p>Sequence Director Tatsuya Kamiyama stated that the HD display is the reason they used a free-roam map rather than a linear one.<br><q cite=https://wikirby.com/wiki/Kirby_Star_Allies_Channel><!--April 25th, 2018-->the Nintendo Switch™ system's higher resolution makes it easier to show a broader view...while keeping Kirby a size where you can see him clearly</q>. <p>The environments have whimsical elements to...</article><article><h1><a href=/2022/11/29/Jekyll-WSL2-localhost-0.0.0.0-View-on-Mobile-Fix>Jekyll WSL2 localhost 0.0.0.0 View on Mobile Fix</a></h1><time>29 November 2022</time><p>If you're making a website, you may want to test that website on smartphones. If you're making your website with Jekyll, you may want to run it in WSL2 to avoid any Windows compatibility issues. But what if you want to do both of these things? You may run into trouble. <p>Unlike WSL1, WSL2 is a Virtual Machine. A consequence of this is that the virtual Linux machine in WSL2 has a different IP address from the host Windows machine. So if you run <code>jekyll serve --host 0.0.0.0</code>, then try...</article><div class=pnav><a class="btnlink fri" href=/Home/page/2/>Older Posts</a></div>
+<p>This works on all videos on the web. If a website disables Firefox's right click menu by default, press Shift + Right-Click to open it.</article><article><h1><a href=/2022/12/06/Kirby-Star-Allies-Assignment-Art>Kirby Star Allies Assignment: Art</a></h1><time> 6 December 2022</time><p>Kirby Star Allies uses high definition 3D models for characters and environments. User interface elements use flat vector art with lots of patterns and a limited palette of solid colors; gradients are only used in backgrounds. <p>Sequence Director Tatsuya Kamiyama stated that the HD display is the reason they used a free-roam map rather than a linear one.<br><q cite=https://wikirby.com/wiki/Kirby_Star_Allies_Channel><!--April 25th, 2018-->the Nintendo Switch™ system's higher resolution makes it easier to show a broader view...while keeping Kirby a size where you can see him clearly</q>. <p>The environments have whimsical elements to...</article><div class=pnav><a class="btnlink fri" href=/Home/page/2/>Older Posts</a></div>
 <footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
 <script src=/webpnotice.js></script></body></html>

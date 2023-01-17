@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<link rel=preload href=/ThysbelonTitle.svg as=image type=image/svg+xml>
+<link rel=preload href=/thysbelonicon.svg as=image type=image/svg+xml>
+<link rel=preload href=/BlogStylesheet.css as=style>
+<meta name="color-scheme" content="dark light"><title>Can You Play Midi with SF2 on the Web? - Thysbelon</title>
+<meta name=theme-color content=#ff4c60>
+<link rel=author href=/About/>
+<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="description" content=" Yes.Start Jams Thank you to jet2jet for making such an amazing tool!"><link rel=icon type=image/x-icon href=/thysbelonicon.svg>
+<link rel=stylesheet href=/BlogStylesheet.css></head>
+<body>
+<header><a href=/Home><img id=blogtitle src=/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280></a></header>
+<nav><ul><li><a href=/Subscribe/>Subscribe</a><li><a href=/Archive/>Archive</a><li><a href=/Portfolio/>Portfolio</a><li><a href=/About/>About</a><li><details><summary>Art</summary><ul><li><a href=/Digital-Art/>Digital Art</a><li><a href=/Photography/>Photography</a><li><a href=/Programs/>Programs</a></details>
+	<li><a href=/>Language/言語</a></ul></nav>
+<main itemscope itemtype=https://schema.org/BlogPosting>
+<section>
+<h1 itemprop=headline>Can You Play Midi with SF2 on the Web?</h1>
+<time itemprop=datePublished datetime=2023-01-16>16 January 2023</time>
+<style>
+#bopmoth{
+	width:301px;
+	height:303px;
+	object-fit:cover;
+	object-position:0;
+	shape-outside: polygon(2px 58.20%, 17.42% 48.29%, 47.79% -2px, 100% 0px, 100% 100%, 48.95% 100%, 44.83% 94.62%, 4px 68.11%);
+}
+@keyframes bop {
+0%{object-position:-602px;}
+50%{object-position:-301px;}
+}
+</style>
+<img itemprop=image class=trans src=headbopsheet.png id=bopmoth alt="A hummingbird moth wearing headphones.">
+<script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js></script><script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js></script>
+<p>Yes.</p>
+<button onclick=this.onclick=null;StartJams() style=margin-bottom:1rem>Start Jams</button>
+<p><a href=https://github.com/jet2jet/js-synthesizer target=_blank>Thank you to jet2jet for making such an amazing tool!</a>
+<script>
+function StartJams(){
+console.log('startjams')
+var sfontBuffer;
+var smfBuffer;
+var context; //context.suspend() and context.resume() can be used to pause and play
+var synth; //this can be used to implement Pause and Play features with synth.stopPlayer() and synth.playPlayer(). Implementing this feature would require changing the loop code from a "while true" loop to a recursive named function.
+(async function(){
+	let response = await fetch('SEQ_GS_VS_RAIKOU.sf3') // I used the linux program "sf3convert" to compress to sf3.
+	sfontBuffer = await response.arrayBuffer()
+	response = await fetch('SEQ_GS_VS_RAIKOU.mid') // extracted using the latest version of vgmtrans
+	smfBuffer = await response.arrayBuffer()
+})();
+
+JSSynth.waitForReady().then(loadSynthesizer);
+
+async function loadSynthesizer() {
+	context = new AudioContext();
+	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js')
+	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.worklet.min.js');
+	// Create the synthesizer instance for AudioWorkletNode
+	synth = new JSSynth.AudioWorkletNodeSynthesizer();
+	synth.init(context.sampleRate);
+	// You must create AudioWorkletNode before using other methods
+	// (This is because the message port is not available until the
+	// AudioWorkletNode is created)
+	var audioNode = synth.createAudioNode(context);
+	audioNode.connect(context.destination); // or another node...
+	// After node creation, you can use Synthesizer methods
+	await synth.loadSFont(sfontBuffer)
+	await synth.addSMFDataToPlayer(smfBuffer);
+	let tempelem=document.getElementById('bopmoth')
+	await synth.playPlayer();
+	tempelem.style.animation="0.63157894736842105263157894736842s step-end infinite bop"
+	//let looptestseek= await synth.retrievePlayerTotalTicks() - 1000
+	//await synth.seekPlayer(looptestseek) //test loop
+	while (true) {
+		console.log("loop")
+		await synth.waitForPlayerStopped()
+		await synth.seekPlayer(1920) //loop once. tick 0 is the beginning of the song, keep this in mind while calculating. ticks is ticks-per-quarter-note * quarter notes. find tpq by reaper right click > source properties
+		await synth.playPlayer();
+	}
+}
+}
+</script>
+<!--style: "midi-player::part(play-button){color:black} midi-player::part(time){color:black}"
+<script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.5.0"></script>
+<midi-player sound-font src=Blue_Rondo_A_La_Turk.mid></midi-player>-->
+</section>
+<div class=tags>Tags:<ul><li><a href=/Tags/Pokémon rel=tag>Pokémon</a></ul></div>
+<div class=tags>Categories:<ul><li><a href=/Categories/Web-Development rel=category>Web Development</a></ul></div>
+</main>
+<aside>
+<h2>Related Posts</h2><ul class="gallery padb">
+
+
+
+
+<li><a href=/2022/02/19/How-to-Play-Custom-Songs-in-Vib-Ribbon-on-an-Emulator>
+How to Play Custom Songs in Vib-Ribbon on an Emulator<br>
+<p>Vib-Ribbon is a game that released on the PS1 in 1999, and the PS3 and PS Vita in 2014. It...</p>
+</a>
+
+
+
+<li><a href=/2022/04/16/The-Origin-Of-Every-Kirby-Song-on-the-Kirby-or-Touhou-Song-Title-Quiz>
+The Origin Of Every Kirby Song on the Kirby or Touhou Song Title Quiz<br>
+<p>Last week, I came across a quiz that asks the quizzee, "Is this song title from Kirby or Touhou?". I...</p>
+</a>
+
+
+
+<li><a href=/2022/04/09/Android-5.0-Lollipop-the-Best-Emoji>
+Android 5.0 Lollipop: the Best Emoji<br>
+<p>I've never been that big of a fan of most emoji. Apple popularized the the use of gradients in emoji,...</p>
+</a>
+
+
+
+<li><a href=/2022/10/05/Top-5-Games-for-Game-Design-Class>
+Top 5 Games for Game Design Class<br>
+<p>I don't spend a lot of time thinking about what makes the games I play good, so I'm a bit...</p>
+</a>
+
+
+
+<li><a href=/2022/05/27/How-to-Make-Custom-3DS-Mega-Badges>
+How to Make Custom 3DS Mega Badges<br>
+<p>Nintendo Badge Arcade is a free-to-play game for the 3DS in which you play a crane game to unlock badges...</p>
+</a>
+
+
+
+<li><a href=/2022/09/17/I-Moved-My-Jekyll-Website-from-Windows-to-WSL2-Ubuntu>
+I Moved My Jekyll Website from Windows to WSL2 Ubuntu<br>
+<p>Hello! I got a new laptop, and this one has Windows 11 on it, so I finally decided to stop...</p>
+</a>
+
+
+
+<li><a href=/2022/11/04/How-to-Convert-from-WebP-or-SVG-to-Formats-like-PNG-and-GIF>
+How to Convert from WebP or SVG to Formats like PNG and GIF<br>
+<p>Online Converters: webp WebUtils (webp/avif to png/jpeg, animation not supported, files converted in bulk but downloaded one at a time)...</p>
+</a>
+
+
+
+<li><a href=/2022/02/28/My-Thoughts-on-Illustrator's-Image-Trace>
+My Thoughts on Illustrator's Image Trace<br>
+<p>When I saw the Image Trace feature, I thought it would be an easy way to take low resolution art...</p>
+</a>
+
+
+
+<li><a href=/2022/12/12/Kirby-Star-Allies-Assignment-Elements>
+Kirby Star Allies Assignment: Elements<br>
+<p>This post contains spoilers for Kirby Star Allies. When my professor spoke of what he wanted in this blog post,...</p>
+</a>
+
+
+
+<li><a href=/2022/02/08/Talking-About-Video-Games-Now-Because-I-was-too-Scared-to-Earlier>
+Talking About Video Games Now Because I was too Scared to Earlier<br>
+<p>Hello! There were a few times when I was writing my previous posts that I wanted to talk about video...</p>
+</a>
+</ul>
+</aside>
+<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+<script src=/webpnotice.js></script></body></html>
