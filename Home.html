@@ -19,6 +19,7 @@ pagination:
 	{%- assign outputpost = post.excerpt -%}
 	{%- assign outputpost = outputpost | replace: "<img src=/emoji/", "protectemoji" -%}
 	{%- assign outputpost = outputpost | replace: "src=/", "protectrootimage" -%}
+	{%- assign outputpost = outputpost | replace: "src=http", "protectexternimage" -%}
 	{%- if page.layout == "default-en" -%}{%- unless post.short -%}{%- assign outputpost = outputpost | truncatewords: 90 -%}{%- endunless -%}{%- endif -%}
 	{%- if picture contains "<source" -%}
 	{%- comment -%}<img alt="picture found">{%- endcomment -%}
@@ -43,11 +44,13 @@ pagination:
 	{%- assign outputpost = outputpost | replace: "href=http", "PROTECTEXTERNLINK" -%}
 	{%- assign outputpost = outputpost | replace: "href=/", "PROTECTPOSTLINK" -%}
 	{%- assign outputpost = outputpost | replace: "href=", "href=posturlhere/../" -%}
+	{%- assign outputpost = outputpost | replace: "fetch('", "fetch('posturlhere/../" -%}
 	{%- assign outputpost = outputpost | replace: "posturlhere", post.url -%}
 	{%- assign outputpost = outputpost | replace: "PROTECTEXTERNLINK", "href=http" -%}
 	{%- assign outputpost = outputpost | replace: "PROTECTPOSTLINK", "href=/" -%}
 	{%- assign outputpost = outputpost | replace: "protectemoji", "<img src=/emoji/" -%}
 	{%- assign outputpost = outputpost | replace: "protectrootimage","src=/" -%}
+	{%- assign outputpost = outputpost | replace: "protectexternimage", "src=http" -%}
 	{%- assign outputpost = outputpost | replace: '<img src=/emoji/😊.svg style=width:initial;height:initial;display:block;float:right;max-width:250px alt="Smiling face with smiling eyes emoji.">','<a href=/2022/04/09/Android-5.0-Lollipop-the-Best-Emoji tabindex=-1><img src=/emoji/😊.svg style=width:initial;height:initial;display:block;float:right;max-width:250px alt="Smiling face with smiling eyes emoji."></a>' -%}
 	{%- if forloop.first == false -%}{%- assign outputpost = outputpost | replace: "<img","<img loading=lazy" -%}{%- endif -%}
 	<article><h1><a href={{ post.url }}>{%- if post.custmheader -%}{{ post.custmheader }}{%- else -%}{{ post.title }}{%- endif -%}</a></h1><time>{%- if page.layout == "default-en" -%}{{ post.date | date: "%e %B %Y" }}{%- else -%}{{ post.date | date: "%Y年%-m月%-d日" }}{%- endif -%}</time>{%- if page.layout == "default-jp" and post.short != true -%}{{ outputpost | append: "…" }}{%- else -%}{{ outputpost }}{%- endif -%}</article>
