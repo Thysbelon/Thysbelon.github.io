@@ -13,6 +13,15 @@
   </author>
 
   <entry>
+    <title>Trouble with N64 Sequenced Music</title>
+	<id>/2023/01/18/Trouble-with-N64-Sequenced-Music</id>
+    <link href="/2023/01/18/Trouble-with-N64-Sequenced-Music"/>
+    <summary type="html">DLS files are really tough to work with. The only thing that can convert them is Viena. I've been extracting soundbanks from N64 games, but N64SoundbankTool only extracts them as DLS; so when I convert the DLS to SF2 and play it with the N64-music-converted-to-midi, I can't tell how many...</summary>
+	<updated>2023-01-18T17:00:00Z</updated>
+	<published>2023-01-18T17:00:00Z</published>
+  </entry>
+
+  <entry>
     <title>Can You Play Midi with SF2 on the Web?</title>
 	<id>/2023/01/16/Can-You-Play-Midi-with-SF2-on-the-Web</id>
     <link href="/2023/01/16/Can-You-Play-Midi-with-SF2-on-the-Web"/>
@@ -32,7 +41,7 @@ Thank you to jet2jet for making such an amazing tool!
     <title>La Follia d'amore Taiko no Tatsujin Chart</title>
 	<id>/2023/01/07/La-Follia-d'amore-Taiko-no-Tatsujin-Chart</id>
     <link href="/2023/01/07/La-Follia-d'amore-Taiko-no-Tatsujin-Chart"/>
-    <summary type="html">I made a Taiko chart of Hyness' phase 2 battle theme (Oni difficulty only).</summary>
+    <summary type="html">I made a Taiko chart of Hyness' phase 2 battle theme (Oni and Hard difficulty only).</summary>
 	<updated>2023-01-07T17:00:00Z</updated>
 	<published>2023-01-07T17:00:00Z</published>
   </entry>
