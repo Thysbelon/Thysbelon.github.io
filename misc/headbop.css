@@ -1,0 +1,11 @@
+[src="/misc/headbopsheet.png"]{
+	width:301px;
+	height:303px;
+	object-fit:cover;
+	object-position:0;
+	shape-outside: polygon(2px 58.20%, 17.42% 48.29%, 47.79% -2px, 100% 0px, 100% 100%, 48.95% 100%, 44.83% 94.62%, 4px 68.11%);
+}
+@keyframes bop {
+0%{object-position:-602px;}
+50%{object-position:-301px;}
+}
