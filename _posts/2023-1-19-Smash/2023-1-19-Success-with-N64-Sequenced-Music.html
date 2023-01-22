@@ -11,14 +11,21 @@ categories:
 <img class=trans src=/misc/headbopsheet.png id=bopmoth2 alt="A hummingbird moth wearing headphones.">
 <button onclick=this.onclick=null;StartJams2() style=margin-bottom:1rem>Start Jams</button>
 <p>Remember when I said I would never attempt to embed N64 sequenced music on a webpage again? I lied. I just had to give it another try! I wanted to see what kind of results I would get by using a midi extracted via <a href=https://github.com/jombo23/N64-Tools target=_blank>N64 Soundbank Tool</a>. There were some errors I had to fix, but it sounds pretty good! Not perfect, of course, but it's recognizable.
-<p>The most difficult part was recreating the reverb heard in game. I tried a bunch of weird module things, but all I really needed was to play a convolverNode reverb output <em>alongside</em> the unmodified output. <br>Thank you to <a href=http://reverbjs.org/ target=_blank>Reverb.js</a> for making that even easier to do!
+<details>
+<summary>
+Fixes
+</summary>
+<p>I had to change the sustain level of the bass instrument in the soundfont, so the sound wouldn't go quiet immediately. <a href=ExtractedSoundbank-instr_20-vol_envelope-sustain_level.7z>Fixed soundfont (use 7zip to extract).</a> I also added reverb.
+</details>
+<p>The most difficult part was recreating the reverb heard in game. I tried a bunch of weird module things, but all I really needed was to play a convolverNode reverb output <em>alongside</em> the unmodified output. <!--<br>Thank you to <a href=http://reverbjs.org/ target=_blank>Reverb.js</a> for making that even easier to do!-->
 <p>(Please don't click "Start Jams" twice)
 <script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js></script><script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js></script>
-<script src=http://reverbjs.org/reverb.js></script>
+<!--<script src=http://reverbjs.org/reverb.js></script>-->
 <script>
 var sfontBuffer;
 var smfBuffer;
 var jams2;
+var context = new AudioContext();
 
 function StartJams2(){
 console.log('startjams2');
@@ -30,38 +37,38 @@ console.log('startjams2');
 	smfBuffer = await response.arrayBuffer();
 })();
 
-{%-comment-%}
-/*async function createReverb() { // from mdn
+async function createReverb() { // from mdn
   let convolver = context.createConvolver();
 
   // load impulse response from file
-  let response = await fetch("Nice Drum Room.wav"); // from https://www.voxengo.com/impulses/
+  let response = await fetch('/misc/ElvedenHallSmokingRoom.m4a'); // from http://reverbjs.org/Library/ElvedenHallSmokingRoom.m4a
   let arraybuffer = await response.arrayBuffer();
   convolver.buffer = await context.decodeAudioData(arraybuffer);
 
   return convolver;
-}*/
-{%-endcomment-%}
+}
 
 JSSynth.waitForReady().then(loadSynthesizer);
 
 async function loadSynthesizer() {
 	
-	var context = new AudioContext();
+	context.resume();
 	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js')
 	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.worklet.min.js');
 	var synth = new JSSynth.AudioWorkletNodeSynthesizer();
 	synth.init(context.sampleRate);
 	var audioNode = synth.createAudioNode(context);
 	
-	{%-comment-%}
+	
 	// goes with mdn code
-	//let reverb = await createReverb();
-	//audioNode.connect(reverb);
-	//var gain = new GainNode(context,{gain:6})
-	//reverb.connect(gain);
-	//gain.connect(context.destination);
-	{%-endcomment-%}
+	let reverb = await createReverb();
+	audioNode.connect(reverb);
+	//var gain = new GainNode(context,{gain:3})
+	let gain = new GainNode(context,{gain:0.2});
+	reverb.connect(gain);
+	gain.connect(context.destination);
+	audioNode.connect(context.destination);
+	
 	
 	{%-comment-%}
 	/*let delay = new DelayNode(context, {delayTime:0.02, maxDelayTime:0.02});
@@ -83,6 +90,7 @@ async function loadSynthesizer() {
 	*/
 	{%-endcomment-%}
 	
+	{%-comment-%}/*
 	let gain = new GainNode(context,{gain:0.2});
 	reverbjs.extend(context);
 	var reverbNode = context.createReverbFromUrl("http://reverbjs.org/Library/ElvedenHallSmokingRoom.m4a", function() {
@@ -90,6 +98,7 @@ async function loadSynthesizer() {
 	});
 	audioNode.connect(reverbNode);
 	audioNode.connect(context.destination);
+	*/{%-endcomment-%}
 	
 	await synth.loadSFont(sfontBuffer);
 	await synth.addSMFDataToPlayer(smfBuffer);

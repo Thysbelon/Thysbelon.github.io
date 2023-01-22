@@ -1,0 +1,97 @@
+---
+short: true
+tags:
+ - Bomberman
+ - Bomberman Hero
+ - N64
+categories:
+ - Web Development
+ - Video Game
+---
+<link href=/misc/headbop.css rel=stylesheet>
+<img class=trans src=/misc/headbopsheet.png id=bopmoth3 alt="A hummingbird moth wearing headphones.">
+<button onclick=this.onclick=null;StartJams3() style=margin-bottom:1rem>Start Jams</button>
+<p>Today I put a midi of Redial on the web! :)
+<p>To get it more accurate, I had to <a href=redial.mid>move Channel 10 to Channel 9</a> (so it would be on a melodic channel) and increase the pitch bend range of the flute (<a href=https://github.com/mmontag/chip-player-js/commit/c7bd02fa4607a3e667915335b5b8c35e4c954e8d#diff-b3ec3a9bee19be17cac48aec8418a919b740104572a2caf5b331efc7aab7f92eR228 target=_blank>mmontag figured this out first</a> and provided a <a href=https://www.polyphone-soundfonts.com/forum/soundfonts-help/346-how-to-set-pitch-bend-range-to-12-semitones target=_blank>source</a>). I also made a <a href=redial-echo.mid>second midi</a> that echos the melodic instruments, and applied a little reverb to both. I also had to <a href=ExtractedSoundbank-Instr_0D-increaseDecay.7z>increase the decay on the keyboard</a> because it was going quiet too soon (<a href=/2023/01/19/Success-with-N64-Sequenced-Music>a lot like last time</a>).
+<script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js></script><script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js></script>
+<!--<script src=http://reverbjs.org/reverb.js></script>-->
+<script>
+var sfontBuffer;
+var smfBuffer;
+var smfBuffer2;
+var context = new AudioContext();
+
+function StartJams3(){
+console.log('startjams3');
+
+(async function(){
+	let response = await fetch('ExtractedSoundbank-Instr_0D-increaseDecay.sf3');
+	sfontBuffer = await response.arrayBuffer();
+	response = await fetch('redial.mid');
+	smfBuffer = await response.arrayBuffer();
+	response = await fetch('redial-echo.mid');
+	smfBuffer2 = await response.arrayBuffer();
+})();
+
+async function createReverb() { // from mdn
+  let convolver = context.createConvolver();
+
+  // load impulse response from file
+  let response = await fetch('/misc/ElvedenHallSmokingRoom.m4a'); // from http://reverbjs.org/Library/ElvedenHallSmokingRoom.m4a
+  let arraybuffer = await response.arrayBuffer();
+  convolver.buffer = await context.decodeAudioData(arraybuffer);
+
+  return convolver;
+}
+
+JSSynth.waitForReady().then(loadSynthesizer);
+
+async function loadSynthesizer() {
+	
+	context.resume();
+	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js')
+	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.worklet.min.js');
+	var synth = new JSSynth.AudioWorkletNodeSynthesizer();
+	synth.init(context.sampleRate);
+	var audioNode = synth.createAudioNode(context);
+	
+	synth2 = new JSSynth.AudioWorkletNodeSynthesizer();
+	synth2.init(context.sampleRate);
+	var audioNode2 = synth2.createAudioNode(context);
+	//audioNode2.connect(context.destination);
+	//await synth2.loadSFont(sfontBuffer)
+	//await synth2.addSMFDataToPlayer(smfBuffer2);
+	
+	// goes with mdn code
+	let reverb = await createReverb();
+	let gain = new GainNode(context,{gain:0.2});
+	reverb.connect(gain);
+	gain.connect(context.destination);
+	
+	let music=new GainNode(context,{gain:1})
+	audioNode.connect(music);
+	audioNode2.connect(music);
+	music.connect(reverb);
+	music.connect(context.destination)
+	
+	await synth.loadSFont(sfontBuffer);
+	await synth.addSMFDataToPlayer(smfBuffer);
+	await synth2.loadSFont(sfontBuffer);
+	await synth2.addSMFDataToPlayer(smfBuffer2);
+	let tempelem=document.getElementById('bopmoth3')
+	await synth.playPlayer();
+	await synth2.playPlayer();
+	tempelem.style.animation=(60/155.026)*2+"s step-end infinite bop"
+	while (true) {
+		console.log("loop")
+		await synth.waitForPlayerStopped()
+		await synth.seekPlayer(16*960)
+		await synth2.seekPlayer(16*960)
+		await synth.playPlayer();
+		await synth2.playPlayer();
+	}
+	
+}
+
+}
+</script>
