@@ -13,6 +13,15 @@
   </author>
 
   <entry>
+    <title>Looping N64 Midi</title>
+	<id>/2023/01/23/Looping-N64-Midi</id>
+    <link href="/2023/01/23/Looping-N64-Midi"/>
+    <summary type="html"><![CDATA[<a href="/2023/01/23/Looping-N64-Midi"><img alt="A hummingbird moth wearing headphones." src="/2023/01/23/Looping-N64-Midi/..//misc/headbopsheet.png" style="max-height:80vh;float:right" /></a>]]>Start Jams The previous two N64 midis had blank space after the end of the loop, so I cut off the blank space so I could cleanly loop the song when the player stopped. However, I learned today that N64SoundbankTool exported midis will have their loop start and end points...</summary>
+	<updated>2023-01-23T17:00:00Z</updated>
+	<published>2023-01-23T17:00:00Z</published>
+  </entry>
+
+  <entry>
     <title>Redial</title>
 	<id>/2023/01/22/Redial</id>
     <link href="/2023/01/22/Redial"/>

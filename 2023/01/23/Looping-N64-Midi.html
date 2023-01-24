@@ -5,11 +5,11 @@
 <link rel=preload href=/ThysbelonTitle.svg as=image type=image/svg+xml>
 <link rel=preload href=/thysbelonicon.svg as=image type=image/svg+xml>
 <link rel=preload href=/BlogStylesheet.css as=style>
-<meta name="color-scheme" content="dark light"><title>Success with N64 Sequenced Music - Thysbelon</title>
+<meta name="color-scheme" content="dark light"><title>Looping N64 Midi - Thysbelon</title>
 <meta name=theme-color content=#ff4c60>
 <link rel=author href=/About/>
 <meta name=viewport content=width=device-width,initial-scale=1.0>
-<meta name="description" content="Start Jams Remember when I said I would never attempt to embed N64 sequenced music on a webpage again? I lied. I just had to give it another try! I wanted to see what kind of results I would get by using a midi extracted via N64 Soundbank Tool. There..."><link rel=icon type=image/x-icon href=/thysbelonicon.svg>
+<meta name="description" content="Start Jams The previous two N64 midis had blank space after the end of the loop, so I cut off the blank space so I could cleanly loop the song when the player stopped. However, I learned today that N64SoundbankTool exported midis will have their loop start and end points..."><link rel=icon type=image/x-icon href=/thysbelonicon.svg>
 <link rel=stylesheet href=/BlogStylesheet.css></head>
 <body>
 <header><a href=/Home><img id=blogtitle src=/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280></a></header>
@@ -17,35 +17,25 @@
 	<li><a href=/>Language/言語</a></ul></nav>
 <main itemscope itemtype=https://schema.org/BlogPosting>
 <section>
-<h1 itemprop=headline>Success with N64 Sequenced Music</h1>
-<time itemprop=datePublished datetime=2023-01-19>19 January 2023</time>
+<h1 itemprop=headline>Looping N64 Midi</h1>
+<time itemprop=datePublished datetime=2023-01-23>23 January 2023</time>
 <link href=/misc/headbop.css rel=stylesheet>
-<img itemprop=image class=trans src=/misc/headbopsheet.png id=bopmoth2 alt="A hummingbird moth wearing headphones.">
-<button onclick=this.onclick=null;StartJams2() style=margin-bottom:1rem>Start Jams</button>
-<p>Remember when I said I would never attempt to embed N64 sequenced music on a webpage again? I lied. I just had to give it another try! I wanted to see what kind of results I would get by using a midi extracted via <a href=https://github.com/jombo23/N64-Tools target=_blank>N64 Soundbank Tool</a>. There were some errors I had to fix, but it sounds pretty good! Not perfect, of course, but it's recognizable.
-<details>
-<summary>
-Fixes
-</summary>
-<p>I had to change the sustain level of the bass instrument in the soundfont, so the sound wouldn't go quiet immediately. <a href=ExtractedSoundbank-instr_20-vol_envelope-sustain_level.7z>Fixed soundfont (use 7zip to extract).</a> I also added reverb.
-</details>
-<p>The most difficult part was recreating the reverb heard in game. I tried a bunch of weird module things, but all I really needed was to play a convolverNode reverb output <em>alongside</em> the unmodified output. <!--<br>Thank you to <a href=http://reverbjs.org/ target=_blank>Reverb.js</a> for making that even easier to do!-->
-<p>(Please don't click "Start Jams" twice)
+<img itemprop=image class=trans src=/misc/headbopsheet.png id=bopmoth4 alt="A hummingbird moth wearing headphones.">
+<button onclick=this.onclick=null;StartJams4() style=margin-bottom:1rem>Start Jams</button>
+<p>The previous two N64 midis had blank space after the end of the loop, so I cut off the blank space so I could cleanly loop the song when the player stopped. However, I learned today that N64SoundbankTool exported midis will have their loop start and end points marked by a CC 102 and 103 event. I used js-synthesizer's hook midi method to automatically loop the song at those positions; it was easy to do and it turned out great!
 <script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js></script><script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js></script>
-<!--<script src=http://reverbjs.org/reverb.js></script>-->
 <script>
 var sfontBuffer;
 var smfBuffer;
-var jams2;
 var context = new AudioContext();
 
-function StartJams2(){
-console.log('startjams2');
+function StartJams4(){
+console.log('startjams4');
 
 (async function(){
-	let response = await fetch('ExtractedSoundbank-instr_20-vol_envelope-sustain_level.sf3');
+	let response = await fetch('ExtractedSoundbank.sf3');
 	sfontBuffer = await response.arrayBuffer();
-	response = await fetch('Super Smash Bros. (U) 0000000A 00B379FC cut.mid');
+	response = await fetch('Kirby 64 - The Crystal Shards (U) 00000007 0025C274.mid');
 	smfBuffer = await response.arrayBuffer();
 })();
 
@@ -67,49 +57,44 @@ async function loadSynthesizer() {
 	context.resume();
 	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js')
 	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.worklet.min.js');
+	await context.audioWorklet.addModule('/misc/N64-midi-loop.js');
 	var synth = new JSSynth.AudioWorkletNodeSynthesizer();
 	synth.init(context.sampleRate);
 	var audioNode = synth.createAudioNode(context);
-	
+	synth.hookPlayerMIDIEventsByName('n64Loop');
 	
 	// goes with mdn code
 	let reverb = await createReverb();
 	audioNode.connect(reverb);
 	//var gain = new GainNode(context,{gain:3})
-	let gain = new GainNode(context,{gain:0.2});
+	let gain = new GainNode(context,{gain:0.1});
 	reverb.connect(gain);
 	gain.connect(context.destination);
-	audioNode.connect(context.destination);await synth.loadSFont(sfontBuffer);
+	audioNode.connect(context.destination);
+	
+	await synth.loadSFont(sfontBuffer);
 	await synth.addSMFDataToPlayer(smfBuffer);
-	let tempelem=document.getElementById('bopmoth2')
+	let tempelem=document.getElementById('bopmoth4')
 	await synth.playPlayer();
-	tempelem.style.animation="0.75949367088607594936708860759494s step-end infinite bop"
-	jams2=true
-	while (jams2===true) {
+	tempelem.style.animation=(60/174)*2+"s step-end infinite bop"
+	/*while (jams2===true) {
 		console.log("loop")
 		await synth.waitForPlayerStopped()
 		await synth.seekPlayer(1440)
 		await synth.playPlayer();
-	}
+	}*/
 	
 }
 
 }
 </script>
 </section>
-<div class=tags>Tags:<ul><li><a href=/Tags/Smash-Bros. rel=tag>Smash Bros.</a><li><a href=/Tags/N64 rel=tag>N64</a></ul></div>
+<div class=tags>Tags:<ul><li><a href=/Tags/Kirby rel=tag>Kirby</a><li><a href=/Tags/Kirby-64 rel=tag>Kirby 64</a><li><a href=/Tags/N64 rel=tag>N64</a></ul></div>
 <div class=tags>Categories:<ul><li><a href=/Categories/Web-Development rel=category>Web Development</a><li><a href=/Categories/Video-Game rel=category>Video Game</a></ul></div>
 </main>
 <aside>
 <h2>Related Posts</h2><ul class="gallery padb">
 
-
-
-
-<li><a href=/2023/01/23/Looping-N64-Midi>
-Looping N64 Midi<br>
-<p>Start Jams The previous two N64 midis had blank space after the end of the loop, so I cut off...</p>
-</a>
 
 
 
@@ -120,9 +105,9 @@ Redial<br>
 
 
 
-<li><a href=/2023/01/18/Trouble-with-N64-Sequenced-Music>
-Trouble with N64 Sequenced Music<br>
-<p>DLS files are really tough to work with. The only thing that can convert them is Viena. I've been extracting...</p>
+<li><a href=/2023/01/19/Success-with-N64-Sequenced-Music>
+Success with N64 Sequenced Music<br>
+<p>Start Jams Remember when I said I would never attempt to embed N64 sequenced music on a webpage again? I...</p>
 </a>
 
 
@@ -141,6 +126,13 @@ Thank you to jet2jet for making such an amazing tool!
 
 
 
+<li><a href=/2023/01/18/Trouble-with-N64-Sequenced-Music>
+Trouble with N64 Sequenced Music<br>
+<p>DLS files are really tough to work with. The only thing that can convert them is Viena. I've been extracting...</p>
+</a>
+
+
+
 <li><a href=/2022/02/19/How-to-Play-Custom-Songs-in-Vib-Ribbon-on-an-Emulator>
 How to Play Custom Songs in Vib-Ribbon on an Emulator<br>
 <p>Vib-Ribbon is a game that released on the PS1 in 1999, and the PS3 and PS Vita in 2014. It...</p>
@@ -148,9 +140,9 @@ How to Play Custom Songs in Vib-Ribbon on an Emulator<br>
 
 
 
-<li><a href=/2022/04/16/The-Origin-Of-Every-Kirby-Song-on-the-Kirby-or-Touhou-Song-Title-Quiz>
-The Origin Of Every Kirby Song on the Kirby or Touhou Song Title Quiz<br>
-<p>Last week, I came across a quiz that asks the quizzee, "Is this song title from Kirby or Touhou?". I...</p>
+<li><a href=/2022/06/06/The-Original-Mew-Glitch>
+The Original Mew Glitch<br>
+<p>On November 6th 2021, Did You Know Gaming uploaded a video about the origins of Mew. This video made me...</p>
 </a>
 
 
@@ -162,16 +154,16 @@ Top 5 Games for Game Design Class<br>
 
 
 
-<li><a href=/2022/02/08/Talking-About-Video-Games-Now-Because-I-was-too-Scared-to-Earlier>
-Talking About Video Games Now Because I was too Scared to Earlier<br>
-<p>Hello! There were a few times when I was writing my previous posts that I wanted to talk about video...</p>
+<li><a href=/2022/04/03/Trouble-with-Spacing-Objects-Evenly-in-Illustrator>
+Trouble with Spacing Objects Evenly in Illustrator<br>
+<p>Today, I was working on the social media ads for RCP and I needed to space out the numbers in...</p>
 </a>
 
 
 
-<li><a href=/2022/02/28/My-Thoughts-on-Illustrator's-Image-Trace>
-My Thoughts on Illustrator's Image Trace<br>
-<p>When I saw the Image Trace feature, I thought it would be an easy way to take low resolution art...</p>
+<li><a href=/2022/12/12/Kirby-Star-Allies-Assignment-Elements>
+Kirby Star Allies Assignment: Elements<br>
+<p>This post contains spoilers for Kirby Star Allies. When my professor spoke of what he wanted in this blog post,...</p>
 </a>
 
 
@@ -183,9 +175,9 @@ Android 5.0 Lollipop: the Best Emoji<br>
 
 
 
-<li><a href=/2022/09/17/I-Moved-My-Jekyll-Website-from-Windows-to-WSL2-Ubuntu>
-I Moved My Jekyll Website from Windows to WSL2 Ubuntu<br>
-<p>Hello! I got a new laptop, and this one has Windows 11 on it, so I finally decided to stop...</p>
+<li><a href=/2022/11/01/Kirby-Star-Allies-Assignment-Game-Mechanics>
+Kirby Star Allies Assignment: Game Mechanics<br>
+<p>Kirby Star Allies follows the same formula established in Super Star and refined in the previous three Kirby games. In...</p>
 </a>
 </ul>
 </aside>
