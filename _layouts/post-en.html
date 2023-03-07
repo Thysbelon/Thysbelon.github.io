@@ -13,7 +13,7 @@ layout: default-en
 <aside>
 <h2>Related Posts</h2><ul class="gallery {% unless page.removefooter %}padb{% endunless %}">
 {% assign posts = site.related_posts | where: "layout", "post-en" %}
-{% for post in posts %}
+{% for post in posts limit: 14 %}
 {% assign outputpost = post.excerpt %}
 {% comment %}
 {% assign imgattr = outputpost | split:'<img ' %}

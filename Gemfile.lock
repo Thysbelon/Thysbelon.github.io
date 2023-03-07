@@ -41,6 +41,8 @@ GEM
       jekyll (>= 3.8.6, < 5)
     jekyll-sass-converter (2.2.0)
       sassc (> 2.0.1, < 3.0)
+    jekyll-tagging-related_posts (1.2.0)
+      jekyll (>= 3.9, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     kramdown (2.4.0)
@@ -78,6 +80,7 @@ DEPENDENCIES
   jekyll-archives (~> 2.2.1)
   jekyll-paginate-v2
   jekyll-postfiles
+  jekyll-tagging-related_posts
   webrick (~> 1.7)
 
 BUNDLED WITH
