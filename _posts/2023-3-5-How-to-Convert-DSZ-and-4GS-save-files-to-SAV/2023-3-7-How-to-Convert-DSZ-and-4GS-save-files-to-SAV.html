@@ -11,15 +11,10 @@ tags:
 ---
 <p>44670's two great web emulator ports: <a href=https://gba.44670.org/ target=_blank>44gba</a> and <a href=https://ds.44670.org/ target=_blank>DS Player</a>, both use a completely unique file extension for their save files; Here's how to convert these formats to .sav:
 <h2>4GS</h2>
-<p>This is just a renamed version of the emulator Visual Boy Advance's srm save format.
-<p>To convert it to sav:
-<ol>
-<li>Rename it to change the <code>.4gs</code> extension to <code>.srm</code>, and remove all spaces from the file name.
-<li>Use gbaconv to convert
-</ol>
-<p>I was going to compile gbaconv to WebAssembly using Emscripten, so that even people with only a school-locked chromebook can use gbaconv by visiting a website, but I can't. I spent a whole day trying to do this, and when I finally got it writing files, they were corrupted. I'm really disappointed. <a href=https://github.com/Thysbelon/gbaconv-web target=_blank>Here is the (non-functional) source code</a>; I encourage anyone reading this to help me fix this web app!
-<p>Anyway, <a href=https://emulation.gametechwiki.com/index.php/Game_Boy_Advance_emulators#Save_formats target=_blank>more details on VBA's save format can be found on emugen wiki</a>, this link also contains links to <a href=https://web.archive.org/web/20190801135240/https://github.com/libretro/vbam-libretro/blob/master/src/libretro/gbaconv/gbaconv.c target=_blank>gbaconv's source code</a> and a <a href=https://www.mediafire.com/?6bg8ag0bjs1b7ng target=_blank>ready-to-use gbaconv binary for 64-bit Windows</a>.
-<p>Compiling is the process of taking source code and converting it into an executable file that your computer can run. For users of operating systems like MacOS and Android, it shouldn't be too hard to compile gbaconv with a terminal command like <code>cc gbaconv.c -o gbaconv</code>. The <a href=https://www.howtogeek.com/682770/how-to-open-the-terminal-on-a-mac/ target=_blank>terminal</a> is included by default on MacOS, but Android users will have to install <a href=https://termux.dev/en/ target=_blank>Termux</a> and <a href=https://wiki.termux.com/wiki/Termux-setup-storage target=_blank>allow Termux to access their phone's storage</a>.
+<p>This is just a renamed version of the emulator VBA-Next's srm save format.
+<p>To convert it to sav: just use <a href=https://thysbelon.github.io/gbaconv-web/>gbaconv-web</a>.
+<p><a href=https://emulation.gametechwiki.com/index.php/Game_Boy_Advance_emulators#Save_formats target=_blank>More details on VBA's save format can be found on emugen wiki</a>, this link also contains links to <a href=https://web.archive.org/web/20190801135240/https://github.com/libretro/vbam-libretro/blob/master/src/libretro/gbaconv/gbaconv.c target=_blank>gbaconv's source code</a> and a <a href=https://www.mediafire.com/?6bg8ag0bjs1b7ng target=_blank>ready-to-use gbaconv binary for 64-bit Windows</a>.
+<!--<p>Compiling is the process of taking source code and converting it into an executable file that your computer can run. For users of operating systems like MacOS and Android, it shouldn't be too hard to compile gbaconv with a terminal command like <code>cc gbaconv.c -o gbaconv</code>. The <a href=https://www.howtogeek.com/682770/how-to-open-the-terminal-on-a-mac/ target=_blank>terminal</a> is included by default on MacOS, but Android users will have to install <a href=https://termux.dev/en/ target=_blank>Termux</a> and <a href=https://wiki.termux.com/wiki/Termux-setup-storage target=_blank>allow Termux to access their phone's storage</a>.-->
 <h2>DSZ</h2>
 <p>This is Desmume's dsv save format compressed to 7z.
 <p>To convert it to sav:
