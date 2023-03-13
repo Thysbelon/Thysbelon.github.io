@@ -205,6 +205,10 @@ article, section, .tags, .pnav {
 	padding-bottom:4vh;
 	display:flow-root;
 }
+hr.invisible-pause{ /* This will replace all instances of </section><section> to denote a semantic pause without a header. */
+	opacity:0;
+	height:1rem;
+}
 body>article:last-of-type{padding-bottom:10vh}
 .pnav {position:absolute;bottom:2rem;left:0;right:0;padding:0}
 .tags ul, .gallery {
@@ -412,6 +416,7 @@ a.yt>span::before{
 	left:-9999px
 }
 span.nowrap {white-space:nowrap}
+span[title] {text-decoration: underline dotted}
 abbr {
 	text-decoration:none;
 }
