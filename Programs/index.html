@@ -7,7 +7,7 @@ tagroup: "Art"
 <h2><a href=/rhythm-heaven-web>Rhythm Heaven Web Port Demo</a></h2>
 <p>I think I'm the kind of person who feels more motivated to learn when I know the <em>use</em> of the thing I'm learning. That's why I decided to learn Javascript by attempting to port <a href=https://youtu.be/A0J8wmucIbM target=_blank>Rhythm Heaven Fever (specifically the "Hole in One" mini game)</a> to the web.
 <p>All art and sound effects are pulled from Rhythm Heaven Fever.
-<p>There is a gameplay demo and a small Canvas Animation Demo. I planned to incorporate this animation system into the main demo, but I abandoned the project before that happened. Unlike the main demo, which uses a hand-made css spritesheet of the characters' poses, and has placeholder bad animation timing; this animation demo uses animation and sprite data from Rhythm Heaven Fever, extracted using <a href=https://github.com/rhmodding/bread target=_blank>Bread</a>.
+<p>There is a gameplay demo and a small Canvas Animation Demo. I planned to incorporate this animation system into the main demo, but I abandoned the project before that happened. Unlike the main demo, which uses a hand-made css spritesheet of the characters' poses, and has placeholder bad animation timing; the animation demo uses animation and sprite data from Rhythm Heaven Fever, extracted using <a href=https://github.com/rhmodding/bread target=_blank>Bread</a>.
 <h2><a href=https://github.com/Thysbelon/Convert2VibFormat target=_blank>Convert-2-Vib-Format Script</a></h2>
 <p>A collection of batch and bash shell scripts that use VLC to convert every audio file in the current directory to a specific type, then generates cue (text) files for each song, then uses chdman to convert each audio and cue file pair to CHD, a disc compression format usually used for preserving old video games (or simply zips the audio cue pair). The goal of this is to make it easy to play modern songs in the classic game Vib-Ribbon. If you wish to read more, please see <a href=/2022/02/19/How-to-Play-Custom-Songs-in-Vib-Ribbon-on-an-Emulator>my blog post on playing songs in Vib-Ribbon</a>.
 <h2><a href=https://github.com/Thysbelon/webp2common target=_blank>WebP-2-Common Script</a></h2>
@@ -16,4 +16,9 @@ tagroup: "Art"
 <p>A slight modification of a program made by UncertainProd. I added sounds to their program using the Web Audio API.
 <h2><a href=/OnlineUniversalPokemonRandomizer>Online Universal Pokemon Randomizer</a></h2>
 <p><a href=https://github.com/Dabomstew/universal-pokemon-randomizer target=_blank>Dabomstew's Universal Pokemon Randomizer</a> ported to Javascript via <a href=https://leaningtech.com/cheerpj/ target=_blank>CheerpJ</a>.
+<h2><a href=https://github.com/Thysbelon/gbaconv-web target=_blank>GBA-Conv-Web</a></h2>
+<p>The simple command-line c program <a href=https://github.com/libretro/vba-next/blob/master/libretro/gbaconv/gbaconv.c target=_blank>gbaconv</a>, compiled to run on the web via Emscripten.
+<h2><a href=https://github.com/Thysbelon/nsfplayer-wasm target=_blank>NSF-Player-WASM</a></h2>
+<p>A program that consists of the library game-music-emu compiled with Emscripten, some c helper code compiled with Emscripten, and a JavaScript function that uses the functions defined in the c helper code and wraps it all up in a single 'nsfplay()' function for ease of use.
+<p>This program allows front-end web developers to easily play NES and Famicom chiptune music in the browser with NSF files. These files only contain music playing code, which makes them much smaller than a 'streamed' music file like a WAV or MP3.
 </section>
