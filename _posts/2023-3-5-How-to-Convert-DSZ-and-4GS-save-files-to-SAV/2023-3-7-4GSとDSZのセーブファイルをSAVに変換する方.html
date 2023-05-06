@@ -1,0 +1,30 @@
+---
+locale: jp
+layout: post-jp
+categories:
+  - ゲーム
+tags:
+  - ガイド
+  - DS
+  - GBA
+  - エミュレータ
+short: true
+alt: /2023/03/07/How-to-Convert-4GS-and-DSZ-save-files-to-SAV
+title: ４ＧＳとＤＳＺのセーブファイルをＳＡＶに変換する方
+---
+<p>44670さんの二つのエミュレータのウェブのいい移植：<a href=https://gba.44670.org/ target=_blank>44VBA</a>と<a href=https://ds.44670.org/ target=_blank>DS Player</a>は一向に異色なファイル拡張子をセーブファイルに使う、このフォーマットを「.sav」に変換する方：
+<h2>4GS</h2>
+<p>これはエミュレータVBA-Nextのsrmのセーブのフォーマットのリネームした版だけだ。
+<p>savに変換する方：<a href=https://thysbelon.github.io/gbaconv-web/>gbaconv-web</a>を使うだけ。
+<p><a href=https://emulation-gametechwiki-com.translate.goog/index.php/Game_Boy_Advance_emulators?_x_tr_sl=auto&_x_tr_tl=ja&_x_tr_hl=ja-JP#Save_formats target=_blank>Emugen WikiにＶＢＡのセーブのフォーマットについての知識がある（機械翻訳）。</a>.
+<h2>DSZ</h2>
+<p>これはgzipに圧縮したDesmumeのｄｓｖのセーブのフォーマットだ。
+<p>savに変換する方：
+<ol>
+<li><a href=https://ublockorigin.com/>なるべくアドのブロッカーを入れてください</a>。アンドロイドのユーザは<a href=https://kiwibrowser.com/ target=_blank>Kiwi Browser</a>か<a href=https://www.mozilla.org/en-US/firefox/new/ target=_blank>Firefox</a>で拡張機能を入れられる。
+<li>ｄｓｚのアーカイブを<a href=https://www.7-zip.org/ target=_blank>7-zip</a>か<a href=https://www.ezyzip.com/unzip-7z-files.html target=_blank>ウェブの解凍ソフト</a>で解凍してｄｓｖを受けて。「.dsz」ファイルを「.7z」にリネームしないといけないかもしてません。
+<li>解凍したファイルが拡張子がないが、まだｄｓｖファイルです。<a href=https://www.save-editor.com/tools/wse_ds_save_converter.html target=_blank>このウェブサイトを使ってsavに変換して（多いアド。あなたはアドのブロッカーがないなら気を付けて。灰色の「CONVERT」のボタンをクリックしないといけない）</a>。
+</ol>
+<ins datetime="2023-03-19"><p>Desmumeはｄｓｖのファイルを使って、MelonDSは「File」／「Import savefile」をクリックするのでｄｓｖファイルを使える。それで、あなたはセーブのファイルをこれらのエミュレータで使うつもりなら、ステップ３を抜かせる。</ins>
+<hr class="invisible-pause">
+<p><a href=https://emulation-gametechwiki-com.translate.goog?_x_tr_sl=auto&_x_tr_tl=ja&_x_tr_hl=ja-JP target=_blank>Emugen Wikiで最高なエミュレータを調べてください（機械翻訳）</a>。
