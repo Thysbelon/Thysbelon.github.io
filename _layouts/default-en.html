@@ -9,15 +9,17 @@
 {%- if page.noindex or page.url contains "/page/" -%}<meta name=robots content=noindex>{%- endif -%}
 {%- if page.alt -%}<link rel=alternate hreflang=ja href={{ site.url }}{{ page.alt }}>{%- endif -%}
 <title>{% unless page.url contains "/Home" %}{% if page.title %}{{ page.title }}{% else %}{{ page.url | split: "/" | last | replace: "-", " " }}{% endif %} - {% endunless %}Thysbelon</title>
+<meta property="og:title" content="{% unless page.url contains "/Home" %}{% if page.title %}{{ page.title }}{% else %}{{ page.url | split: "/" | last | replace: "-", " " }}{% endif %} - {% endunless %}Thysbelon">
 <meta name=theme-color content=#ff4c60>
 {% if page.id %}<link rel=author href=/About/>{% endif %}
 <meta name=viewport content=width=device-width,initial-scale=1.0>
-{% if page.description %}<meta name="description" content="{{ page.description }}">{% elsif page.id %}<meta name="description" content="{{ page.excerpt | replace: "<p>"," " | strip_html | strip_newlines | replace: '"','&quot;' | truncatewords: 50 }}">{% endif %}
+{% if page.description %}<meta name="description" content="{{ page.description }}"><meta property="og:description" content="{{ page.description }}">{% elsif page.id %}<meta name="description" content="{{ page.excerpt | replace: "<p>"," " | strip_html | strip_newlines | replace: '"','&quot;' | truncatewords: 50 }}"><meta property="og:description" content="{{ page.excerpt | replace: "<p>"," " | strip_html | strip_newlines | replace: '"','&quot;' | truncatewords: 50 }}">{% endif %}
 {%- if page.script -%}{{- page.script -}}{%- endif -%}
 {%- if page.url == "/Home" or page.url == "/Subscribe/" -%}<link rel="alternate" type="application/atom+xml" title="Thysbelon" href="/atom-en.xml">{%- endif -%}
 <link rel=icon type=image/x-icon href={% if page.custmicon %}{{ page.custmicon }}{% else %}/thysbelonicon.svg{% endif %}>
 <link rel=stylesheet href=/BlogStylesheet.css>
 {%- if page.style -%}{% if page.style contains "<style>" %}{{ page.style }}{% else %}<style>{{ page.style }}</style>{% endif %}{%- endif -%}
+{%- if page.id -%}{%- assign ogimage = content -%}{%- assign ogimage = ogimage | split: 'src=' | slice: 1, 1 | split: ' ' | first | remove_first: '["' -%}{%- unless ogimage contains ".js" -%}<meta name="og:image" content={{ ogimage }}>{%- endunless -%}{%- endif -%}
 </head>
 <body>
 <header>{% unless page.url == "/Home/index.html" %}<a href=/Home>{% endunless %}{% if page.custmlogo %}{{ page.custmlogo }}{% else %}<img id=blogtitle src=/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>{% endif %}{% unless page.url == "/Home/" %}</a>{% endunless %}</header>
