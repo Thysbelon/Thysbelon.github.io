@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<link rel=preload href=/ThysbelonTitle.svg as=image type=image/svg+xml>
+<link rel=preload href=/thysbelonicon.svg as=image type=image/svg+xml>
+<link rel=preload href=/BlogStylesheet.css as=style>
+<meta name="color-scheme" content="dark light"><title>How to Use the "Nanashi no Geemu: Me" English Patch - Thysbelon</title>
+<meta property="og:title" content="How to Use the "Nanashi no Geemu: Me" English Patch - Thysbelon">
+<meta name=theme-color content=#ff4c60>
+<link rel=author href=/About/>
+<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="description" content="There is only one english patch available for ナナシ ノ ゲエム 目, unfortunately that patch was made using a bad dump and is thus impossible to patch onto a legitimate good dump of ナナシ ノ ゲエム 目. Fortunately, the only difference between the good dump and the bad dump is..."><meta property="og:description" content="There is only one english patch available for ナナシ ノ ゲエム 目, unfortunately that patch was made using a bad dump and is thus impossible to patch onto a legitimate good dump of ナナシ ノ ゲエム 目. Fortunately, the only difference between the good dump and the bad dump is..."><link rel=icon type=image/x-icon href=/thysbelonicon.svg>
+<link rel=stylesheet href=/BlogStylesheet.css><meta name="og:image" content=[]></head>
+<body>
+<header><a href=/Home><img id=blogtitle src=/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280></a></header>
+<nav><ul><li><a href=/Subscribe/>Subscribe</a><li><a href=/Portfolio/>Portfolio</a><li><a href=/Archive/>Archive</a><li><a href=/About/>About</a><li><details><summary>Art</summary><ul><li><a href=/Photography/>Photography</a><li><a href=/Digital-Art/>Digital Art</a><li><a href=/Programs/>Programs</a></details>
+	<li><a href=/>Language/言語</a></ul></nav>
+<main itemscope itemtype=https://schema.org/BlogPosting>
+<section>
+<h1 itemprop=headline>How to Use the <i lang=ja-Latn translate=no>Nanashi no Geemu: Me</i> English Patch</h1>
+<time itemprop=datePublished datetime=2023-06-05> 5 June 2023</time>
+<p><a href=https://www.romhacking.net/translations/2456/ target=_blank>There is only one english patch available for <span lang=ja title="Nanashi no Geemu: Me">ナナシ ノ ゲエム 目</span></a>, unfortunately that patch was made using a bad dump and is thus impossible to patch onto a legitimate good dump of <span lang=ja>ナナシ ノ ゲエム 目</span>. Fortunately, the only difference between the good dump and the bad dump is an underdumped header, so we can easily modify the good dump to be the same as the patchable bad dump.
+<p>Simply open the good dump in a hex editor, and replace all data in between addresses 0x320 and 0x1000 with zeroes.
+<h2>Lessons on Things You'll See in Hex Editors</h2>
+<p>An "address", also known as an "offset", is a location. For example, the 7th byte in a file would be located at address 7. In every hex editor I've seen, the addresses of every 16 bytes (0x10 in hexadecimal) are listed on the left.
+<p>Writing "0x" before a number is used to indicate that the number is in hexadecimal. Decimal is the counting system we use everyday; counting to 10 goes 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Hexadecimal is a counting system used in computer programming; hexadecimal uses both the numbers used in the decimal system <em>and</em> latin letters from A to F to represent numbers; counting to 0x10 in hexadecimal goes 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, 10. "10" in hexadecimal is 16 in decimal, that's why it's important to write the number as 0x10 so people <em>know</em> it's a hexadecimal number.
+<p>A byte is a two digit hexadecimal number; they range from 0 to 0xFF (255 in decimal).
+</section>
+<div class=tags>Tags:<ul><li><a href=/Tags/Guide rel=tag>Guide</a><li><a href=/Tags/DS rel=tag>DS</a><li><a href=/Tags/Romhacking rel=tag>Romhacking</a></ul></div>
+<div class=tags>Categories:<ul><li><a href=/Categories/Video-Game rel=category>Video Game</a></ul></div>
+</main>
+<aside>
+<h2>Related Posts</h2><ul class="gallery padb">
+
+
+
+
+<li><a href=/2023/03/07/How-to-Convert-4GS-and-DSZ-save-files-to-SAV>
+How to Convert 4GS and DSZ save files to SAV<br>
+<p>44670's two great web emulator ports: 44VBA and DS Player, both use a completely unique file extension for their save...</p>
+</a>
+
+
+
+<li><a href=/2023/01/16/Can-You-Play-Midi-with-SF2-on-the-Web>
+Can You Play Midi with SF2 on the Web?<br>
+<p>
+
+
+Yes.
+Start Jams
+Thank you to jet2jet for making such an amazing tool!
+
+</p>
+</a>
+
+
+
+<li><a href=/2022/12/08/How-to-Take-a-Screenshot-of-a-YouTube-Video>
+How to Take a Screenshot of a YouTube Video<br>
+<p>Use Firefox Right-click the video Right-click the video again to open Firefox's context menu Click "Take Snapshot..." This works on...</p>
+</a>
+
+
+
+<li><a href=/2022/11/29/Jekyll-WSL2-localhost-0.0.0.0-View-on-Mobile-Fix>
+Jekyll WSL2 localhost 0.0.0.0 View on Mobile Fix<br>
+<p>If you're making a website, you may want to test that website on smartphones. If you're making your website with...</p>
+</a>
+
+
+
+<li><a href=/2022/11/08/How-to-Fix-bsnes-Black-Screen-Glitches-and-Crashes-when-Using-Shaders-on-a-Laptop>
+How to Fix bsnes Black Screen, Glitches and Crashes when Using Shaders on a Laptop<br>
+<p>Hello! When I used bsnes for the first time on my new laptop, I noticed that setting the shader to...</p>
+</a>
+
+
+
+<li><a href=/2022/11/04/How-to-Convert-from-WebP-or-SVG-to-Formats-like-PNG-and-GIF>
+How to Convert from WebP or SVG to Formats like PNG and GIF<br>
+<p>Online Converters: webp WebUtils (webp/avif to png/jpeg, animation not supported, files converted in bulk but downloaded one at a time)...</p>
+</a>
+
+
+
+<li><a href=/2022/09/28/How-to-Change-the-Internal-Name-of-a-Wii-or-GameCube-Disc>
+How to Change the Internal Name of a Wii or GameCube Disc<br>
+<p>Those who use WiiFlow or other such USB loaders to play their Wii and GameCube games may wish to change...</p>
+</a>
+
+
+
+<li><a href=/2022/09/17/I-Moved-My-Jekyll-Website-from-Windows-to-WSL2-Ubuntu>
+I Moved My Jekyll Website from Windows to WSL2 Ubuntu<br>
+<p>Hello! I got a new laptop, and this one has Windows 11 on it, so I finally decided to stop...</p>
+</a>
+
+
+
+<li><a href=/2022/09/06/NoScript-Blocks-the-Object-Tag-when-it-Blocks-Scripts>
+NoScript Blocks the &lt;object&gt; Tag when it Blocks Scripts<br>
+<p>NoScript has separate checkboxes for blocking "scripts" and "objects". I assumed that unchecking "scripts" would only block &lt;script&gt; tags on...</p>
+</a>
+
+
+
+<li><a href=/2022/07/13/Animated-SVGs-Use-High-CPU-and-Freeze-when-used-as-an-Image>
+Animated SVGs Use High CPU and Freeze when used as an Image<br>
+<p>An SVG animated with CSS @keyframes defined in the SVG itself (not the page's CSS) will use high CPU on...</p>
+</a>
+
+
+
+<li><a href=/2022/06/09/SplatHex-displays-Damage-Up-for-All-Gear>
+SplatHex displays Damage Up for All Gear<br>
+<p>Watch out for this SplatHex bug! Even though octoglasses' main ability is last-ditch effort, SplatHex shows damage up as the...</p>
+</a>
+
+
+
+<li><a href=/2022/06/06/The-Original-Mew-Glitch>
+The Original Mew Glitch<br>
+<p>On November 6th 2021, Did You Know Gaming uploaded a video about the origins of Mew. This video made me...</p>
+</a>
+
+
+
+<li><a href=/2022/05/27/How-to-Make-Custom-3DS-Mega-Badges>
+How to Make Custom 3DS Mega Badges<br>
+<p>Nintendo Badge Arcade is a free-to-play game for the 3DS in which you play a crane game to unlock badges...</p>
+</a>
+
+
+
+<li><a href=/2022/04/09/Android-5.0-Lollipop-the-Best-Emoji>
+Android 5.0 Lollipop: the Best Emoji<br>
+<p>I've never been that big of a fan of most emoji. Apple popularized the the use of gradients in emoji,...</p>
+</a>
+</ul>
+</aside>
+<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+<script src=/webpnotice.js></script></body></html>

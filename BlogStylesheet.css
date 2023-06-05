@@ -25,10 +25,17 @@
 }*/
 @font-face {
 	font-family:Compagnon;
-	font-style:normal;
+	font-style:italic;
 	font-weight:900;
 	font-display:fallback;
 	src:url(Compagnon-Italic-bold-thinSpace2.woff2);
+}
+@font-face {
+	font-family:Compagnon;
+	font-style:normal;
+	font-weight:normal;
+	font-display:fallback;
+	src:url(Compagnon-Roman.woff2);
 }
 @font-face {
 	font-family:Kiwi Maru;
@@ -254,6 +261,10 @@ h2:lang(en), h2 a:lang(en), h1:lang(en), h1 a:lang(en) {
 	/*-webkit-text-stroke:0.08rem;*/
 	/*word-spacing:-0.5rem;*/
 	/*font-weight:normal;*/
+	font-style: italic;
+}
+h2:lang(en) i, h2 a:lang(en) i, h1:lang(en) i, h1 a:lang(en) i {
+	font-style: normal;
 }
 h2 a:active, h1 a:active{
 	color:var(--pink);
