@@ -13,9 +13,27 @@
   </author>
 
   <entry>
-    <title>How to Create the Pokemon Black 2 frieNDS Rom from a Good Dump</title>
-	<id>/2023/06/12/How-to-Create-the-Pokemon-Black-2-frieNDS-Rom-from-a-Good-Dump</id>
-    <link href="/2023/06/12/How-to-Create-the-Pokemon-Black-2-frieNDS-Rom-from-a-Good-Dump"/>
+    <title>What to do if a Romhack Patch from Project Pokémon Doesn't Work</title>
+	<id>/2023/06/17/What-to-do-if-a-Romhack-Patch-from-Project-Pokémon-Doesn't-Work</id>
+    <link href="/2023/06/17/What-to-do-if-a-Romhack-Patch-from-Project-Pok%C3%A9mon-Doesn't-Work"/>
+    <summary type="html">I mistakenly thought that the most recent version of Blaze Black and Volt White and its sequels needed to be patched onto a bad dump in order to function. The reason I mistakenly thought this is because the main download page for these hacks has the bad versions of the...</summary>
+	<updated>2023-06-17T17:00:00Z</updated>
+	<published>2023-06-17T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>How to Create the Pokémon Black/White SweeTnDs Rom from a Good Dump</title>
+	<id>/2023/06/17/How-to-Create-the-Pokemon-Black-White-SweeTnDs-Rom-from-a-Good-Dump</id>
+    <link href="/2023/06/17/How-to-Create-the-Pokemon-Black-White-SweeTnDs-Rom-from-a-Good-Dump"/>
+    <summary type="html">I wrote this guide due to a wrong assumption I made about a romhack. I will still publish this guide anyway in case there is a Pokémon romhack out there that doesn't have a fixed version. There were too many differences between the SweeTnDs bad scene dump and the good...</summary>
+	<updated>2023-06-17T17:00:00Z</updated>
+	<published>2023-06-17T17:00:00Z</published>
+  </entry>
+
+  <entry>
+    <title>How to Create the Pokémon Black/White 2 frieNDS Rom from a Good Dump</title>
+	<id>/2023/06/12/How-to-Create-the-Pokémon-Black-White-2-frieNDS-Rom-from-a-Good-Dump</id>
+    <link href="/2023/06/12/How-to-Create-the-Pok%C3%A9mon-Black-White-2-frieNDS-Rom-from-a-Good-Dump"/>
     <summary type="html">It's funny how PokéCommunity and Project Pokémon each represent one extreme side to take on the same issue. On Project Pokémon, if a romhack contains even a single unaltered byte from the rom, it gets taken down. A lot of Pokémon Super Mystery Dungeon hacks are lost forever because of...</summary>
 	<updated>2023-06-12T17:00:00Z</updated>
 	<published>2023-06-12T17:00:00Z</published>
