@@ -205,12 +205,16 @@ nav details ul a:hover,nav details ul a:focus-visible {
 	background-color:transparent;
 	color:var(--pink)
 }
-article, section, .tags, .pnav {
+article, section, .tags, .pnav, div.section {
 	margin-left:auto;
 	margin-right:auto;
 	max-width:calc(35rem * 1.3); /*1.3 compensates for the difference between the root font size and p's font size*/
 	padding-bottom:4vh;
 	display:flow-root;
+}
+section.nospace {
+	padding-bottom:0;
+	display:block;
 }
 hr.invisible-pause{ /* This will replace all instances of </section><section> to denote a semantic pause without a header. */
 	opacity:0;
@@ -431,8 +435,11 @@ span[title] {text-decoration: underline dotted}
 abbr {
 	text-decoration:none;
 }
-strong {
+strong, h3 {
 	color: var(--pink);
+}
+h3 {
+	font-style: italic;
 }
 code {
 	background:black;
