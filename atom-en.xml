@@ -67,10 +67,10 @@
   </entry>
 
   <entry>
-    <title>How to Convert 4GS and DSZ save files to SAV</title>
-	<id>/2023/03/07/How-to-Convert-4GS-and-DSZ-save-files-to-SAV</id>
-    <link href="/2023/03/07/How-to-Convert-4GS-and-DSZ-save-files-to-SAV"/>
-    <summary type="html">44670's two great web emulator ports: 44VBA and DS Player, both use a completely unique file extension for their save files; Here's how to convert these formats to .sav: 4GS This is just a renamed version of the emulator VBA-Next's srm save format. To convert it to sav: just use...</summary>
+    <title>How to Convert 4GS and DSZ save files to and from SAV</title>
+	<id>/2023/03/07/How-to-Convert-4GS-and-DSZ-save-files-to-and-from-SAV</id>
+    <link href="/2023/03/07/How-to-Convert-4GS-and-DSZ-save-files-to-and-from-SAV"/>
+    <summary type="html">44670's two great web emulator ports: 44VBA and DS Player, both use a completely unique file extension for their save files; Here's how to convert these formats to .sav, and convert .sav to these formats: 4GS This is just a renamed version of the emulator VBA-Next's srm save format. More...</summary>
 	<updated>2023-03-07T17:00:00Z</updated>
 	<published>2023-03-07T17:00:00Z</published>
   </entry>
