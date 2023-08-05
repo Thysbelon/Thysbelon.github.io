@@ -439,6 +439,9 @@ strong, h3 {
 	color: var(--pink);
 }
 h3 {
+	font-size:1.35rem;
+}
+h3:lang(en) {
 	font-style: italic;
 }
 code {
@@ -627,6 +630,7 @@ html {
 	}*/
 	body {font-size:clamp(.8rem,2.5vw,1rem)}
 	h2, h2 a, h1, h1 a {font-size:clamp(1.5rem,5vw,2rem)}
+	h3{font-size:clamp(1.05rem,3vw,1.35rem)}
 	p, figcaption, blockquote, pre, section>ul,article>ul,section>ol,article>ol,section>details,section>details>* {
 		font-size:clamp(1rem,3vw,1.3rem)
 	}
