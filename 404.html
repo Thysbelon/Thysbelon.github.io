@@ -1,32 +1,35 @@
 <!DOCTYPE html>
-<html lang=en>
+<html>
 <head>
 <meta charset=UTF-8>
-<link rel=preload href=/ThysbelonTitle.svg as=image type=image/svg+xml>
-<link rel=preload href=/thysbelonicon.svg as=image type=image/svg+xml>
-<link rel=preload href=/BlogStylesheet.css as=style>
-<meta name="color-scheme" content="dark light"><meta name=robots content=noindex><title>404 - Thysbelon</title>
-<meta property="og:title" content="404 - Thysbelon">
-<meta name=theme-color content=#ff4c60>
-
+<link rel=preload href=/ThysbelonTitle.svg as=image>
+<link rel=preload href=/thysbelonicon.svg as=image><meta name=robots content=noindex><title>404-Thysbelon/シズビロン</title>
 <meta name=viewport content=width=device-width,initial-scale=1.0>
 <link rel=icon type=image/x-icon href=/thysbelonicon.svg>
-<link rel=stylesheet href=/BlogStylesheet.css><noscript><style>.jsonly{display:none}</style></noscript></head>
+<link rel=stylesheet href=/BlogStylesheet.css>
+<meta name=theme-color content=#ff4c60><noscript><style>.jsonly{display:none}</style></noscript><script src=/Archive/hidelang.js></script></head>
 <body>
-<header><a href=/Home><img id=blogtitle src=/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280></a></header>
-<nav><ul><li><a href=/Portfolio/>Portfolio</a><li><a href=/Archive/>Archive</a><li><a href=/Subscribe/>Subscribe</a><li><a href=/About/>About</a><li><details><summary>Art</summary><ul><li><a href=/Photography/>Photography</a><li><a href=/Programs/>Programs</a><li><a href=/Digital-Art/>Digital Art</a></details>
-			<li><a href=/>Language/言語</a></ul></nav>
-<section>
-	<h1>404: Page not found</h1>
-	<noscript><p>Turn on Javascript to see a list of suggestions.</p></noscript>
-	<p class=jsonly>Loading suggestions...</p>
+<header><a href=/><img id=blogtitle src=/ThysbelonTitle.svg alt=""><img src=/thysbelonicon.svg alt=""></a></header><nav><ul ></ul></nav><section>
+	<h1>404:<span lang=ja>ページが見つけなかった</span>　<span lang=en>Page not found</span></h1>
+	<noscript><p lang=en>Turn on Javascript to see a list of suggestions.</p><p lang=ja>発案のリストを見るためにJavaScriptをオンにしてください。</p></noscript>
+	<p class=jsonly><span lang=en>Loading suggestions...</span><span lang=ja>発案をロードしている…</span></p>
 	<!--<img class="websitecolor fri" src=/workingmoth.webp> replace this with a magnifying glass moth-->
-	<p>You can also use the search bar to search for pages on this website by adding "site:thysbelon.github.io" to the beginning of your search.
+	<p lang=en>You can also use the search bar to search for pages on this website by adding "site:thysbelon.github.io" to the beginning of your search.
+	<p lang=ja>あなたは検索の始めに「site:thysbelon.github.io」を足すのでウェブサイトでページを検索するために検索窓を使える。
 </section>
 <script>
-(function(){const suggestor=new Worker('/404-2.js')
-suggestor.postMessage(window.location.pathname)
-suggestor.addEventListener('message', function(e){document.querySelector("p.jsonly").outerHTML="<p>Maybe this list will help? (make sure there are no typos in the url!)</p>"+e.data; suggestor.terminate()}, {once:true})})()
+(function(){
+	console.log("navigator.language=="+navigator.language)
+	if (navigator.language=="ja"){
+		console.log("japanese language detected")
+		var suggestor=new Worker('/404-jp.js')
+	} else {
+		console.log("other language detected")
+		var suggestor=new Worker('/404-2.js')
+	}
+	suggestor.postMessage(window.location.pathname)
+	if (navigator.language=="ja"){var suggestMessage="このリストが手伝うかもしれません。"} else {var suggestMessage="Maybe this list will help? (make sure there are no typos in the url!)"}
+	suggestor.addEventListener('message', function(e){document.querySelector("p.jsonly").outerHTML="<p>"+suggestMessage+"</p>"+e.data; suggestor.terminate()}, {once:true})
+})()
 </script>
-<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
-<script src=/webpnotice.js></script></body></html>
+<footer></footer></body></html>
