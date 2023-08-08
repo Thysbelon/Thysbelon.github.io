@@ -47,7 +47,7 @@ nav>ul,nav {
 </head>
 <body>
 <header>{%- if page.url != "/" -%}<a href=/>{%- endif -%}<img id=blogtitle src=/ThysbelonTitle.svg alt=""><img src=/thysbelonicon.svg alt="">{%- if page.url != "/" and page.url != "/Home" -%}</a>{%- endif -%}</header>
-<nav><ul {% if page.type %}style=flex-wrap:wrap{% endif %}>
+{%- unless page.title contains "404" -%}<nav><ul {% if page.type %}style=flex-wrap:wrap{% endif %}>
 {%- if page.url == "/" -%}
 	<li><a href=Home lang=en>English</a>
 	<li><a href=ホーム lang=ja>日本語</a>
@@ -80,41 +80,7 @@ nav>ul,nav {
 	<li><a href=/>Language/言語</a>
 	<li><a href=https://thysbelon.wordpress.com target=_blank>WordPress</a>
 {%- else -%}
-	{%- assign groupcheck = page.url | split: "/" -%}
-	{%- if groupcheck[2] != nil -%}
-		{%- assign group = groupcheck[1] | prepend: "/" | append: "/" -%}
-		<li><a href={{ group }}>{{ groupcheck[1] | replace: "-", " " }}</a>
-		{%- for i in site.pages -%}
-			{%- if i.url contains group and i.url != group and i.url != page.url -%}
-				<li><a href={{ i.url | remove: group | prepend: "../" }}>{{ i.url | split: "/" | last | replace: "-", " " }}</a>
-			{%- endif -%}
-		{%- endfor -%}
-	{%- else -%}
-		{%- for i in site.pages -%}
-			{%- if i.url contains page.url and i.url != page.url -%}
-				{%- assign group = true -%}
-				{%- break -%}
-			{%- endif -%}
-		{%- endfor -%}
-		{%- if group == true -%}
-			{%- for i in site.pages -%}
-				{%- if i.url contains page.url and i.url != page.url -%}
-					<li><a href={{ i.url | remove: page.url }}>{{ i.url | split: "/" | last | replace: "-", " " }}</a>
-				{%- endif -%}
-			{%- endfor -%}
-		{%- else -%}
-			{%- for i in site.pages -%}
-				{%- assign groupcheck = i.url | split: "/" -%}
-				{%- if groupcheck[2] == nil -%}
-					{%- unless i.url == page.url or i.url contains ".html" or i.url contains "css" or i.url == "/" or i.url == "/Home" or i.layout == "default-jp" or i.type or i.nonav -%}
-						<li><a href={{ i.url }}>{{ i.url | split: "/" | last | replace: "-", " " }}</a>
-					{%- endunless -%}
-				{%- endif -%}
-			{%- endfor -%}
-			<li><a href=/>Language/言語</a>
-			<li><a href=https://thysbelon.wordpress.com target=_blank>WordPress</a>
-		{%- endif -%}
-	{%- endif -%}
-{%- endif -%}</ul></nav>
+
+{%- endif -%}</ul></nav>{%- endunless -%}
 {{ content }}
 <footer></footer></body></html>

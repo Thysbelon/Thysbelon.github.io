@@ -1,18 +1,31 @@
 ---
+layout: default
 permalink: /404.html
 noindex: true
 style: "<noscript><style>.jsonly{display:none}</style></noscript>"
 title: 404
+script: "<script src=/Archive/hidelang.js></script>"
 ---
 <section>
-	<h1>404: Page not found</h1>
-	<noscript><p>Turn on Javascript to see a list of suggestions.</p></noscript>
-	<p class=jsonly>Loading suggestions...</p>
+	<h1>404:<span lang=ja>ページが見つけなかった</span>　<span lang=en>Page not found</span></h1>
+	<noscript><p lang=en>Turn on Javascript to see a list of suggestions.</p><p lang=ja>発案のリストを見るためにJavaScriptをオンにしてください。</p></noscript>
+	<p class=jsonly><span lang=en>Loading suggestions...</span><span lang=ja>発案をロードしている…</span></p>
 	<!--<img class="websitecolor fri" src=/workingmoth.webp> replace this with a magnifying glass moth-->
-	<p>You can also use the search bar to search for pages on this website by adding "site:{{ site.url | remove: "https://" | remove: "http://" }}" to the beginning of your search.
+	<p lang=en>You can also use the search bar to search for pages on this website by adding "site:{{ site.url | remove: "https://" | remove: "http://" }}" to the beginning of your search.
+	<p lang=ja>あなたは検索の始めに「site:{{ site.url | remove: "https://" | remove: "http://" }}」を足すのでウェブサイトでページを検索するために検索窓を使える。
 </section>
 <script>
-(function(){const suggestor=new Worker('/404-2.js')
-suggestor.postMessage(window.location.pathname)
-suggestor.addEventListener('message', function(e){document.querySelector("p.jsonly").outerHTML="<p>Maybe this list will help? (make sure there are no typos in the url!)</p>"+e.data; suggestor.terminate()}, {once:true})})()
+(function(){
+	console.log("navigator.language=="+navigator.language)
+	if (navigator.language=="ja"){
+		console.log("japanese language detected")
+		var suggestor=new Worker('/404-jp.js')
+	} else {
+		console.log("other language detected")
+		var suggestor=new Worker('/404-2.js')
+	}
+	suggestor.postMessage(window.location.pathname)
+	if (navigator.language=="ja"){var suggestMessage="このリストが手伝うかもしれません。"} else {var suggestMessage="Maybe this list will help? (make sure there are no typos in the url!)"}
+	suggestor.addEventListener('message', function(e){document.querySelector("p.jsonly").outerHTML="<p>"+suggestMessage+"</p>"+e.data; suggestor.terminate()}, {once:true})
+})()
 </script>

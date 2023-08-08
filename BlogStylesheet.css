@@ -1,3 +1,5 @@
+/* FIX HOME PAGE BLOG LINK COLORS */
+
 /*@font-face {
 	font-family:space;
 	src: local('Verdana');
@@ -100,7 +102,7 @@ body {
 	font-family:Kiwi Maru,American Typewriter,Hiragino Maru Gothic Pro,Arial Rounded MT,UD Digi Kyokasho N-B;
 	overflow-x:hidden;
 }
-span:lang(ja){font-family:Kiwi Maru}
+*:lang(en)/* I hope this change didn't break anything */ span:lang(ja){font-family:Kiwi Maru}
 * {text-decoration-thickness:from-font;text-underline-position:from-font}
 button,a{transition-duration:.4s}
 button:active,a:active {transition-duration:.1s}
@@ -232,7 +234,7 @@ body>article:last-of-type{padding-bottom:10vh}
 .tags ul li:not(.tags ul li:last-child)::after {
 	content:" / "
 }
-h1 + time {
+h1 + time, article time {
 	display:block;
 	text-align:right;
 	width:100%;
@@ -254,13 +256,13 @@ button, button:hover, button:active {
 	font-family:inherit;
 	/*border-style:hidden;*/ /*why did i add this?*/
 }
-h2, h2 a, h1, h1 a {
+h2, /*h2 *,*/ h1, /*h1 * this breaks hover colors,*/ h1 a, h2 a {
 	font-family:Compagnon2,Kaisei Decol,American Typewriter, Hiragino Mincho Pro,Maiandra GD,BIZ UDPMincho;
-	color:var(--pink);
+	color:var(--pink); 
 	margin-top:1rem;
 	margin-bottom:1rem;
 }
-h2:lang(en), h2 a:lang(en), h1:lang(en), h1 a:lang(en) {
+h2:lang(en), h2 *:lang(en), h1:lang(en), h1 *:lang(en) {
 	font-family:Compagnon,Curlz MT,Forte,Pilgiche,Apple Chancery,Blackadder ITC,Lucida Calligraphy,Segoe Script,Brush Script MT;
 	/*-webkit-text-stroke:0.08rem;*/
 	/*word-spacing:-0.5rem;*/
@@ -273,7 +275,7 @@ h2:lang(en) i, h2 a:lang(en) i, h1:lang(en) i, h1 a:lang(en) i {
 h2 a:active, h1 a:active{
 	color:var(--pink);
 }
-h2[itemprop], h1[itemprop], article > h1 {
+h2[itemprop], h1[itemprop], article > h1, article>a:first-child, article>a>h1 {
 	margin-bottom:0;
 }
 .gallery {
