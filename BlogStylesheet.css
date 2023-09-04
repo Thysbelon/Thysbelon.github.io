@@ -104,7 +104,7 @@ body {
 }
 *:lang(en)/* I hope this change didn't break anything */ span:lang(ja){font-family:Kiwi Maru}
 * {text-decoration-thickness:from-font;text-underline-position:from-font}
-button,a{transition-duration:.4s}
+button,a,a>*/*does this break anything?*/{transition-duration:.4s}
 button:active,a:active {transition-duration:.1s}
 body:lang(en) {
 	font-family:Kiwi-Maru,American Typewriter,Hiragino Maru Gothic Pro,Arial Rounded MT,UD Digi Kyokasho N-B;
@@ -399,10 +399,10 @@ blockquote {
 p {
 	margin-top:0;
 }
-a, button, button:disabled:hover, button:disabled:active {
+a, button, button:disabled:hover, button:disabled:active, a>code {
 	color:var(--link);
 }
-a:hover, a:focus-visible {
+a:hover, a:focus-visible, a:hover>code {
 	color:var(--txt);
 }
 a:active {
