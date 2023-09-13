@@ -11,18 +11,6 @@ title: "Ghost Trick 2023 Mod: Countdown (Arranged) Music Adjustment"
 <p>To my surprise, all the music files in the remaster are completely unencrypted, uncompressed WAVE files (The devs should've compressed them, they could have reduced the file size of the music from ~675 MB to ~63 MB). This made it very easy to modify the "Countdown" arrangement to include that lead instrument.
 <!--IfThisCommentIsNotPresent, <strong>WillBeOpenAndAllPageTextWillBe<strong>.FixThis-->
 <p><strong>I have only tested this mod on the demo, and only while disconnected from the internet</strong>, but it did work under these circumstances.
-<!--
-<section class=nospace>
-<h2>Installation Instructions</h2>
-<ol>
-<li><a href=mediafire>Download the Countdown (Arranged) Music Adjustment mod</a>
-<li><a href=https://savelocation.net/steam-game-folder target=_blank>Go to Ghost Trick's directory</a>
-<li>Look for a file that is at least 3 GB with the extension ".pak". Open it in a hex editor.
-<li>In the hex editor, press the key combination CTRL+F and search for these hex numbers: 52 49 46 46 28 1F 2D 00 57 41 56 45
-<li>
-</ol>
-</section>
--->
 <p><a href=https://savelocation.net/steam-game-folder target=_blank>Go to Ghost Trick's directory</a>
 <p>
 <label for=pakpicker>Select pak file: </label>
@@ -37,7 +25,6 @@ function onChange(e){
 	let CountdownMod;
 	let success=0;
 	fetch("CountdownMod.wav").then( (value) => {
-		//value.arrayBuffer().then((value2) => {CountdownMod=new Uint8Array(value2); success++; if (success===2) {patching(finalRIFFaddress, pakFile, CountdownMod)}})
 		value.blob().then((value2) => {CountdownMod=value2; success++; if (success===2) {patching(finalRIFFaddress, pakFile, CountdownMod)}})
 	})
 	console.log("Starting on file "+e.target.files[0].name)

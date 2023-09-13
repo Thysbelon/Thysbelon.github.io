@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-	//if () {return}
+	//if (phone) {return} // turn off script for mobile, the modals are not useful there.
 	let elementsArray = document.querySelectorAll(".gallery img, section > img");
 	document.querySelector("nav").outerHTML+="<dialog id=imgmodal><img></dialog>"
 	var modal = document.getElementById("imgmodal");
