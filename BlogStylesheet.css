@@ -502,6 +502,10 @@ article img {
 	--w:nothing;
 	--h:nothing;
 }
+article img.pixl { /* apply properties like these to all .pixl images? */
+	max-width:calc(20rem * calc(var(--w)*8)/calc(var(--h)*7) );
+	max-height:20rem;
+}
 .websitecolor {
 	background-color:initial;
 }
