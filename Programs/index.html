@@ -4,7 +4,7 @@ tagroup: "Art"
 <section>
 <h1>{{ page.url | split: "/" | last | replace: "-", " " }}</h1>
 <p>This is where I put any games or applications I've programmed. They are listed with the oldest at the top and the newest at the bottom.
-<h2><a href=/rhythm-heaven-web>Rhythm Heaven Web Port Demo</a></h2>
+<h2><a href=/rhythm-heaven-web target=_blank>Rhythm Heaven Web Port Demo</a></h2>
 <p>I think I'm the kind of person who feels more motivated to learn when I know the <em>use</em> of the thing I'm learning. That's why I decided to learn Javascript by attempting to port <a href=https://youtu.be/A0J8wmucIbM target=_blank>Rhythm Heaven Fever (specifically the "Hole in One" mini game)</a> to the web.
 <p>All art and sound effects are pulled from Rhythm Heaven Fever.
 <p>There is a gameplay demo and a small Canvas Animation Demo. I planned to incorporate this animation system into the main demo, but I abandoned the project before that happened. Unlike the main demo, which uses a hand-made css spritesheet of the characters' poses, and has placeholder bad animation timing; the animation demo uses animation and sprite data from Rhythm Heaven Fever, extracted using <a href=https://github.com/rhmodding/bread target=_blank>Bread</a>.
@@ -18,11 +18,14 @@ tagroup: "Art"
 <p><a href=https://github.com/Dabomstew/universal-pokemon-randomizer target=_blank>Dabomstew's Universal Pokemon Randomizer</a> ported to Javascript via <a href=https://leaningtech.com/cheerpj/ target=_blank>CheerpJ</a>.
 <h2><a href=/gbaconv-web target=_blank>GBA-Conv-Web</a></h2>
 <p>The simple command-line c program <a href=https://github.com/libretro/vba-next/blob/master/libretro/gbaconv/gbaconv.c target=_blank>gbaconv</a>, compiled to run on the web via Emscripten. I added support for 4gz files and SRAM type save files and made the front-end webpage. <a href=https://github.com/libretro/vba-next/pull/149 target=_blank>The SRAM support I added was merged into the original gbaconv.c</a>.
-<h2><a href=/nsfplayer-wasm target=_blank>NSF-Player-WASM</a></h2>
+<h2 id=nsfplayer-wasm><a href=/nsfplayer-wasm target=_blank>NSF-Player-WASM</a></h2>
 <p>A program that consists of <a href=https://bitbucket.org/mpyne/game-music-emu/src/master/ target=_blank>the library game-music-emu</a> compiled with Emscripten, <a href=https://github.com/Thysbelon/nsfplayer-wasm/blob/main/main.c target=_blank>some c helper code I wrote</a> compiled with Emscripten, and a <a href=https://github.com/Thysbelon/nsfplayer-wasm/blob/main/docs/nsfplay-function.js target=_blank>JavaScript function that uses the functions defined in the c helper code and wraps it all up in a single 'nsfplay()' function for ease of use</a>.
 <p>This program allows front-end web developers to easily play NES and Famicom chiptune music in the browser with NSFe files. These files only contain music playing code, which makes them much smaller than a 'streamed' music file like a WAV or MP3.
+<p>I have since made a successor named <a href=#Web-GME-Player>Web-GME-Player</a>.
 <h2><a href=/cutpoint-generator target=_blank>Cutpoint Group Frequency Distribution Table Diagram Generator</a></h2>
 <p>Manually counting data points to create a diagram for a statistics class assignment is monotonous and mindless work. I couldn't find an online generator for the assignments that asked for a frequency distribution table with cutpoint grouping, so I made my own.
 <h2><a href=/wave-extractor target=_blank>Wave Extractor</a></h2>
 <p>Extract <a href="https://docs.fileformat.com/audio/wav/" target=_blank>WAVE</a> files from an archive (that is neither encrypted nor compressed). Useful for extracting music from a PC game's archive (which is a file that contains all the files used in the game). This webapp makes use of <a href=https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream target=_blank><code>ReadableStream</code>s</a> to process archives of any size.
+<h2 id=Web-GME-Player><a href=/Web-GME-Player target=_blank>Web-GME-Player</a></h2>
+<p>A successor to <a href=#nsfplayer-wasm>NSF-Player-WASM</a>. All of the file formats supported by game-music-emu have been enabled. Many improvements and bug fixes have been made, and new features have been added. <!--to do: write more here-->
 </section>
