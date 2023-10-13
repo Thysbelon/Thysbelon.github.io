@@ -23,7 +23,7 @@
 <!--to do: update jp translation-->
 <p>44670's two great web emulator ports: <a href=https://gba.44670.org/ target=_blank>44VBA</a> and <a href=https://ds.44670.org/ target=_blank>DS Player</a>, both use a completely unique file extension for their save files; Here's how to convert these formats to .sav, and convert .sav to these formats:
 <section class=nospace>
-<h2>4GS</h2>
+<h2 id=4GS>4GS</h2>
 <p>This is just a renamed version of the emulator VBA-Next's srm save format.
 <p><a href=https://emulation.gametechwiki.com/index.php/Game_Boy_Advance_emulators#Save_formats target=_blank>More details on VBA's save format can be found on emugen wiki</a>.
 <h3>Convert 4GS to SAV</h3>
@@ -32,7 +32,7 @@
 <p>Run the sav file through <a href=https://thysbelon.github.io/gbaconv-web/>gbaconv-web</a>, then rename the output from ".srm" to ".4gs".
 </section>
 <section class=nospace>
-<h2>DSZ</h2>
+<h2 id=DSZ>DSZ</h2>
 <p>This is Desmume's dsv save format compressed to gzip.
 <h3>Convert DSZ to SAV</h3>
 <ol>
@@ -48,6 +48,7 @@
 <li>Compress the dsv file to gzip using <a href=https://www.7-zip.org/ target=_blank>7-Zip</a> or <a href=https://gzip.swimburger.net/ target=_blank>this online compressor</a>.
 <li>Rename the gzipped file to ".dsz" and load it into DS Player.
 </ol>
+<p><strong>Even after following these steps, it may still be impossible to import your save into DS Player</strong>. DS Player, being a fork of Desmume, has the same issues with guessing save file size. In Desmume, this is not a problem because the user can choose the correct file size when importing .sav files; however, DS Player has no such option, so any .sav (or .dsz) that is a greater size than what DS Player expects will always fail to load.
 </section>
 <section class=nospace>
 <h2>About 4DSAZ, 4GZ, and 44GBASAV files</h2>
