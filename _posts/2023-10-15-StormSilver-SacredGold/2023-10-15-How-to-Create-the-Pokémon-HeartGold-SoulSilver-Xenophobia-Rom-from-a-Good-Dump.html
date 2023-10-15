@@ -1,0 +1,29 @@
+---
+tags:
+  - Guide
+  - DS
+  - Romhacking
+  - Pokémon
+categories:
+  - Video Game
+title: "How to Create the Pokémon HeartGold/SoulSilver Xenophobia Rom from a Good Dump"
+---
+<p>Once again, I have discovered an old (2012) romhack of Drayano's that requires a bad dump in order to patch it.
+<p>Once again, I will provide instructions on how to patch Sacred Gold and Storm Silver using a legitimate good dump of the game.
+<p>Of course, these instructions will help with any romhack that requires these bad dumps: decrypted CRC32 of FFD28F00 for HeartGold and EBB387E7 for SoulSilver.
+<!-- pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad -->
+<section class=nospace>
+<h2>Method 1: Hex Editing Instructions</h2>
+<ol>
+<li>Open a decrypted good dump of either HeartGold or SoulSilver in a hex editor
+<li>Replace the bytes in addresses 0x00000330 through 0x00001000 with zeroes.
+</ol>
+</section>
+<section class=nospace>
+<h2>Method 2: Patches</h2>
+<ul>
+<li><a href='4780 - Pokemon HeartGold (U)(Xenophobia).xdelta'>4780 - Pokemon HeartGold (U)(Xenophobia).xdelta</a>
+<li><a href='4781 - Pokemon SoulSilver (U)(Xenophobia).xdelta'>4781 - Pokemon SoulSilver (U)(Xenophobia).xdelta</a>
+</ul>
+</section>
+<p>After you have modified the good dump using either method 1 or method 2, you can apply the Sacred Gold or Storm Silver patch, or whatever romhack patch requires these bad dump base roms.
