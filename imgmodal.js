@@ -32,8 +32,17 @@ document.addEventListener('DOMContentLoaded', function() {
 				modalImg.src = this.src;
 				if (this.className.includes("pixl")) {
 					modal.style.imageRendering="pixelated"
-				} else {modal.style.imageRendering="auto"}
+					if (this.style.getPropertyValue("--w")) {
+						console.log(this.style.getPropertyValue("--w"))
+						let theAspectRatio=this.style.getPropertyValue("--w")*8+"/"+this.style.getPropertyValue("--h")*7; modalImg.style.objectFit="fill"
+						modal.style.aspectRatio=theAspectRatio
+						modalImg.style.aspectRatio=theAspectRatio
+						modalImg.style.height="initial"
+						modalImg.style.width="100%"
+					} else {modal.style.removeProperty('aspect-ratio'); modalImg.style.removeProperty('aspect-ratio'); modalImg.style.objectFit="contain"; modalImg.style.removeProperty('width'); modalImg.style.height="100%"}
+				} else {modal.style.imageRendering="auto"; modal.style.removeProperty('aspect-ratio'); modalImg.style.removeProperty('aspect-ratio'); modalImg.style.objectFit="contain"; modalImg.style.removeProperty('width'); modalImg.style.height="100%"}
 				modal.showModal()
+				modal.style.display="flex"
 			}
 		});
 		elem.tabIndex=0
