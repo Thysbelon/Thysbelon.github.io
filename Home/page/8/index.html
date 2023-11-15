@@ -14,7 +14,7 @@
 <link rel=stylesheet href=/BlogStylesheet.css></head>
 <body>
 <header><a href=/Home><img id=blogtitle src=/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280></a></header>
-<nav><ul><li><a href=/About/>About</a><li><a href=/UI-UX/>UI UX</a><li><a href=/Portfolio/>Portfolio</a><li><a href=/Subscribe/>Subscribe</a><li><a href=/Archive/>Archive</a><li><details><summary>Art</summary><ul><li><a href=/Photography/>Photography</a><li><a href=/Programs/>Programs</a><li><a href=/Digital-Art/>Digital Art</a></details>
+<nav><ul><li><a href=/Archive/>Archive</a><li><a href=/UI-UX/>UI UX</a><li><a href=/About/>About</a><li><a href=/Portfolio/>Portfolio</a><li><a href=/Subscribe/>Subscribe</a><li><details><summary>Art</summary><ul><li><a href=/Programs/>Programs</a><li><a href=/Photography/>Photography</a><li><a href=/Digital-Art/>Digital Art</a></details>
 	<li><a href=/>Language/言語</a></ul></nav>
 <article><h1><a href=/2022/07/13/Animated-SVGs-Use-High-CPU-and-Freeze-when-used-as-an-Image>Animated SVGs Use High CPU and Freeze when used as an Image</a></h1><time>13 July 2022</time><p>An SVG animated with CSS <code>@keyframes</code> defined in the SVG itself (not the page's CSS) will use high CPU on Firefox if the SVG is linked to in the <code>src</code> attribute of an <code>&lt;img&gt;</code> tag, or linked to in a <code>background-image</code> CSS property on the page. In addition, an animated SVG in a <code>background-image</code> may freeze on chromium.
 <p>I tested different ways of putting an animated SVG on a page; the option that performed best was the <code>&lt;object&gt;</code> tag, inline svg was a close second.
