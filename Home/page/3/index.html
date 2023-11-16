@@ -16,8 +16,8 @@
 <header><a href=/Home><img id=blogtitle src=/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280></a></header>
 <nav><ul><li><a href=/Archive/>Archive</a><li><a href=/UI-UX/>UI UX</a><li><a href=/About/>About</a><li><a href=/Portfolio/>Portfolio</a><li><a href=/Subscribe/>Subscribe</a><li><details><summary>Art</summary><ul><li><a href=/Programs/>Programs</a><li><a href=/Photography/>Photography</a><li><a href=/Digital-Art/>Digital Art</a></details>
 	<li><a href=/>Language/言語</a></ul></nav>
-<article><h1><a href=/2023/01/23/Looping-N64-Midi>Looping N64 Midi</a></h1><time>23 January 2023</time><link href=/misc/headbop.css rel=stylesheet>
-<a href=/2023/01/23/Looping-N64-Midi tabindex=-1><img class=trans src=/misc/headbopsheet.png id=bopmoth4 alt="A hummingbird moth wearing headphones."></a>
+<article><h1><a href=/2023/03/07/How-to-Convert-4GS-and-DSZ-save-files-to-and-from-SAV>How to Convert 4GS and DSZ save files to and from SAV</a></h1><time> 7 March 2023</time><!--to do: update jp translation--> <p>44670's two great web emulator ports: <a href=https://gba.44670.org/ target=_blank>44VBA</a> and <a href=https://ds.44670.org/ target=_blank>DS Player</a>, both use a completely unique file extension for their save files; Here's how to convert these formats to .sav, and convert .sav to these formats: <section class=nospace> <h2 id=4GS>4GS</h2> <p>This is just a renamed version of the emulator VBA-Next's srm save format. <p><a href=https://emulation.gametechwiki.com/index.php/Game_Boy_Advance_emulators#Save_formats target=_blank>More details on VBA's save format can be found on emugen wiki</a>. <h3>Convert 4GS to SAV</h3> <p>To convert it to sav: just use <a href=https://thysbelon.github.io/gbaconv-web/>gbaconv-web</a>. <h3>Convert SAV...</article><article><h1><a href=/2023/01/23/Looping-N64-Midi>Looping N64 Midi</a></h1><time>23 January 2023</time><link href=/misc/headbop.css rel=stylesheet>
+<a href=/2023/01/23/Looping-N64-Midi tabindex=-1><img loading=lazy class=trans src=/misc/headbopsheet.png id=bopmoth4 alt="A hummingbird moth wearing headphones."></a>
 <button onclick=this.onclick=null;StartJams4() style=margin-bottom:1rem>Start Jams</button>
 <p>The previous two N64 midis had blank space after the end of the loop, so I cut off the blank space so I could cleanly loop the song when the player stopped. However, I learned today that N64SoundbankTool exported midis will have their loop start and end points marked by a CC 102 and 103 event. I used js-synthesizer's hook midi method to automatically loop the song at those positions; it was easy to do and it turned out great!
 <script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js></script><script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js></script>
@@ -246,59 +246,6 @@ async function loadSynthesizer() {
 }
 
 }
-</script></article><article><h1><a href=/2023/01/18/Trouble-with-N64-Sequenced-Music>Trouble with N64 Sequenced Music</a></h1><time>18 January 2023</time><p>DLS files are really tough to work with. The only thing that can convert them is Viena. I've been extracting soundbanks from N64 games, but N64SoundbankTool only extracts them as DLS; so when I convert the DLS to SF2 and play it with the N64-music-converted-to-midi, I can't tell how many of the flaws are from the DLS conversion, and how many are from the N64 extraction... (They're probably the fault of the N64 extraction) <br>and I don't think I'll be able to find a way to play DLS files on...</article><article><h1><a href=/2023/01/16/Can-You-Play-Midi-with-SF2-on-the-Web>Can You Play Midi with SF2 on the Web?</a></h1><time>16 January 2023</time><link href=/misc/headbop.css rel=stylesheet>
-<a href=/2023/01/16/Can-You-Play-Midi-with-SF2-on-the-Web tabindex=-1><img loading=lazy class=trans src=/misc/headbopsheet.png id=bopmoth alt="A hummingbird moth wearing headphones."></a>
-<script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js></script><script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js></script>
-<p>Yes.</p>
-<button onclick=this.onclick=null;StartJams() style=margin-bottom:1rem>Start Jams</button>
-<p><a href=https://github.com/jet2jet/js-synthesizer target=_blank>Thank you to jet2jet for making such an amazing tool!</a>
-<script>
-function StartJams(){
-console.log('startjams')
-var sfontBuffer;
-var smfBuffer;
-var context; //context.suspend() and context.resume() can be used to pause and play
-var synth; //this can be used to implement Pause and Play features with synth.stopPlayer() and synth.playPlayer(). Implementing this feature would require changing the loop code from a "while true" loop to a recursive named function.
-(async function(){
-	let response = await fetch('/2023/01/16/Can-You-Play-Midi-with-SF2-on-the-Web/../SEQ_GS_VS_RAIKOU.sf3') // I used the linux program "sf3convert" to compress to sf3.
-	sfontBuffer = await response.arrayBuffer()
-	response = await fetch('/2023/01/16/Can-You-Play-Midi-with-SF2-on-the-Web/../SEQ_GS_VS_RAIKOU.mid') // extracted using the latest version of vgmtrans
-	smfBuffer = await response.arrayBuffer()
-})();
-
-JSSynth.waitForReady().then(loadSynthesizer);
-
-async function loadSynthesizer() {
-	context = new AudioContext();
-	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js')
-	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.worklet.min.js');
-	// Create the synthesizer instance for AudioWorkletNode
-	synth = new JSSynth.AudioWorkletNodeSynthesizer();
-	synth.init(context.sampleRate);
-	// You must create AudioWorkletNode before using other methods
-	// (This is because the message port is not available until the
-	// AudioWorkletNode is created)
-	var audioNode = synth.createAudioNode(context);
-	audioNode.connect(context.destination); // or another node...
-	// After node creation, you can use Synthesizer methods
-	await synth.loadSFont(sfontBuffer)
-	await synth.addSMFDataToPlayer(smfBuffer);
-	let tempelem=document.getElementById('bopmoth')
-	await synth.playPlayer();
-	tempelem.style.animation="0.63157894736842105263157894736842s step-end infinite bop"
-	//let looptestseek= await synth.retrievePlayerTotalTicks() - 1000
-	//await synth.seekPlayer(looptestseek) //test loop
-	while (true) {
-		console.log("loop")
-		await synth.waitForPlayerStopped()
-		await synth.seekPlayer(1920) //loop once. tick 0 is the beginning of the song, keep this in mind while calculating. ticks is ticks-per-quarter-note * quarter notes. find tpq by reaper right click > source properties
-		await synth.playPlayer();
-	}
-}
-}
-</script>
-<!--style: "midi-player::part(play-button){color:black} midi-player::part(time){color:black}"
-<script src=/2023/01/16/Can-You-Play-Midi-with-SF2-on-the-Web/../"https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.5.0"></a></script>
-<midi-player sound-font src=/2023/01/16/Can-You-Play-Midi-with-SF2-on-the-Web/../Blue_Rondo_A_La_Turk.mid></midi-player>--></article><div class=pnav><a class="btnlink fli" href=/Home/page/2/>Newer Posts</a><a class="btnlink fri" href=/Home/page/4/>Older Posts</a></div>
+</script></article><article><h1><a href=/2023/01/18/Trouble-with-N64-Sequenced-Music>Trouble with N64 Sequenced Music</a></h1><time>18 January 2023</time><p>DLS files are really tough to work with. The only thing that can convert them is Viena. I've been extracting soundbanks from N64 games, but N64SoundbankTool only extracts them as DLS; so when I convert the DLS to SF2 and play it with the N64-music-converted-to-midi, I can't tell how many of the flaws are from the DLS conversion, and how many are from the N64 extraction... (They're probably the fault of the N64 extraction) <br>and I don't think I'll be able to find a way to play DLS files on...</article><div class=pnav><a class="btnlink fli" href=/Home/page/2/>Newer Posts</a><a class="btnlink fri" href=/Home/page/4/>Older Posts</a></div>
 <footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
 <script src=/webpnotice.js></script></body></html>
