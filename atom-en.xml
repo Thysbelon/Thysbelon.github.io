@@ -13,6 +13,15 @@
   </author>
 
   <entry>
+    <title>Famicom Two Square Pseudofilter</title>
+	<id>/2023/11/28/Famicom-Two-Square-Pseudofilter</id>
+    <link href="/2023/11/28/Famicom-Two-Square-Pseudofilter"/>
+    <summary type="html">SquareWave has a 2A03 song that showcases a cool effect that can be achieved by playing two square waves with the same notes at the same time, with the first's waveform set to 25% duty, and the second's set to -25% duty. This effect is called the "pseudofilter" (at least,...</summary>
+	<updated>2023-11-28T17:00:00Z</updated>
+	<published>2023-11-28T17:00:00Z</published>
+  </entry>
+
+  <entry>
     <title>Pac-Man Championship Ed. and Blaster Master Area 4 & Game Over Ribbit Triangle Effect</title>
 	<id>/2023/11/16/Pac-Man-Championship-and-Blaster-Master-Area-4-Game-Over-Ribbit-Triangle-Effect</id>
     <link href="/2023/11/16/Pac-Man-Championship-and-Blaster-Master-Area-4-Game-Over-Ribbit-Triangle-Effect"/>
