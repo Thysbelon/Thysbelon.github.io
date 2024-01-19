@@ -494,6 +494,10 @@ article img {
 	float:right;
 	margin-left:.5vw
 }
+.imageWidth100perc img {
+	width:100%;
+}
+
 .pixl {
 	image-rendering:pixelated;
 	width:100%;
