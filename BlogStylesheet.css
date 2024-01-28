@@ -9,14 +9,15 @@
 	font-family:Compagnon2;
 	font-style:normal;
 	unicode-range:U+0041—007A;
-	font-display:fallback;
+	/*font-display:fallback; causes layout shift issues */
+	font-display:optional; /* "font-display: optional can avoid a re-layout as the web font is only used if it is available by the time of initial layout." */
 	src:url(Compagnon-Roman.woff2);
 }
 @font-face {
 	font-family:Kaisei Decol;
 	font-weight:bold;
 	unicode-range:U+3041—309F;
-	font-display:fallback;
+	font-display:optional;
 	src:url(kaisei-decol-japanese.woff2);
 }
 /*@font-face {
@@ -29,28 +30,28 @@
 	font-family:Compagnon;
 	font-style:italic;
 	font-weight:900;
-	font-display:fallback;
+	font-display:optional;
 	src:url(Compagnon-Italic-bold-thinSpace2.woff2);
 }
 @font-face {
 	font-family:Compagnon;
 	font-style:normal;
 	font-weight:normal;
-	font-display:fallback;
+	font-display:optional;
 	src:url(Compagnon-Roman.woff2);
 }
 @font-face {
 	font-family:Kiwi Maru;
 	font-style:normal;
 	unicode-range:U+3041—309F;
-	font-display:fallback;
+	font-display:optional;
 	src:url(kiwi-maru-japanese.woff2);
 }
 @font-face {
 	font-family:Kiwi-Maru;
 	font-style:normal;
 	/*unicode-range:U+0041—007A;*/
-	font-display:fallback;
+	font-display:optional;
 	src:url(KiwiMaru-en-ext3.woff2);
 }
 :root {
@@ -437,7 +438,7 @@ span[title] {text-decoration: underline dotted}
 abbr {
 	text-decoration:none;
 }
-strong, h3 {
+strong, h3, b.color {
 	color: var(--pink);
 }
 h3 {

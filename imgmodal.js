@@ -1,3 +1,21 @@
+function displayImage(modalImg, modal, elem) {
+	console.log(elem)
+	modalImg.src = elem.src.replace('thumbnails/','');
+	if (elem.className.includes("pixl")) {
+		modal.style.imageRendering="pixelated"
+		if (elem.style.getPropertyValue("--w")) {
+			console.log(elem.style.getPropertyValue("--w"))
+			let theAspectRatio=elem.style.getPropertyValue("--w")*8+"/"+elem.style.getPropertyValue("--h")*7; modalImg.style.objectFit="fill"
+			modal.style.aspectRatio=theAspectRatio
+			modalImg.style.aspectRatio=theAspectRatio
+			modalImg.style.height="initial"
+			modalImg.style.width="100%"
+		} else {modal.style.removeProperty('aspect-ratio'); modalImg.style.removeProperty('aspect-ratio'); modalImg.style.objectFit="contain"; modalImg.style.removeProperty('width'); modalImg.style.height="100%"}
+	} else {modal.style.imageRendering="auto"; modal.style.removeProperty('aspect-ratio'); modalImg.style.removeProperty('aspect-ratio'); modalImg.style.objectFit="contain"; modalImg.style.removeProperty('width'); modalImg.style.height="100%"}
+	modal.style.display="flex"
+	modal.showModal()
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 	//if (phone) {return} // turn off script for mobile, the modals are not useful there.
 	let elementsArray = document.querySelectorAll(".gallery img, section > img");
@@ -6,43 +24,16 @@ document.addEventListener('DOMContentLoaded', function() {
 	var modalImg = document.querySelector("#imgmodal img");
 	modal.addEventListener("click",function(){
 		modal.style.removeProperty('display')
+		modalImg.src=''
 		modal.close()
 	})
 	elementsArray.forEach(function(elem) {
 		elem.addEventListener("click", function() {
-			console.log(this)
-			modalImg.src = this.src;
-			if (this.className.includes("pixl")) {
-				modal.style.imageRendering="pixelated"
-				if (this.style.getPropertyValue("--w")) {
-					console.log(this.style.getPropertyValue("--w"))
-					let theAspectRatio=this.style.getPropertyValue("--w")*8+"/"+this.style.getPropertyValue("--h")*7; modalImg.style.objectFit="fill"
-					modal.style.aspectRatio=theAspectRatio
-					modalImg.style.aspectRatio=theAspectRatio
-					modalImg.style.height="initial"
-					modalImg.style.width="100%"
-				} else {modal.style.removeProperty('aspect-ratio'); modalImg.style.removeProperty('aspect-ratio'); modalImg.style.objectFit="contain"; modalImg.style.removeProperty('width'); modalImg.style.height="100%"}
-			} else {modal.style.imageRendering="auto"; modal.style.removeProperty('aspect-ratio'); modalImg.style.removeProperty('aspect-ratio'); modalImg.style.objectFit="contain"; modalImg.style.removeProperty('width'); modalImg.style.height="100%"}
-			modal.showModal()
-			modal.style.display="flex"
+			displayImage(modalImg, modal, this)
 		});
 		elem.addEventListener("keydown", function(e) {
 			if (e.key === "Enter") {
-				console.log(this)
-				modalImg.src = this.src;
-				if (this.className.includes("pixl")) {
-					modal.style.imageRendering="pixelated"
-					if (this.style.getPropertyValue("--w")) {
-						console.log(this.style.getPropertyValue("--w"))
-						let theAspectRatio=this.style.getPropertyValue("--w")*8+"/"+this.style.getPropertyValue("--h")*7; modalImg.style.objectFit="fill"
-						modal.style.aspectRatio=theAspectRatio
-						modalImg.style.aspectRatio=theAspectRatio
-						modalImg.style.height="initial"
-						modalImg.style.width="100%"
-					} else {modal.style.removeProperty('aspect-ratio'); modalImg.style.removeProperty('aspect-ratio'); modalImg.style.objectFit="contain"; modalImg.style.removeProperty('width'); modalImg.style.height="100%"}
-				} else {modal.style.imageRendering="auto"; modal.style.removeProperty('aspect-ratio'); modalImg.style.removeProperty('aspect-ratio'); modalImg.style.objectFit="contain"; modalImg.style.removeProperty('width'); modalImg.style.height="100%"}
-				modal.showModal()
-				modal.style.display="flex"
+				displayImage(modalImg, modal, this)
 			}
 		});
 		elem.tabIndex=0
