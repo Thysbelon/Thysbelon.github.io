@@ -583,6 +583,15 @@ img[src^="/emoji/"]{
 	vertical-align:-10%
 }
 summary{cursor:pointer}
+table {
+	border-collapse: collapse;
+	border: 2px solid var(--txt);
+	/*font-size: 0.8rem;*/
+}
+th, td {
+	border: 1px solid var(--txt);
+	padding: .7rem .8rem;
+}
 @media (prefers-color-scheme:dark) /*assuming that this media query will not activate if forced-colors is on*/ {
 	:root {
 		--bg:var(--purple);
