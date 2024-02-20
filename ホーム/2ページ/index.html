@@ -40,25 +40,52 @@
 	<article>
 			<h1><a href=/Blog/2022-2-19/ビブリボンにエミュレータでお好み音楽で遊び方>ビブリボンにエミュレータでお好み音楽で遊び方</a></h1>
 			<time datetime=2022-02-19 >19 February 2022</time>
-				<a href=/Blog/2022-2-19/ビブリボンにエミュレータでお好み音楽で遊び方 tabindex=-1><img src=/Blog/2022-2-19/Vibriasciimonospace.svg $3style=margin:0; title=このＡＳＣＩＩアートは僕のバッチのスクリプトの終わりに見られる。 alt="直線で作ったウサギのキャラクタのビブリです。"></a>
-	<p>ビブリボンはＰＳ１で１９９９に、ＰＳ３とＰＳ ＶＩＴＡで２０１４にリリースされたゲーム。斬新な機能がある：お好みＣＤをPlayStationに入れて、そのＣＤから生成されたステージで遊べる⋯
+				<a href=/Blog/2022-2-19/ビブリボンにエミュレータでお好み音楽で遊び方.html tabindex=-1><img src=/Blog/2022-2-19/Vibriasciimonospace.svg $3style=margin:0; title=このＡＳＣＩＩアートは僕のバッチのスクリプトの終わりに見られる。 alt="直線で作ったウサギのキャラクタのビブリです。"></a>
+	<p>ビブリボンはＰＳ１で１９９９に、ＰＳ３とＰＳ ＶＩＴＡで２０１４にリリースされたゲーム。斬新な機能がある：お好みＣＤをPlayStationに入れて、そのＣＤから生成されたステージで遊べる。人々は時々パソコンにエミュレータを使ってゲームをする。４Ｋのグラフィックを見られるから、など。多くのエミュレータでお好み音楽で遊び方のガイドは「ディスク書き込みソフトウェアをダウンロードして」と言った。それは完全に不要だ、ＣＤ-ＤＡ形式は事実上簡単ですから<!--more-->。
+	<p>ＣＤ-ＤＡ形式は複数のファイルで構成されています：ディスクの歌ごとに一つの音声ファイル、及び各歌はＣＤのどこにあるかと言うテキストを含まれているcue sheetのファイル。それによりＣＤプレーヤーはディスクを再生できます。音声ファイルをＣＤ-ＤＡ形式に変換するのはcue sheetをタイプするのだけが条件かもしれません。</p>
+	<figure><pre>
+FILE "music.bin" BINARY
+  TRACK 01 AUDIO
+    INDEX 01 00:00:00
+</pre></figure>
+	<p>これはあなたを使えるサンプルのcue sheetです。「music.bin」をあなたの音声ファイルの名に変更して。名の周りに引用符を保つのを確かめてください。あなたのファイルが「.bin」じゃないファイル拡張子があったら、「BINARY」をあなたの音声ファイルの形式に変換しらなければいけません。有効な形式は「WAVE」、「MP3」、「AIFF」、「BINARY」、「MOTOROLA」です。「WAVE」形式でWavPackとFLACを使える。複数の音声ファイルを一つのバーチャルなＣＤに入れたかったら：三つの行を繰り返して、「TRACK 01 AUDIO」を「TRACK 02 AUDIO」に変換してください。<!--You can add as many tracks as you want as long as the total file size of all the audio files combined is less than 700 MB.-->
+	<p>異なるエミュレータは異なるファイルの種類をサポートする。例えば、DuckStationは「.bin」のファイル拡張子があるＣＤ-ＤＡのwavのファイルだけをサポートします。ＣＤ-ＤＡのwavは普通なwavと同じではありません。僕は音声ファイルを変換するには<a target=_blank href=https://www.videolan.org/vlc/index.ja.html>ＶＬＣメディアプレイヤー</a>を使うのを勧める。よくて安定のメディアプレイヤーですので。「メディア」／「変更 / 保存」をクリックして、ファイルを追加して、そして「プロファイル」の隣に「Audio - CD」やほしい形式をクリックして。
+	<p>全てのファイルをwavに変換したら、ハード・ドライブで早く空きを失うかもしれない、wavは圧縮しない形式ですから。歌を圧縮してDuckStationで遊びたかったら、<a target=_blank href=https://www.mamedev.org/>ＭＡＭＥ</a>に付属のコマンド・ラインのプログラムのchdmanを使って歌をchdに圧縮できる。
+	<p>その方法を使ってたくさんの音声ファイルをＣＤ-ＤＡの形式に変換するのはたくさん時間がかかる、僕はプロセスをスピードアップするスクリプトを書いたんです。スクリプトを使うにはＶＬＣと（オプションの）chdmanをインストールしなければいけない、僕がもう教えた方法をするショートカットだけですから。<a target=_blank href=https://github.com/Thysbelon/ConvertToVibFormat>僕のGitHubのリポジトリでスクリプトをダウンロードしてください。</a>（英語のパソコンだけで試験しました。文章化が訳していません。）<p><!--（投稿の残りは訳していない。<a rel=alternate hreflang=en href=/2022/02/19/How-to-Play-Custom-Songs-in-Vib-Ribbon-on-an-Emulator>ここに英語の投稿があります</a>。）
+	<p>ガイドの終わりです。I'm going to talk about the game itself now.</p>
+	<p>If you read this post without knowing about the game, you may be wondering; "Just what <em>is</em> Vib-Ribbon?"</p>
+	<div id=vibspeech>
+	<img loading=lazy src=/Blog/2022-2-19/vib-min.gif $3title="I drew this using Shake Art DELUXE by nokoi" alt="An image of Vibri's head with a speech bubble.">
+	<video controls disableremoteplayback>
+		<source type=audio/mp3 src=vibConst32kbpsMono.mp3>
+		<track label=English kind=subtitles srclang=en src=/Blog/2022-2-19/vibtt.vtt $3default>
+	</video>
+	</div>
+	<p>Vib-Ribbon is a really interesting, experimental rhythm game. When you're not playing with your own songs, the Laugh & Peace tracks included on the disc will challenge the player's skills with...
 	</article>
 <article>
 			<h1><a href=/Blog/2022-2-8/前に怖がりすぎたから今ゲームについてを話してる>前に怖がりすぎたから今ゲームについてを話してる</a></h1>
 			<time datetime=2022-02-08 >08 February 2022</time>
-				<p>ハロー！前投稿を書いてる時ビデオゲームについてを話したいことが何度かあったけど、それがプロじゃないらしく聞こえるのを心配した。じゃあ、僕がいるコースが<em>ゲームデザインを教える</em>のを考慮して、そんなに怖がるのをやめる時が来たと判断した⋯
+				<p>ハロー！前投稿を書いてる時ビデオゲームについてを話したいことが何度かあったけど、それがプロじゃないらしく聞こえるのを心配した。じゃあ、僕がいるコースが<em>ゲームデザインを教える</em>のを考慮して、そんなに怖がるのをやめる時が来たと判断した。</p>
+	<a href=/Blog/2022-2-8/前に怖がりすぎたから今ゲームについてを話してる.html tabindex=-1><img src=/Blog/2022-2-8/supmarioparty.webp $3alt="マリオパーティ スーパースターズのスクリーンショット。"></a>
+	<p><a href=placeholder>一番目の投稿</a>で、デザインは一人で強いけど、それを使う作品に弱いことができるのを述べた。それを書いた時「マリオパーティ スーパースターズ」を思っていた。 そのゲームの<!--more-->GUIはとてもきれいと可読。ほとんどの時間白を使う、そして一つフォントしか使うんだ。しかし、僕はゲームは「当たり障りのない」、「精神無き」、「コーポレート」だと言ったインタネットにコメントを見たと思います。生憎に、もうそのコメントを見つけられない、でも、考えさせられた。このデザインは可読なウェブサイトに偉い、Mario Partyに適切じゃないかもしれない。</p>
+	<a href=https://youtu.be/bE_ZuNp1CTI?t=569 target=_blank style='background:url("https://i.ytimg.com/vi/bE_ZuNp1CTI/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLD9T4FMe6dUfOYomAEji95EdBtV7w") center/100%;display:block;width:100%;max-width:336px;aspect-ratio:84/47;color:transparent;'>Good Design, Bad Design - The Best & Worst of Graphic Design in Games</a>
+	<p>マリオパーティとあやしいUIの決断を考えているのが僕にこのビデオを思い出させた！それには、「マリオパーティ８」のはまちまちなフォントとフォントスタイルを使いすぎるの、 及びちぐはぐなボタンと全体的なガシャガシャな観, が悪いデザインの代表的な例としてリストされている。このビデオのコメントについての一つ面白い物は、人々がマリオパーティ スーパースターズのUIに反応した（僕が覚えた）方法の逆の反応を気づいた：<br><q lang=en>I'm sure most people playing Mario Party never even give thought to the UI design</q>,<br><q lang=en>I never really cared about typographic design choices and really like MP8 but now that you mention it... wow, it really is all over the place. Now I can't unsee it D:</q>,<br><q lang=en>I would say the design for that Mario Party has a ridiculous amount of early 2000's...
 	</article>
 <article>
 			<h1><a href=/Blog/2022-1-30/感化についてを話してる>感化についてを話してる</a></h1>
 			<time datetime=2022-01-30 >30 January 2022</time>
-			<a href=/Blog/2022-1-30/感化についてを話してる tabindex=-1><img class="restrictsize fri" style=--w:560px src=/Blog/2022-1-30/post2illunano.svg $3alt="僕が3冊の本の表紙を見ているの挿絵です。"></a><p>こんにちは！今日はちょっともっとどうして前書き込みで選んだデザイナーをしたについて話す。</p>
-<p>コレクションの中で一番大好きな表紙は「Everything Matters!」と言った。この表紙の僕が一番目に気に入っているのは、4色⋯
+			<a href=/Blog/2022-1-30/感化についてを話してる.html tabindex=-1><img class="restrictsize fri" style=--w:560px src=/Blog/2022-1-30/post2illunano.svg $3alt="僕が3冊の本の表紙を見ているの挿絵です。"></a><p>こんにちは！今日はちょっともっとどうして前書き込みで選んだデザイナーをしたについて話す。</p>
+<p>コレクションの中で一番大好きな表紙は「Everything Matters!」と言った。この表紙の僕が一番目に気に入っているのは、4色しか使っていないことだ。 僕は描くたびに、使う色の数を限るようにして、僕は3色しか使うキャラクターのデザインが好きんだよ。それようのデザインはシンプルややさしく覚えるんだ。</p>
+<p>少ない色しかでデザインする時、色が色に浮き出るのを確かめるのは大切だ。これではデザインが<!--more-->分かるのがやさしいになせるんだ。明るさが大きく異なる色を使うと手伝ってデザインがポップする、一般的に。</p><figure><img loading=lazy class=pixl src=/Blog/2022-1-30/blackcolorlayer.png $3alt=さん色のイメージです。右の半分はグレースケールです。グレースケールのは紫は暗い、黄色は明るい、青いは明るさ半ばです。><figcaption> ありがちな助言が、「カラー」を設定した全黒いレイヤーを使って色が浮き出るのを確かめる。</figcaption></figure><p>これは、本の表紙についての僕の2番目のポイントにつながる、それが非常に対照的な色を使う方法が好きだ。</p><a target=_blank href=https://designarchives.aiga.org/#/entries/%2Bcredits%3A%22Isaac%20Tobin%22/_/detail/relevance/asc/7/7/21605/everything-matters/1><img loading=lazy class="restrictsize fri" src=/2022/01/25/102273_or.avif alt="本の「Everything Matters!」の表紙です。ホットピンクとティールの縞が交番する彗星の輪は題名に突進しています。"></a><p>表紙が黒と白をともに使ってい、最なコントラストの強い2色。ホットピンクとティールは、明るさだけではそれほどコントラストがないが、彩度が高く色相が大きく異なるため浮き出る。これも三番目の僕はこの表紙が好きの由、ピンクと青を使い、僕のお気に入りの2色んだ。</p><p>この表紙の僕が四番目に気に入っているのは形の使い。明瞭なシルエットと形の生み合わせはキャラが忘れがたいにならせるのと同じように、「Everything Matters!」の表紙で使う形はそれはどんな本を知らせる。タイトルから末広がりになる鋭いライン、掻いたみたい太字の書体、が必死の気持ちを与える、あたかも世界けど終わっているが気にしない人々がある。鋭いラインも、ホットピンクとティールとともに、あなたに本がコメディーだを見せる。</p><a target=_blank href="https://designarchives.aiga.org/#/entries/%2Bcredits%3A%22John%20Fulbrook%20III%22/_/detail/relevance/asc/2/7/20997/the-learners/1"><img loading=lazy class="restrictsize fli" src=/Blog/2022-1-30/30520_or.avif $3alt=本の表紙。人物の顔の挿絵は下半分が赤いジャケットで覆っています。></a><p>そのポイントを合わせるほかのデザイナーが作る本の表紙におけるは、「The Learners」の表紙はアートディレクターとしてのジョン・フルブルック3世だった。三色しかを使って、黒、白、赤。恐怖してるみたい挿絵と、筆記体タイプとともにシンプルなジャケットの対比は表紙が違うのにならせる。</p></section><section><a target=_blank href=https://designarchives.aiga.org/#/entries/%2Bcredits%3A%22Rodrigo%20Corral%22/_/detail/relevance/asc/27/7/586/lullaby-cover/1><picture><source srcset=/Blog/2022-1-30/2095_or.avif $3type=image/avif><source srcset=/Blog/2022-1-30/2095_or.webp $3type=image/webp><img loading=lazy class="restrictsize fri" src=/Blog/2022-1-30/2095_or.png $3alt=本の表紙の両面、タイトルと著者は裏側にあります。></picture></a><p>ロドリゴ・コラールが作る僕が一番大好きなデザインは「Lullaby」の表紙だった。その挿絵が黒と黄色しかを使って、鳥が地味な白い背景で眠っています。その単純絵は本についてをたくさん言う。孤独な死んだ鳥はかなり暗澹、あたりに空虚は注意が向けらせる。</p>
+</section>...
 	</article>
 <article>
 			<h1><a href=/Blog/2022-1-25/僕を動かすデザイナー>僕を動かすデザイナー</a></h1>
 			<time datetime=2022-01-25 >25 January 2022</time>
-				<a href=https://designarchives.aiga.org/#/entries/%2Bcredits%3A%22Isaac%20Tobin%22/_/detail/relevance/asc/7/7/21605/everything-matters/1 target=_blank><a href=/Blog/2022-1-25/僕を動かすデザイナー tabindex=-1><picture><source srcset=/Blog/2022-1-25/102273_or.avif $3type=image/avif><img class="restrictsize fri" src=/Blog/2022-1-25/102273_or.webp $3alt="本の「Everything Matters」の表紙です。"></picture></a></a>
-<p>初めまして！これは僕の一番目の投稿です。</p><p>ディジタル・デザインに最初の宿題の一部として、<a href=https://designarchives.aiga.org/#/collections target=_blank>AIGA Design Archives</a>から三人の僕を動かすデザイナーを選ばなきゃいけなかった。資料が多いから選ぶのが難しかったが、本の⋯
+				<a href=https://designarchives.aiga.org/#/entries/%2Bcredits%3A%22Isaac%20Tobin%22/_/detail/relevance/asc/7/7/21605/everything-matters/1 target=_blank><a href=/Blog/2022-1-25/僕を動かすデザイナー.html tabindex=-1><picture><source srcset=/Blog/2022-1-25/102273_or.avif $3type=image/avif><img class="restrictsize fri" src=/Blog/2022-1-25/102273_or.webp $3alt="本の「Everything Matters」の表紙です。"></picture></a></a>
+<p>初めまして！これは僕の一番目の投稿です。</p><p>ディジタル・デザインに最初の宿題の一部として、<a href=https://designarchives.aiga.org/#/collections target=_blank>AIGA Design Archives</a>から三人の僕を動かすデザイナーを選ばなきゃいけなかった。資料が多いから選ぶのが難しかったが、本の表紙が好きだったから、そこからデザイナーを選らんだ。</p><p>選らんだデザイナーは<!--more-->アイザック・トービン、ジョン・フルブルック3世、ロドリゴ・コラール。一番大好きなデザインが<span><cite>Everything Matters!</cite></span>の表紙だった。僕のウェブサイトを見て気づかったかもですよね、僕は明るい色の限られた選択とともにシンプルな形が好き、から同じパターンのデザイナーを選ぼうとしたんだ。でも、僕が見たデザイナーの多くはすべての作品に使う単一なスタイルがない。アートスタイルは本ごとに大幅に異なって、物語のトーンに最もよく合うように。これは僕に何かを悟らせた、文脈はデザインがいいかどうかを決定するものの一部だよ。デザインが真空の中で見事かもしれないが、本とともにまるっきり不釣り合いになれる。</p><a href=https://designarchives.aiga.org/#/entries/%2Bcollections%3A%2250%20Books%20%7C%2050%20Covers%20of%201995%22/_/detail/relevance/asc/30/7/2362/rutgers-student-handbook/1 target=_blank><img loading=lazy class=fri src=/Blog/2022-1-25/5757_or_4.webp $3alt=本の表紙></a><p>1995年の「50 Books | 50 Covers」コレクションを見ているとき、この表紙に気づいた。僕の印象はこの表紙は怖いです。不釣り合いな文字が、多いフォント、大きさ、方向で不安の気分を生み出す。手はグラスの裏にあり、ひどい実験何らかから脱出するようにしているみたい。そして、グレースケールの配色では、ホラー映画の観にすべてを関連付けるんだね。でも、この表紙の記載を読んだ時、驚愕した。学生ハンドブックんだ！</p><p>学校は非常に恐ろしい環境になれるから、学校ハンドブックは親切に見えるはずだと思い、がこの表紙が伝える気分の正反対んだな。</p>
+</section>...
 	</article>
 	<div class=pnav>
 	<a class="btnlink fli" href=/ホーム/>新しい投稿</a>
