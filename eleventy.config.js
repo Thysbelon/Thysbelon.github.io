@@ -347,8 +347,9 @@ module.exports = function(eleventyConfig) {
 		return myExcerpt
 	});
 
-	eleventyConfig.addFilter('titleFromURL', function(inputURL) { // change this to a filter
+	eleventyConfig.addFilter('titleFromURL', function(inputURL) {
 		//console.log('inputURL is '+inputURL)
+		if (typeof inputURL != 'string') {return 'titleFromURL was not given a string'}
 		const splitURL=inputURL.split('/')
 		if (splitURL[splitURL.length-1]=='') {splitURL.pop()}
 		return splitURL[splitURL.length-1].replaceAll('-', ' ')

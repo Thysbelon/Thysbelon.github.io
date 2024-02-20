@@ -3,7 +3,7 @@ function collectionToBarebonesNavArray(collection) { // will use the code listed
 	collection.forEach(elem => {
 		let tempObj={}
 		tempObj.url = elem.url
-		tempObj.title = elem.title
+		tempObj.title = elem.data.title
 		tempObj.data={}
 		tempObj.data.navOrder=elem.data.navOrder
 		tempObj.data.nonav=elem.data.nonav
@@ -144,8 +144,8 @@ render(data) {
 var title = data.locale=='jp' ? 'シズビロン' : data.metadata.title
 if (data.page.url!='/' && data.page.url!='/ホーム/' && !data.page.url.match(/\/page-\d+?\//) && !data.page.url.match(/\/ホーム\/\d+?ページ\//)) {
 	title = data.locale=='jp' ? '【'+title+'】' : ' - '+title;
-	if (data.page.title) {
-		title=data.page.title+title
+	if (data.title) {
+		title=data.title+title
 	} else {
 		title=this.titleFromURL(data.page.url)+title
 	}
