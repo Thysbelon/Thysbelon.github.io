@@ -1,4 +1,4 @@
-onmessage=async function(e) {
+onmessage=function(e) {
 {
 	// from ChatGPT, with some modifications
 	const japaneseRegex = /[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}ー々〆〤]/gu; 
@@ -13,7 +13,7 @@ onmessage=async function(e) {
 	var containsKanji = (str) => kanjiRegex.test(str);
 	var containsLatin = (str) => latinRegex.test(str);
 }
-var keywords1=e.data
+var keywords1=e.data.pathname
 keywords1=keywords1.replace(/\d\d\d\d\/\d\d\/\d\d\//, "")
 keywords1=keywords1.replace(/-/g, "/")// remove parenthesis as well?
 keywords1=keywords1.split('/')
@@ -73,8 +73,7 @@ for (let wordIndex=0, l=keywords1.length;wordIndex<l;wordIndex++) {
 console.log(keywords)
 var keywordsComplete=keywords.map(x => x = {word:x,ranking:0,PageMatches:[]});
 var tenposts=["","","","","","","","","",""];
-let allposts = await fetch('/posts-jp.json')
-allposts = await allposts.json()
+let allposts /* this is all pages */ = e.data.URLarray
 console.log(allposts)
 for (let keyword of keywordsComplete) {
 	for (let post of allposts) {

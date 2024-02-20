@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang=ja>
+<head>
+<meta charset=UTF-8>
+<title>Android 5.0 Lollipop：最高のエモジ【シズビロン】</title>
+<meta property="og:title" content="Android 5.0 Lollipop：最高のエモジ【シズビロン】">
+<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="color-scheme" content="dark light">
+<meta name=theme-color content=#ff4c60>
+<link rel=stylesheet href=/css/BlogStylesheet.css>
+
+
+<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+
+<link rel=alternate hreflang=en href="/Blog/2022-4-9/Android-5.0-Lollipop-the-Best-Emoji">
+ 
+
+
+ 
+<!-- to do: og:image property here. make a universal eleventyConfig function to fetch the first image of a post. -->
+</head>
+<body>
+<header>
+<a href="/ホーム/">
+<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="スズメガのロゴ。" width=280 height=280>
+</a>
+</header>
+<nav><ul > 
+
+		<li><a href=/アーカイブ/>アーカイブ</a></li>
+<li><a href=/僕について/>僕について</a></li>
+<li><a href=/購読する/>購読する</a></li>
+		
+		<li><a href=/Blog/2022-4-9/Android-5.0-Lollipop-the-Best-Emoji>言語/<span lang=en>Language</span></a></li>
+	
+</ul></nav>
+<main> 
+
+<h1 itemprop=headline>Android 5.0 Lollipop：最高のエモジ</h1>
+<time itemprop=datePublished datetime=2022-04-09>09 April 2022</time>
+<img itemprop=image src=/emoji/😊.svg style=width:initial;height:initial;display:block;float:right;max-width:250px alt="笑顔の絵文字">
+<p>大半のアメリカのエモジは好きじゃないだ<img src=/emoji/😕.svg alt=😕>。それらはAppleのグラデーションの醜いエモジに倣ってるんです。僕の一番大好きなエモジはAndroid ５.０のエモジです<img src=/emoji/😍.svg alt=😍>。<!--そのエモジはかわいくて独自んです。-->Android５のエモジの個性的は最大の長所と最大の短所だ。<!--独自だから、かわいいです。-->曲げてキスしたり<img src=/emoji/😘.svg alt=😘>悲しくかがんだりする<img src=/emoji/😩.svg alt=😩>。とてもかわいい、でも見るのは大変かも。それに、Appleに倣わないから<!--他のスマホを持ってる人-->テキストを送ってるとき誤解ができる、たとえば😳<img src=/emoji/😳.svg alt=😳>。しかし、Android５のエモジが好き、使いたいだよ<img src=/emoji/😼.svg alt=😼><!--more-->。
+<p>GoogleはAndroid８.０をリリースするときAndroid５のエモジを捨てた。でも、僕はまだエモジを見つけられるのを知っていた<img src=/emoji/🔍.svg alt=🔍>。Googleはよくオープンソースを使う会社んですから、資料を公開する。資料がGitHubにある。GitHubは変更の履歴を保つ<img src=/emoji/📆.svg alt=📆>。僕は<a href=https://github.com/googlefonts/noto-emoji/releases target=_blank>noto-emojiのReleases</a>の下部を見て、Android５のエモジのＳＶＧを見つけた<img src=/emoji/😄.svg alt=😄>！
+<p>じゃあ、どうエモジを使う？カラー・フォントを作りたかった、簡単と思った<img src=/emoji/☺.svg alt=☺>。しかし、簡単じゃないことは<a href=https://qiita.com/496_/items/6910dd76283ba1347327#カラー絵文字フォントのための4つの仕様 target=_blank>四つのカラー・フォント形式</a><!--があるからとても難しいです--><!--は工程を難しくした-->だよ<img src=/emoji/😵.svg alt=😵>。一番簡単と思ったから、OpentypeＳＶＧ形式を使うことにした。<a href=https://github.com/adobe-type-tools/opentype-svg target=_blank>Adobeのopentype-svgのツール</a>のaddsvgを使ってAndroid５エモジを<a href=https://github.com/adobe-fonts/noto-emoji-svg target=_blank>Noto Emoji SVGフォント</a>に入れた。成功だった、でも作ったフォントがFirefoxだけ使える。すべてのブラウザの互換だimgのタグを使えるのを遅く気づいた<img src=/emoji/😅.svg alt=😅>。「emoji」という名前フォルダを作って、すべてのＳＶＧファイルをそれに入れた。タイプするの<img src=/emoji/💻.svg alt=💻>をもっと簡単にするため各ファイルをそれのエモジにリネームした。リネームするのが難しかったから、<a href="https://downgit.github.io/#/home?url=https://github.com/Thysbelon/Thysbelon.github.io/tree/main/emoji" target=_blank>emojiフォルダをダウンロードできる（２.４６ＭＢ）</a>。<a href=Android-5-Emoji.zip>エモジフォントもダウンロードできる</a><img src=/emoji/🐈.svg alt=🐈>。
+
+<div class=tags>Tags:<ul>
+	<li><a href=/Tags/タイポグラフィ rel=tag>タイポグラフィ</a>
+
+	<li><a href=/Tags/ガイド rel=tag>ガイド</a>
+</ul></div>
+<div class=tags>Categories:<ul>
+	<li><a href=/Tags/ディジタル・デザイン rel=category>ディジタル・デザイン</a>
+</ul></div>
+
+</main>
+<!-- test of afterMain. Related posts will be placed here when they are ready -->
+<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+</body></html>

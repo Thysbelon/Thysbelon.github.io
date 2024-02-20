@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang=ja>
+<head>
+<meta charset=UTF-8>
+<title>新しい彩り【シズビロン】</title>
+<meta property="og:title" content="新しい彩り【シズビロン】">
+<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="color-scheme" content="dark light">
+<meta name=theme-color content=#ff4c60>
+<link rel=stylesheet href=/css/BlogStylesheet.css>
+
+
+<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+
+<link rel=alternate hreflang=en href="/Blog/2022-3-29/New-Color-Scheme">
+ 
+
+
+ 
+<!-- to do: og:image property here. make a universal eleventyConfig function to fetch the first image of a post. -->
+</head>
+<body>
+<header>
+<a href="/ホーム/">
+<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="スズメガのロゴ。" width=280 height=280>
+</a>
+</header>
+<nav><ul > 
+
+		<li><a href=/アーカイブ/>アーカイブ</a></li>
+<li><a href=/僕について/>僕について</a></li>
+<li><a href=/購読する/>購読する</a></li>
+		
+		<li><a href=/Blog/2022-3-29/New-Color-Scheme>言語/<span lang=en>Language</span></a></li>
+	
+</ul></nav>
+<main> 
+
+<h1 itemprop=headline>新しい彩り</h1>
+<time itemprop=datePublished datetime=2022-03-29>29 March 2022</time>
+<img itemprop=image src=thumb.png class=fri alt="絵はスズメガがベレーをかぶってパレットと筆を持っています。"><p>今週は<a href=https://developer.mozilla.org/ja/docs/Web/Accessibility target=_blank>MDNにウェブのアクセシビリティのチュートリアル</a>を読んだり、僕のウェブサイトがもっとアクセシブルになろうとしたりするのに多くの時間を使ったよ。タグ、カテゴリ、ナビ、関連投稿、アーカイブがリスト要素に変更した、スクリーンリーダーにベターになったから。 また、WCAG AAアクセシビリティガイドラインを満たすようにウェブサイトのカラーパレットを調整した。僕は前よりアクセシブルなときれいな彩りを考えつけたのがうれしいだ。</p>
+
+<div class=tags>Tags:<ul>
+	<li><a href=/Tags/色 rel=tag>色</a>
+</ul></div>
+<div class=tags>Categories:<ul>
+	<li><a href=/Tags/ディジタル・デザイン rel=category>ディジタル・デザイン</a>
+</ul></div>
+
+</main>
+<!-- test of afterMain. Related posts will be placed here when they are ready -->
+<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+</body></html>

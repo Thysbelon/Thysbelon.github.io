@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<title>If you're learning marketing and you're worried you're not good enough, know you're better than these Klonoa ads - Thysbelon</title>
+<meta property="og:title" content="If you're learning marketing and you're worried you're not good enough, know you're better than these Klonoa ads - Thysbelon">
+<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="color-scheme" content="dark light">
+<meta name=theme-color content=#ff4c60>
+<link rel=stylesheet href=/css/BlogStylesheet.css>
+
+
+<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+
+
+ 
+
+
+ 
+<!-- to do: og:image property here. make a universal eleventyConfig function to fetch the first image of a post. -->
+</head>
+<body>
+<header>
+<a href="/">
+<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>
+</a>
+</header>
+<nav><ul > 
+
+		<li><a href=/New-Media-Projects/>New Media Projects</a></li>
+<li><a href=/About/>About</a></li>
+<li><a href=/Archive/>Archive</a></li>
+<li><a href=/Portfolio/>Portfolio</a></li>
+<li><a href=/Subscribe/>Subscribe</a></li>
+		<li>
+				<details>
+				<summary>
+				Art
+				</summary>
+				<ul>
+				<li><a href=/Digital-Art/>Digital Art</a></li>
+<li><a href=/Photography/>Photography</a></li>
+<li><a href=/Programs/>Programs</a></li>
+				</ul>
+				</details>
+			</li>
+		
+	
+</ul></nav>
+<main> 
+
+<h1 itemprop=headline>If you're learning marketing and you're worried you're not good enough, know you're better than these Klonoa ads</h1>
+<time itemprop=datePublished datetime=2022-05-02>02 May 2022</time>
+<a href=https://imgur.com/gallery/plA5hIz target=_blank><img itemprop=image src=thumb6.webp alt="Two magazine ads for Klonoa, a mascot platforming game. The first ad has a greyscale photo of two adults kissing. The second ad has large text that says: Quite possibly the only thing weirder than your sister."></a><p>I just finished my marketing course, which was required for my itech degree. I've always been wary of business, so I was worried that I wouldn't "get" marketing at all. I had no idea what to write in my paper... then I remembered something that gave me confidence; these advertisements.<p>Someone was paid to come up with these.<p>So, no matter how little I know about marketing, I still know more than these paid designers who worked for a prominent game company, so I think that's a pretty good accomplishment. <img src=/emoji/😊.svg alt=😊>
+<div class=tags>Tags:<ul>
+	<li><a href=/Tags/Klonoa rel=tag>Klonoa</a>
+
+	<li><a href=/Tags/Marketing rel=tag>Marketing</a>
+</ul></div>
+<div class=tags>Categories:<ul>
+	<li><a href=/Tags/Digital-Design rel=category>Digital Design</a>
+
+	<li><a href=/Tags/Video-Game rel=category>Video Game</a>
+
+	<li><a href=/Tags/Design rel=category>Design</a>
+</ul></div>
+
+</main>
+<!-- test of afterMain. Related posts will be placed here when they are ready -->
+<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+</body></html>

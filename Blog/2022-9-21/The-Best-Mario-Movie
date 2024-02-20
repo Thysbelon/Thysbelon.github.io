@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<title>The Best Mario Movie - Thysbelon</title>
+<meta property="og:title" content="The Best Mario Movie - Thysbelon">
+<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="color-scheme" content="dark light">
+<meta name=theme-color content=#ff4c60>
+<link rel=stylesheet href=/css/BlogStylesheet.css>
+
+
+<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+
+
+ 
+
+<script src=/ytvideoactivate.js></script>
+ 
+<!-- to do: og:image property here. make a universal eleventyConfig function to fetch the first image of a post. -->
+</head>
+<body>
+<header>
+<a href="/">
+<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>
+</a>
+</header>
+<nav><ul > 
+
+		<li><a href=/New-Media-Projects/>New Media Projects</a></li>
+<li><a href=/About/>About</a></li>
+<li><a href=/Archive/>Archive</a></li>
+<li><a href=/Portfolio/>Portfolio</a></li>
+<li><a href=/Subscribe/>Subscribe</a></li>
+		<li>
+				<details>
+				<summary>
+				Art
+				</summary>
+				<ul>
+				<li><a href=/Digital-Art/>Digital Art</a></li>
+<li><a href=/Photography/>Photography</a></li>
+<li><a href=/Programs/>Programs</a></li>
+				</ul>
+				</details>
+			</li>
+		
+	
+</ul></nav>
+<main> 
+
+<h1 itemprop=headline>The Best Mario Movie</h1>
+<time itemprop=datePublished datetime=2022-09-21>21 September 2022</time>
+<a href=https://youtu.be/JN-WCA5-Qxs target=_blank class=yt style='--ytimgurl:url(https://i1.ytimg.com/vi/JN-WCA5-Qxs/hqdefault.jpg)'><span>Cory Arcangel & Paper Rad - Super Mario Movie - 2005</span></a>
+<p>I saw this movie in game design class. It was an example of how game engines can be used to create art outside of video games. A lot of the other students were mocking and making jokes about it, which disappointed me. I think this movie is beautiful, it deserves more respect.
+<p>I worry that if I talked too much about the movie I would only be stating the obvious; so I'll keep this brief. This isn't the first story I've seen about a digital world and its inhabitants slowly deteriorating (<a href=https://tuyoki.itch.io/escaped-chasm target=_blank>Escaped Chasm</a>, <a href=https://www.youtube.com/watch?v=VWVtIg5cdDU target=_blank>The End of Hatsune Miku</a>, and <a href=https://ddlc.moe/ target=_blank>Doki Doki Literature Club</a> all come to mind), but every take on this idea is so beautiful and brings something new. Much of the movie is made of surreal glitch landscapes and repetitive music. The slowness of it all reminds me of a funeral. I thought this movie might not have any story, that it would just be those landscape shots for the whole runtime; but it surprised me with a happy ending in the form of two people finding each other and <!--sharing their sadness-->finding meaning in the end of the world.
+<p>One thing that the other students noted is this movie is a lot like a creepypasta, which is not a bad observation at all on its own. Corrupting dialogue with glitches is a common romhack creepypasta convention. Although most creepypasta is written by amateurs, and is thus known for being poorly written, I don't think that takes away the artistic value of creepypasta, so I don't think it's an insult to compare something to creepypasta.
+<p>The other students didn't seem to see it that way, though. When they made the connection, they started parrotting the over-used joke of "hyper realistic bleeding eyes"; this joke is a riff on the fact that those words appear in amateur creepypastas so often that they lose their weight. It made me wonder, do these people only see art as an opportunity to make jokes? To earn favor among their peers? It would be a shame if they thought that way; art is valuable all on its own, and I would have preferred it if the class stayed quiet and listened and watched the movie.
+<div class=tags>Tags:<ul>
+	<li><a href=/Tags/Mario rel=tag>Mario</a>
+</ul></div>
+<div class=tags>Categories:<ul>
+	<li><a href=/Tags/Video-Game rel=category>Video Game</a>
+</ul></div>
+
+</main>
+<!-- test of afterMain. Related posts will be placed here when they are ready -->
+<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+</body></html>

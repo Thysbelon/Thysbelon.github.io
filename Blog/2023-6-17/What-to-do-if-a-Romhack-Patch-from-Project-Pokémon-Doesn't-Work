@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<title>What to do if a Romhack Patch from Project Pokémon Doesn't Work - Thysbelon</title>
+<meta property="og:title" content="What to do if a Romhack Patch from Project Pokémon Doesn't Work - Thysbelon">
+<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="color-scheme" content="dark light">
+<meta name=theme-color content=#ff4c60>
+<link rel=stylesheet href=/css/BlogStylesheet.css>
+
+
+<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+
+
+ 
+
+
+ 
+<!-- to do: og:image property here. make a universal eleventyConfig function to fetch the first image of a post. -->
+</head>
+<body>
+<header>
+<a href="/">
+<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>
+</a>
+</header>
+<nav><ul > 
+
+		<li><a href=/New-Media-Projects/>New Media Projects</a></li>
+<li><a href=/About/>About</a></li>
+<li><a href=/Archive/>Archive</a></li>
+<li><a href=/Portfolio/>Portfolio</a></li>
+<li><a href=/Subscribe/>Subscribe</a></li>
+		<li>
+				<details>
+				<summary>
+				Art
+				</summary>
+				<ul>
+				<li><a href=/Digital-Art/>Digital Art</a></li>
+<li><a href=/Photography/>Photography</a></li>
+<li><a href=/Programs/>Programs</a></li>
+				</ul>
+				</details>
+			</li>
+		
+	
+</ul></nav>
+<main> 
+
+<h1 itemprop=headline>What to do if a Romhack Patch from Project Pokémon Doesn't Work</h1>
+<time itemprop=datePublished datetime=2023-06-17>17 June 2023</time>
+<p>I mistakenly thought that the most recent version of Blaze Black and Volt White and its sequels <em>needed</em> to be patched onto a bad dump in order to function. The reason I mistakenly thought this is because the <a href=https://projectpokemon.org/home/files/file/2465-pok%C3%A9mon-blaze-black-2-pok%C3%A9mon-volt-white-2/ target=_blank>main download page</a> for these hacks has the bad versions of the patches. The good, most recent versions of these hacks can be found on the <a href=https://projectpokemon.org/home/forums/topic/24126-pok%C3%A9mon-blaze-black-2-pok%C3%A9mon-volt-white-2/?do=findComment&comment=283788 target=_blank>forum threads</a> for them, which are linked to in the main download page.
+<p>So let me pass this lesson to you: <strong>if a romhack patch you downloaded from Project Pokémon isn't working, try looking in the thread for a fixed patch!</strong>
+<div class=tags>Tags:<ul>
+	<li><a href=/Tags/Guide rel=tag>Guide</a>
+
+	<li><a href=/Tags/DS rel=tag>DS</a>
+
+	<li><a href=/Tags/Romhacking rel=tag>Romhacking</a>
+
+	<li><a href=/Tags/Pokémon rel=tag>Pokémon</a>
+</ul></div>
+<div class=tags>Categories:<ul>
+	<li><a href=/Tags/Video-Game rel=category>Video Game</a>
+</ul></div>
+
+</main>
+<!-- test of afterMain. Related posts will be placed here when they are ready -->
+<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+</body></html>

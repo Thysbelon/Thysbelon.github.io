@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<title>New Color Scheme - Thysbelon</title>
+<meta property="og:title" content="New Color Scheme - Thysbelon">
+<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="color-scheme" content="dark light">
+<meta name=theme-color content=#ff4c60>
+<link rel=stylesheet href=/css/BlogStylesheet.css>
+
+
+<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+
+<link rel=alternate hreflang=ja href="/Blog/2022-3-29/新しい彩り">
+ 
+
+
+ 
+<!-- to do: og:image property here. make a universal eleventyConfig function to fetch the first image of a post. -->
+</head>
+<body>
+<header>
+<a href="/">
+<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>
+</a>
+</header>
+<nav><ul > 
+
+		<li><a href=/New-Media-Projects/>New Media Projects</a></li>
+<li><a href=/About/>About</a></li>
+<li><a href=/Archive/>Archive</a></li>
+<li><a href=/Portfolio/>Portfolio</a></li>
+<li><a href=/Subscribe/>Subscribe</a></li>
+		<li>
+				<details>
+				<summary>
+				Art
+				</summary>
+				<ul>
+				<li><a href=/Digital-Art/>Digital Art</a></li>
+<li><a href=/Photography/>Photography</a></li>
+<li><a href=/Programs/>Programs</a></li>
+				</ul>
+				</details>
+			</li>
+		<li><a href=/Blog/2022-3-29/新しい彩り>Language/<span lang=ja>言語</span></a></li>
+	
+</ul></nav>
+<main> 
+
+<h1 itemprop=headline>New Color Scheme</h1>
+<time itemprop=datePublished datetime=2022-03-29>29 March 2022</time>
+<img itemprop=image src=thumb.png class=fri alt="Illustration of a hummingbird moth wearing a beret and holding a palette and paintbrush."><p>I spent a lot of time this week reading the <br><a href=https://developer.mozilla.org/en-US/docs/Web/Accessibility target=_blank>web accessibility tutorials at MDN</a> and trying to make my website more accessible. I changed the tags, categories, navbar, related posts, and archive to list elements, to make them better for screen readers. I also adjusted the color palette of my website to meet the WCAG AA accessibility guidelines. I'm happy I was able to come up with a color scheme that is both more accessible, and is prettier than the one I had before.</p>
+<div class=tags>Tags:<ul>
+	<li><a href=/Tags/Color rel=tag>Color</a>
+
+	<li><a href=/Tags/User-Interface rel=tag>User Interface</a>
+</ul></div>
+<div class=tags>Categories:<ul>
+	<li><a href=/Tags/Digital-Design rel=category>Digital Design</a>
+
+	<li><a href=/Tags/Web-Development rel=category>Web Development</a>
+</ul></div>
+
+</main>
+<!-- test of afterMain. Related posts will be placed here when they are ready -->
+<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+</body></html>

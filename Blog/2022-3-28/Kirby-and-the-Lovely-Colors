@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<title>Kirby and the Lovely Colors - Thysbelon</title>
+<meta property="og:title" content="Kirby and the Lovely Colors - Thysbelon">
+<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="color-scheme" content="dark light">
+<meta name=theme-color content=#ff4c60>
+<link rel=stylesheet href=/css/BlogStylesheet.css>
+
+
+<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+
+
+ 
+
+
+ 
+<!-- to do: og:image property here. make a universal eleventyConfig function to fetch the first image of a post. -->
+</head>
+<body>
+<header>
+<a href="/">
+<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>
+</a>
+</header>
+<nav><ul > 
+
+		<li><a href=/New-Media-Projects/>New Media Projects</a></li>
+<li><a href=/About/>About</a></li>
+<li><a href=/Archive/>Archive</a></li>
+<li><a href=/Portfolio/>Portfolio</a></li>
+<li><a href=/Subscribe/>Subscribe</a></li>
+		<li>
+				<details>
+				<summary>
+				Art
+				</summary>
+				<ul>
+				<li><a href=/Digital-Art/>Digital Art</a></li>
+<li><a href=/Photography/>Photography</a></li>
+<li><a href=/Programs/>Programs</a></li>
+				</ul>
+				</details>
+			</li>
+		
+	
+</ul></nav>
+<main> 
+
+<h1 itemprop=headline>Kirby and the Lovely Colors</h1>
+<time itemprop=datePublished datetime=2022-03-28>28 March 2022</time>
+<picture><source srcset=1-90.avif type=image/avif><img itemprop=image src=1.jpg alt="A monochromatic painted green banner that reads Downtown Grasslands. Inside the circle at the center is an illustration of a cityscape covered in greenery and surrounded by trees."></picture>
+<p>Kirby and the Forgotten Land released last friday, and it's a lot of fun so far. I love the flat color, monochromatic graphics that display during the level loading screens. I've spoken before about how I like flat colors. <a href=https://www.quora.com/What-does-it-mean-when-someone-refers-to-a-flat-color-What-is-the-difference-from-a-non-flat-color?share=1 target=_blank>The definition of a "flat color"</a> appears to be a color with no shading, texture, gradation, or halftones at all. The kind of colors I like fit the definition of flat color, but I'm okay with a bit of texture or large stylized halftones; these are the kinds of color the last two kirby games have used.</p>
+<p>The colors in forgotton land's loading screens don't use any shading or gradients, but they do use paint-like texture. The circular graphics appear to have been drawn with only flat colors first, and then a splotchy paint drop texture was overlayed on top of them. There's also a multishaded brush stroke behind the circle.</p>
+<p>I love flat colors, but they are used a lot in today's brands, and they might be getting a bit boring to many people, so I think adding a bit of texture like this was a wonderful touch that brings out the natural beauty of and enhances the artwork.<!--p--> These paint splotches aren't used everywhere in the game, though. The graphics for Waddle Dee Town don't use the splotchy texture at all. The sparse use of the paint texture suggests that it has a symbolic meaning: it represents the wild nature of the Beast Pack, the game's antagonists, and the main residents of the game's setting.</p>
+<picture><source srcset=2-60.avif type=image/avif><img loading=lazy src=2-80.webp alt="Screenshot of Kirby and the Forgotten Land. It's the pause menu. On the right is text that states the current in-game location: Waddle Dee Town, and a circular illustration of the town. There are no paint-like textures in this menu."></picture>
+<p>So, most of the game just uses standard flat colors. Maybe that's for the best, it makes the splotches more special when they <em>are</em> used. If paint-like textures were used in every part of the User Interface, <a href=placeholder>it might look more like Pokémon Legends: Arceus</a>, which uses black, dark blue, and brush stroke textures to invoke the idea of Japanese calligraphy. Kirby and the Forgotten Land doesn't take place in traditional Japan. Using too many paint-like textures may also give the impression that the game is all about painting, which also isn't true.</p>
+<p>When thinking about how Kirby and the Forgotten Land uses only flat colors for its UI, I realized that none of the 3D models use flat colors; they're all shaded. This makes Kirby look quite <a href=placeholder>different from something like Donut County</a>, which only uses flat colors period. It also helps to distinguish the UI from the characters and landscape.</p>
+<picture><source srcset=3-60.avif type=image/avif><img loading=lazy src=3-80.webp alt="The Stage Cleared screen of Kirby and the Forgotten Land. To the left of the text stating the missions cleared in this stage, Kirby and his friends are jumping happily.">
+<p>One last thing I have to say about Forgotten Land; I love how the characters are made a part of the User Interface. The end of level screens have a freeze frame of Kirby and the Waddle Dees jumping for joy. The level select screen has kirby fly up next to the text. My favorite are the little animations of Kirby doing things in Waddle Dee Town; like turning the handle on the gacha machine or signing for a package; it's very cute.</p>
+<picture><source srcset=4-60.avif type=image/avif><img loading=lazy src=4-80.webp alt="A screenshot from Kirby Star Allies. Foreground graphic elements use bright yellow and pinkish red. the background is alternating shades of pink and light pink, which fade into eachother with a dot pattern, also known as a halftone pattern.">
+<p>Although Forgotten Land isn't the first Kirby game to use flat colors this much, it's still a recent development; and it started with Kirby Star Allies in 2018. This game uses a lot of large halftone patterns, giving it an appearance comparable to a comic book. It sparsely uses gradients, letting the expertly picked color palettes speak on their own. It's a style that blew me away when I first saw it, and I'm so glad to see flat colors used again for Forgotten Land.</p>
+<div class=tags>Tags:<ul>
+	<li><a href=/Tags/Kirby rel=tag>Kirby</a>
+
+	<li><a href=/Tags/Kirby-and-the-Forgotten-Land rel=tag>Kirby and the Forgotten Land</a>
+
+	<li><a href=/Tags/Kirby-Star-Allies rel=tag>Kirby Star Allies</a>
+
+	<li><a href=/Tags/Color rel=tag>Color</a>
+</ul></div>
+<div class=tags>Categories:<ul>
+	<li><a href=/Tags/Video-Game rel=category>Video Game</a>
+
+	<li><a href=/Tags/Digital-Design rel=category>Digital Design</a>
+</ul></div>
+
+</main>
+<!-- test of afterMain. Related posts will be placed here when they are ready -->
+<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+</body></html>

@@ -1,24 +1,49 @@
+
 <!DOCTYPE html>
 <html lang=ja>
 <head>
 <meta charset=UTF-8>
-<!--<link rel=preconnect href=https://fonts.bunny.net>
-<link href=https://fonts.bunny.net/css?family=kaisei-decol:700|kiwi-maru:500 rel=stylesheet>-->
-<!--<link href=https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@700&family=Kiwi+Maru:wght@500&display=fallback rel=stylesheet>-->
-<!--<link href=https://api.fonts.coollabs.io/css2?family=Kaisei+Decol:wght@700&family=Kiwi+Maru:wght@500&display=fallback rel=stylesheet>-->
-<link rel=preload href=/ThysbelonTitle.svg as=image type=image/svg+xml>
-<link rel=preload href=/thysbelonicon.svg as=image type=image/svg+xml>
-<link rel=preload href=/BlogStylesheet.css as=style>
-<meta name="color-scheme" content="dark light"><meta name=robots content=noindex><title>購読する-シズビロン</title>
-<meta name=theme-color content=#ff4c60><meta name=viewport content=width=device-width,initial-scale=1.0><link rel="alternate" type="application/atom+xml" title="シズビロン" href="/atom-jp.xml"><link rel=icon type=image/x-icon href=/thysbelonicon.svg>
-<link rel=stylesheet href=/BlogStylesheet.css><style>.btnlink{width:4rem;display:block;text-align:right;background:var(--txt) url('/Subscribe/Feed-icon.svg') no-repeat 10%/20%;}.btnlink:hover{background-color:#f55e61;}</style></head>
+<title>購読する【シズビロン】</title>
+<meta property="og:title" content="購読する【シズビロン】">
+<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="color-scheme" content="dark light">
+<meta name=theme-color content=#ff4c60>
+<link rel=stylesheet href=/css/BlogStylesheet.css>
+
+<style>.btnlink{width:4rem;display:block;text-align:right;background:var(--txt) url('/Subscribe/Feed-icon.svg') no-repeat 10%/20%;}.btnlink:hover{background-color:#f55e61;}</style>
+<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+<meta name=robots content=noindex>
+<link rel=alternate hreflang=en href="/Subscribe/">
+ 
+
+
+ 
+<!-- to do: og:image property here. make a universal eleventyConfig function to fetch the first image of a post. -->
+</head>
 <body>
-<header><a href=/ホーム><img id=blogtitle src=/ThysbelonTitle.svg alt=シズビロン。 width=1002 height=272><img src=/thysbelonicon.svg alt=スズメガのロゴ。 width=280 height=280></a></header>
-<nav><ul ><li><a href=/僕について/>僕について</a><li><a href=/アーカイブ/>アーカイブ</a><li><a href=/>言語/Language</a></ul></nav><section>
+<header>
+<a href="/ホーム/">
+<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="スズメガのロゴ。" width=280 height=280>
+</a>
+</header>
+<nav><ul > 
+
+		<li><a href=/アーカイブ/>アーカイブ</a></li>
+<li><a href=/僕について/>僕について</a></li>
+		
+		<li><a href=/Subscribe/>言語/<span lang=en>Language</span></a></li>
+	
+</ul></nav>
+<main> 
+<section>
 <h2>Subscribe to Atom feed</h2>
 <p>Atom is a language similar to RSS. It is used on many webpages. By using a Reader, you can receive a syndication of recent updates from every website you follow. I personally use <a href=https://nodetics.com/feedbro/ target=_blank>Feedbro</a> as my Atom and RSS reader; Feedbro is a browser extension. If Feedbro does not appeal, you may want to read <a href=https://zapier.com/blog/best-rss-feed-reader-apps/ rel="nofollow" target=_blank>Zapier's Top 5 Feed Aggregators</a>.</p>
 <a class=btnlink href=/atom-jp.xml rel=alternate type=application/atom+xml title="ブログのAtom Feed">Atom</a>
 </section>
 <section>
 <p>There used to be an option to subscribe to Push Notifications. I have retired this option. If you subscribed to push notifications in the past, please clear site data for this website in order to delete your subscription.
-</section><footer>ヘッダーの英語のフォントは<a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a>から。</footer></body></html>
+</section>
+</main>
+
+<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+</body></html>

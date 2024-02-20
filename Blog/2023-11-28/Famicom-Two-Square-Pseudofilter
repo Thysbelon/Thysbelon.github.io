@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<title>Famicom Two Square Pseudofilter - Thysbelon</title>
+<meta property="og:title" content="Famicom Two Square Pseudofilter - Thysbelon">
+<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="color-scheme" content="dark light">
+<meta name=theme-color content=#ff4c60>
+<link rel=stylesheet href=/css/BlogStylesheet.css>
+
+
+<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+
+
+ 
+
+
+ 
+<!-- to do: og:image property here. make a universal eleventyConfig function to fetch the first image of a post. -->
+</head>
+<body>
+<header>
+<a href="/">
+<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>
+</a>
+</header>
+<nav><ul > 
+
+		<li><a href=/New-Media-Projects/>New Media Projects</a></li>
+<li><a href=/About/>About</a></li>
+<li><a href=/Archive/>Archive</a></li>
+<li><a href=/Portfolio/>Portfolio</a></li>
+<li><a href=/Subscribe/>Subscribe</a></li>
+		<li>
+				<details>
+				<summary>
+				Art
+				</summary>
+				<ul>
+				<li><a href=/Digital-Art/>Digital Art</a></li>
+<li><a href=/Photography/>Photography</a></li>
+<li><a href=/Programs/>Programs</a></li>
+				</ul>
+				</details>
+			</li>
+		
+	
+</ul></nav>
+<main> 
+
+<h1 itemprop=headline>Famicom Two Square Pseudofilter</h1>
+<time itemprop=datePublished datetime=2023-11-28>28 November 2023</time>
+<p><a href=https://squarewave.neocities.org/ target=_blank>SquareWave</a> has a <a href=https://youtu.be/0OVX7diOP9I target=_blank>2A03 song that showcases a cool effect</a> that can be achieved by playing two square waves with the same notes at the same time, with the first's waveform set to 25% duty, and the second's set to <em>-25%</em><!--test_screenreader--> duty. This effect is called the "pseudofilter" (at least, that's what the comments call it) because of how its tinny, needly waveform resembles the sound of a 50% square wave run through a high pass filter. The basic steps of how to create it are obvious, but SquareWave unfortunately did not go into detail about the other ways he used it, like changing the resulting waveform, and that bassy detune effect. I researched this myself, and I will share what I learned here.
+<section class=nospace>
+<h2>Changing the Combined Waveform</h2>
+<p>Simply have one square wave play a different note from the other square wave for a moment, then go back to them both playing the same note; changing the note for even a single frame, and even if volume is set to 0, will still work. When they both start playing the same note again, the second square will be desynced ever-so-slightly, creating a different waveform. With this trick, you can make a pseudo-sawtooth, or a pseudo-triangle. The pitch of the note you use to change the waveform affects how drastically the waveform changes; for example, if you are playing C4 on both squares, then you have square 1 play C4 pitched up by 5 units for a single frame, then go back to C4 pitch 0 the next, the change in waveform will be very small, and it will still look needle-like. However, if you instead played C#4 for a single frame, the waveform will change a lot, resembling a triangle.
+<p>The shape of the combined waveform depends on what shape the waveform was previously; thus, if you are writing this effect into a song, and you start playback halfway through, the waveform will have a <strong>different shape</strong> than if you started playback at the beginning! This behavior can make it hard to write this effect into a song; I suggest doing test renders of the entire song to wav that only contain the two square channels.
+</section>
+<section class=nospace>
+<h2>Bass Drop Detune</h2>
+<p>Although this one may seem simple, I had trouble figuring it out because I wasn't very familiar with detune. Simply do a typical pseudofilter with a low note, like F#1, but have one square be pitched up slightly, by 4 units or so.
+</section>
+<p class=padt>Please check out this <a href=effects-with-2-squares.fms>example FamiStudio file that shows off these effects</a>.
+<p>Also, all of these effects can also be done on any sound chip that has at least two squares where it is possible to set the duty cycles to be the inverse of eachother. I know the Game Boy is included on this list, and I have an <a href=gb-2-square-changing-waveform.fur>example furnace file showing the combined waveform effect on Game Boy</a>. It may also be possible on the AY-3-8910... etc.
+<div class=tags>Tags:<ul>
+	<li><a href=/Tags/Famicom rel=tag>Famicom</a>
+
+	<li><a href=/Tags/Game-Boy rel=tag>Game Boy</a>
+
+	<li><a href=/Tags/Guide rel=tag>Guide</a>
+</ul></div>
+<div class=tags>Categories:<ul>
+	<li><a href=/Tags/Video-Game rel=category>Video Game</a>
+
+	<li><a href=/Tags/Music rel=category>Music</a>
+</ul></div>
+
+</main>
+<!-- test of afterMain. Related posts will be placed here when they are ready -->
+<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+</body></html>

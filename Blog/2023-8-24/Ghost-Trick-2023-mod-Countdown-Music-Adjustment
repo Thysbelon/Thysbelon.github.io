@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<title>Ghost Trick 2023 Mod: Countdown (Arranged) Music Adjustment - Thysbelon</title>
+<meta property="og:title" content="Ghost Trick 2023 Mod: Countdown (Arranged) Music Adjustment - Thysbelon">
+<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="color-scheme" content="dark light">
+<meta name=theme-color content=#ff4c60>
+<link rel=stylesheet href=/css/BlogStylesheet.css>
+
+
+<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+
+
+ 
+
+
+ 
+<!-- to do: og:image property here. make a universal eleventyConfig function to fetch the first image of a post. -->
+</head>
+<body>
+<header>
+<a href="/">
+<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>
+</a>
+</header>
+<nav><ul > 
+
+		<li><a href=/New-Media-Projects/>New Media Projects</a></li>
+<li><a href=/About/>About</a></li>
+<li><a href=/Archive/>Archive</a></li>
+<li><a href=/Portfolio/>Portfolio</a></li>
+<li><a href=/Subscribe/>Subscribe</a></li>
+		<li>
+				<details>
+				<summary>
+				Art
+				</summary>
+				<ul>
+				<li><a href=/Digital-Art/>Digital Art</a></li>
+<li><a href=/Photography/>Photography</a></li>
+<li><a href=/Programs/>Programs</a></li>
+				</ul>
+				</details>
+			</li>
+		
+	
+</ul></nav>
+<main> 
+
+<h1 itemprop=headline>Ghost Trick 2023 Mod: Countdown (Arranged) Music Adjustment</h1>
+<time itemprop=datePublished datetime=2023-08-24>24 August 2023</time>
+<p>The closest thing "Countdown" has to a melody is this odd harsh beeping instrument. It really drives the song's tense nature. Unfortunately, the arranged version of Countdown from the 2023 remaster completely removes this lead instrument.
+<p>To my surprise, all the music files in the remaster are completely unencrypted, uncompressed WAVE files (The devs should've compressed them, they could have reduced the file size of the music from ~675 MB to ~63 MB). This made it very easy to modify the "Countdown" arrangement to include that lead instrument.
+<!--IfThisCommentIsNotPresent, <strong>WillBeOpenAndAllPageTextWillBe<strong>.FixThis-->
+<p><strong>I have only tested this mod on the demo, and only while disconnected from the internet</strong>, but it did work under these circumstances.
+<p><a href=https://savelocation.net/steam-game-folder target=_blank>Go to Ghost Trick's directory</a>
+<p>
+<label for=pakpicker>Select pak file: </label>
+<input type=file id=pakpicker accept=.pak>
+<p role="status">
+<script>
+const stat=document.querySelector('p[role="status"]')
+const pakpicker=document.getElementById("pakpicker")
+pakpicker.addEventListener('change', onChange);
+function onChange(e){
+	stat.textContent="Working..."
+	let CountdownMod;
+	let success=0;
+	fetch("CountdownMod.wav").then( (value) => {
+		value.blob().then((value2) => {CountdownMod=value2; success++; if (success===2) {patching(finalRIFFaddress, pakFile, CountdownMod)}})
+	})
+	console.log("Starting on file "+e.target.files[0].name)
+	const pakFile=e.target.files[0]
+	const rechunkStream=pakFile.stream()
+	console.log("Created readable stream")
+	const streamReader=rechunkStream.getReader()
+	console.log("Created reader")
+	let finalRIFFaddress="nothing"
+	let addressTracker=0 // aka bytes read
+	let curRIFFaddress="nothing"
+	let RIFFprogress=0
+	
+	//from mdn
+	streamReader.read().then(function processData({ done, value }) {
+		// Result objects contain two properties:
+		// done	- true if the stream has already given you all its data.
+		// value - some data. Always undefined when done is true.
+		if (done) {
+			console.log("Stream complete");
+			console.warn("no WAVEs found")
+			stat.textContent='Error: "Countdown" not detected in pak file.'
+			return;
+		}
+		
+		// value is always a uint8array
+		// the length of value is decided by browser automatically.
+		for (let i=0, l=value.length; i<l; i++) {
+			switch (RIFFprogress) {
+				case 0:
+					if (value[i] == 0x52) { // R
+						if (curRIFFaddress==="nothing") {curRIFFaddress=addressTracker+i} // if the address of the chunk is 0, and the index of the byte is 5, curRIFFaddress will be five. if the address of the chunk is 0x110, and the index of the byte is 5, curRIFFaddress will be 0x115. 
+						RIFFprogress=1
+					}
+					break;
+				case 1:
+					if (value[i] == 0x49) { // I
+						RIFFprogress=2
+					} else {
+						curRIFFaddress="nothing"
+						RIFFprogress=0
+					}
+					break;
+				case 2:
+					if (value[i] == 0x46) { // F
+						RIFFprogress=3
+					} else {
+						curRIFFaddress="nothing"
+						RIFFprogress=0
+					}
+					break;
+				case 3:
+					if (value[i] == 0x46) { // F
+						RIFFprogress=4
+					} else {
+						curRIFFaddress="nothing"
+						RIFFprogress=0
+					}
+					break;
+				case 4:
+					if (value[i] == 0x28) { // size byte
+						RIFFprogress=5
+					} else {
+						curRIFFaddress="nothing"
+						RIFFprogress=0
+					}
+					break;
+				case 5:
+					if (value[i] == 0x1F) { // size byte
+						RIFFprogress=6
+					} else {
+						curRIFFaddress="nothing"
+						RIFFprogress=0
+					}
+					break;
+				case 6:
+					if (value[i] == 0x2D) { // size byte
+						RIFFprogress=7
+					} else {
+						curRIFFaddress="nothing"
+						RIFFprogress=0
+					}
+					break;
+				case 7:
+					if (value[i] == 0x00) { // unknown byte
+						RIFFprogress=8
+					} else {
+						curRIFFaddress="nothing"
+						RIFFprogress=0
+					}
+					break;
+				case 8:
+					if (value[i] == 0x57) { // W
+						RIFFprogress=9
+					} else {
+						curRIFFaddress="nothing"
+						RIFFprogress=0
+					}
+					break;
+				case 9:
+					if (value[i] == 0x41) { // A
+						RIFFprogress=10
+					} else {
+						curRIFFaddress="nothing"
+						RIFFprogress=0
+					}
+					break;
+				case 10:
+					if (value[i] == 0x56) { // V
+						RIFFprogress=11
+					} else {
+						curRIFFaddress="nothing"
+						RIFFprogress=0
+					}
+					break;
+				case 11:
+					if (value[i] == 0x45) { // E
+						finalRIFFaddress=curRIFFaddress
+						console.log("WAVE found at "+curRIFFaddress.toString(16).toUpperCase())
+						curRIFFaddress="nothing"
+						RIFFprogress=0
+						success++; if (success===2) {patching(finalRIFFaddress, pakFile, CountdownMod)}
+						return
+					} else {
+						curRIFFaddress="nothing"
+						RIFFprogress=0
+					}
+					break;
+				default:
+					// this should never activate
+					console.log("default activated somehow")
+					break;
+			}
+		}
+		
+		// reading the chunk is done, update addressTracker to the address of the next chunk
+		addressTracker+=value.length
+	
+		// Read some more, and call this function again
+		return streamReader.read().then(processData);
+	});
+}
+
+function patching(finalRIFFaddress, pakFile, CountdownMod) {
+	if (finalRIFFaddress==="nothing") {console.log("nothing in finalRIFFaddress");stat.textContent='Error: "Countdown" not detected in pak file.';return}
+	const ToDownload=new File([pakFile.slice(0, finalRIFFaddress), CountdownMod, pakFile.slice(finalRIFFaddress+0x2D1F28)], pakFile.name)
+	download(ToDownload)
+	stat.textContent="Done!"
+}
+
+function download(file) {
+	const link = document.createElement('a')
+	const url = URL.createObjectURL(file)
+	
+	link.href = url
+	link.download = file.name
+	document.body.appendChild(link)
+	link.click()
+	
+	document.body.removeChild(link)
+	window.URL.revokeObjectURL(url)
+}
+</script>
+<div class=tags>Tags:<ul>
+	<li><a href=/Tags/Ghost-Trick rel=tag>Ghost Trick</a>
+
+	<li><a href=/Tags/Modding rel=tag>Modding</a>
+
+	<li><a href=/Tags/PC rel=tag>PC</a>
+</ul></div>
+<div class=tags>Categories:<ul>
+	<li><a href=/Tags/Video-Game rel=category>Video Game</a>
+</ul></div>
+
+</main>
+<!-- test of afterMain. Related posts will be placed here when they are ready -->
+<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+</body></html>

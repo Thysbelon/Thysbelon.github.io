@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<title>I Moved My Jekyll Website from Windows to WSL2 Ubuntu - Thysbelon</title>
+<meta property="og:title" content="I Moved My Jekyll Website from Windows to WSL2 Ubuntu - Thysbelon">
+<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="color-scheme" content="dark light">
+<meta name=theme-color content=#ff4c60>
+<link rel=stylesheet href=/css/BlogStylesheet.css>
+
+
+<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+
+
+ 
+
+
+ 
+<!-- to do: og:image property here. make a universal eleventyConfig function to fetch the first image of a post. -->
+</head>
+<body>
+<header>
+<a href="/">
+<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>
+</a>
+</header>
+<nav><ul > 
+
+		<li><a href=/New-Media-Projects/>New Media Projects</a></li>
+<li><a href=/About/>About</a></li>
+<li><a href=/Archive/>Archive</a></li>
+<li><a href=/Portfolio/>Portfolio</a></li>
+<li><a href=/Subscribe/>Subscribe</a></li>
+		<li>
+				<details>
+				<summary>
+				Art
+				</summary>
+				<ul>
+				<li><a href=/Digital-Art/>Digital Art</a></li>
+<li><a href=/Photography/>Photography</a></li>
+<li><a href=/Programs/>Programs</a></li>
+				</ul>
+				</details>
+			</li>
+		
+	
+</ul></nav>
+<main> 
+
+<h1 itemprop=headline>I Moved My Jekyll Website from Windows to WSL2 Ubuntu</h1>
+<time itemprop=datePublished datetime=2022-09-17>17 September 2022</time>
+<p>Hello! I got a new laptop, and this one has Windows 11 on it, so I finally decided to stop procrastinating and actually install WSL2. (WSL2 is also available on Windows 10, but when I last checked you needed to sign up for the Windows Insider Program, but that may not be the case anymore?)
+<p>I use <a href=https://jekyllrb.com target=_blank>Jekyll</a> to automatically generate some of the pages on this website, like the previews of each post on the home page, or the pages for each tag. Jekyll also automatically puts every page into the same template.html file, so if I were to make a change to the "Thysbelon" banner at the top, that change would automatically be copied to every page on the website, which is very convenient.
+<p>Jekyll is a "gem", or plug-in, for the Ruby programming language. You can run Ruby, and thus Jekyll, on Windows using RubyInstaller, and this is what I did previously. But Jekyll isn't made to run on Windows, so you're likely to run into issues. For example, I use the jekyll-minifier gem to automatically trim down the html files to make them smaller and faster to download. But the jekyll-minifier gem is programmed to only run if the environment variable is set to "production", and there's no way to do this on Windows. The hacky solution is to edit the gem itself to always run regardless of environment variable, but this isn't necessary before publishing the website and it takes longer for me to see my changes.
+<p>WSL2 is the Windows Subsystem for Linux 2. While WSL1 was more like a simple shell that allowed you to use some Linux commands and small programs in Windows, WSL2 is more like a virtual machine; it promises all the best parts of Windows and Linux in one OS. (Of course, it doesn't actually deliver on this. For example, many apps, such as Chromium, are distributed through the "Snap" installer, which distributes apps in self-contained packages that auto update. And for Ruby, the version available through Snap is actually more up-to-date than the version distributed through apt. However, WSL2 does not support Snap at all. There are workarounds to force it to run, but these are considered hacky and <q cite=https://discourse.ubuntu.com/t/using-snapd-in-wsl2/12113>not recommended for general use</q> - <a href=https://discourse.ubuntu.com/t/using-snapd-in-wsl2/12113 target=_blank>zyga on ubuntu Discourse</a>.)
+<p>I suspect this difference is the reason why I had trouble installing Jekyll using the WSL guide on the official website. This guide says to install Ruby using the "apt" command line tool, but doing this installs all gems to the root folder, which Ruby does not have permission to access. This guide was probably written for WSL1
+<p>To install Ruby and Jekyll on WSL2 Ubuntu, follow the <a href=https://jekyllrb.com/docs/installation/ubuntu/ target=_blank>Jekyll installation guide for Ubuntu</a> instead of the one for Windows. This guide puts all the gems in a place that Ruby will have no problem accessing.
+<p>The other problem I had moving over to WSL2 was file permissions. I copied and pasted my website folder from Windows to Ubuntu using File Explorer. Somehow, this caused the website folder to have restricted permissions, and <code>jekyll serve</code> didn't work. I googled the error message, which was something like "There was an error while trying to write to Gemfile.lock. It is likely that you need to grant write permissions for that path", and I didn't receive any explanation as to how or why this happened, but I did get a solution. Run the command <span class=nowrap>"<code>sudo chown -R $(whoami):$(whoami) myappfolder</code>"</span>. And it worked! I could run <code>jekyll serve</code> again. But when I started writing this post, I didn't have permission to save my changes to the file. I tried googling my problems again, but I couldn't find any clue on how to fix it.
+<p>Do you want to know what the solution was?<br>
+"<code>sudo chown -R $(whoami):$(whoami) myappfolder</code>"<br>
+That's right. Running the same command <em>again</em> fixed it.<br>I have no idea.
+<div class=tags>Tags:<ul>
+	<li><a href=/Tags/Guide rel=tag>Guide</a>
+
+	<li><a href=/Tags/Jekyll rel=tag>Jekyll</a>
+
+	<li><a href=/Tags/WSL2 rel=tag>WSL2</a>
+</ul></div>
+<div class=tags>Categories:<ul>
+	<li><a href=/Tags/Web-Development rel=category>Web Development</a>
+</ul></div>
+
+</main>
+<!-- test of afterMain. Related posts will be placed here when they are ready -->
+<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+</body></html>

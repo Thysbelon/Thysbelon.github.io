@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<title>Liquid Sunshine (Splatoon 3) N163 Chiptune Cover - Thysbelon</title>
+<meta property="og:title" content="Liquid Sunshine (Splatoon 3) N163 Chiptune Cover - Thysbelon">
+<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="color-scheme" content="dark light">
+<meta name=theme-color content=#ff4c60>
+<link rel=stylesheet href=/css/BlogStylesheet.css>
+
+
+<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+
+
+ 
+
+
+ 
+<!-- to do: og:image property here. make a universal eleventyConfig function to fetch the first image of a post. -->
+</head>
+<body>
+<header>
+<a href="/">
+<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>
+</a>
+</header>
+<nav><ul > 
+
+		<li><a href=/New-Media-Projects/>New Media Projects</a></li>
+<li><a href=/About/>About</a></li>
+<li><a href=/Archive/>Archive</a></li>
+<li><a href=/Portfolio/>Portfolio</a></li>
+<li><a href=/Subscribe/>Subscribe</a></li>
+		<li>
+				<details>
+				<summary>
+				Art
+				</summary>
+				<ul>
+				<li><a href=/Digital-Art/>Digital Art</a></li>
+<li><a href=/Photography/>Photography</a></li>
+<li><a href=/Programs/>Programs</a></li>
+				</ul>
+				</details>
+			</li>
+		
+	
+</ul></nav>
+<main> 
+
+<h1 itemprop=headline>Liquid Sunshine (Splatoon 3) N163 Chiptune Cover</h1>
+<time itemprop=datePublished datetime=2023-05-05>05 May 2023</time>
+<script src=https://thysbelon.github.io/nsfplayer-wasm/assets/nsfplayer-mono-stereo.js></script>
+<script src=https://thysbelon.github.io/nsfplayer-wasm/nsfplay-function.js></script>
+
+<script>
+function stratjams6() {
+	nsfplay("liquid-sunshine.nsfe",0,{introEnd:1331, panningObject:{"Square 1":-1,"Square 2":1,"Wave 8":-0.5,"Wave 7":0.5} });
+}
+</script>
+<button onclick=stratjams6() style=margin-bottom:1rem>Start Jams</button>
+<p>(This music cannot yet be played on the home page. Please click on the post link.)
+<p>This cover would not have been possible without <a href=https://vocalremover.org/splitter-ai target=_blank>this music splitter AI</a>.
+<p>I started messing around with using wavetable synth to replicate human vowel sounds in 3/25/2023. I liked the result so much, I wanted to make a cover using it. The <a href=https://www.youtube.com/watch?v=EZx61kSObTI target=_blank>music video for Liquid Sunshine</a> released not too long after, and it had on-screen lyrics! (though, Nintendo of America's romanized lyrics have <a href=https://splatoonwiki.org/wiki/Liquid_Sunshine#cite_note-1 target=_blank>many glaring inaccuracies</a>) I started making my cover on April 5th, and finished on April 22nd.
+<p>I also experimented with stereo audio. Square 1 is panned hard left, square 2 hard right, wave 1 a little left, and wave 2 a little right.
+<p><a href=https://www.mediafire.com/file/nsx5xmov3ml395s/Liquid-Sunshine.zip/file>Download project files</a>.
+<div class=tags>Tags:<ul>
+	<li><a href=/Tags/Famicom rel=tag>Famicom</a>
+
+	<li><a href=/Tags/Splatoon-3 rel=tag>Splatoon 3</a>
+</ul></div>
+<div class=tags>Categories:<ul>
+	<li><a href=/Tags/Video-Game rel=category>Video Game</a>
+
+	<li><a href=/Tags/Music rel=category>Music</a>
+</ul></div>
+
+</main>
+<!-- test of afterMain. Related posts will be placed here when they are ready -->
+<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+</body></html>

@@ -1,28 +1,59 @@
+
 <!DOCTYPE html>
 <html lang=en>
 <head>
 <meta charset=UTF-8>
-<link rel=preload href=/ThysbelonTitle.svg as=image type=image/svg+xml>
-<link rel=preload href=/thysbelonicon.svg as=image type=image/svg+xml>
-<link rel=preload href=/BlogStylesheet.css as=style>
-<meta name="color-scheme" content="dark light"><title>Digital Art - Thysbelon</title>
+<title>Digital Art - Thysbelon</title>
 <meta property="og:title" content="Digital Art - Thysbelon">
-<meta name=theme-color content=#ff4c60>
-
 <meta name=viewport content=width=device-width,initial-scale=1.0>
-<script src=/imgmodal.js></script><link rel=icon type=image/x-icon href=/thysbelonicon.svg>
-<link rel=stylesheet href=/BlogStylesheet.css></head>
+<meta name="color-scheme" content="dark light">
+<meta name=theme-color content=#ff4c60>
+<link rel=stylesheet href=/css/BlogStylesheet.css>
+
+
+<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+
+
+ 
+
+<script src=/js/imgmodal.js></script>
+ 
+<!-- to do: og:image property here. make a universal eleventyConfig function to fetch the first image of a post. -->
+</head>
 <body>
-<header><a href=/Home><img id=blogtitle src=/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280></a></header>
-<nav><ul><li><a href=/Portfolio/>Portfolio</a><li><a href=/New-Media-Projects/>New Media Projects</a><li><a href=/About/>About</a><li><a href=/Archive/>Archive</a><li><a href=/Subscribe/>Subscribe</a><li><details><summary>Art</summary><ul><li><a href=/Programs/>Programs</a><li><a href=/Photography/>Photography</a></details>
-			<li><a href=/>Language/言語</a></ul></nav>
-<section>
+<header>
+<a href="/">
+<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>
+</a>
+</header>
+<nav><ul > 
+
+		<li><a href=/New-Media-Projects/>New Media Projects</a></li>
+<li><a href=/About/>About</a></li>
+<li><a href=/Archive/>Archive</a></li>
+<li><a href=/Portfolio/>Portfolio</a></li>
+<li><a href=/Subscribe/>Subscribe</a></li>
+		<li>
+				<details>
+				<summary>
+				Art
+				</summary>
+				<ul>
+				<li><a href=/Photography/>Photography</a></li>
+<li><a href=/Programs/>Programs</a></li>
+				</ul>
+				</details>
+			</li>
+		
+	
+</ul></nav>
+<main> 
 <h1>Digital Art</h1>
 <p>I draw occasionally. I use a drawing tablet and <a href=https://krita.org target=_blank>Krita</a>.
+<section>
 <h2>Art History Class</h2>
 <p>All the below artwork I drew for my Art History class in high school.
-</section>
-<div class="gallery gridlery fs padb">
+<div class="gallery gridlery fs padb fullwidth">
 <div><img loading=lazy src=athenabg2.png alt=wip><p>Ancient Greece: Athena riding a griffon</p></div>
 <div><img loading=lazy src=impressionist.png alt=wip><p>Impressionist: A blue flower inside of a blue vase resting atop a wooden table. I don't usually draw like this, so I'm proud it turned out well.</p></div>
 <div><img loading=lazy src=shrimp5.png alt=wip><p>Cubism: A shrimp. I drew this cute shrimp when I was excited about having shrimp for dinner.</p></div>
@@ -33,6 +64,7 @@
 <div><img loading=lazy src=tattoo.png alt=wip><p>Tattoo: A stylized woodpecker in front of a skin texture. I was inspired by the beautiful woodpecker I saw beside a stump that morning.</p></div>
 <div><img loading=lazy src=animation.gif alt=wip><p>Animation: A gif of my fursona sleeping in a forest. The assignment was to draw a still image reminiscent of 2d animation, but the video lessons on animation that the teacher showed us inspired me to make a little animation of my own.</p></div>
 </div>
+</section>
 <!--
 <section class=c><p>Working on it...<img class=websitecolor src=/workingmoth.webp alt="A hummingbird clearwing moth hammering a nail into a board."></p></section>
 -->
@@ -40,8 +72,7 @@
 <section>
 <h2>Puyo Puyo Fanart</h2>
 <p>I used to be really into puyo.
-</section>
-<div class="gallery gridlery fs">
+<div class="gallery gridlery fs fullwidth">
 <div><img loading=lazy src=aya-redesign.png alt=wip><p>My Aya redesign.</p></div>
 <div><img loading=lazy src=sig-environmental-light-test-dark-skin-tone.png alt=wip><p>Environmental lighting practice with my sig redesign.</p></div>
 <div><img loading=lazy src=aya-pixel-art.png alt=wip class=pixl><p>Pixel art. Made to be a 3DS badge.</p></div>
@@ -69,11 +100,11 @@
 <div><img loading=lazy src=sun-angel.png alt=wip><p>Angel based off the sun bookmark.</p></div>
 <div><img loading=lazy src=moon-angel.png alt=wip><p>Angel based off the moon stone.</p></div>
 </div>
+</section>
 <section>
 <h2>Soma Cruz + Friends Fanart</h2>
 <p>Soma gets his own section.
-</section>
-<div class="gallery gridlery fs">
+<div class="gallery gridlery fs fullwidth">
 <div><img loading=lazy src=10-5-2021-doodle2.png alt=wip><p>ms paint doodle.</p></div>
 <div><img loading=lazy src=17590d42015.87dee6b694364556.png alt=wip><p>phone doodle</p></div>
 <div><img loading=lazy src=5.20.2022-doodle.png alt=wip><p>with Mina.</p></div>
@@ -91,10 +122,10 @@
 <img loading=lazy src=red-moth4.png alt=wip>
 <div><img loading=lazy src=yellow-moth.png alt=wip><p>Alucard.</p></div>
 </div>
+</section>
 <section>
 <h2>Miscellaneous</h2>
-</section>
-<div class="gallery gridlery fs padb">
+<div class="gallery gridlery fs fullwidth">
 <div><img loading=lazy src=182fb407d5d.91075a4aeca735a9.png alt=wip><p>Magolor.</p></div>
 <div><img loading=lazy src=17cb8e776d0.928b86702dd1fae6.png alt=wip><p>Azurill</p></div>
 <div><img loading=lazy src=corruption-ghost.png alt=wip><p>Inspired by a Mario 64 corruption.</p></div>
@@ -105,6 +136,8 @@
 <div><img loading=lazy src=the-hoppip.png alt=wip><p>Hoppip and Hopip. A redraw of my start in digital art.</p></div>
 <div><img loading=lazy src=zx-spectrum-drawcia.png alt=wip class=pixl style=--w:320;--h:240><p>A piece inspired by <i>Kirby: Canvas Curse</i>; drawn in the style of the <span lang=en-GB>ZX Spectrum</span> for my beeper cover of the song <a href=https://www.youtube.com/watch?v=hq0_Z13NZ88><i>Drawcia Sorceress</i></a>.</p></div>
 </div>
+</section>
+</main>
 
 <footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
-<script src=/webpnotice.js></script></body></html>
+</body></html>

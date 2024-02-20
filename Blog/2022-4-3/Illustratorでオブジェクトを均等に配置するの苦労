@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang=ja>
+<head>
+<meta charset=UTF-8>
+<title>Illustratorでオブジェクトを均等に配置するの苦労【シズビロン】</title>
+<meta property="og:title" content="Illustratorでオブジェクトを均等に配置するの苦労【シズビロン】">
+<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="color-scheme" content="dark light">
+<meta name=theme-color content=#ff4c60>
+<link rel=stylesheet href=/css/BlogStylesheet.css>
+
+
+<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+
+<link rel=alternate hreflang=en href="/Blog/2022-4-3/Trouble-with-Spacing-Objects-Evenly-in-Illustrator">
+ 
+
+
+ 
+<!-- to do: og:image property here. make a universal eleventyConfig function to fetch the first image of a post. -->
+</head>
+<body>
+<header>
+<a href="/ホーム/">
+<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="スズメガのロゴ。" width=280 height=280>
+</a>
+</header>
+<nav><ul > 
+
+		<li><a href=/アーカイブ/>アーカイブ</a></li>
+<li><a href=/僕について/>僕について</a></li>
+<li><a href=/購読する/>購読する</a></li>
+		
+		<li><a href=/Blog/2022-4-3/Trouble-with-Spacing-Objects-Evenly-in-Illustrator>言語/<span lang=en>Language</span></a></li>
+	
+</ul></nav>
+<main> 
+
+<h1 itemprop=headline>Illustratorでオブジェクトを均等に配置するの苦労</h1>
+<time itemprop=datePublished datetime=2022-04-03>03 April 2022</time>
+<img itemprop=image src=thumb.png class=fri alt="コンピュータの前に座っている悔しいスズメガ。"><p>今日は<a href=/ディジタル・デザイン/SNS/#SNSのアド>ＲＣＰのＳＮＳのアド</a>に取り組んでいた。「1,500,000,000」の数字の間隔を空けようとしていた。最初に「アウトライン」をクリックした、個々の数字を動かせるんだった。自動的に均等に配置するツールがあるのが確かけど、どこにあるかとどうやって使うかわからなかった。オンラインで見つけた<a href=https://maschituts.com/how-to-evenly-space-objects-in-illustrator/ target=_blank>「How to Evenly Space Objects in Illustrator」</a>という題名のガイドを従ってて、オブジェクトを選択して、そして整列パネルで「水平方向等間隔に分布」をクリックした。<br>何も起こらなかった。何度も何度も試した、オブジェクトを間違って選択した？結局、ふとした、オブジェクトをグループ解除することにした。完璧に機能した。Illustratorはいいツールがあるけど、直感的でないだから煩わしいです。
+
+<div class=tags>Tags:<ul>
+	<li><a href=/Tags/Illustrator rel=tag>Illustrator</a>
+
+	<li><a href=/Tags/ガイド rel=tag>ガイド</a>
+</ul></div>
+<div class=tags>Categories:<ul>
+	<li><a href=/Tags/ディジタル・デザイン rel=category>ディジタル・デザイン</a>
+</ul></div>
+
+</main>
+<!-- test of afterMain. Related posts will be placed here when they are ready -->
+<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+</body></html>

@@ -1,21 +1,23 @@
-onmessage=async function(e) {
-var keywords=e.data
-keywords=keywords.replace(/\d\d\d\d\/\d\d\/\d\d\//, "")
+onmessage=function(e) {
+console.log('message received from main')
+var keywords=e.data.pathname
+keywords=keywords.replace(/\d\d\d\d\/\d\d\/\d\d\//, "") // change
 keywords=keywords.replace(/-/g, "/")// remove parenthesis as well?
 keywords=keywords.split('/')
 keywords.shift()
 console.log(keywords)
 var keywordsComplete=keywords.map(x => x = {word:x,ranking:0,PageMatches:[]});
 var tenposts=["","","","","","","","","",""];
-let allposts = await fetch('/posts.json')
-allposts = await allposts.json()
+//let allposts = await fetch('/posts.json')
+//allposts = await allposts.json()
+const allposts /* this is all pages */ = e.data.URLarray
 console.log(allposts)
 for (let keyword of keywordsComplete) {
 	for (let post of allposts) {
 		if (post.toLowerCase().includes(keyword.word.toLowerCase())) {keyword.ranking+=1; keyword.PageMatches.push(post)}
 	}
 }
-keywordsComplete.sort(function(a, b){return a.ranking - b.ranking})
+keywordsComplete.sort(function(a, b){return a.ranking - b.ranking}) // keywords with the least matches will be at the top.
 console.log(keywordsComplete);
 let progress=0;
 father_loop:

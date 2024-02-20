@@ -1,0 +1,12 @@
+---
+tags:
+ - Guide
+ - Jekyll
+ - WSL2
+categories:
+ - Web Development
+---
+<p>If you're making a website, you may want to test that website on smartphones. If you're making your website with Jekyll, you may want to run it in WSL2 to avoid any Windows compatibility issues. But what if you want to do both of these things? You may run into trouble.
+<p>Unlike WSL1, WSL2 is a Virtual Machine. A consequence of this is that the virtual Linux machine in WSL2 has a different IP address from the host Windows machine. So if you run <code>jekyll serve --host 0.0.0.0</code>, then try to connect to your Windows machine's IP using your phone browser, it won't connect. If you use a tool like <code>ifconfig</code> in the Linux machine to find <em>its</em> IP address, then navigate to that in your phone, it <em>still</em> won't work, because the only device that can access your virtual Linux machine's IP is the host machine.
+<p>There are <em>many</em> different ways to solve this, one of which is to just ditch WSL2 and use either WSL1 or Ruby for Windows; if you only use Jekyll, it may be worth it. I didn't want to change my setup that drastically (because I'm lazy), and I didn't want to install any new software either (like an <a href=https://stackoverflow.com/questions/49835559/access-a-web-server-which-is-running-on-wsl-windows-subsystem-for-linux-from-l/73690504#73690504>SSH server</a>). My quick fix was to download the Python Windows embeddable package, shift + right-click python.exe to copy the path, run <code>jekyll serve</code> on the Linux machine, navigate to the <code>_site</code> folder of my Jekyll project in Powershell, then paste the python path and run <code>-m http.server</code> (make sure to remove the quotes from the python.exe path or it won't work for some reason! Powershell is weird, but CMD can't navigate to the WSL2 filesystem).
+<p><a href=https://learn.microsoft.com/en-us/windows/wsl/compare-versions#exceptions-for-using-wsl-1-rather-than-wsl-2 target=_blank>Microsoft's official website mentions this IP address issue, and links to a Powershell script that sets port forwarding rules for WSL2 whenever its IP changes.</a> I'll probably use this.

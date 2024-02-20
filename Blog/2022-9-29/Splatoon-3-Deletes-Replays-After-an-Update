@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<title>Splatoon 3 Deletes Replays After an Update - Thysbelon</title>
+<meta property="og:title" content="Splatoon 3 Deletes Replays After an Update - Thysbelon">
+<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="color-scheme" content="dark light">
+<meta name=theme-color content=#ff4c60>
+<link rel=stylesheet href=/css/BlogStylesheet.css>
+
+
+<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+
+
+ 
+
+
+ 
+<!-- to do: og:image property here. make a universal eleventyConfig function to fetch the first image of a post. -->
+</head>
+<body>
+<header>
+<a href="/">
+<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>
+</a>
+</header>
+<nav><ul > 
+
+		<li><a href=/New-Media-Projects/>New Media Projects</a></li>
+<li><a href=/About/>About</a></li>
+<li><a href=/Archive/>Archive</a></li>
+<li><a href=/Portfolio/>Portfolio</a></li>
+<li><a href=/Subscribe/>Subscribe</a></li>
+		<li>
+				<details>
+				<summary>
+				Art
+				</summary>
+				<ul>
+				<li><a href=/Digital-Art/>Digital Art</a></li>
+<li><a href=/Photography/>Photography</a></li>
+<li><a href=/Programs/>Programs</a></li>
+				</ul>
+				</details>
+			</li>
+		
+	
+</ul></nav>
+<main> 
+
+<h1 itemprop=headline>Splatoon 3 Deletes Replays After an Update</h1>
+<time itemprop=datePublished datetime=2022-09-29>29 September 2022</time>
+<img itemprop=image src=P1054413.webp alt="Photo of a Switch screen displaying the message There are no battle replays that can be replayed.">
+<p>Fun fact: Just like Smash Ultimate and Smash 4, Splatoon 3 will delete all your replays after an update! And unlike the Smash games, there is <strong>no way to save them before they're deleted!</strong> Wow!
+<p>I set up my tripod and camera above my switch to record my replays and preserve them that way, but this photo is all I have for my efforts. Once an update is available, Splatoon 3 <em>will not</em> let you enter the lobby without updating, after which your replays will be deleted.
+<div class=tags>Tags:<ul>
+	<li><a href=/Tags/Splatoon-3 rel=tag>Splatoon 3</a>
+</ul></div>
+<div class=tags>Categories:<ul>
+	<li><a href=/Tags/Video-Game rel=category>Video Game</a>
+</ul></div>
+
+</main>
+<!-- test of afterMain. Related posts will be placed here when they are ready -->
+<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+</body></html>
