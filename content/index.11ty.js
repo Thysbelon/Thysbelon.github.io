@@ -20,7 +20,7 @@ data() {
 render(data) {
 return `
 	${data.pagination.items.map(post => `<article>
-			<h1><a href=${post.url}>${ post.data.customHeader ? post.data.customHeader : (post.data.title ? post.data.title : this.titleFromURL(post.url)) }</a></h1>
+			<h1><a href=${post.url.replace(/\.html$/, '')}>${ post.data.customHeader ? post.data.customHeader : (post.data.title ? post.data.title : this.titleFromURL(post.url)) }</a></h1>
 			<time datetime=${this.htmlDateString(post.data.computedDate)} >${this.readableDate(post.data.computedDate)}</time>
 			${ this.makeHomeExcerpt(post) }
 	</article>`).join("\n")}

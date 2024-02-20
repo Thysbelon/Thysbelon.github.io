@@ -34,7 +34,7 @@ module.exports = {
 	],
 	"layout": "post-en.11ty.js",
 	//"permalink": "{% setPermalink page.filePathStem, page.url %}"
-	"permalink": data => `${ setPermalink(data.page.inputPath, data.page.filePathStem) }`,
+	"permalink": data => `${ setPermalink(data.page.inputPath, data.page.filePathStem) }.html`,
 	"eleventyComputed": {
 		"computedDate": data => data.page.inputPath.match(/\d\d\d\d-\d\d?-\d\d?/) ? new Date(grabDateStringFromFile(data.page.inputPath)) : data.page.date // failure. this computed value will never be treated as "date" when sorting posts. solution: https://github.com/11ty/eleventy/issues/2514#issuecomment-1198736399
 	}

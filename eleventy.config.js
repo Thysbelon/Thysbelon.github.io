@@ -187,7 +187,7 @@ module.exports = function(eleventyConfig) {
 		//</ul>`;
 		return `<ul class="gallery padt fullwidth">
 			${ collection.map(post =>
-				`<li><a href="${post.url}">
+				`<li><a href="${post.url.replace(/\.html$/, '')}">
 				${ post.data.customHeader ? post.data.customHeader : (post.data.title ? post.data.title : eleventyConfig.javascriptFunctions.titleFromURL(post.url)) }<br>
 				<p>${ eleventyConfig.javascriptFunctions.makeExcerpt(post.content, 20, lang).replaceAll("</p><p>"," ").replace(/<script ?.*?>.*?<\/script>/gms, "").replace(/(<([^>]+)>)/gi, "")/*remove HTML*/ }</p>
 			</a>`).join('\n') }
@@ -352,7 +352,7 @@ module.exports = function(eleventyConfig) {
 		if (typeof inputURL != 'string') {return 'titleFromURL was not given a string'}
 		const splitURL=inputURL.split('/')
 		if (splitURL[splitURL.length-1]=='') {splitURL.pop()}
-		return splitURL[splitURL.length-1].replaceAll('-', ' ')
+		return splitURL[splitURL.length-1].replaceAll('-', ' ').replace(/\.html$/, '')
 	});
 
 	// Shortcodes
