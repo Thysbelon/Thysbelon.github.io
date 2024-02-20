@@ -49,14 +49,14 @@ function generateDefaultNavbarPageList(curPageURL, allPages) {
 	//if (!curPageURL.includes('/blog/')) {console.log('default navbar')}
 	//console.log('generating Default navbar... curPageURL: '+curPageURL)
 	//const newAllPages = allPages.filter((page) => !(page.url.includes('/blog/') || page.url.includes('/tags/') || page.url=='/' || page.url==curPageURL || page.url.match(/\//g).length >= 3 || page.data.nonav))
-	const newAllPages = allPages.filter((page) => !(page.url.includes('/Blog/') || page.url.includes('/Tags/') || page.url=='/' || page.url=='/ホーム/' || page.url.match(/\//g).length >= 3 || page.data.nonav || page.data.dropDownNav))
+	const newAllPages = allPages.filter((page) => !(page.url==false || page.url.includes('/Blog/') || page.url.includes('/Tags/') || page.url=='/' || page.url=='/ホーム/' || page.url.match(/\//g).length >= 3 || page.data.nonav || page.data.dropDownNav))
 	//newAllPages=applyNavOrder(newAllPages)
 	return newAllPages
 }
 function generateNestedNavbarPageList(curPageURL, allPages, inputPageURL=curPageURL) {
 	//console.log('generating Nested navbar... (this will always happen at least once) curPageURL: '+curPageURL)
 	//const nestedPages = allPages.filter((page) => (page.url.includes(inputPageURL) && page.url!=curPageURL && !page.data.nonav)) // all pages that are the child of the inputted curPageURL
-	const nestedPages = allPages.filter((page) => (page.url.includes(inputPageURL) && !page.url.includes('/Categories/') && !page.url.includes('/カテゴリ/') /*&& !page.data.nonav*/ && !page.data.dropDownNav)) // all pages that are the child of the inputted curPageURL
+	const nestedPages = allPages.filter((page) => (page.url!=false && page.url.includes(inputPageURL) && !page.url.includes('/Categories/') && !page.url.includes('/カテゴリ/') /*&& !page.data.nonav*/ && !page.data.dropDownNav)) // all pages that are the child of the inputted curPageURL
 	//nestedPages=applyNavOrder(nestedPages)
 	return nestedPages
 }
@@ -82,7 +82,7 @@ function generateNav(curPageURL, allPages, globalFn, curPageAltLang=undefined, c
 	// Idea: code for generating the Archive navbar can be moved to the archive page; the navbar will be in the data varible. A conditional can be used here to insert Archive's navbar.
 	//
 	//var newAllPages=allPages.map(function(pageEntry){ return {url: pageEntry.url, title: pageEntry.title, data: {navOrder: pageEntry.data.navOrder, nonav: pageEntry.data.nonav} } }) // I thought this line would prevent the original collection array from being modified...
-	var newAllPages=collectionToBarebonesNavArray(allPages.filter(item => !item.url.includes('/Tags/')))
+	var newAllPages=collectionToBarebonesNavArray(allPages.filter(item => (item.url != false && !item.url.includes('/Tags/'))))
 	//if (!curPageURL.includes('/blog/')) {
 	//	console.log('FIRST LOG '+curPageURL)
 	//	console.log(newAllPages)
@@ -115,7 +115,7 @@ function generateNav(curPageURL, allPages, globalFn, curPageAltLang=undefined, c
 	newAllPages=applyNavOrder(newAllPages)
 	newAllPages=newAllPages.filter(page => page.url!=curPageURL)
 	var allDropdowns=new Set()
-	allPages.filter(page => page.data.dropDownNav).forEach(page => allDropdowns.add(page.data.dropDownNav))
+	allPages.filter(page => (page.url!=false && page.data.dropDownNav)).forEach(page => allDropdowns.add(page.data.dropDownNav))
 	allDropdowns=Array.from(allDropdowns)
 	return `
 		${newAllPages.map(pageEntry =>
@@ -128,7 +128,7 @@ function generateNav(curPageURL, allPages, globalFn, curPageAltLang=undefined, c
 				${dropdown}
 				</summary>
 				<ul>
-				${allPages.filter(page => page.data?.dropDownNav==dropdown && page.url != curPageURL).sort(sortPagesAlphabetically).map(pageEntry =>
+				${allPages.filter(page => page.url != false && page.data?.dropDownNav==dropdown && page.url != curPageURL).sort(sortPagesAlphabetically).map(pageEntry =>
 					`<li><a href=${pageEntry.url}>${pageEntry.title ? pageEntry.title : globalFn.titleFromURL(pageEntry.url)}</a></li>`
 				).join('\n')}
 				</ul>
@@ -141,6 +141,7 @@ function generateNav(curPageURL, allPages, globalFn, curPageAltLang=undefined, c
 
 module.exports = {
 render(data) {
+if (data.page.url!=false) { // note: it seems like drafts (and pages with permalink: false) only cause trouble when a default layout is set. TODO: remove the redundant url!=false conditionals
 var title = data.locale=='jp' ? 'シズビロン' : data.metadata.title
 if (data.page.url!='/' && data.page.url!='/ホーム/' && !data.page.url.match(/\/page-\d+?\//) && !data.page.url.match(/\/ホーム\/\d+?ページ\//)) {
 	title = data.locale=='jp' ? '【'+title+'】' : ' - '+title;
@@ -168,7 +169,7 @@ ${ data.noDefaultStylesheet ? '' : '<link rel=stylesheet href=/css/BlogStyleshee
 ${ data.extraStylesheet ? '<link rel=stylesheet href=/css/'+data.extraStylesheet+'>' : '' }
 ${ data.internalStyle ? (data.internalStyle.includes('<style>') ? data.internalStyle : '<style>'+data.internalStyle+'</style>' ) : '' }
 <link rel=icon type=image/x-icon href=${ data.customIcon ? data.customIcon : '/img/thysbelonicon.svg' }>
-${ (data.noindex || data.page.url.match(/\/page-\d+?\//)) ? '<meta name=robots content=noindex>' : '' }
+${ (data.noindex || data.page.url?.match(/\/page-\d+?\//)) ? '<meta name=robots content=noindex>' : '' }
 ${ data.altLang ? `<link rel=alternate hreflang=${data.locale=='jp' ? 'en' : 'ja'} href="${data.altLang}">` : '' }
 ${ data.page.isPost ? '<link rel=author href=/About/>' : '' } `/*The isPost variable will be set by the post layout. I may not need this variable if I search for /blog/ in url*/+`
 ${ data.page.description ? '<meta name="description" content="'+data.page.description+'"><meta property="og:description" content="'+data.page.description+'">' : '' }
@@ -192,5 +193,6 @@ ${ data.afterMain ? data.afterMain : '' }
 ${ data.customFooter ? data.customFooter : '<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>' }
 </body></html>
 `;
+}
 }
 }
