@@ -1,3 +1,0 @@
-make this page a layout default. There is no text, it should be accessible in both language.
-eng page link: Portfolio
-jpn page link: ポートフォリオ

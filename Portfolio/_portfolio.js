@@ -1,2 +1,0 @@
-let divimgs=document.querySelectorAll(".gallery>div>img");
-divimgs.forEach(function(element){element.addEventListener("mouseover",function(){this.parentElement.style.borderColor="var(--pink)"});element.addEventListener("mouseout",function(){this.parentElement.style.removeProperty('border-color')})})

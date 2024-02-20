@@ -1,4 +1,0 @@
----
-layout: null
----
-[{% for post in site.pages %}{% unless post.layout contains "jp" or post.url contains "%" or post.layout == "redir2mon" or post.layout == "archive" or post.url contains ".xml" or post.url contains "/Home/" or post.url contains "404" or post.url contains "/page/" or post.url == "/posts.json" or post.url == "/" %}"{{ post.url }}",{% endunless %}{% endfor %}{% assign posts = site.posts | where: "layout", "post-en" %}{% for post in posts %}"{{ post.url }}"{% unless forloop.last %},{% endunless %}{% endfor %}]

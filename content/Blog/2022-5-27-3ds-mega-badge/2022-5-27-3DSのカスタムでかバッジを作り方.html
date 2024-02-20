@@ -1,0 +1,33 @@
+---
+locale: jp
+layout: post-jp
+categories:
+  - ゲーム
+tags:
+  - 3DS
+  - ガイド
+  - CFW
+altLang: /Blog/2022-5-27/How-to-Make-Custom-3DS-Mega-Badges
+---
+<!--put How-To rich search result data in this post-->
+<!--ソフトが起動できるバッジ = launcher badge-->
+<!--でかバッジ = mega badge-->
+<!--バッジとれ～るセンターは３ＤＳのホーム・メニュを飾るためにバッジを受けるためにキャッチャーで遊ぶＦ２Ｐのゲーム。-->
+<!--バッジとれ～るセンターは３ＤＳのホーム・メニュを飾るためにキャッチャーで遊んでバッジを受けるＦ２Ｐのゲーム。-->
+<img class=fri src=badge2D-80.webp alt="３ＤＳのホーム・メニュでドロッチェのでかバッジのスクショ。">
+<p>バッジとれ～るセンターは３ＤＳのホーム・メニュを飾るためにバッジを受けるためにキャッチャーで遊ぶＦ２Ｐのゲーム。<a href={%comment%}https://3ds.hacks.guide{%endcomment%}https://3ds-hacks-guide.translate.goog/ja_JP/?_x_tr_sl=en&_x_tr_tl=ja&_x_tr_hl=ja-JP target=_blank>３ＤＳにＣＦＷをインストールする</a><!--（日本語訳が半端から、英語訳を<a href=https://addons.mozilla.org/en-US/firefox/addon/to-google-translate/>機械で訳してください。</a>）-->のをもって、ユーザーは６４×６４ピクセルＰＮＧでカスタムバッジを作れる。特殊な種類のバッジの「でかバッジ」がある。二か四つの一般なバッジで成り立っているでも、上の画面にあらゆるパートは一つのバッジに見える<!--more-->。
+<p>カスタムでかバッジを作り方：
+<ol><li>はじめにＧＹＴＢでバッジを注射して。３ＤＳアプリのUniversal-Updaterを使ってＧＹＴＢをダウンロードできる。使う前に<a href={%comment%}https://github.com/MrCheeze/GYTB{%endcomment%}https://github-com.translate.goog/MrCheeze/GYTB?_x_tr_sl=auto&_x_tr_tl=ja&_x_tr_hl=ja-JP target=_blank>ＧＹＴＢの文書化を読んでください</a>（<a href=https://yyoossk.blogspot.com/2017/12/3dsgytb.html target=_blank>日本語のＧＹＴＢについてブログの投稿</a>）。組み合わせてでかバッジにしたいイメージはアルファベット順に隣にあるために名付けなくてはいけません：<ul>
+<li>縦の１×２でかバッジは、上の半、次に下の半。
+<li>横の２×１でかバッジは、左の半、次に右の半。
+<li>２×２でかバッジは、上左、次に下左、次に上右、最後に下右。</ul>
+<li><a href=https://gbatemp-net.translate.goog/threads/advanced-badge-editor-create-your-own-badges-and-sets-easily.448520/?_x_tr_sl=en&_x_tr_tl=ja&_x_tr_hl=ja-JP target=_blank>Simple Badge InjectorとAdvanced Badge Editorをダウンロードして</a>、 リンクしたウェブページの指図を読んでください。
+<li>Simple Badge Injectorでバッジのデータをダンプして。
+<li>データをAdvanced Badge Editorで開いて。
+<li>でかバッジごとに、あらゆるバッジのパートが同じのＩＤと異質のSub IDにならせて。Sub IDを設定しなくてはいけない数値は種類のでかバッジによって異なる：<ul>
+<li>縦の１×２でかバッジは、上の半のバッジのSub IDが１０００と、下の半のが１０１０。
+<li>横の２×１でかバッジは、左の半のバッジのSub IDが１００と、右の半のが１０１。
+<li>２×２でかバッジは、上左が１１００、下左が１１１０、上右が１１０１、下右が１１１１。</ul>
+<li>エディットを保存して。
+<li>Simple Badge Injectorを使って３ＤＳに編集したバッジのデータを注射して。</ol>
+<p>Advanced Badge Editorでカテゴリ（改造の群集ではセットと呼ばれる）やでかバッジを編集できる。唯一の編集できない特殊なプロパティはピンだ。<img class=fri src=goodpin-80.webp alt=エネコのバッジの後ろのスクショ。バッジのピンがエネコの頭にあります。>公式のバッジは、ピンをきれいな点に据えた、でもＧＹＴＢで注射したバッジはピンをいつも６４×６４イメージの中心に据えた。<img class=fli src=pinhead2-80.webp alt=小さい鳥のピッチのバッジ。頭の後ろからピンが張り出している。>これので、小さいバッジに前からピンの後ろが見えてる。<a href=https://gbatemp-net.translate.goog/threads/advanced-badge-editor-create-your-own-badges-and-sets-easily.448520/page-6?_x_tr_sl=en&_x_tr_tl=ja&_x_tr_hl=ja-JP#post-8484100 target=_blank>gbatempのredunkaはピンの位置付けを管理する数値を知った。</a>しかし、数値を使い方が不明です。いつかバイナリエディタを使ってそれを勉強するかもしれない、ピンの数値を編集するツールを作るかもしれない。それが約束じゃないです。あなたはピンの数値を勉強できるかもしれない？バイナリエディタが必要です。僕は<a href=https://mh-nexus.de/en/hxd/ target=_blank>ＨｘＤ</a>を使ってる、しかしWindowsだけにある。<a href=https://ja.wikipedia.org/wiki/バイナリエディタ target=_blank>ウィキペディアに代表的なバイナリエディタのリストがある。</a>あなたのバイナリエディタでBadgeMngFile.datを開いて、<a href=https://3dbrew-org.translate.goog/wiki/Home_Menu?_x_tr_sl=en&_x_tr_tl=ja&_x_tr_hl=ja-JP#BadgeMngFile.dat target=_blank>3dbrewの文書化</a>を使って十六進の数値の意味を知られる。

@@ -1,0 +1,19 @@
+---
+navbar: '<li><a href=/アーカイブ/>アーカイブ</a></li><li><a href=/タグ/>タグ</a></li><li><a href=/カテゴリ/>カテゴリ</a></li>'
+pagination:
+  data: collections.jpListOfTags
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - post
+    - posts
+    - tagList
+  addAllPagesToCollections: true
+eleventyComputed:
+  title: '{{ tag }}のタグ'
+permalink: /タグ/{{ tag | prettySlug }}/
+locale: jp
+---
+<h1>「{{ tag }}」のタグ</h1>
+{{ collections.jpPostsInComputedDateOrder | tagFilter(tag) | generateArchiveHTMLfromCollection('jp') | safe }}

@@ -1,0 +1,27 @@
+---
+locale: en_US
+categories:
+  - Video Game
+tags:
+  - 3DS
+  - Guide
+  - CFW
+altLang: /Blog/2022-5-27/3DSのカスタムでかバッジを作り方
+---
+<!--put How-To rich search result data in this post-->
+<img class=fri src=badge2D-80.webp alt="Screenshot of a Daroach mega badge in the 3DS home menu.">
+<p><span class=nowrap>Nintendo Badge Arcade</span> is a free-to-play game for the 3DS in which you play a crane game to unlock badges to decorate your 3DS's home menu with. By <a href=https://3ds.hacks.guide target=_blank>Installing custom firmware to the 3DS</a> users can make their own custom badges out of 64 by 64 pixel PNGs. There is a special kind of badge called the mega badge; it's made up of two or four normal badges, but the parts appear as one badge when viewed on the top screen. So how do you make your own custom <em>mega</em> badges?
+<ol><li>Start by injecting your badges with GYTB. You can download GYTB from the Universal Updater 3DS app. Please <a href=https://github.com/MrCheeze/GYTB target=_blank>read GYTB's documentation</a> before using it. The parts you want to combine into a mega badge <em>must</em> be named so that they will be next to each other alphabetically:<ul>
+	<li>For vertical one-by-two mega badges, it's top half, then bottom half.
+	<li>For horizontal two-by-one mega badges, it's left half, then right half.
+	<li>For two-by-two mega badges, the order must be top left, bottom left, top right, bottom right.</ul>
+<li>Afterwards, <a href=https://gbatemp.net/threads/advanced-badge-editor-create-your-own-badges-and-sets-easily.448520/ target=_blank>download Simple Badge Injector and Advanced Badge Editor</a>; I recommend reading the linked page's instructions on how to use the software.
+<li>Dump your badge data with Simple Badge Injector.
+<li>Open the data in Advanced Badge Editor.
+<li>For each mega badge, make all the badge parts have the same Badge ID, and different Badge Sub IDs. The value the Badge Sub ID should be set to differs with the kind of mega badge:<ul>
+	<li>For vertical one-by-two mega badges, The top half Badge Sub ID must be 1000, the bottom half 1010.
+	<li>For horizontal two-by-one mega badges, the left half Badge Sub ID must be 100, the right half 101.
+	<li>For two-by-two mega badges, The Badge Sub ID is 1100 for top left, 1110 for bottom left, 1101 for top right, and 1111 for bottom right.</ul>
+<li>Save your edits.
+<li>Inject the edited badge data into your 3DS using Simple Badge Injector.</ol>
+<p>Both categories (called sets in the hacking community) and mega badges can be edited with Advanced Badge Editor, so the only special property of badges that is not possible to edit is the pin.<img class=fri src=goodpin-80.webp alt="screenshot of the backside of a skitty badge; the badge pin is on skitty's head."> In official badges, the badge pin is placed in an aesthetically pleasing spot, but GYTB injected badges always place the pin in the center of the 64 by 64 image;<img class=fli src=pinhead2-80.webp alt="A badge of the small bird Pitch; the pin sticks out from behind its head."> this causes the backside of the pin to be visible from the front on small badges. <a href=https://gbatemp.net/threads/advanced-badge-editor-create-your-own-badges-and-sets-easily.448520/page-6#post-8484100 target=_blank>redunka on gbatemp figured out which value controls the pin placement</a>, though it's not exactly clear how the value works. I might mess around with a hex editor to see if I can make sense of it, or maybe I'll make a tool that lets people edit the values easily. No promises, though. Maybe you can experiment with the value on your own? You'll need a hex editor for this. I personally use <a href=https://mh-nexus.de/en/hxd/ target=_blank>HxD</a>, but that's Windows exclusive. Other platforms can try using <a href=https://imhex.werwolv.net/ target=_blank>ImHex</a>. Open BadgeMngFile.dat in your hex editor, and refer to <a href=https://3dbrew.org/wiki/Home_Menu#BadgeMngFile.dat target=_blank>3dbrew's documentation</a> on what the hex values represent.

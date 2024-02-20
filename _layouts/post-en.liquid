@@ -1,0 +1,8 @@
+---
+layout: default-en
+eleventyComputed:
+	afterMain: "<div class=tags>Tags:<ul>{% for tag in page.tags %}<li><a href=/Tags/{{ tag | slugify }} rel=tag>{{ tag }}</a>{% endfor %}</ul></div><div class=tags>Categories:<ul>{% for category in page.categories %}<li><a href=/Categories/{{ category | slugify }} rel=category>{{ category }}</a>{% endfor %}</ul></div>"
+---
+<h1 itemprop=headline>{% if page.customHeader %}{{ page.customHeader }}{% else %}{{ page.title }}{% endif %}</h1>
+<time itemprop=datePublished datetime={{ page.date | date: "%F" }}>{{ page.date | date: "%e %B %Y" }}</time>
+{{ content | replace_first: "<img","<img itemprop=image" }}
