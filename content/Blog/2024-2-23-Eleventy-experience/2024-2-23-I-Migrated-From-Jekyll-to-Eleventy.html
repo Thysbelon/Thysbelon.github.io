@@ -1,0 +1,26 @@
+---
+categories:
+ - Web Development
+tags:
+ - Eleventy
+ - Jekyll
+draft: true
+---
+<p>I spent about two weeks migrating my website from Jekyll to Eleventy. Jekyll is probably very good for simple websites, but I added a lot of complicated features to my website, so the Liquid code was a mess. Now that all that complicated code is in JavaScript, I feel like it'll be much easier to maintain.
+<p>I'm not sure I can write a good post about my experiences, so I'll just make a big list of tips and links. (make sure to also read the <a href=https://www.11ty.dev/docs/ target=_blank>Eleventy docs!</a>)
+<ul>
+<li id=global-default-layout><a href=https://github.com/11ty/eleventy/issues/380#issuecomment-932851369 target=_blank>Globally set default layout</a> (I used method 2)
+<li>Use the <a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter target=_blank><code>Array.prototype.filter()</code></a> method to grab only certain pages
+<li>The slugify filter, used in the eleventy-base-blog repo, throws an error and halts the build when used with multi-byte languages like Japanese. You can always <a href=https://www.11ty.dev/docs/filters/ target=_blank>make your own slug filter</a>
+<li>Jekyll post templates set their date variable using a date string in the filename of the template. Eleventy's <code>date</code> key doesn't work quite the same. You can use <a href=https://www.11ty.dev/docs/data-computed/ target=_blank>computed data</a> to control exactly how variables are calculated, but you can't overwrite the default <code>date</code> variable this way, which will cause undesired results when sorting posts by date. <a href=https://github.com/11ty/eleventy/issues/2514 target=_blank>You can make a collection sorted by the computed date as a workaround</a>
+<li><a href=https://globster.xyz/ target=_blank>Globster</a> is a good website for learning about and testing globs
+<li><a href=https://stackoverflow.com/questions/39296057/glob-for-all-folders-within-a-folder-except-one-named-folder target=_blank>Glob for all folders within a folder except one named folder</a>
+<li>You can use Passthrough File Copy to copy non-template files to the output directory unaltered. If you're trying to use the <code>rename</code> option to map the input directory to the output directory, make sure to <a href=https://github.com/11ty/eleventy/issues/3010#issuecomment-1661392357 target=_blank>put all globs in the <code>filter</code> option</a>
+<li><a href=https://github.com/11ty/eleventy/issues/637 target=_blank>&ldquo;How can I filter a collection by a frontmatter field?&rdquo;</a> (Useful for managing Jekyll's <code>categories</code> in Eleventy. <a href=https://github.com/Thysbelon/Thysbelon.github.io/blob/main/eleventy.config.js#L202 target=_blank>I use something slightly different</a> than what is linked because my <code>categories</code> are an array)
+<li><a href=https://github.com/Thysbelon/Thysbelon.github.io/blob/main/eleventy.config.js#L197 target=_blank>Strip <code>&lt;script&gt;</code> tags and their contents from a string</a>
+<li><a href=https://css-tricks.com/snippets/javascript/strip-html-tags-in-javascript/ target=_blank>Strip HTML Tags in JavaScript</a> (Doesn't remove contents of <code>&lt;script&gt;</code> tags. Use the above regex to strip <code>&lt;script&gt;</code> tags before stripping all HTML tags)
+<li><a href=https://stackoverflow.com/questions/10712555/gitignore-all-files-of-extension-in-directory target=_blank>gitignore all files of extension in directory</a> (files in .gitignore are also ignored by Eleventy)
+<li><a href=https://stackoverflow.com/questions/5581034/is-there-a-way-to-make-a-child-divs-width-wider-than-the-parent-div-using-css target=_blank>&ldquo;Is there a way to make a child DIV's width wider than the parent DIV using CSS?&rdquo;</a>
+<li><a href=https://github.com/Thysbelon/Thysbelon.github.io/blob/main/content/404.html>Re-use the sitemap to grab a list of all pages in client-side JavaScript</a> (this JavaScript runs in the browser, <em>not</em> when Eleventy is generating the site)
+<li>If you have <a href=#global-default-layout>set a default layout</a>, make sure to <a href=https://github.com/Thysbelon/Thysbelon.github.io/blob/main/_layouts/default-en.11ty.js#L144 target=_blank>code the layout so it skips rendering for pages with "permalink: false"</a> (or else every build that hides draft posts, and manipulates post URLs with string functions, will fail)
+</ul>

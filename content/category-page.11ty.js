@@ -10,7 +10,7 @@ data() {
 			addAllPagesToCollections: true,
 		},
 		eleventyComputed: {
-			title: data => `${ data.tag } Category`
+			title: data => `${ data.category } Category`
 		},
 		permalink: function(data){return `/Categories/${ this.prettySlug(data.category) }/`}
 	}

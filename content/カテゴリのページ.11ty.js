@@ -10,7 +10,7 @@ data() {
 			addAllPagesToCollections: true,
 		},
 		eleventyComputed: {
-			title: data => `${ data.tag }のカテゴリ`
+			title: data => `${ data.category }のカテゴリ`
 		},
 		permalink: function(data){return `/カテゴリ/${ this.prettySlug(data.category) }/`},
 		locale: 'jp'
