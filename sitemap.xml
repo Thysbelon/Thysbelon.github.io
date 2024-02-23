@@ -337,6 +337,11 @@
 	</url>
 	
 	<url>
+		<loc>https://thysbelon.github.io/Blog/2024-2-23/I-Migrated-From-Jekyll-to-Eleventy.html</loc>
+		<lastmod>2024-02-23</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://thysbelon.github.io/Categories/</loc>
 		<lastmod>2024-02-23</lastmod>
 	</url>
@@ -803,6 +808,11 @@
 	
 	<url>
 		<loc>https://thysbelon.github.io/Tags/PC/</loc>
+		<lastmod>2024-02-23</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://thysbelon.github.io/Tags/Eleventy/</loc>
 		<lastmod>2024-02-23</lastmod>
 	</url>
 	

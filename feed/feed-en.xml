@@ -4,11 +4,19 @@
 	<subtitle>My personal blog where I post about whatever interests me.</subtitle>
 	<link href="https://thysbelon.github.io/feed/feed-en.xml" rel="self"/>
 	<link href="https://thysbelon.github.io/"/>
-	<updated>2024-02-23T15:58:09Z</updated>
+	<updated>2024-02-23T17:30:15Z</updated>
 	<id>https://thysbelon.github.io/</id>
 	<author>
 		<name>Thysbelon</name>
 	</author>
+	
+	<entry>
+		<title>I Migrated From Jekyll to Eleventy</title>
+		<link href="https://thysbelon.github.io/Blog/2024-2-23/I-Migrated-From-Jekyll-to-Eleventy.html"/>
+		<updated>2024-02-23T00:00:00Z</updated>
+		<id>https://thysbelon.github.io/Blog/2024-2-23/I-Migrated-From-Jekyll-to-Eleventy.html</id>
+		<content type="html">I spent about two weeks migrating my website from Jekyll to Eleventy. Jekyll is probably very good for simple websites,...</content>
+	</entry>
 	
 	<entry>
 		<title>Famicom Two Square Pseudofilter</title>
