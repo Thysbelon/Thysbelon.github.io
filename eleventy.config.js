@@ -266,14 +266,14 @@ module.exports = function(eleventyConfig) {
 		if (picturePosition != -1 && picturePosition < imgPosition) {
 			postBody = postBody.replace(/(<picture>.*<\/picture>)/s, '<a href='+post.url+' tabindex=-1>$1</a>') // allow the user to navigate to the post by clicking the image (if there is one).
 		} else {
-			postBody = postBody.replace(/<img (.+?)>/, '<a href='+post.url+' tabindex=-1><img $1></a>') // allow the user to navigate to the post by clicking the image (if there is one). fix this for <picture>
+			postBody = postBody.replace(/<img (.+?)>/, '<a href='+post.url+' tabindex=-1><img $1></a>') // allow the user to navigate to the post by clicking the image (if there is one). tabindex attribute prevents keyboard users from navigating to it; because it is a redundant link for keyboard users.
 		}
 		postResourcesURL=post.url.split('/')
 		postResourcesURL.pop()
 		postResourcesURL=postResourcesURL.join('/')+'/'
 		//postBody = postBody.replace(/(<img .*src="?'?)([^/].+? )(.*>)/, '$1'+postResourcesURL+'$2$3') // fix relative image links. TODO: apply this to all resources, like videos
-		postBody = postBody.replaceAll(/(src="?'?)([^/].+?"?'? )/g, '$1'+postResourcesURL+'$2$3') // fix relative anchor links
-		postBody = postBody.replaceAll(/(srcset="?'?)([^/].+?"?'? )/g, '$1'+postResourcesURL+'$2$3')
+		postBody = postBody.replaceAll(/(src="?'?)([^/].+?"?'? )/g, '$1'+postResourcesURL+'$2') // fix relative anchor links
+		postBody = postBody.replaceAll(/(srcset="?'?)([^/].+?"?'? )/g, '$1'+postResourcesURL+'$2')
 		return postBody
 	})
 

@@ -18,7 +18,7 @@ ${data.content.replace('<img', '<img itemprop=image')}
 	<li><a href=/Tags/${ this.prettySlug(tag) } rel=tag>${ tag }</a>
 `).join('') : ''}</ul></div>
 <div class=tags>Categories:<ul>${ data.categories ? data.categories.map(category => `
-	<li><a href=/Tags/${ this.prettySlug(category) } rel=category>${ category }</a>
+	<li><a href=/Categories/${ this.prettySlug(category) } rel=category>${ category }</a>
 `).join('') : '' }</ul></div>
 `
 }
