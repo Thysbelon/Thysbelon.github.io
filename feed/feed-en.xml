@@ -4,11 +4,19 @@
 	<subtitle>My personal blog where I post about whatever interests me.</subtitle>
 	<link href="https://thysbelon.github.io/feed/feed-en.xml" rel="self"/>
 	<link href="https://thysbelon.github.io/"/>
-	<updated>2024-03-02T21:39:55Z</updated>
+	<updated>2024-03-10T19:47:41Z</updated>
 	<id>https://thysbelon.github.io/</id>
 	<author>
 		<name>Thysbelon</name>
 	</author>
+	
+	<entry>
+		<title>MJ&#39;s Camera is a Panasonic Lumix LX100II</title>
+		<link href="https://thysbelon.github.io/Blog/2024-3-10/MJ&amp;#39;s-Camera-is-a-Panasonic-Lumix-LX100II.html"/>
+		<updated>2024-03-10T00:00:00Z</updated>
+		<id>https://thysbelon.github.io/Blog/2024-3-10/MJ&amp;#39;s-Camera-is-a-Panasonic-Lumix-LX100II.html</id>
+		<content type="html">I was watching Snapcube&#39;s stream of Insomniac&#39;s Spider-Man, and I noticed that MJ&#39;s camera looked very familiar. In fact, it&#39;s...</content>
+	</entry>
 	
 	<entry>
 		<title>I Migrated From Jekyll to Eleventy</title>
