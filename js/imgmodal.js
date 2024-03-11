@@ -38,8 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 		elem.tabIndex=0
 	});
-	let divimgs=document.querySelectorAll(".gallery>div>img");
+
+	//let divimgs=document.querySelectorAll(".gallery>div>img");
 	/* The below code allows the border to "light up" even on images that are inside a div. Once :has(), the parent selector, is usable in Firefox, that could replace this code? */
+	/*
 	divimgs.forEach(function(element){
 		element.addEventListener("mouseover",function(){
 			this.parentElement.style.borderColor="var(--pink)"
@@ -55,5 +57,35 @@ document.addEventListener('DOMContentLoaded', function() {
 			this.parentElement.style.removeProperty('border-color')
 		})
 	})
-	document.head.innerHTML+='<style>#imgmodal {height:80vh;align-items:center;justify-content:center} .gallery img{cursor:pointer}.gallery img,.gallery>div{transition-duration:.4s}.gallery>img:hover,.gallery>img:focus-visible{border-color:var(--pink)} #imgmodal img {background-color:white; height:100%} dialog{background-color:white;border-radius:1rem} #imgmodal img[src$=".svg"]{/*padding:2vw*/} dialog::backdrop{background-color: rgb(255 255 255 / 50%)}</style>'
+	*/
+	document.head.innerHTML+=`<style>
+	#imgmodal {
+		height:80vh;
+		align-items:center;
+		justify-content:center
+	}
+	.gallery img{
+		cursor:pointer
+	}
+	.gallery img,.gallery>div{
+		transition-duration:.4s
+	}
+	.gallery>img:hover, .gallery>img:focus-visible, .gallery>div:has(img:hover), .gallery>div:has(img:focus-visible){
+		border-color:var(--pink)
+	}
+	#imgmodal img {
+		background-color:white;
+		height:100%
+	}
+	dialog{
+		background-color:white;
+		border-radius:1rem
+	}
+	#imgmodal img[src$=".svg"]{
+		/*padding:2vw*/
+	}
+	dialog::backdrop{
+		background-color: rgb(255 255 255 / 50%)
+	}
+	</style>`
 })
