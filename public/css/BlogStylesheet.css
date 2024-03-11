@@ -348,9 +348,12 @@ html:lang(en) .gallery article > p, html:lang(en) .gallery article > h2 {
 .gallery > li > a:lang(en) {
 	font-weight:bold;
 }
-.gallery > li > a > p {
+.gallery > li > a > p, .gallery > li > a > time /* p and time */ {
 	color:var(--txt);
 	font-weight:initial;
+}
+.gallery > li > a > time {
+	float: right;
 }
 .gallery > li > a:hover, .gallery > li > a:focus-visible {
 	color:var(--pink);

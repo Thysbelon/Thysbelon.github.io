@@ -189,6 +189,7 @@ module.exports = function(eleventyConfig) {
 			${ collection.map(post =>
 				`<li><a href="${post.url.replace(/\.html$/, '')}">
 				${ post.data.customHeader ? post.data.customHeader : (post.data.title ? post.data.title : eleventyConfig.javascriptFunctions.titleFromURL(post.url)) }<br>
+				<time datetime=${eleventyConfig.javascriptFunctions.htmlDateString(post.data.computedDate)} >${eleventyConfig.javascriptFunctions.readableDate(post.data.computedDate)}</time>
 				<p>${ eleventyConfig.javascriptFunctions.makeExcerpt(post.content, 20, lang).replaceAll("</p><p>"," ").replace(/<script ?.*?>.*?<\/script>/gms, "").replace(/(<([^>]+)>)/gi, "")/*remove HTML*/ }</p>
 			</a>`).join('\n') }
 		</ul>`;
@@ -264,9 +265,9 @@ module.exports = function(eleventyConfig) {
 		const imgPosition=postBody.indexOf('<img')
 		const picturePosition=postBody.indexOf('<picture>')
 		if (picturePosition != -1 && picturePosition < imgPosition) {
-			postBody = postBody.replace(/(<picture>.*<\/picture>)/s, '<a href='+post.url+' tabindex=-1>$1</a>') // allow the user to navigate to the post by clicking the image (if there is one).
+			postBody = postBody.replace(/(<picture>.*<\/picture>)/s, '<a href='+post.url.replace(/\.html$/, '')+' tabindex=-1>$1</a>') // allow the user to navigate to the post by clicking the image (if there is one).
 		} else {
-			postBody = postBody.replace(/<img (.+?)>/, '<a href='+post.url+' tabindex=-1><img $1></a>') // allow the user to navigate to the post by clicking the image (if there is one). tabindex attribute prevents keyboard users from navigating to it; because it is a redundant link for keyboard users.
+			postBody = postBody.replace(/<img (.+?)>/, '<a href='+post.url.replace(/\.html$/, '')+' tabindex=-1><img $1></a>') // allow the user to navigate to the post by clicking the image (if there is one). tabindex attribute prevents keyboard users from navigating to it; because it is a redundant link for keyboard users.
 		}
 		postResourcesURL=post.url.split('/')
 		postResourcesURL.pop()
