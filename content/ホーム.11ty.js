@@ -7,13 +7,13 @@ data() {
 		layout: "default-en.11ty.js",
 		description: "My personal blog where I post about whatever interests me.",
 		altLang: "/",
-		script: "<script src=/ytvideoactivate.js></script>",
+		//script: "<script src=/ytvideoactivate.js></script>",
 		pagination: {
 			data: "collections.jpPostsInComputedDateOrder",
 			size: 5, // final will be 5
 			//reverse: true // collection is now reversed by default
 		},
-		permalink: data => `ホーム/${data.pagination.pageNumber>0 ? (data.pagination.pageNumber+1)+'ページ'+'/' : ''}index.html`,
+		permalink: data => `ホーム/${data.pagination.pageNumber>0 ? (data.pagination.pageNumber+1)+'ページ/' : ''}index.html`,
 		locale: 'jp'
 	}
 }, // why does https://willmartian.com/posts/conditional-rendering-eleventy/ "real world example" not have commas?

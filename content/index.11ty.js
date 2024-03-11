@@ -7,7 +7,7 @@ data() {
 		layout: "default-en.11ty.js",
 		description: "My personal blog where I post about whatever interests me.",
 		altLang: "/ホーム/",
-		script: "<script src=/ytvideoactivate.js></script>",
+		//script: "<script src=/ytvideoactivate.js></script>",
 		pagination: {
 			data: "collections.enPostsInComputedDateOrder", // to do: when jp posts are added, make en posts and jp posts separate collections; or maybe data can be generated programmatically? See the 'before' function
 			size: 5,
@@ -16,7 +16,7 @@ data() {
 		permalink: data => `${data.pagination.pageNumber>0 ? 'page-'+(data.pagination.pageNumber+1)+'/' : ''}index.html` // pagination is supposed to work without a permalink...
 	}
 }, // why does https://willmartian.com/posts/conditional-rendering-eleventy/ "real world example" not have commas?
-// TODO: automatically wrap an a element around the first picture of the post. Automatically correct the relative links of post pictures so they display correctly on the homepage.
+
 render(data) {
 return `
 	${data.pagination.items.map(post => `<article>

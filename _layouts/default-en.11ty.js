@@ -166,7 +166,7 @@ return `
 <meta name="color-scheme" content="dark light">
 <meta name=theme-color content=#ff4c60>
 ${ data.noDefaultStylesheet ? '' : '<link rel=stylesheet href=/css/BlogStylesheet.css>' }
-${ data.extraStylesheet ? '<link rel=stylesheet href=/css/'+data.extraStylesheet+'>' : '' }
+${ data.extraStylesheet ? '<link rel=stylesheet href=/css/'+data.extraStylesheet+'>' : '' } `/* TODO: make it possible to define a variable to add multiple extra stylesheets. */+`
 ${ data.internalStyle ? (data.internalStyle.includes('<style>') ? data.internalStyle : '<style>'+data.internalStyle+'</style>' ) : '' }
 <link rel=icon type=image/x-icon href=${ data.customIcon ? data.customIcon : '/img/thysbelonicon.svg' }>
 ${ (data.noindex || data.page.url?.match(/\/page-\d+?\//)) ? '<meta name=robots content=noindex>' : '' }
