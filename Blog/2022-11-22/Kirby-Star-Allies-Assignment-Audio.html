@@ -9,14 +9,14 @@
 <meta name="color-scheme" content="dark light">
 <meta name=theme-color content=#ff4c60>
 <link rel=stylesheet href=/css/BlogStylesheet.css>
-
+<link rel=stylesheet href=/css/lite-yt-embed.css> 
 
 <link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
 
 
  
 
-<script src=/ytvideoactivate.js></script>
+<script async src=/js/lite-yt-embed.js></script>
  
 <!-- to do: og:image property here. make a universal eleventyConfig function to fetch the first image of a post. -->
 </head>
@@ -62,8 +62,19 @@
 <figcaption>Sound effects in Kirby Star Allies</figcaption></figure>
 <figure><video controls playsinline disablepictureinpicture disableremoteplayback><source src=charge.webm type=video/webm></video>
 <figcaption>Charging sound effects</figcaption></figure>
-<figure><a href=https://youtube.com/clip/UgkxgG2fpf4kljRAcPlyugDY-yE2KuyZQkJA data-fullvidURL=qVqV5T45QB0 data-clipt=EKjjiwcY6JuOBw target=_blank class=yt style='--ytimgurl:url(https://i.ytimg.com/vi_webp/qVqV5T45QB0/mqdefault.webp)'><span>Final boss music phases example</span></a>
-<figcaption>Final boss music change</figcaption></figure>
+<figure>
+<!--
+<a href=https://youtube.com/clip/UgkxgG2fpf4kljRAcPlyugDY-yE2KuyZQkJA data-fullvidURL=qVqV5T45QB0 data-clipt=EKjjiwcY6JuOBw target=_blank class=yt style='--ytimgurl:url(https://i.ytimg.com/vi_webp/qVqV5T45QB0/mqdefault.webp)'>
+<span>Final boss music phases example</span>
+</a>
+-->
+<lite-youtube videoid="qVqV5T45QB0" yes-cookie params="clip=UgkxgG2fpf4kljRAcPlyugDY-yE2KuyZQkJA&clipt=EKjjiwcY6JuOBw" style="background-image: url('https://i.ytimg.com/vi_webp/qVqV5T45QB0/mqdefault.webp');">
+	<a href="https://youtube.com/clip/UgkxgG2fpf4kljRAcPlyugDY-yE2KuyZQkJA" class="lty-playbtn" title="Play Video" target=_blank>
+		<span class="thysbelon-lty-title"><span class=lyt-visually-hidden>Play Video: </span>Final boss music phases example</span>
+	</a>
+</lite-youtube>
+<figcaption>Final boss music change</figcaption>
+</figure>
 <figure><video controls playsinline disablepictureinpicture disableremoteplayback><source src=ksamenu.webm type=video/webm></video>
 <figcaption>Title and Menu</figure>
 <div class=tags>Tags:<ul>
