@@ -19,28 +19,9 @@ function generateToCmarkup(content /*data.content*/){
 	only one header (like subscribe)
 	*/
 	/*
-	<details>
-		<summary>
-			Contents
-		</summary>
-		<ol>
-			<li><a href=#4GS>4GS</a>
-				<ol>
-					<li><a href=#4GS-to-SAV>4GS to SAV</a>
-					<li><a href=#SAV-to-4GS>SAV to 4GS</a>
-				</ol>
-			<li><a href=#DSZ>DSZ</a>
-		</ol>
-	</details>
 	*/
 	// add id attributes to all h# elements that don't already have them via regex.
-	// document.querySelectorAll("h2, h3, h4, h5, h6") // how to do this with data.content? alternative is to use matchAll (which returns an array)
-	// if querySelectorAll returns elements in the same order that they appear in the document, the list can be used as is.
 	// go through the nodes in the list, add each h2 as a list element to the primary ol, add each h3 as a child list list element to the current li. etc.
-	//const parser = new DOMParser();
-	//const fragment = parser.parseFromString(content, "text/html")
-	//var headers=fragment.querySelectorAll("h2, h3, h4, h5, h6");
-	//const toc=parser.parseFromString("<details><summary>Contents</summary></details>", "text/html")
 	var headArray=content.match(/<h[2-6].*?>.+?<\/h[2-6]>/g);
 	//console.log(headArray)
 	headArray=headArray.map(item => {
