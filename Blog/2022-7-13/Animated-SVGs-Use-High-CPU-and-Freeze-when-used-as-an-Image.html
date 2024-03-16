@@ -50,6 +50,7 @@
 </ul></nav>
 <main> 
 
+
 <h1 itemprop=headline>Animated SVGs Use High CPU and Freeze when used as an Image</h1>
 <time itemprop=datePublished datetime=2022-07-13>13 July 2022</time>
 <p>An SVG animated with CSS <code>@keyframes</code> defined in the SVG itself (not the page's CSS) will use high CPU on Firefox if the SVG is linked to in the <code>src</code> attribute of an <code>&lt;img&gt;</code> tag, or linked to in a <code>background-image</code> CSS property on the page. In addition, an animated SVG in a <code>background-image</code> may freeze on chromium.

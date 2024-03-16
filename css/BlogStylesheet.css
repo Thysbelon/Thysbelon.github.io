@@ -204,10 +204,43 @@ nav details {
 	align-self:flex-start;
 }
 nav details ul a{text-decoration-color:transparent}
-nav details ul a:hover,nav details ul a:focus-visible {
+nav details /*ul*/ a:hover,nav details /*ul*/ a:focus-visible {
 	background-color:transparent;
 	color:var(--pink)
 }
+.toc {
+	width: fit-content;
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	z-index:99;
+}
+.toc, .toc * {
+	text-align: unset;
+}
+.toc summary {
+	text-align: right;
+}
+/* modified from https://stackoverflow.com/a/26245056/20697953 */
+.toc ol {
+  list-style-type: none;
+  counter-reset: item;
+	padding-left:1rem;
+	padding-right:1rem;
+}
+
+.toc ol > li {
+  counter-increment: item;
+}
+
+.toc ol > li:before {
+  content: counters(item, ".") ". ";
+}
+
+.toc li ol > li:before {
+  content: counters(item, ".") " ";
+}
+
 article, section, .tags, .pnav, div.section, main /*new addition Feb 18 2024*/ {
 	margin-left:auto;
 	margin-right:auto;
@@ -611,7 +644,7 @@ th, td {
 		--txt:var(--sky);
 		--link:var(--robin);
 	}
-	nav > ul > li a, button, .btnlink, .nxt {
+	/*nav > ul > li a*/ nav a, button, .btnlink, .nxt {
 		color:var(--blue);
 	}
 	.websitecolor {
@@ -628,7 +661,7 @@ th, td {
 	}
 }
 @media (prefers-color-scheme:light) {
-	nav > ul > li a, button, .btnlink, .nxt {
+	nav /*> ul > li*/ a, button, .btnlink, .nxt {
 		color:white;
 	}
 	.websitecolor {
@@ -673,8 +706,11 @@ html {
 		padding:.3rem clamp(.01rem,.2vw,.3rem);
 		border:clamp(.01rem,.2vw,.1rem) solid transparent;
 	}
-	nav details ul li {
-		margin:.5rem 0;
+	nav details /*ul*/ li {
+		margin:1rem 0;
+	}
+	nav details li:last-of-type {
+		margin-bottom:0;
 	}
 }
 @media (min-width: 1930px) { /*4k television*/

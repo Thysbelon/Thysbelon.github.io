@@ -49,6 +49,12 @@
 	
 </ul></nav>
 <main> 
+<nav class=toc>
+	<details>
+		<summary>
+			Contents
+		</summary>
+		<ol><li><a href=#Method-1:-Hex-Editing-Instructions>Method 1: Hex Editing Instructions</a><li><a href=#Method-2:-Patches>Method 2: Patches</a></ol></details></nav>
 
 <h1 itemprop=headline>How to Create the Pokémon HeartGold/SoulSilver Xenophobia Rom from a Good Dump</h1>
 <time itemprop=datePublished datetime=2023-10-15>15 October 2023</time>
@@ -57,14 +63,14 @@
 <p>16 October 2023 edit: And once again, <strong>I am wrong!</strong> I wrote this post quickly and misremembered some things. <a href=https://thysbelon.github.io/2023/06/17/What-to-do-if-a-Romhack-Patch-from-Project-Pok%C3%A9mon-Doesn't-Work>I've actually only encountered <em>one</em> other hack of Drayano's that uses a bad dump as a base rom (which has since been fixed)</a>. I'm writing this addition because, I don't know why I didn't think to try this earlier, but <a href=https://twitter.com/Drayano60 target=_blank>Drayano's twitter</a> bio has a <a href=https://drive.google.com/drive/folders/0B-zmEVN0Mas6Q3lLbDJDaWNyaVU?resourcekey=0-o98YGOlDJ0JVXXjxoHprIA&usp=sharing target=_blank>Google Drive link to all of his old romhacks <em>with fixed patches!</em></a>
 <p>Of course, these instructions will help with any romhack that requires these bad dumps: decrypted CRC32 of FFD28F00 for HeartGold and EBB387E7 for SoulSilver.
 <section class=nospace>
-<h2>Method 1: Hex Editing Instructions</h2>
+<h2 id=Method-1:-Hex-Editing-Instructions>Method 1: Hex Editing Instructions</h2>
 <ol>
 <li>Open a decrypted good dump of either HeartGold or SoulSilver in a hex editor
 <li>Replace the bytes in addresses 0x00000330 through 0x00001000 with zeroes.
 </ol>
 </section>
 <section class=nospace>
-<h2>Method 2: Patches</h2>
+<h2 id=Method-2:-Patches>Method 2: Patches</h2>
 <ul>
 <li><a href='4780 - Pokemon HeartGold (U)(Xenophobia).xdelta'>4780 - Pokemon HeartGold (U)(Xenophobia).xdelta</a>
 <li><a href='4781 - Pokemon SoulSilver (U)(Xenophobia).xdelta'>4781 - Pokemon SoulSilver (U)(Xenophobia).xdelta</a>
