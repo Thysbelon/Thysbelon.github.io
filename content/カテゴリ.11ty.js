@@ -3,7 +3,7 @@ module.exports = {
 data() {
 	return {
 		layout: "default-en.11ty.js",
-		altLang: "カテゴリ",
+		altLang: "Categories",
 		noindex: true,
 		nonav: true,
 		navbar: '<li><a href=/アーカイブ/>アーカイブ</a></li><li><a href=/タグ/>タグ</a></li><li><a href=/Categories/>言語/<span lang=en>Language</span></a></li>',

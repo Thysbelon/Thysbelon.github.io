@@ -1,3 +1,95 @@
+function addIDtoHeaders(content){
+	content=content.replaceAll(/<h([2-6])(?! ?id)(.*?)>(.+?)<\/h[2-6]>/g, '<h$1 id="$3"$2>$3</h$1>')
+	content=content.replaceAll(/id="(.+?)"/g, 'id="\uE000$1\uE000"')
+	var contentArray=content.split('\uE000')
+	for (i=1, l=contentArray.length; i<l; i+=2) {
+		contentArray[i]=contentArray[i].replaceAll(/<.+?>/g, '')
+		contentArray[i]=contentArray[i].replaceAll(' ','-')
+	}
+	content=contentArray.join('')
+	content=content.replaceAll(/id="(.+?)"/g, 'id=$1')
+	return content
+}
+function generateToCmarkup(content /*data.content*/){
+	/*
+	list of pages that DON'T need a table of contents
+	/ & /ホーム
+	Archive
+	Tags and Categories
+	only one header (like subscribe)
+	*/
+	/*
+	<details>
+		<summary>
+			Contents
+		</summary>
+		<ol>
+			<li><a href=#4GS>4GS</a>
+				<ol>
+					<li><a href=#4GS-to-SAV>4GS to SAV</a>
+					<li><a href=#SAV-to-4GS>SAV to 4GS</a>
+				</ol>
+			<li><a href=#DSZ>DSZ</a>
+		</ol>
+	</details>
+	*/
+	// add id attributes to all h# elements that don't already have them via regex.
+	// document.querySelectorAll("h2, h3, h4, h5, h6") // how to do this with data.content? alternative is to use matchAll (which returns an array)
+	// if querySelectorAll returns elements in the same order that they appear in the document, the list can be used as is.
+	// go through the nodes in the list, add each h2 as a list element to the primary ol, add each h3 as a child list list element to the current li. etc.
+	//const parser = new DOMParser();
+	//const fragment = parser.parseFromString(content, "text/html")
+	//var headers=fragment.querySelectorAll("h2, h3, h4, h5, h6");
+	//const toc=parser.parseFromString("<details><summary>Contents</summary></details>", "text/html")
+	var headArray=content.match(/<h[2-6].*?>.+?<\/h[2-6]>/g);
+	//console.log(headArray)
+	headArray=headArray.map(item => {
+		if (typeof item == 'string') {
+			let name=item.match(/(?<=<)h\d/);
+			if (name == null) {console.log('name is null '+item)} else {name=name[0]}
+			let id=item.match(/(?<=id=).+?(?=>)/);
+			if (id == null) {console.log('id is null '+item)} else {id=id[0]}
+			//let text=item.match(/(?<=>).+?(?=<)/);
+			//if (text == null) {console.log('text is null '+item)} else {text=text[0]}
+			let text=item.replaceAll(/<.+?>/g, '');
+			return {name: name, id: id, text: text}
+		} else {return {name: 'name', id: typeof item, text: 'text'}}
+	})
+	var tocMarkup=`<nav class=toc>
+	<details>
+		<summary>
+			Contents
+		</summary>
+		<ol>`
+	for (let i=0, l=headArray.length; i<l; i++) {
+		switch (headArray[i]?.name) {
+			case 'h2':
+				tocMarkup+=`<li><a href=#${headArray[i].id}>${headArray[i].text}</a>`
+				break;
+			case 'h3':
+				if (headArray[i-1].name=='h2') {
+					tocMarkup+='<ol>'
+				}
+				tocMarkup+=`<li><a href=#${headArray[i].id}>${headArray[i].text}</a>`
+				if (headArray[i+1].name=='h2') {
+					tocMarkup+='</ol>'
+				}
+				break;
+			case 'h4':
+				break;
+			case 'h5':
+				break;
+			case 'h6':
+				break;
+			default:
+				console.log('error: '+headArray[i])
+				break;
+		}
+	}
+	tocMarkup+='</ol></details></nav>'
+	return tocMarkup
+}
+
 function collectionToBarebonesNavArray(collection) { // will use the code listed in https://medium.com/@ziyoshams/deep-copying-javascript-arrays-4d5fc45a6e3e to make a copy of collections.all that has NO references to the original
 	let navArray=[]
 	collection.forEach(elem => {
@@ -152,7 +244,14 @@ if (data.page.url!='/' && data.page.url!='/ホーム/' && !data.page.url.match(/
 	}
 }
 const isHomePage=(data.page.url=='/' || data.page.url=='/ホーム/') // check
+const hasToC=!(isHomePage || data.page.url.includes('/page-') || data.page.url.includes('ページ/') || data.page.url=='/Archive/' || data.page.url=='/アーカイブ/' || data.page.url.includes('Tags') || data.page.url.includes('Categories') || data.page.url.includes('タグ') || data.page.url.includes('カテゴリ')) && (data.content.match(/<h\d/g).length > 1) // to do: put in a list in a data file?
 const filterByLang = data.locale=='jp' ? function(item){return item.data?.locale=='jp'} : function(item){return item.data?.locale!='jp'}
+if (hasToC) {
+	var pageContent=addIDtoHeaders(data.content)
+	var toc=generateToCmarkup(pageContent)
+} else {
+	var pageContent=data.content
+}
 //const navArray = data.navbar ? (typeof data.navbar == 'string' ? data.navbar : data.navbar(data)) : generateNav(data.page.url, data.collections.all.filter(item => item.data?.locale != 'jp'), this, data.altLang) // function will determine if current page is nested or not (with another url-checking function), then will iterate through all pages with the appropriate criteria for the current page. All of these functions can be local to this file because I don't think they'll be used anywhere else.
 const navArray = data.navbar!=undefined ? (typeof data.navbar == 'string' ? data.navbar : data.navbar(data)) : generateNav(data.page.url, data.collections.all.filter(filterByLang), this, data.altLang, data.locale)
 return `
@@ -187,7 +286,8 @@ ${ isHomePage ? '' : '</a>' }
 ${ navArray }
 </ul></nav>
 <main${data.page.isPost ? ' itemscope itemtype=https://schema.org/BlogPosting' : ''}> `/*this is a big change. check for visual errors*/+`
-${data.content}
+${hasToC ? toc : ''}
+${pageContent}
 </main>
 ${ data.afterMain ? data.afterMain : '' }
 ${ data.customFooter ? data.customFooter : '<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>' }
