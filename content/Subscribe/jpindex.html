@@ -4,7 +4,18 @@ layout: default-jp
 locale: jp
 permalink: /購読する/
 noindex: true
-internalStyle: ".btnlink{width:4rem;display:block;text-align:right;background:var(--txt) url('/Subscribe/Feed-icon.svg') no-repeat 10%/20%;}.btnlink:hover{background-color:#f55e61;}"
+internalStyle: |
+  .btnlink{
+  	display: inline-block;
+  }
+  #atom{
+  	background:var(--txt) url('Feed-icon.svg') no-repeat 10%/20%;
+  	text-align:right;
+  	width:4.4em;
+  }
+  #atom:hover{
+  	background:var(--pink) url('Feed-icon.svg') no-repeat 10%/20%;
+  }
 altLang: /Subscribe/
 ---
 <section>
