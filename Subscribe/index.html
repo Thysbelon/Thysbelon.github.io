@@ -10,7 +10,18 @@
 <meta name=theme-color content=#ff4c60>
 <link rel=stylesheet href=/css/BlogStylesheet.css>
  
-<style>#atom{width:4rem;display:block;text-align:right;background:var(--txt) url('Feed-icon.svg') no-repeat 10%/20%;}</style>
+<style>.btnlink{
+	display: inline-block;
+}
+#atom{
+	background:var(--txt) url('Feed-icon.svg') no-repeat 10%/20%;
+	text-align:right;
+	width:4.4em;
+}
+#atom:hover{
+	background:var(--pink) url('Feed-icon.svg') no-repeat 10%/20%;
+}
+</style>
 <link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
 <meta name=robots content=noindex>
 <link rel=alternate hreflang=ja href="/購読する/">
@@ -52,7 +63,8 @@
 <section>
 <h1>Subscribe to Atom feed</h1>
 <p>Atom is a language similar to RSS. It is used on many webpages. By using a Reader, you can receive a syndication of recent updates from every website you follow. I personally use <a href=https://nodetics.com/feedbro/ target=_blank>Feedbro</a> as my Atom and RSS reader; Feedbro is a browser extension. If Feedbro does not appeal, you may want to read <a href=https://zapier.com/blog/best-rss-feed-reader-apps/ rel="nofollow" target=_blank>Zapier's Top 5 Feed Aggregators</a>.</p>
-<a class=btnlink id=atom href=/feed/feed-en.xml rel=alternate type=application/atom+xml title="Blog Atom Feed">Atom</a><a class=btnlink href=/feed/feed-en.json rel=alternate type=application/json title="Blog JSON Feed">JSON</a>
+<a class=btnlink id=atom href=/feed/feed-en.xml rel=alternate type=application/atom+xml title="Blog Atom Feed">Atom</a>
+<a class=btnlink id=json href=/feed/feed-en.json rel=alternate type=application/json title="Blog JSON Feed">JSON</a>
 </section>
 <section>
 <p>There used to be an option to subscribe to Push Notifications. I have retired this option. If you subscribed to push notifications in the past, please clear site data for this website in order to delete your subscription.
