@@ -52,6 +52,79 @@
 
 
 	<article>
+			<h1><a href=/Blog/2023-1-23/Looping-N64-Midi>Looping N64 Midi</a></h1>
+			<time datetime=2023-01-23 >23 January 2023</time>
+			<link href=/misc/headbop.css rel=stylesheet>
+<a href=/Blog/2023-1-23/Looping-N64-Midi tabindex=-1><img class=trans src=/misc/headbopsheet.png id=bopmoth4 alt="A hummingbird moth wearing headphones."></a>
+<button onclick=this.onclick=null;StartJams4() style=margin-bottom:1rem>Start Jams</button>
+<p>The previous two N64 midis had blank space after the end of the loop, so I cut off the blank space so I could cleanly loop the song when the player stopped. However, I learned today that N64SoundbankTool exported midis will have their loop start and end points marked by a CC 102 and 103 event. I used js-synthesizer's hook midi method to automatically loop the song at those positions; it was easy to do and it turned out great!
+<script src=/Blog/2023-1-23/https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js></script><script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js></script>
+<script>
+var sfontBuffer;
+var smfBuffer;
+var context = new AudioContext();
+
+function StartJams4(){
+console.log('startjams4');
+
+(async function(){
+	let response = await fetch('ExtractedSoundbank.sf3');
+	sfontBuffer = await response.arrayBuffer();
+	response = await fetch('Kirby 64 - The Crystal Shards (U) 00000007 0025C274.mid');
+	smfBuffer = await response.arrayBuffer();
+})();
+
+async function createReverb() { // from mdn
+  let convolver = context.createConvolver();
+
+  // load impulse response from file
+  let response = await fetch('/Blog/2023-1-19/ElvedenHallSmokingRoom.m4a'); // from http://reverbjs.org/Library/ElvedenHallSmokingRoom.m4a
+  let arraybuffer = await response.arrayBuffer();
+  convolver.buffer = await context.decodeAudioData(arraybuffer);
+
+  return convolver;
+}
+
+JSSynth.waitForReady().then(loadSynthesizer);
+
+async function loadSynthesizer() {
+	
+	context.resume();
+	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js')
+	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.worklet.min.js');
+	await context.audioWorklet.addModule('N64-midi-loop.js');
+	var synth = new JSSynth.AudioWorkletNodeSynthesizer();
+	synth.init(context.sampleRate);
+	var audioNode = synth.createAudioNode(context);
+	synth.hookPlayerMIDIEventsByName('n64Loop');
+	
+	// goes with mdn code
+	let reverb = await createReverb();
+	audioNode.connect(reverb);
+	//var gain = new GainNode(context,{gain:3})
+	let gain = new GainNode(context,{gain:0.1});
+	reverb.connect(gain);
+	gain.connect(context.destination);
+	audioNode.connect(context.destination);
+	
+	await synth.loadSFont(sfontBuffer);
+	await synth.addSMFDataToPlayer(smfBuffer);
+	let tempelem=document.getElementById('bopmoth4')
+	await synth.playPlayer();
+	tempelem.style.animation=(60/174)*2+"s step-end infinite bop"
+	/*while (jams2===true) {
+		console.log("loop")
+		await synth.waitForPlayerStopped()
+		await synth.seekPlayer(1440)
+		await synth.playPlayer();
+	}*/
+	
+}
+
+}
+</script>
+	</article>
+<article>
 			<h1><a href=/Blog/2023-1-22/Redial>Redial</a></h1>
 			<time datetime=2023-01-22 >22 January 2023</time>
 			<link href=/misc/headbop.css rel=stylesheet>
@@ -287,11 +360,6 @@ async function loadSynthesizer() {
 <!--style: "midi-player::part(play-button){color:black} midi-player::part(time){color:black}"
 <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.5.0"></script>
 <midi-player sound-font src=Blue_Rondo_A_La_Turk.mid></midi-player>-->
-	</article>
-<article>
-			<h1><a href=/Blog/2023-1-7/La-Follia-d'amore-Taiko-no-Tatsujin-Chart>La Follia d'amore Taiko no Tatsujin Chart</a></h1>
-			<time datetime=2023-01-07 >07 January 2023</time>
-			<p>I made a <a href=La-Follia-d'amore.zip>Taiko chart of Hyness' phase 2 battle theme (Oni and Hard difficulty only)</a>.
 	</article>
 	<div class=pnav>
 	<a class="btnlink fli" href=/page-3/>Newer Posts</a>
