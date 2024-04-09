@@ -13,7 +13,7 @@ render(data) {
 return `
 <h1 itemprop=headline>${ data.customHeader ? data.customHeader : ( data.title ? data.title : this.titleFromURL(data.page.url) ) }</h1>
 <time itemprop=datePublished datetime=${this.htmlDateString(data.computedDate)}>${this.readableDate(data.computedDate)}</time>
-${data.content.replace('<img', '<img itemprop=image')}
+${data.content.replace('<img', '<img itemprop=image').replace('{rel}', '')}
 <div class=tags>Tags:<ul>${ data.tags ? data.tags.filter((tag) => tag!='posts').map(tag => `
 	<li><a href=/Tags/${ this.prettySlug(tag) } rel=tag>${ tag }</a>
 `).join('') : ''}</ul></div>
