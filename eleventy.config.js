@@ -273,8 +273,8 @@ module.exports = function(eleventyConfig) {
 		postResourcesURL.pop()
 		postResourcesURL=postResourcesURL.join('/')+'/'
 		//postBody = postBody.replace(/(<img .*src="?'?)([^/].+? )(.*>)/, '$1'+postResourcesURL+'$2$3') // fix relative image links. TODO: apply this to all resources, like videos
-		postBody = postBody.replaceAll(/(src="?'?)([^/].+?"?'? )/g, '$1'+postResourcesURL+'$2') // fix relative anchor links
-		postBody = postBody.replaceAll(/(srcset="?'?)([^/].+?"?'? )/g, '$1'+postResourcesURL+'$2')
+		postBody = postBody.replaceAll(/(src="?'?)(?!https:\/)([^/].+?"?'?)([ >])/g, '$1'+postResourcesURL+'$2$3') // fix relative anchor links
+		postBody = postBody.replaceAll(/(srcset="?'?)(?!https:\/)([^/].+?"?'?)([ >])/g, '$1'+postResourcesURL+'$2$3')
 		postBody = postBody.replaceAll('{rel}', postResourcesURL) // '{rel}' is a meaningless string used to mark relative urls in javascript (which cannot be automatically detected)
 		return postBody
 	})
