@@ -52,13 +52,27 @@
 
 
 	<article>
+			<h1><a href=/Blog/2023-3-7/How-to-Convert-4GS-and-DSZ-save-files-to-and-from-SAV>How to Convert 4GS and DSZ save files to and from SAV</a></h1>
+			<time datetime=2023-03-07 >07 March 2023</time>
+			<!--to do: update jp translation-->
+<p>44670's two great web emulator ports: <a href=https://gba.44670.org/ target=_blank>44VBA</a> and <a href=https://ds.44670.org/ target=_blank>DS Player</a>, both use a completely unique file extension for their save files; Here's how to convert these formats to .sav, and convert .sav to these formats:
+<section class=nospace>
+<h2 id=4GS>4GS</h2>
+<p>This is just a renamed version of the emulator VBA-Next's srm save format.
+<p><a href=https://emulation.gametechwiki.com/index.php/Game_Boy_Advance_emulators#Save_formats target=_blank>More details on VBA's save format can be found on emugen wiki</a>.
+<h3>Convert 4GS to SAV</h3>
+<p>To convert it to sav: just use <a href=https://thysbelon.github.io/gbaconv-web/>gbaconv-web</a>.
+<h3>Convert SAV to 4GS</h3>
+<p>Run the sav file through <a href=https://thysbelon.github.io/gbaconv-web/>gbaconv-web</a>, then rename the output...
+	</article>
+<article>
 			<h1><a href=/Blog/2023-1-23/Looping-N64-Midi>Looping N64 Midi</a></h1>
 			<time datetime=2023-01-23 >23 January 2023</time>
 			<link href=/misc/headbop.css rel=stylesheet>
 <a href=/Blog/2023-1-23/Looping-N64-Midi tabindex=-1><img class=trans src=/misc/headbopsheet.png id=bopmoth4 alt="A hummingbird moth wearing headphones."></a>
 <button onclick=this.onclick=null;StartJams4() style=margin-bottom:1rem>Start Jams</button>
 <p>The previous two N64 midis had blank space after the end of the loop, so I cut off the blank space so I could cleanly loop the song when the player stopped. However, I learned today that N64SoundbankTool exported midis will have their loop start and end points marked by a CC 102 and 103 event. I used js-synthesizer's hook midi method to automatically loop the song at those positions; it was easy to do and it turned out great!
-<script src=/Blog/2023-1-23/https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js></script><script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js></script><script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js></script>
 <script>
 var sfontBuffer;
 var smfBuffer;
@@ -132,8 +146,8 @@ async function loadSynthesizer() {
 <button onclick=this.onclick=null;StartJams3() style=margin-bottom:1rem>Start Jams</button>
 <p>Today I put a midi of Redial on the web! :)
 <p>To get it more accurate, I had to <a href=redial.mid>move Channel 10 to Channel 9</a> (so it would be on a melodic channel) and increase the pitch bend range of the flute (<a href=https://github.com/mmontag/chip-player-js/commit/c7bd02fa4607a3e667915335b5b8c35e4c954e8d#diff-b3ec3a9bee19be17cac48aec8418a919b740104572a2caf5b331efc7aab7f92eR228 target=_blank>mmontag figured this out first</a> and provided a <a href=https://www.polyphone-soundfonts.com/forum/soundfonts-help/346-how-to-set-pitch-bend-range-to-12-semitones target=_blank>source</a>). I also made a <a href=redial-echo.mid>second midi</a> that echos the melodic instruments, and applied a little reverb to both. I also had to <a href=ExtractedSoundbank-Instr_0D-increaseDecay.7z>increase the decay on the keyboard</a> because it was going quiet too soon (<a href=/2023/01/19/Success-with-N64-Sequenced-Music>a lot like last time</a>).
-<script src=/Blog/2023-1-22/https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js></script><script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js></script>
-<!--<script src=http://reverbjs.org/reverb.js></script>-->
+<script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js></script><script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js></script>
+<!--<script src=/Blog/2023-1-22/http://reverbjs.org/reverb.js></script>-->
 <script>
 var sfontBuffer;
 var smfBuffer;
@@ -230,8 +244,8 @@ Fixes
 </details>
 <p>The most difficult part was recreating the reverb heard in game. I tried a bunch of weird module things, but all I really needed was to play a convolverNode reverb output <em>alongside</em> the unmodified output. <!--<br>Thank you to <a href=http://reverbjs.org/ target=_blank>Reverb.js</a> for making that even easier to do!-->
 <p>(Please don't click "Start Jams" twice)
-<script src=/Blog/2023-1-19/https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js></script><script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js></script>
-<!--<script src=http://reverbjs.org/reverb.js></script>-->
+<script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js></script><script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js></script>
+<!--<script src=/Blog/2023-1-19/http://reverbjs.org/reverb.js></script>-->
 <script>
 var sfontBuffer;
 var smfBuffer;
@@ -302,64 +316,6 @@ async function loadSynthesizer() {
 			<h1><a href=/Blog/2023-1-18/Trouble-with-N64-Sequenced-Music>Trouble with N64 Sequenced Music</a></h1>
 			<time datetime=2023-01-18 >18 January 2023</time>
 			<p>DLS files are really tough to work with. The only thing that can convert them is Viena. I've been extracting soundbanks from N64 games, but N64SoundbankTool only extracts them as DLS; so when I convert the DLS to SF2 and play it with the N64-music-converted-to-midi, I can't tell how many of the flaws are from the DLS conversion, and how many are from the N64 extraction... (They're probably the fault of the N64 extraction) <br>and I don't think I'll be...
-	</article>
-<article>
-			<h1><a href=/Blog/2023-1-16/Can-You-Play-Midi-with-SF2-on-the-Web>Can You Play Midi with SF2 on the Web?</a></h1>
-			<time datetime=2023-01-16 >16 January 2023</time>
-			<link href=/misc/headbop.css rel=stylesheet>
-<a href=/Blog/2023-1-16/Can-You-Play-Midi-with-SF2-on-the-Web tabindex=-1><img class=trans src=/misc/headbopsheet.png id=bopmoth alt="A hummingbird moth wearing headphones."></a>
-<script src=/Blog/2023-1-16/https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js></script><script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js></script>
-<p>Yes.</p>
-<button onclick=this.onclick=null;StartJams() style=margin-bottom:1rem>Start Jams</button>
-<p><a href=https://github.com/jet2jet/js-synthesizer target=_blank>Thank you to jet2jet for making such an amazing tool!</a>
-<script>
-function StartJams(){
-console.log('startjams')
-var sfontBuffer;
-var smfBuffer;
-var context; //context.suspend() and context.resume() can be used to pause and play
-var synth; //this can be used to implement Pause and Play features with synth.stopPlayer() and synth.playPlayer(). Implementing this feature would require changing the loop code from a "while true" loop to a recursive named function.
-(async function(){
-	let response = await fetch('SEQ_GS_VS_RAIKOU.sf3') // I used the linux program "sf3convert" to compress to sf3.
-	sfontBuffer = await response.arrayBuffer()
-	response = await fetch('SEQ_GS_VS_RAIKOU.mid') // extracted using the latest version of vgmtrans
-	smfBuffer = await response.arrayBuffer()
-})();
-
-JSSynth.waitForReady().then(loadSynthesizer);
-
-async function loadSynthesizer() {
-	context = new AudioContext();
-	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js')
-	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.worklet.min.js');
-	// Create the synthesizer instance for AudioWorkletNode
-	synth = new JSSynth.AudioWorkletNodeSynthesizer();
-	synth.init(context.sampleRate);
-	// You must create AudioWorkletNode before using other methods
-	// (This is because the message port is not available until the
-	// AudioWorkletNode is created)
-	var audioNode = synth.createAudioNode(context);
-	audioNode.connect(context.destination); // or another node...
-	// After node creation, you can use Synthesizer methods
-	await synth.loadSFont(sfontBuffer)
-	await synth.addSMFDataToPlayer(smfBuffer);
-	let tempelem=document.getElementById('bopmoth')
-	await synth.playPlayer();
-	tempelem.style.animation="0.63157894736842105263157894736842s step-end infinite bop"
-	//let looptestseek= await synth.retrievePlayerTotalTicks() - 1000
-	//await synth.seekPlayer(looptestseek) //test loop
-	while (true) {
-		console.log("loop")
-		await synth.waitForPlayerStopped()
-		await synth.seekPlayer(1920) //loop once. tick 0 is the beginning of the song, keep this in mind while calculating. ticks is ticks-per-quarter-note * quarter notes. find tpq by reaper right click > source properties
-		await synth.playPlayer();
-	}
-}
-}
-</script>
-<!--style: "midi-player::part(play-button){color:black} midi-player::part(time){color:black}"
-<script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.5.0"></script>
-<midi-player sound-font src=Blue_Rondo_A_La_Turk.mid></midi-player>-->
 	</article>
 	<div class=pnav>
 	<a class="btnlink fli" href=/page-3/>Newer Posts</a>
