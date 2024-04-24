@@ -11,6 +11,14 @@
 	},
 	"items": [
 		{
+			"id": "https://thysbelon.github.io/Blog/2024-4-23/How-to-Remove-Line-Breaks-in-Excel.html",
+			"url": "https://thysbelon.github.io/Blog/2024-4-23/How-to-Remove-Line-Breaks-in-Excel.html",
+			"title": "How to Remove Line Breaks in Excel",
+			"content_html": "Microsoft Forms responses can be downloaded as an Excel Spreadsheet; but the fields will often have unnecessary line breaks, which...",
+			"date_published": "2024-04-23T00:00:00Z"
+		}
+		,
+		{
 			"id": "https://thysbelon.github.io/Blog/2024-4-14/Peepy&#39;s-Secret-Midi-(Almost-Finished).html",
 			"url": "https://thysbelon.github.io/Blog/2024-4-14/Peepy&#39;s-Secret-Midi-(Almost-Finished).html",
 			"title": "Peepy&#39;s Secret Midi (Almost Finished)",

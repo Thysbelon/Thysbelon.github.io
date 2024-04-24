@@ -4,11 +4,19 @@
 	<subtitle>My personal blog where I post about whatever interests me.</subtitle>
 	<link href="https://thysbelon.github.io/feed/feed-en.xml" rel="self"/>
 	<link href="https://thysbelon.github.io/"/>
-	<updated>2024-04-19T18:52:18Z</updated>
+	<updated>2024-04-24T02:50:00Z</updated>
 	<id>https://thysbelon.github.io/</id>
 	<author>
 		<name>Thysbelon</name>
 	</author>
+	
+	<entry>
+		<title>How to Remove Line Breaks in Excel</title>
+		<link href="https://thysbelon.github.io/Blog/2024-4-23/How-to-Remove-Line-Breaks-in-Excel.html"/>
+		<updated>2024-04-23T00:00:00Z</updated>
+		<id>https://thysbelon.github.io/Blog/2024-4-23/How-to-Remove-Line-Breaks-in-Excel.html</id>
+		<content type="html">Microsoft Forms responses can be downloaded as an Excel Spreadsheet; but the fields will often have unnecessary line breaks, which...</content>
+	</entry>
 	
 	<entry>
 		<title>Peepy&#39;s Secret Midi (Almost Finished)</title>

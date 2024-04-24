@@ -485,6 +485,9 @@ abbr {
 strong, h3, b.color {
 	color: var(--pink);
 }
+.uppercase {
+	text-transform: uppercase;
+}
 h3 {
 	font-size:1.35rem;
 }
