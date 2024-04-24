@@ -4,11 +4,35 @@
 	<subtitle>My personal blog where I post about whatever interests me.</subtitle>
 	<link href="https://thysbelon.github.io/feed/feed-en.xml" rel="self"/>
 	<link href="https://thysbelon.github.io/"/>
-	<updated>2024-04-24T02:50:00Z</updated>
+	<updated>2024-04-24T17:40:48Z</updated>
 	<id>https://thysbelon.github.io/</id>
 	<author>
 		<name>Thysbelon</name>
 	</author>
+	
+	<entry>
+		<title>Did You Know Styluses for Capacitive Screens Don&#39;t Have to be Expensive?</title>
+		<link href="https://thysbelon.github.io/Blog/2024-4-24/Did-You-Know-Styluses-for-Capacitive-Screens-Don&amp;#39;t-Have-to-be-Expensive.html"/>
+		<updated>2024-04-24T00:00:00Z</updated>
+		<id>https://thysbelon.github.io/Blog/2024-4-24/Did-You-Know-Styluses-for-Capacitive-Screens-Don&amp;#39;t-Have-to-be-Expensive.html</id>
+		<content type="html">You may have heard of active styluses, which have lots of features and are battery operated; but did you know...</content>
+	</entry>
+	
+	<entry>
+		<title>IDEO Field Guide to Human-Centered Design</title>
+		<link href="https://thysbelon.github.io/Blog/2024-4-24/IDEO-Field-Guide-to-Human-Centered-Design.html"/>
+		<updated>2024-04-24T00:00:00Z</updated>
+		<id>https://thysbelon.github.io/Blog/2024-4-24/IDEO-Field-Guide-to-Human-Centered-Design.html</id>
+		<content type="html">The IDEO field guide is a very useful resource for anyone who wants to get into product design as a...</content>
+	</entry>
+	
+	<entry>
+		<title>There are Other Search Engines</title>
+		<link href="https://thysbelon.github.io/Blog/2024-4-24/There-are-Other-Search-Engines.html"/>
+		<updated>2024-04-24T00:00:00Z</updated>
+		<id>https://thysbelon.github.io/Blog/2024-4-24/There-are-Other-Search-Engines.html</id>
+		<content type="html">With Google getting worse and worse lately, it&#39;s helpful to use at least two different search engines. I use both...</content>
+	</entry>
 	
 	<entry>
 		<title>How to Remove Line Breaks in Excel</title>
