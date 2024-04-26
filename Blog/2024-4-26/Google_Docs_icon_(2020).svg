@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 88" native-dark-active=""><link xmlns="" type="text/css" rel="stylesheet" id="dark-mode-custom-link"/><link xmlns="" type="text/css" rel="stylesheet" id="dark-mode-general-link"/><style xmlns="" lang="en" type="text/css" id="dark-mode-custom-style"/><style xmlns="" lang="en" type="text/css" id="dark-mode-native-style">:root, ::after, ::before, ::backdrop {
+  --native-dark-opacity: 0.85;
+  --native-dark-bg-color: #292929;
+  --native-dark-text-shadow: none;
+  --native-dark-font-color: #dcdcdc;
+  --native-dark-link-color: #8db2e5;
+  --native-dark-cite-color: #92de92;
+  --native-dark-fill-color: #7d7d7d;
+  --native-dark-border-color: #555555;
+  --native-dark-visited-link-color: #c76ed7;
+  --native-dark-transparent-color: transparent;
+  --native-dark-bg-image-color: rgba(0, 0, 0, 0.25);
+  --native-dark-box-shadow: 0 0 0 1px rgb(255 255 255 / 10%);
+  --native-dark-bg-image-filter: brightness(50%) contrast(200%)
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html a:visited, 
+html a:visited &gt; * {
+  color: var(--native-dark-visited-link-color) !important;
+}
+
+a[ping]:link,
+a[ping]:link &gt; *,
+:link:not(cite) {
+  color: var(--native-dark-link-color) !important;
+}
+
+html cite,
+html cite a:link,
+html cite a:visited {
+  color: var(--native-dark-cite-color) !important;
+}
+
+img,
+image,
+figure:empty {
+  opacity: var(--native-dark-opacity) !important;
+}
+        </style><style xmlns="" lang="en" type="text/css" id="dark-mode-native-sheet"/><path fill="#fff" d="M42 22H22v44h20z"/><path fill="#ea4335" d="M42 0v22h22z"/><path fill="#ffba00" d="M22 0H6C2.685 0 0 2.685 0 6v60h22V22h20V0z"/><path fill="#00832d" d="M22 66H0v16c0 3.315 2.685 6 6 6h16z"/><path fill="#00ac47" d="M42 66H22v22h20z"/><path fill="#0066da" d="M64 66H42v22h16c3.315 0 6-2.685 6-6z"/><path fill="#2684fc" d="M42 22v44h22V22z"/></svg>

@@ -52,41 +52,77 @@
 
 
 	<article>
-			<h1><a href=/Blog/2022-9-29/Splatoon-3-Deletes-Replays-After-an-Update>Splatoon 3 Deletes Replays After an Update</a></h1>
-			<time datetime=2022-09-29 >29 September 2022</time>
-			<a href=/Blog/2022-9-29/Splatoon-3-Deletes-Replays-After-an-Update tabindex=-1><img src=/Blog/2022-9-29/P1054413.webp alt="Photo of a Switch screen displaying the message There are no battle replays that can be replayed."></a>
-<p>Fun fact: Just like Smash Ultimate and Smash 4, Splatoon 3 will delete all your replays after an update! And unlike the Smash games, there is <strong>no way to save them before they're deleted!</strong> Wow!
-<p>I set up my tripod and camera above my switch to record my replays and preserve them that way, but this photo is all I have for my efforts. Once an update is available, Splatoon 3 <em>will not</em> let you enter the lobby without updating, after which your replays will be deleted.
+			<h1><a href=/Blog/2022-11-4/How-to-Convert-from-WebP-or-SVG-to-Formats-like-PNG-and-GIF>How to Convert from WebP or SVG to Formats like PNG and GIF</a></h1>
+			<time datetime=2022-11-04 >04 November 2022</time>
+			<p>Online Converters:
+<ul>
+<li>webp<ul>
+	<li><a target=_blank href=https://www.webutils.app/image-compress>WebUtils (webp/avif to png/jpeg, animation not supported, files converted in bulk but downloaded one at a time)</a>
+	<li><a target=_blank href=https://webptopng.com/>WebPtoPNG (animation not supported, unclear if files are uploaded to server)</a>
+	<li><a target=_blank href=https://ezgif.com/webp-to-gif>ezgif (animated webp to animated gif, one at a time)</a>
+</ul></li>
+<li>SVG<ul>
+	<li><a target=_blank href=https://fffuel.co/rrrasterize/>rrrasterize (svg to png, one at a time)</a>
+	<li><a target=_blank href=https://svgtopng.com/>SVGtoPNG (use adblock)</a>
+	<li><a target=_blank href=https://svgconverter.com/svg-to-png>SVGconverter (use adblock)</a>
+</ul></li>
+</ul>
+<p>The best adblocking extension is uBlock Origin. To install extensions on Android, use either Firefox or Kiwi Browser.
+<p>Offline Converters:
+<p>Just use <a target=_blank href=https://imagemagick.org/>ImageMagick</a>. It's a command-line tool, but converting is easy.
+<p>The easiest way is to run <a href=https://github.com/Thysbelon/webp2common target=_blank>this webp2common script</a> in the same folder as the WebPs you want to convert (after installing imagemagick)
+<p>When installing ImageMagick on Windows, make sure you leave "add to system path" checked <a href=/Blog/2022-11-4/How-to-Convert-from-WebP-or-SVG-to-Formats-like-PNG-and-GIF tabindex=-1><img src=/emoji/✔.svg alt=✔></a>. This allows you to use the program without needing to type the full file explorer path to ImageMagick every time (and it allows the webp2common script to function)
+<p>I will also tell you how to use ImageMagick on its own. On Windows, you can open a terminal by navigating to the folder your WebPs are stored in using File Explorer, then shift + right-click on an empty spot, then click "Open in PowerShell" or "Open in Command Prompt".
+<p>To convert a single image: <code>magick input.webp output.png</code> or <code>convert input.webp output.png</code>
+<p>To convert all webp images in the directory to png: <br><code>mogrify -format png *.webp</code>
+<p>On Windows: <code>magick mogrify -format png *.webp</code>
+<p>Do note that <em>animated</em> WebPs converted to png will be output as many still png images, <em>not</em> an animated png. To convert animated webps to an animated image format, use <code>apng</code> or <code>gif</code>. Before converting to apng, check your version with <code>magick -version</code>, any below 7.1.10-20 will incorrectly speed up or slow down the output; the only workaround is to fiddle with the <code>-delay</code> option for each animated image.
+In order to batch convert many webp images to png for static images and gif for animated images, please use <a href=https://github.com/Thysbelon/webp2common target=_blank>the webp2common script</a>.
+<h2>How to Convert SVGs</h2>
+<p>To convert all SVG images to png with transparent backgrounds: <br><code>mogrify -background none -format png *.svg</code> (<strong>errors may appear even if the program works correctly</strong>). Remember that on Windows you need to add "magick" to the start of the command.
+<p>The quality of svg to png conversions can be improved by adding <code>-density 400</code> to the command (after "mogrify"). Play around with the amount of density until you are happy with the result.
+<h2>How to Use ImageMagick on Android</h2>
+<p>ImageMagick can be used on Android via <a target=_blank href=https://termux.dev/en/>Termux</a>.
+<ul><li><a target=_blank href=https://wiki.termux.com/wiki/Termux-setup-storage>Follow this guide to allow Termux to access your phone's storage</a>
+<li>Run <code>apt update</code> and <code>apt upgrade</code> to make sure the list of installable apps and installed apps are up to date.
+<li>Run <code>apt install imagemagick</code>
+<li>Linux Terminal tips: use <code>ls</code> to view the contents of the current directory. Subdirectories will usually be in color. Use <code>pwd</code> to show the current directory. Use <code>cd directoryname</code> to navigate to a different directory. Use <code>cd ..</code> to back out of the current directory. Use just <code>cd</code> to return to the home directory.
+<li>You can use the <a href=https://github.com/Thysbelon/webp2common target=_blank>webp2common script</a> on Android.</ul>
+<h2>Miscellaneous Tips</h2>
+<p>Some Linux distributions only have ImageMagick-6 in their package repository. If you are using ImageMagick-6, svg conversions will have incorrect black strokes. This issue can be fixed by installing inkscape.
 	</article>
 <article>
-			<h1><a href=/Blog/2022-9-28/How-to-Change-the-Internal-Name-of-a-Wii-or-GameCube-Disc>How to Change the Internal Name of a Wii or GameCube Disc</a></h1>
-			<time datetime=2022-09-28 >28 September 2022</time>
-			<p>Those who use WiiFlow or other such USB loaders to play their Wii and GameCube games may wish to change the name used for the game in the menu; to type in a name that looks more aesthetically appealing, or to distinguish between modified copies of the same game.</p>
-<video controls disablepictureinpicture><source src=/Blog/2022-9-28/HowtoHxD3hevcMedium.mp4 type="video/mp4; codecs=H265"><source src=/Blog/2022-9-28/HowtoHxD3h264Medium.mp4 type=video/mp4></video>
-<p>To change the name of a Wii or GameCube disc, open the game in a hex editor, locate the current name, then overwrite it by typing in your new name. This is the most reliable way to change the name of a disc.
+			<h1><a href=/Blog/2022-11-1/Kirby-Star-Allies-Assignment-Game-Mechanics>Kirby Star Allies Assignment: Game Mechanics</a></h1>
+			<time datetime=2022-11-01 >01 November 2022</time>
+			<p>Kirby Star Allies follows the same formula established in Super Star and refined in the previous three Kirby games. In every game, Kirby starts out with only an inhale and slide move, but inhaling an enemy with an ability will give Kirby that Copy Ability. The Super Star formula has this defining trait: each Copy Ability has multiple attacks which can be activated with different combinations of the attack button, the jump button, and the d-pad/left joystick.
+<p>Kirby can make friends...
 	</article>
 <article>
-			<h1><a href=/Blog/2022-9-21/The-Best-Mario-Movie>The Best Mario Movie</a></h1>
-			<time datetime=2022-09-21 >21 September 2022</time>
-			<lite-youtube videoid="JN-WCA5-Qxs" style="background-image: url('https://i1.ytimg.com/vi/JN-WCA5-Qxs/hqdefault.jpg');">
-	<a href="https://youtube.com/watch?v=JN-WCA5-Qxs" class="lty-playbtn" title="Play Video" target=_blank>
-		<span class="thysbelon-lty-title"><span class=lyt-visually-hidden>Play Video: </span>Cory Arcangel & Paper Rad - Super Mario Movie - 2005</span>
-	</a>
-</lite-youtube>
-<p>I saw this movie in game design class. It was an example of how game engines can be used to create art outside of video games. A lot of the other students were mocking and making jokes about it, which disappointed me. I think this movie is beautiful, it deserves more respect.
-<p>I worry that if I talked too much about the movie I would only be stating the...
+			<h1><a href=/Blog/2022-10-25/Kirby-Star-Allies-Assignment-Narrative>Kirby Star Allies Assignment: Narrative</a></h1>
+			<time datetime=2022-10-25 >25 October 2022</time>
+			<p>Kirby is a platforming series that focuses on being simple and fun. Story often takes a back seat. Many of the games will have only a simple cutscene at the beginning showing how Kirby got into this mess, <em>no</em> story in the middle, then an exposition dump right before the final boss.<p>This pattern has its advantages and disadvantages; it allows the player to focus on the gameplay without interruption, and the exposition dump gets the player invested and makes the...
 	</article>
 <article>
-			<h1><a href=/Blog/2022-9-17/I-Moved-My-Jekyll-Website-from-Windows-to-WSL2-Ubuntu>I Moved My Jekyll Website from Windows to WSL2 Ubuntu</a></h1>
-			<time datetime=2022-09-17 >17 September 2022</time>
-			<p>Hello! I got a new laptop, and this one has Windows 11 on it, so I finally decided to stop procrastinating and actually install WSL2. (WSL2 is also available on Windows 10, but when I last checked you needed to sign up for the Windows Insider Program, but that may not be the case anymore?)
-<p>I use <a href=https://jekyllrb.com target=_blank>Jekyll</a> to automatically generate some of the pages on this website, like the previews of each post on the home page, or the pages...
+			<h1><a href=/Blog/2022-10-24/Kirby-Super-Star-Ultra-Everything-Unlocked-Save-File>Kirby Super Star Ultra Everything Unlocked Save File</a></h1>
+			<time datetime=2022-10-24 >24 October 2022</time>
+			<p>I had trouble finding a 100% save file for this game online, so I'm uploading mine!
+<p><del datetime=2023-1-9>Actually, my save file is only at 92% completion, but it should have most of the content unlocked. You can also use the <a href=https://www.neoseeker.com/kirby-super-star-ultra/action_replay/ds/ target=_blank>Action Replay cheat code</a> <code>1205C170 0000ffff</code> to unlock all movies.</del> <br><ins datetime=2023-1-9 style=text-decoration:none>Update 1/9/2023: I used the wayback machine to recover <a href=https://gbatemp.net/download/2696-kirby-super-stars-ultra-usa.2998/ target=_blank>Hillsy_'s completed save file</a>. I used cheat codes to get the last few unlocks, and now I have a <a href=Kirby-Super-Star-Ultra-(USA).zip>100% completed save file for the US version of Kirby Super Star Ultra!</a></ins>
+<p>Are you wondering why I was looking for a 100% save file? If you look in the Kirby tag, you'll find out what I was working on...
+<p><ins datetime=2022-11-8 style=text-decoration:none>Update 11/8/2022: Speedrun.com has a 100% save file for the Japanese version: Kirby Ultra Super Deluxe, under the "Resources" tab. This website also has a guide on how to import the save file into Desmume due to the file being in the uncommon .duc format. <a href=Hoshi-no-Kirby-Ultra-Super-Deluxe-(Japan).zip>Here is the same save file converted into the universal .sav format</a>.</ins>
 	</article>
 <article>
-			<h1><a href=/Blog/2022-9-6/NoScript-Blocks-the-Object-Tag-when-it-Blocks-Scripts>NoScript Blocks the &lt;object&gt; Tag when it Blocks Scripts</a></h1>
-			<time datetime=2022-09-06 >06 September 2022</time>
-			<a href=/Blog/2022-9-6/NoScript-Blocks-the-Object-Tag-when-it-Blocks-Scripts tabindex=-1><img src=/Blog/2022-9-6/noscript5.webp alt="A screenshot of NoScript's settings. Under the title 'Enable these capabilities', script is unchecked and object is checked."></a>
-<p>NoScript has separate checkboxes for blocking "scripts" and "objects". I assumed that unchecking "scripts" would only block <code>&lt;script&gt;</code> tags on a page; and that leaving "object" checked would allow all <code>&lt;object&gt;</code> tags to work as normal. When I was adjusting the CSS of my <a href=placeholder>Vib-Ribbon post</a>, I noticed the animated background, which is an <code>@keyframes</code>-animated-SVG embedded via an <code>&lt;object&gt;</code> tag, had disappeared. It would seem that blocking JavaScript using NoScript <em>also</em> blocks <code>&lt;object&gt;</code> tags, even if the data of the <code>&lt;object&gt;</code> tag does not contain any JavaScript. This is <em>not</em> the case with other methods of blocking JavaScript, such as using uBlock Origin or setting permissions in Chromium.
+			<h1><a href=/Blog/2022-10-7/Updated-Orchid-Theme-for-WiiFlow-Lite-(and-Wii-U-Icons)>Updated Orchid Theme for WiiFlow Lite (and Wii U Icons)</a></h1>
+			<time datetime=2022-10-07 >07 October 2022</time>
+			<!--<a href=/Blog/2022-10-7/Updated-Orchid-Theme-for-WiiFlow-Lite-(and-Wii-U-Icons) tabindex=-1><img src=/Blog/2022-10-7/P1054457-3.webp alt="Screenshot of WiiFlow's game menu with the Orchid theme."></a>--><img src=/Blog/2022-10-7/P1054458-2.webp alt="Screenshot of WiiFlow's home menu with the Orchid theme.">
+<p>WiiFlow is an app that displays Wii and GameCube <!--disc images-->games in a pretty coverflow view. The app used to have a wide variety of themes to customize its appearance to your liking; but as WiiFlow gained new features that required new UI elements, the themes were not updated.
+<p><a href=Orchid-updated.zip>I put in a little bit of work to update the Orchid theme</a> to support the latest version of WiiFlow. It's still very incomplete; most of the settings menu will not display correctly, but the main menu and frequently used settings are functional. I also changed the "USB" icon to a "Wii" icon. I hope you enjoy using it. The Orchid theme was created by Benjay, Jiiwah, and Roku93 on GBATemp. <a href=https://sites.google.com/site/wiiflowiki4/themes target=_blank>Refer to the WiiFlow Wiki for instructions on how to install themes.</a>
+<p>I also have an <a href=WiiFlow.wuhb>Orchid themed Wii U Menu shortcut to WiiFlow</a>. It requires a <a href=https://sites.google.com/site/wiiflowiki4/forwarder-channels target=_blank>forwarder channel installed on the vWii</a> to work.
+<details>
+<summary>Download and Instructions for Haxchi (Outdated CFW)</summary>
+<p>I also have <a href=WiiFlow-Orchid-WiiUMenu-Banner.7z>images for a shortcut to Wiiflow on the Wii U menu</a>.
+<p>On a Haxchi Wii U: install <a href=https://gbatemp.net/threads/hbl2hbc-v1-1-boot-from-wiiu-hbl-into-vwii-hbc.455673/ target=_blank>HBL2HBC</a> and <a href=https://gbatemp.net/threads/release-wiiu2hbc-a-hbl2hbc-forwarder-channel.455991/ target=_blank>WiiU2HBC</a>. You can replace WiiU2HBC's icon with my custom WiiFlow icons after installing. I recommend using <a href=https://github.com/Random06457/Wii-U-Title-Boot-Editor target=_blank>Wii U Title Boot Editor</a>. If Wii U Title Boot Editor does not work for you, use the files in the folder "tga-files" and transfer them to the shortcut's meta folder via ftp (be careful when doing this! View the Wii U's tga files to make sure you have the correct title).
+</details>
+<!-- TODO: in the post layout, the post content should be wrapped in a div, so there is always space between the post body and the tags & categories -->
 	</article>
 	<div class=pnav>
 	<a class="btnlink fli" href=/page-8/>Newer Posts</a>

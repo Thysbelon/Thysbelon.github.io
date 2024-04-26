@@ -52,32 +52,48 @@
 
 
 	<article>
-			<h1><a href=/Blog/2022-5-27/How-to-Make-Custom-3DS-Mega-Badges>How to Make Custom 3DS Mega Badges</a></h1>
-			<time datetime=2022-05-27 >27 May 2022</time>
-			<!--put How-To rich search result data in this post-->
-<a href=/Blog/2022-5-27/How-to-Make-Custom-3DS-Mega-Badges tabindex=-1><img class=fri src=/Blog/2022-5-27/badge2D-80.webp alt="Screenshot of a Daroach mega badge in the 3DS home menu."></a>
-<p><span class=nowrap>Nintendo Badge Arcade</span> is a free-to-play game for the 3DS in which you play a crane game to unlock badges to decorate your 3DS's home menu with. By <a href=https://3ds.hacks.guide target=_blank>Installing custom firmware to the 3DS</a> users can make their own custom badges out of 64 by 64 pixel PNGs. There is a special kind of badge called the mega badge; it's made up of two or four normal badges, but the parts appear as one badge when viewed on the top...
+			<h1><a href=/Blog/2022-9-6/NoScript-Blocks-the-Object-Tag-when-it-Blocks-Scripts>NoScript Blocks the &lt;object&gt; Tag when it Blocks Scripts</a></h1>
+			<time datetime=2022-09-06 >06 September 2022</time>
+			<a href=/Blog/2022-9-6/NoScript-Blocks-the-Object-Tag-when-it-Blocks-Scripts tabindex=-1><img src=/Blog/2022-9-6/noscript5.webp alt="A screenshot of NoScript's settings. Under the title 'Enable these capabilities', script is unchecked and object is checked."></a>
+<p>NoScript has separate checkboxes for blocking "scripts" and "objects". I assumed that unchecking "scripts" would only block <code>&lt;script&gt;</code> tags on a page; and that leaving "object" checked would allow all <code>&lt;object&gt;</code> tags to work as normal. When I was adjusting the CSS of my <a href=placeholder>Vib-Ribbon post</a>, I noticed the animated background, which is an <code>@keyframes</code>-animated-SVG embedded via an <code>&lt;object&gt;</code> tag, had disappeared. It would seem that blocking JavaScript using NoScript <em>also</em> blocks <code>&lt;object&gt;</code> tags, even if the data of the <code>&lt;object&gt;</code> tag does not contain any JavaScript. This is <em>not</em> the case with other methods of blocking JavaScript, such as using uBlock Origin or setting permissions in Chromium.
 	</article>
 <article>
-			<h1><a href=/Blog/2022-5-2/You-Know-More-About-Marketing-than-the-Klonoa-Ad-People>If you're learning marketing and you're worried you're not good enough, know you're better than these Klonoa ads</a></h1>
-			<time datetime=2022-05-02 >02 May 2022</time>
-			<a href=https://imgur.com/gallery/plA5hIz target=_blank><a href=/Blog/2022-5-2/You-Know-More-About-Marketing-than-the-Klonoa-Ad-People tabindex=-1><img src=/Blog/2022-5-2/thumb6.webp alt="Two magazine ads for Klonoa, a mascot platforming game. The first ad has a greyscale photo of two adults kissing. The second ad has large text that says: Quite possibly the only thing weirder than your sister."></a></a><p>I just finished my marketing course, which was required for my itech degree. I've always been wary of business, so I was worried that I wouldn't "get" marketing at all. I had no idea what to write in my paper... then I remembered something that gave me confidence; these advertisements.<p>Someone was paid to come up with these.<p>So, no matter how little I know about marketing, I still know more than these paid designers who worked for a prominent game company, so I think that's a pretty good accomplishment. <img src=/emoji/😊.svg alt=😊>
+			<h1><a href=/Blog/2022-7-13/Animated-SVGs-Use-High-CPU-and-Freeze-when-used-as-an-Image>Animated SVGs Use High CPU and Freeze when used as an Image</a></h1>
+			<time datetime=2022-07-13 >13 July 2022</time>
+			<p>An SVG animated with CSS <code>@keyframes</code> defined in the SVG itself (not the page's CSS) will use high CPU on Firefox if the SVG is linked to in the <code>src</code> attribute of an <code>&lt;img&gt;</code> tag, or linked to in a <code>background-image</code> CSS property on the page. In addition, an animated SVG in a <code>background-image</code> may freeze on chromium.
+<p>I tested different ways of putting an animated SVG on a page; the option that performed best was the <code>&lt;object&gt;</code> tag, inline svg was a close second.
+<!--<p>My post <a href=placeholder>"How to Play Custom Songs in Vib-Ribbon on an Emulator"</a> has an animated background. In terms of what makes the most sense, the best way to put a background on a page is to set the <code>&lt;body&gt;</code>'s background-image property to the url of the background image. Putting an <code>&lt;img&gt;</code> tag on the page itself is not ideal because HTML is supposed to be used for content, and CSS is for decoration. -->
 	</article>
 <article>
-			<h1><a href=/Blog/2022-4-16/The-Origin-Of-Every-Kirby-Song-on-the-Kirby-or-Touhou-Song-Title-Quiz>The Origin Of Every Kirby Song on the Kirby or Touhou Song Title Quiz</a></h1>
-			<time datetime=2022-04-16 >16 April 2022</time>
-			<a href=/Blog/2022-4-16/The-Origin-Of-Every-Kirby-Song-on-the-Kirby-or-Touhou-Song-Title-Quiz tabindex=-1><img class="restrictsize fri" style=--w:400px src=/Blog/2022-4-16/thumb.png alt="Kirby and Reimu. Kirby is wearing Reimu's ribbon and holding her gohei. Reimu is holding the star rod."></a><p>Last week, I came across a <a href=https://www.sporcle.com/games/SYZekrom/Kirby-or-Touhou-music-track-names target=_blank>quiz that asks the quizzee, "Is this song title from Kirby or Touhou?"</a>. I thought that I would do very well at the quiz, because of how many Kirby songs I know, but I only got 66%. Then I wondered, &ldquo;Are all of these Kirby songs actually real?&rdquo; To satisfy my curiosity, I tracked down the source of every song title myself. I made the mistake of doing this before checking to see if...
+			<h1><a href=/Blog/2022-7-13/Origin-of-Every-Photo-from-Mmm-yes-moth-youtube-video>Origin of Every Photo from <span class=nowrap>&ldquo;Mmm yes moth&rdquo;</span> youtube video</a></h1>
+			<time datetime=2022-07-13 >13 July 2022</time>
+			<lite-youtube videoid="vJRhNkDbsn0" style="background-image: url('https://i.ytimg.com/vi_webp/vJRhNkDbsn0/sddefault.webp');">
+	<a href="https://youtube.com/watch?v=vJRhNkDbsn0" class="lty-playbtn" title="Play Video" target=_blank>
+		<span class="thysbelon-lty-title"><span class=lyt-visually-hidden>Play Video: </span>Mmm yes moth</span>
+	</a>
+</lite-youtube>
+<p>Every photo appears to be of the <a href=https://en.wikipedia.org/wiki/Dryocampa_rubicunda target=_blank>Rosy Maple Moth (Dryocampa rubicunda)</a>.
+<ol>
+<li><a href=https://www.istockphoto.com/photo/rosy-maple-moth-gm1146662108-309051816 target=_blank>Heather Burditt</a>
+<li><a href=https://www.flickr.com/photos/mctra/4990615459/in/faves-77443941@N08/ target=_blank>MCTRA</a>
+<li><a href=https://www.reddit.com/r/NatureIsFuckingLit/comments/fm45cp/this_rosy_maple_moth_that_landed_on_my_finger_d/ target=_blank>Jozlyn_Moonlight</a>
+<li><a href=https://www.squishable.com/mm5/merchant.mvc?Product_Code=mini_squish_rosy_maple_7&Screen=PROD target=_blank>Ann F.</a>
+<li><a href=https://img0.etsystatic.com/142/0/8518585/il_fullxfull.1132005682_di8v.jpg target=_blank>Author Unknown; highest resolution version here.</a>
+<li><a href=https://imgur.com/gallery/Aq3rE4g target=_blank>Garrett Krause</a>
+<li><a href=https://www.flickr.com/photos/kylecharles/5354608129/sizes/l/in/faves-77443941@N08/ target=_blank>kylecharles42</a>
+</ol>
 	</article>
 <article>
-			<h1><a href=/Blog/2022-4-9/Android-5.0-Lollipop-the-Best-Emoji>Android 5.0 Lollipop: the Best Emoji</a></h1>
-			<time datetime=2022-04-09 >09 April 2022</time>
-			<a href=/Blog/2022-4-9/Android-5.0-Lollipop-the-Best-Emoji tabindex=-1><img src=/emoji/😊.svg style=width:initial;height:initial;display:block;float:right;max-width:250px alt="Smiling face with smiling eyes emoji."></a>
-<p>I've never been that big of a fan of most emoji. Apple popularized the the use of gradients in emoji, but I think it just looks <em>so</em> ugly <img src=/emoji/😕.svg alt=😕>. Gradients look nice in a background, but the moment they're put into a character design they just look tacky. The reason I like flat colors so much is because they don't have any ugly gradients, they're easy to draw<img src=/emoji/✏.svg alt=✏>, and they're easy to read at small sizes <img src=/emoji/🙋.svg alt=🙋>.<p>Lots of emoji use...
+			<h1><a href=/Blog/2022-7-1/Taiko-no-Tatsujin-Beatmap-of-Vista-by-Guadalcanal-Diary>Taiko no Tatsujin Beatmap of "... Vista" by Guadalcanal Diary</a></h1>
+			<time datetime=2022-07-01 >01 July 2022</time>
+			<a href=/Blog/2022-7-1/Taiko-no-Tatsujin-Beatmap-of-Vista-by-Guadalcanal-Diary tabindex=-1><img src=/Blog/2022-7-1/donchan.svg class="fri restrictsize" alt="don-chan, the cat-like taiko drum mascot, sitting on a cat bed in loaf position."></a>
+<p>Hello! <img src=/emoji/🙋.svg alt=🙋><br>Recently, I discovered a very cool web port of Taiko no Tatsujin called <a href=https://taiko.bui.pm target=_blank>"Taiko Web"</a>. You can play both official charts and custom charts on it! It inspired me to make <a href=vista.zip>my own custom chart of "... Vista"</a>. I don't have much experience with making charts, so it's probably rough, but I enjoyed making it and I wanted to share it. Currently, there is an Oni difficulty and a Hard difficulty. I may tweak the chart at a later date to improve it, such as by making the Hard difficulty easier or adding a normal difficulty.<p>
 	</article>
 <article>
-			<h1><a href=/Blog/2022-4-3/Trouble-with-Spacing-Objects-Evenly-in-Illustrator>Trouble with Spacing Objects Evenly in Illustrator</a></h1>
-			<time datetime=2022-04-03 >03 April 2022</time>
-			<a href=/Blog/2022-4-3/Trouble-with-Spacing-Objects-Evenly-in-Illustrator tabindex=-1><img src=/Blog/2022-4-3/thumb.png class=fri alt="A hummingbird moth sitting in front of a computer and looking frustrated."></a><p>Today, I was working on the <a href=/Digital-Design/Social-Media/#Social-Media-Ads>social media ads for RCP</a> and I needed to space out the numbers in "1,500,000,000". I first clicked "create outlines" so I could move the individual digits around. I knew there had to be a tool to space them automatically, but I didn't know where it was or how to use it. Following a guide I found online titled <a href=https://maschituts.com/how-to-evenly-space-objects-in-illustrator/ target=_blank>"How to Evenly Space Objects in Illustrator"</a>, I selected my objects, then clicked "Horizontal Distribute Space" in the Align window.<br>Nothing happened. I tried again and again; Did I select the objects wrong<!--in the wrong way-->? Eventually, on a whim, I decided to ungroup the objects. It worked perfectly. Illustrator has good tools, but it's frustrating when they're so unintuitive.
+			<h1><a href=/Blog/2022-6-9/SplatHex-displays-Damage-Up-for-All-Gear>SplatHex displays Damage Up for All Gear</a></h1>
+			<time datetime=2022-06-09 >09 June 2022</time>
+			<a href=/Blog/2022-6-9/SplatHex-displays-Damage-Up-for-All-Gear tabindex=-1><img src=/Blog/2022-6-9/thumb-1.avif alt="Screenshot of SplatHex"></a>
+<p>Watch out for this SplatHex bug! Even though octoglasses' main ability is last-ditch effort, SplatHex shows damage up as the main ability! <strong>This is purely a display bug</strong>, and all gears' main ability will always be correct in-game.
 	</article>
 	<div class=pnav>
 	<a class="btnlink fli" href=/page-10/>Newer Posts</a>
