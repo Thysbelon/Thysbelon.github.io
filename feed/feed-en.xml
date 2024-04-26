@@ -4,11 +4,19 @@
 	<subtitle>My personal blog where I post about whatever interests me.</subtitle>
 	<link href="https://thysbelon.github.io/feed/feed-en.xml" rel="self"/>
 	<link href="https://thysbelon.github.io/"/>
-	<updated>2024-04-25T15:11:12Z</updated>
+	<updated>2024-04-26T14:07:30Z</updated>
 	<id>https://thysbelon.github.io/</id>
 	<author>
 		<name>Thysbelon</name>
 	</author>
+	
+	<entry>
+		<title>I Wish there was a Free, Open Source Tool to Convert PDFs to Digital Forms</title>
+		<link href="https://thysbelon.github.io/Blog/2024-4-25/I-Wish-there-was-a-Free-Open-Source-Tool-to-Convert-PDFs-to-Digital-Forms.html"/>
+		<updated>2024-04-25T00:00:00Z</updated>
+		<id>https://thysbelon.github.io/Blog/2024-4-25/I-Wish-there-was-a-Free-Open-Source-Tool-to-Convert-PDFs-to-Digital-Forms.html</id>
+		<content type="html">Many non-profit organizations stick to paper records because they don&#39;t have the budget to transition to digital. Paper records are...</content>
+	</entry>
 	
 	<entry>
 		<title>Did You Know Styluses for Capacitive Screens Don&#39;t Have to be Expensive?</title>
