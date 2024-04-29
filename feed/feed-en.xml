@@ -4,11 +4,19 @@
 	<subtitle>My personal blog where I post about whatever interests me.</subtitle>
 	<link href="https://thysbelon.github.io/feed/feed-en.xml" rel="self"/>
 	<link href="https://thysbelon.github.io/"/>
-	<updated>2024-04-26T19:53:20Z</updated>
+	<updated>2024-04-29T16:03:44Z</updated>
 	<id>https://thysbelon.github.io/</id>
 	<author>
 		<name>Thysbelon</name>
 	</author>
+	
+	<entry>
+		<title>I Wish the TEFAP Forms Were Publicly Available</title>
+		<link href="https://thysbelon.github.io/Blog/2024-4-29/I-Wish-the-TEFAP-Forms-Were-Publicly-Available.html"/>
+		<updated>2024-04-29T00:00:00Z</updated>
+		<id>https://thysbelon.github.io/Blog/2024-4-29/I-Wish-the-TEFAP-Forms-Were-Publicly-Available.html</id>
+		<content type="html">My college work this semester involved trying to convert the PDF TEFAP forms to digital forms. When I initially did...</content>
+	</entry>
 	
 	<entry>
 		<title>Every Website Should Have a Light and Dark Mode, they&#39;re Accessibility Features</title>

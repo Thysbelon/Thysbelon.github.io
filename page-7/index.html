@@ -52,6 +52,89 @@
 
 
 	<article>
+			<h1><a href=/Blog/2023-1-19/Success-with-N64-Sequenced-Music>Success with N64 Sequenced Music</a></h1>
+			<time datetime=2023-01-19 >19 January 2023</time>
+			<link href=/misc/headbop.css rel=stylesheet>
+<a href=/Blog/2023-1-19/Success-with-N64-Sequenced-Music tabindex=-1><img class=trans src=/misc/headbopsheet.png id=bopmoth2 alt="A hummingbird moth wearing headphones."></a>
+<button onclick=this.onclick=null;StartJams2() style=margin-bottom:1rem>Start Jams</button>
+<p>Remember when I said I would never attempt to embed N64 sequenced music on a webpage again? I lied. I just had to give it another try! I wanted to see what kind of results I would get by using a midi extracted via <a href=https://github.com/jombo23/N64-Tools target=_blank>N64 Soundbank Tool</a>. There were some errors I had to fix, but it sounds pretty good! Not perfect, of course, but it's recognizable.
+<details>
+<summary>
+Fixes
+</summary>
+<p>I had to change the sustain level of the bass instrument in the soundfont, so the sound wouldn't go quiet immediately. <a href=ExtractedSoundbank-instr_20-vol_envelope-sustain_level.7z>Fixed soundfont (use 7zip to extract).</a> I also added reverb.
+</details>
+<p>The most difficult part was recreating the reverb heard in game. I tried a bunch of weird module things, but all I really needed was to play a convolverNode reverb output <em>alongside</em> the unmodified output. <!--<br>Thank you to <a href=http://reverbjs.org/ target=_blank>Reverb.js</a> for making that even easier to do!-->
+<p>(Please don't click "Start Jams" twice)
+<script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js></script><script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js></script>
+<!--<script src=/Blog/2023-1-19/http://reverbjs.org/reverb.js></script>-->
+<script>
+var sfontBuffer;
+var smfBuffer;
+var jams2;
+var context = new AudioContext();
+
+function StartJams2(){
+console.log('startjams2');
+
+(async function(){
+	let response = await fetch('ExtractedSoundbank-instr_20-vol_envelope-sustain_level.sf3');
+	sfontBuffer = await response.arrayBuffer();
+	response = await fetch('Super Smash Bros. (U) 0000000A 00B379FC cut.mid');
+	smfBuffer = await response.arrayBuffer();
+})();
+
+async function createReverb() { // from mdn
+  let convolver = context.createConvolver();
+
+  // load impulse response from file
+  let response = await fetch('ElvedenHallSmokingRoom.m4a'); // from http://reverbjs.org/Library/ElvedenHallSmokingRoom.m4a
+  let arraybuffer = await response.arrayBuffer();
+  convolver.buffer = await context.decodeAudioData(arraybuffer);
+
+  return convolver;
+}
+
+JSSynth.waitForReady().then(loadSynthesizer);
+
+async function loadSynthesizer() {
+	
+	context.resume();
+	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js')
+	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.worklet.min.js');
+	var synth = new JSSynth.AudioWorkletNodeSynthesizer();
+	synth.init(context.sampleRate);
+	var audioNode = synth.createAudioNode(context);
+	
+	
+	// goes with mdn code
+	let reverb = await createReverb();
+	audioNode.connect(reverb);
+	//var gain = new GainNode(context,{gain:3})
+	let gain = new GainNode(context,{gain:0.2});
+	reverb.connect(gain);
+	gain.connect(context.destination);
+	audioNode.connect(context.destination);
+	
+	await synth.loadSFont(sfontBuffer);
+	await synth.addSMFDataToPlayer(smfBuffer);
+	let tempelem=document.getElementById('bopmoth2')
+	await synth.playPlayer();
+	tempelem.style.animation="0.75949367088607594936708860759494s step-end infinite bop"
+	jams2=true
+	while (jams2===true) {
+		console.log("loop")
+		await synth.waitForPlayerStopped()
+		await synth.seekPlayer(1440)
+		await synth.playPlayer();
+	}
+	
+}
+
+}
+</script>
+	</article>
+<article>
 			<h1><a href=/Blog/2023-1-18/Trouble-with-N64-Sequenced-Music>Trouble with N64 Sequenced Music</a></h1>
 			<time datetime=2023-01-18 >18 January 2023</time>
 			<p>DLS files are really tough to work with. The only thing that can convert them is Viena. I've been extracting soundbanks from N64 games, but N64SoundbankTool only extracts them as DLS; so when I convert the DLS to SF2 and play it with the N64-music-converted-to-midi, I can't tell how many of the flaws are from the DLS conversion, and how many are from the N64 extraction... (They're probably the fault of the N64 extraction) <br>and I don't think I'll be...
@@ -126,17 +209,6 @@ async function loadSynthesizer() {
 <p>When my professor spoke of what he wanted in this blog post, he talked at length about Red Dead Redemption; about how it creates an immersive experience of the Wild West that bridges the gap between fiction and reality.
 <p>Kirby is nothing like Red Dead Redemption.
 <p>There are very few Kirby games that could be described as immersive. Forgotten Land comes the closest, due to having a world modeled after Earth, and how minimalist the...
-	</article>
-<article>
-			<h1><a href=/Blog/2022-12-8/How-to-Take-a-Screenshot-of-a-YouTube-Video>How to Take a Screenshot of a YouTube Video</a></h1>
-			<time datetime=2022-12-08 >08 December 2022</time>
-			<ul>
-<li>Use Firefox
-<li>Right-click the video
-<li>Right-click the video <em>again</em> to open Firefox's context menu
-<li>Click "Take Snapshot..."
-</ul>
-<p>This works on all videos on the web. If a website disables Firefox's right click menu by default, press Shift + Right-Click to open it.
 	</article>
 	<div class=pnav>
 	<a class="btnlink fli" href=/page-6/>Newer Posts</a>

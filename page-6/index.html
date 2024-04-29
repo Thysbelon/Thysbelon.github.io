@@ -52,6 +52,24 @@
 
 
 	<article>
+			<h1><a href=/Blog/2023-5-5/Liquid-Sunshine-(Splatoon-3)-N163-Chiptune-Cover>Liquid Sunshine (Splatoon 3) N163 Chiptune Cover</a></h1>
+			<time datetime=2023-05-05 >05 May 2023</time>
+			<script src=https://thysbelon.github.io/nsfplayer-wasm/assets/nsfplayer-mono-stereo.js></script>
+<script src=https://thysbelon.github.io/nsfplayer-wasm/nsfplay-function.js></script>
+
+<script>
+function stratjams6() {
+	nsfplay("liquid-sunshine.nsfe",0,{introEnd:1331, panningObject:{"Square 1":-1,"Square 2":1,"Wave 8":-0.5,"Wave 7":0.5} });
+}
+</script>
+<button onclick=stratjams6() style=margin-bottom:1rem>Start Jams</button>
+<p>(This music cannot yet be played on the home page. Please click on the post link.)
+<p>This cover would not have been possible without <a href=https://vocalremover.org/splitter-ai target=_blank>this music splitter AI</a>.
+<p>I started messing around with using wavetable synth to replicate human vowel sounds in 3/25/2023. I liked the result so much, I wanted to make a cover using it. The <a href=https://www.youtube.com/watch?v=EZx61kSObTI target=_blank>music video for Liquid Sunshine</a> released not too long after, and it had on-screen lyrics! (though, Nintendo of America's romanized lyrics have <a href=https://splatoonwiki.org/wiki/Liquid_Sunshine#cite_note-1 target=_blank>many glaring inaccuracies</a>) I started making my cover on April 5th, and finished on April 22nd.
+<p>I also experimented with stereo audio. Square 1 is panned hard left, square 2 hard right, wave 1 a little left, and wave 2 a little right.
+<p><a href=https://www.mediafire.com/file/nsx5xmov3ml395s/Liquid-Sunshine.zip/file>Download project files</a>.
+	</article>
+<article>
 			<h1><a href=/Blog/2023-3-13/Murders-(Hawaii-Part-II)-VRC6-Chiptune-Cover>Murders (Hawaii: Part II) VRC6 Chiptune Cover</a></h1>
 			<time datetime=2023-03-13 >13 March 2023</time>
 			<script src=/nsfplayer-wasm/assets/nsfplayer-mono-stereo.js></script>
@@ -239,89 +257,6 @@ async function loadSynthesizer() {
 		await synth2.seekPlayer(16*960)
 		await synth.playPlayer();
 		await synth2.playPlayer();
-	}
-	
-}
-
-}
-</script>
-	</article>
-<article>
-			<h1><a href=/Blog/2023-1-19/Success-with-N64-Sequenced-Music>Success with N64 Sequenced Music</a></h1>
-			<time datetime=2023-01-19 >19 January 2023</time>
-			<link href=/misc/headbop.css rel=stylesheet>
-<a href=/Blog/2023-1-19/Success-with-N64-Sequenced-Music tabindex=-1><img class=trans src=/misc/headbopsheet.png id=bopmoth2 alt="A hummingbird moth wearing headphones."></a>
-<button onclick=this.onclick=null;StartJams2() style=margin-bottom:1rem>Start Jams</button>
-<p>Remember when I said I would never attempt to embed N64 sequenced music on a webpage again? I lied. I just had to give it another try! I wanted to see what kind of results I would get by using a midi extracted via <a href=https://github.com/jombo23/N64-Tools target=_blank>N64 Soundbank Tool</a>. There were some errors I had to fix, but it sounds pretty good! Not perfect, of course, but it's recognizable.
-<details>
-<summary>
-Fixes
-</summary>
-<p>I had to change the sustain level of the bass instrument in the soundfont, so the sound wouldn't go quiet immediately. <a href=ExtractedSoundbank-instr_20-vol_envelope-sustain_level.7z>Fixed soundfont (use 7zip to extract).</a> I also added reverb.
-</details>
-<p>The most difficult part was recreating the reverb heard in game. I tried a bunch of weird module things, but all I really needed was to play a convolverNode reverb output <em>alongside</em> the unmodified output. <!--<br>Thank you to <a href=http://reverbjs.org/ target=_blank>Reverb.js</a> for making that even easier to do!-->
-<p>(Please don't click "Start Jams" twice)
-<script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js></script><script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js></script>
-<!--<script src=/Blog/2023-1-19/http://reverbjs.org/reverb.js></script>-->
-<script>
-var sfontBuffer;
-var smfBuffer;
-var jams2;
-var context = new AudioContext();
-
-function StartJams2(){
-console.log('startjams2');
-
-(async function(){
-	let response = await fetch('ExtractedSoundbank-instr_20-vol_envelope-sustain_level.sf3');
-	sfontBuffer = await response.arrayBuffer();
-	response = await fetch('Super Smash Bros. (U) 0000000A 00B379FC cut.mid');
-	smfBuffer = await response.arrayBuffer();
-})();
-
-async function createReverb() { // from mdn
-  let convolver = context.createConvolver();
-
-  // load impulse response from file
-  let response = await fetch('ElvedenHallSmokingRoom.m4a'); // from http://reverbjs.org/Library/ElvedenHallSmokingRoom.m4a
-  let arraybuffer = await response.arrayBuffer();
-  convolver.buffer = await context.decodeAudioData(arraybuffer);
-
-  return convolver;
-}
-
-JSSynth.waitForReady().then(loadSynthesizer);
-
-async function loadSynthesizer() {
-	
-	context.resume();
-	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js')
-	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.worklet.min.js');
-	var synth = new JSSynth.AudioWorkletNodeSynthesizer();
-	synth.init(context.sampleRate);
-	var audioNode = synth.createAudioNode(context);
-	
-	
-	// goes with mdn code
-	let reverb = await createReverb();
-	audioNode.connect(reverb);
-	//var gain = new GainNode(context,{gain:3})
-	let gain = new GainNode(context,{gain:0.2});
-	reverb.connect(gain);
-	gain.connect(context.destination);
-	audioNode.connect(context.destination);
-	
-	await synth.loadSFont(sfontBuffer);
-	await synth.addSMFDataToPlayer(smfBuffer);
-	let tempelem=document.getElementById('bopmoth2')
-	await synth.playPlayer();
-	tempelem.style.animation="0.75949367088607594936708860759494s step-end infinite bop"
-	jams2=true
-	while (jams2===true) {
-		console.log("loop")
-		await synth.waitForPlayerStopped()
-		await synth.seekPlayer(1440)
-		await synth.playPlayer();
 	}
 	
 }
