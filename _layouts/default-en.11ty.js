@@ -250,7 +250,7 @@ ${ data.extraStylesheet ? '<link rel=stylesheet href=/css/'+data.extraStylesheet
 ${ data.internalStyle ? (data.internalStyle.includes('<style>') ? data.internalStyle : '<style>'+data.internalStyle+'</style>' ) : '' }
 <link rel=icon type=image/x-icon href=${ data.customIcon ? data.customIcon : '/img/thysbelonicon.svg' }>
 ${ (data.noindex || data.page.url?.match(/\/page-\d+?\//)) ? '<meta name=robots content=noindex>' : '' }
-${ data.altLang ? `<link rel=alternate hreflang=${data.locale=='jp' ? 'en' : 'ja'} href="${data.altLang}">` : '' }
+${ data.altLang ? `<link rel=alternate hreflang=${data.locale=='jp' ? 'en' : 'ja'} href="https://thysbelon.github.io${data.altLang}"> <link rel=alternate hreflang=${data.locale=='jp' ? 'ja' : 'en'} href="https://thysbelon.github.io${data.page.url.replace(/\.html$/,'')}">` : '' } `/* TODO: make https://thysbelon.github.io a variable */+`
 ${ data.page.isPost ? '<link rel=author href=/About/>' : '' } `/*The isPost variable will be set by the post layout. I may not need this variable if I search for /blog/ in url*/+`
 ${ data.page.description ? '<meta name="description" content="'+data.page.description+'"><meta property="og:description" content="'+data.page.description+'">' : '' }
 ${ data.script ? data.script : '' }
