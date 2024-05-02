@@ -23,9 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
 	var modal = document.getElementById("imgmodal");
 	var modalImg = document.querySelector("#imgmodal img");
 	modal.addEventListener("click",function(){
+		modal.close()
+	})
+	modal.addEventListener("close",function(){
 		modal.style.removeProperty('display')
 		modalImg.src=''
-		modal.close()
 	})
 	elementsArray.forEach(function(elem) {
 		elem.addEventListener("click", function() {
@@ -38,26 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 		elem.tabIndex=0
 	});
-
-	//let divimgs=document.querySelectorAll(".gallery>div>img");
-	/* The below code allows the border to "light up" even on images that are inside a div. Once :has(), the parent selector, is usable in Firefox, that could replace this code? */
-	/*
-	divimgs.forEach(function(element){
-		element.addEventListener("mouseover",function(){
-			this.parentElement.style.borderColor="var(--pink)"
-		});
-		element.addEventListener("focus",function(){
-			console.log("focus")
-			this.parentElement.style.borderColor="var(--pink)"
-		});
-		element.addEventListener("mouseout",function(){
-			this.parentElement.style.removeProperty('border-color')
-		})
-		element.addEventListener("blur",function(){
-			this.parentElement.style.removeProperty('border-color')
-		})
-	})
-	*/
 	document.head.innerHTML+=`<style>
 	#imgmodal {
 		height:80vh;
