@@ -103,7 +103,9 @@ body {
 }
 *:lang(en)/* I hope this change didn't break anything */ span:lang(ja){font-family:Kiwi Maru}
 * {text-decoration-thickness:from-font;text-underline-position:from-font}
-button,a,a>*/*does this break anything?*/{transition-duration:.4s}
+button,a{transition-duration:.4s}
+a>*{transition-duration:0s} /* fixes webkit bug (found in Epiphany browser) */
+a>code{transition-duration:.4s}
 button:active,a:active {transition-duration:.1s}
 body:lang(en) {
 	font-family:Kiwi-Maru,American Typewriter,Hiragino Maru Gothic Pro,Arial Rounded MT,UD Digi Kyokasho N-B;
