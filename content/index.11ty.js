@@ -13,7 +13,8 @@ data() {
 			size: 5,
 			//reverse: true // collection is now reversed by default
 		},
-		permalink: data => `${data.pagination.pageNumber>0 ? 'page-'+(data.pagination.pageNumber+1)+'/' : ''}index.html` // pagination is supposed to work without a permalink...
+		permalink: data => `${data.pagination.pageNumber>0 ? 'page-'+(data.pagination.pageNumber+1)+'/' : ''}index.html`, // pagination is supposed to work without a permalink...
+		extraStylesheet: "lite-yt-embed.css",
 	}
 }, // why does https://willmartian.com/posts/conditional-rendering-eleventy/ "real world example" not have commas?
 
