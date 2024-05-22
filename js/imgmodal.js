@@ -10,8 +10,24 @@ function displayImage(modalImg, modal, elem) {
 			modalImg.style.aspectRatio=theAspectRatio
 			modalImg.style.height="initial"
 			modalImg.style.width="100%"
-		} else {modal.style.removeProperty('aspect-ratio'); modalImg.style.removeProperty('aspect-ratio'); modalImg.style.objectFit="contain"; modalImg.style.removeProperty('width'); modalImg.style.height="100%"}
-	} else {modal.style.imageRendering="auto"; modal.style.removeProperty('aspect-ratio'); modalImg.style.removeProperty('aspect-ratio'); modalImg.style.objectFit="contain"; modalImg.style.removeProperty('width'); modalImg.style.height="100%"}
+		} else {
+			modal.style.removeProperty('aspect-ratio'); 
+			modalImg.style.removeProperty('aspect-ratio'); 
+			modalImg.style.objectFit="contain"; 
+			modalImg.style.removeProperty('width'); 
+			modalImg.style.height="100%"
+		}
+	} else {
+		modal.style.imageRendering="auto"; 
+		//modal.style.removeProperty('aspect-ratio'); 
+		//modalImg.style.removeProperty('aspect-ratio'); 
+		modalImg.style.aspectRatio=elem.getAttribute('width')+'/'+elem.getAttribute('height')
+		//modalImg.setAttribute('width', elem.getAttribute('width'))
+		//modalImg.setAttribute('height', elem.getAttribute('height'))
+		modalImg.style.objectFit="contain"; 
+		modalImg.style.removeProperty('width'); 
+		modalImg.style.height="100%"
+	}
 	modal.style.display="flex"
 	modal.showModal()
 }
@@ -28,6 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	modal.addEventListener("close",function(){
 		modal.style.removeProperty('display')
 		modalImg.src=''
+		modal.style.removeProperty('aspect-ratio'); 
+		modalImg.style.removeProperty('aspect-ratio'); 
 	})
 	elementsArray.forEach(function(elem) {
 		elem.addEventListener("click", function() {
