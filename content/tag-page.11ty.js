@@ -46,6 +46,7 @@ switch (data.page.url) {
 <img src=sylveon.gif class=trans style=position:absolute;bottom:1.3rem;right:1rem;z-index:-1;width:4.5rem>
 <img src=../good-boy3.webp inert alt="a gif of furret walking." class=trans style="position:absolute;bottom:0.6rem;right:1rem;width:8rem;animation:-9.9s 10s linear infinite walk; z-index:2;">
 <img src=flying/vivillon-fancy.gif class=trans style="position:absolute;bottom:9rem;left:1rem;scale:-1 1;z-index:-1;animation:10s 10s backwards linear infinite walk;width:6rem">
+<!-- https://projectpokemon.org/home/docs/spriteindex_148/3d-models-generation-8-pok%C3%A9mon-r123/ -->
 <!-- adding an animation delay of -9.9s is the only way to work around the fact that chromium doesn't respect the overflow-x:clip or hidden property -->
 <script src=/webpnotice.js></script>
 `
@@ -124,14 +125,36 @@ document.querySelector("img[src='../ball.gif']").addEventListener("click", funct
 extract EY files with dolphin and replace backgrounds with a green screen to make gifs of the characters-->`
 		break;
 	case '/Tags/Kirby-Mass-Attack/':
-		uniquePageDecoration=`<!--<img src=KirbyMA.gif alt="Placeholder." class=trans style="position:absolute;bottom:.4rem;left:.4rem;width:6rem">-->`
-		// idea: horde of kirbies running at different speeds
+		uniquePageDecoration=`
+<style>
+@keyframes walk{
+	0%{transform:translateX(-10vw)}
+	100%{transform:translateX(100vw)}
+}
+img[src^="../kirbyMA"]{
+	position:absolute;
+	bottom:.6rem;
+	left:.4rem;
+	width:3rem;
+	animation:var(--s) linear infinite walk;
+	z-index:2;
+}
+</style>
+<img src=../kirbyMA1.gif class="trans pixl" alt="A small kirby walking." style=--s:10s>
+<img src=../kirbyMA1.gif class="trans pixl" alt="A small kirby walking." style=--s:9s>
+<img src=../kirbyMA1.gif class="trans pixl" alt="A small kirby walking." style=--s:8s>
+<img src=../kirbyMA2.gif class="trans pixl" alt="A small kirby walking." style=--s:7s>
+<img src=../kirbyMA2.gif class="trans pixl" alt="A small kirby walking." style=--s:7.5s>
+<img src=../kirbyMA2.gif class="trans pixl" alt="A small kirby walking." style=--s:8.5s>
+<img src=../kirbyMA3.gif class="trans pixl" alt="A small kirby walking." style=--s:9.5s>
+<img src=../kirbyMA3.gif class="trans pixl" alt="A small kirby walking." style=--s:10.5s>
+<img src=../kirbyMA4.gif class="trans pixl" alt="A small kirby walking." style=--s:9.25s>
+<img src=../kirbyMA4.gif class="trans pixl" alt="A small kirby walking." style=--s:8.25s>
+<!-- the spriters resource -->
+`
 		break;
 	case '/Tags/Splatoon-3/':
-		uniquePageDecoration=`<div style=height:12rem class=fullwidth></div><img src=../splashtagBadgesEmbeddedfonts.svg alt="Splashtag with pink and blue smily background: Midnight Moon Thysbelon #1964. Badges: Jel La Fleur, Harmony, Octavio." style=position:absolute;bottom:1.4rem;right:.4rem;width:30rem>`
-		break;
-	case '/Tags/Puyo-Puyo/':
-		uniquePageDecoration=``
+		uniquePageDecoration=`<div style=height:12rem class=fullwidth></div><img src=../splashtagBadgesEmbeddedfonts.svg alt="Splashtag with pink and blue smily background: Midnight Programmer Thysbelon #1964. Badges: Jel La Fleur, Harmony, Big Run Bronze." style=position:absolute;bottom:1.4rem;right:.4rem;width:30rem>`
 		break;
 	case '/Tags/Pokémon-Legends-Arceus/':
 		uniquePageDecoration=``
