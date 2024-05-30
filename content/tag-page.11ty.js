@@ -1,31 +1,58 @@
 module.exports = {
 
 data() {
-	return {
+	const myData={
 		navbar: '<li><a href=/Archive/>Archive</a></li><li><a href=/Tags/>Tags</a></li><li><a href=/Categories/>Categories</a></li>',
 		pagination: {
-			data: "collections.enListOfTags", // to do: when jp posts are added, make en posts and jp posts separate collections; or maybe data can be generated programmatically? See the 'before' function
+			data: "collections.enListOfTags",
 			size: 1,
 			alias: 'tag',
 			filter: ['all', 'post', 'posts', 'tagList'],
 			addAllPagesToCollections: true,
 		},
+		customThemes: {
+			"Vib-Ribbon": {
+				customLogo: "<img id=blogtitle src=/css/vib-ribbon-theme/thystitle2-min.gif alt=Thysbelon. width=484 height=154><img src=/css/vib-ribbon-theme/thyslogo5-min.gif alt=\"Logo of a Hummingbird moth drawn with angular lines.\" width=281 height=281>",
+				customIcon: "/css/vib-ribbon-theme/thyslogo5-min.gif",
+				extraStylesheet: "vib-ribbon-theme/vib-ribbon.css",
+				customFooter: " "
+			}
+		},
 		eleventyComputed: {
-			title: data => `${ data.tag } Tag`
+			title: data => `${ data.tag } Tag`,
+			customLogo: function(data){return data.customThemes[data.tag]?.customLogo},
+			customIcon: function(data){return data.customThemes[data.tag]?.customIcon},
+			extraStylesheet: function(data){return data.customThemes[data.tag]?.extraStylesheet},
+			customFooter: function(data){return data.customThemes[data.tag]?.customFooter},
 		},
 		permalink: function(data){return `/Tags/${ this.prettySlug(data.tag) }/`}
 	}
-}, // why does https://willmartian.com/posts/conditional-rendering-eleventy/ "real world example" not have commas?
+	return myData
+},
 
 render(data) {
 var uniquePageDecoration=""
 switch (data.page.url) {
 	case '/Tags/Pokémon/':
-		uniquePageDecoration=`<style>@keyframes walk{0%{transform:translateX(42vw)}100%{transform:translateX(-100vw)}}</style><img src=../good-boy3.webp alt="a gif of furret walking." class=trans style="position:absolute;bottom:.4rem;right:.4rem;width:8rem;animation:10s linear infinite walk">
-<script src=/webpnotice.js></script>`
+		uniquePageDecoration=`
+<style>
+@keyframes walk{
+	0%{transform:translateX(42vw)}
+	100%{transform:translateX(-100vw)}
+}
+</style>
+<div style=height:13rem class=fullwidth></div>
+<img src=lunala.gif class=trans style=position:absolute;bottom:2rem;left:1rem;transform:scaleX(-1);z-index:-1;width:8rem>
+<img src=sylveon.gif class=trans style=position:absolute;bottom:1.3rem;right:1rem;z-index:-1;width:4.5rem>
+<img src=../good-boy3.webp inert alt="a gif of furret walking." class=trans style="position:absolute;bottom:0.6rem;right:1rem;width:8rem;animation:-9.9s 10s linear infinite walk; z-index:2;">
+<img src=flying/vivillon-fancy.gif class=trans style="position:absolute;bottom:9rem;left:1rem;scale:-1 1;z-index:-1;animation:10s 10s backwards linear infinite walk;width:6rem">
+<!-- adding an animation delay of -9.9s is the only way to work around the fact that chromium doesn't respect the overflow-x:clip or hidden property -->
+<script src=/webpnotice.js></script>
+`
 		break;
 	case '/Tags/Kirby/':
 		uniquePageDecoration=`
+<div style=height:120px class=fullwidth></div>
 <style>
 @keyframes bounce{
 	0%{transform:translateY(0)}
@@ -84,10 +111,10 @@ document.querySelector("img[src='../ball.gif']").addEventListener("click", funct
 		`
 		break;
 	case '/Tags/Kirby-and-the-Forgotten-Land/':
-		uniquePageDecoration=`<img src=../elfilin.gif alt="Animated gif of Elfilin, a cyan chinchilla creature." class=trans style="position:absolute;bottom:.4rem;left:.4rem;width:6rem">`
+		uniquePageDecoration=`<div style=height:7rem class=fullwidth></div><img src=../elfilin.gif alt="Animated gif of Elfilin, a cyan chinchilla creature." class=trans style="position:absolute;bottom:.4rem;left:.4rem;width:6rem">`
 		break;
 	case '/Tags/Kirby-Star-Allies/':
-		uniquePageDecoration=`<img src=../vividria.webp alt="Animated gif of Vividria, the artist." class=trans style="position:absolute;bottom:1.5rem;left:.4rem;width:10rem">`
+		uniquePageDecoration=`<div style=height:11rem class=fullwidth></div><img src=../vividria.webp alt="Animated gif of Vividria, the artist." class=trans style="position:absolute;bottom:1.5rem;left:.4rem;width:10rem">`
 		break;
 	case '/Tags/Kirby-Triple-Deluxe/':
 		uniquePageDecoration=`<img src=../ringle3.webp alt="A gif of Ringle." class=trans style="position:absolute;bottom:.4rem;left:.4rem;width:6rem">`
@@ -98,9 +125,10 @@ extract EY files with dolphin and replace backgrounds with a green screen to mak
 		break;
 	case '/Tags/Kirby-Mass-Attack/':
 		uniquePageDecoration=`<!--<img src=KirbyMA.gif alt="Placeholder." class=trans style="position:absolute;bottom:.4rem;left:.4rem;width:6rem">-->`
+		// idea: horde of kirbies running at different speeds
 		break;
 	case '/Tags/Splatoon-3/':
-		uniquePageDecoration=`<img src=../splashtagBadgesEmbeddedfonts.svg alt="Splashtag with pink and blue smily background: Midnight Moon Thysbelon #1964. Badges: Jel La Fleur, Harmony, Octavio." style=position:absolute;bottom:1.4rem;right:.4rem;width:30rem>`
+		uniquePageDecoration=`<div style=height:12rem class=fullwidth></div><img src=../splashtagBadgesEmbeddedfonts.svg alt="Splashtag with pink and blue smily background: Midnight Moon Thysbelon #1964. Badges: Jel La Fleur, Harmony, Octavio." style=position:absolute;bottom:1.4rem;right:.4rem;width:30rem>`
 		break;
 	case '/Tags/Puyo-Puyo/':
 		uniquePageDecoration=``
