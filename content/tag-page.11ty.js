@@ -157,7 +157,12 @@ img[src^="../kirbyMA"]{
 		uniquePageDecoration=`<div style=height:12rem class=fullwidth></div><img src=../splashtagBadgesEmbeddedfonts.svg alt="Splashtag with pink and blue smily background: Midnight Programmer Thysbelon #1964. Badges: Jel La Fleur, Harmony, Big Run Bronze." style=position:absolute;bottom:1.4rem;right:.4rem;width:30rem>`
 		break;
 	case '/Tags/Pokémon-Legends-Arceus/':
-		uniquePageDecoration=``
+		uniquePageDecoration=`
+<img src=typhlosion-hisui.gif class=trans style=position:absolute;bottom:1.3rem;left:.25rem;transform:scaleX(-1);height:7rem;z-index:2>
+<img src=sneasler.gif class=trans style=position:absolute;bottom:1.3rem;right:.5rem;height:7rem;z-index:2>
+<img src=zoroark-hisui.gif class=trans style=position:absolute;bottom:1.3rem;left:5.75rem;transform:scaleX(-1);height:7rem;z-index:2>
+<img src=lilligant-hisui.gif class=trans style=position:absolute;bottom:1.3rem;right:4.5rem;height:7rem;z-index:2>
+`
 		break;
 	case '/Tags/Klonoa/':
 		uniquePageDecoration=``
