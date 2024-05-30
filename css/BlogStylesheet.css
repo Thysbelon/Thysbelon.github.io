@@ -99,7 +99,11 @@ body {
 	min-height:100vh;
 	position:relative;
 	font-family:Kiwi Maru,American Typewriter,Hiragino Maru Gothic Pro,Arial Rounded MT,UD Digi Kyokasho N-B;
-	overflow-x:hidden;
+	overflow-x:clip;
+	/* may 29 2024 */
+	/*position: relative;*/
+	width:100vi;
+	max-width:100vi;
 }
 *:lang(en)/* I hope this change didn't break anything */ span:lang(ja){font-family:Kiwi Maru}
 * {text-decoration-thickness:from-font;text-underline-position:from-font}
