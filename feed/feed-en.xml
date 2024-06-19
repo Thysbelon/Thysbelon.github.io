@@ -4,11 +4,19 @@
 	<subtitle>My personal blog where I post about whatever interests me.</subtitle>
 	<link href="https://thysbelon.github.io/feed/feed-en.xml" rel="self"/>
 	<link href="https://thysbelon.github.io/"/>
-	<updated>2024-05-30T23:25:01Z</updated>
+	<updated>2024-06-19T00:59:36Z</updated>
 	<id>https://thysbelon.github.io/</id>
 	<author>
 		<name>Thysbelon</name>
 	</author>
+	
+	<entry>
+		<title>Untamed Heart (Klonoa) X Area Zero (Pokémon) Mashup WIP</title>
+		<link href="https://thysbelon.github.io/Blog/2024-6-18/Untamed-Heart-(Klonoa)-X-Area-Zero-(Pok%C3%A9mon)-Mashup-WIP.html"/>
+		<updated>2024-06-18T00:00:00Z</updated>
+		<id>https://thysbelon.github.io/Blog/2024-6-18/Untamed-Heart-(Klonoa)-X-Area-Zero-(Pok%C3%A9mon)-Mashup-WIP.html</id>
+		<content type="html">Play Whenever I notice a vague similarity between two songs, I add them to a list of mashup ideas. I was...</content>
+	</entry>
 	
 	<entry>
 		<title>Ska Cha Cha (Sonic Rush) Sega Mega Drive/Genesis and 32X Cover</title>

@@ -52,6 +52,53 @@
 
 
 	<article>
+			<h1><a href=/Blog/2024-6-18/Untamed-Heart-(Klonoa)-X-Area-Zero-(Pokémon)-Mashup-WIP>Untamed Heart (Klonoa) X Area Zero (Pokémon) Mashup WIP</a></h1>
+			<time datetime=2024-06-18 >18 June 2024</time>
+			<script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js></script><script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js></script>
+<button id=untamed-heart-area-zero>Play</button>
+<script>
+document.getElementById('untamed-heart-area-zero').addEventListener('click', startUHAZ, {once:true}) // this should activate on keyboard interact as well.
+function startUHAZ(){
+console.log('startjams')
+var sfontBuffer;
+var smfBuffer;
+var context; //context.suspend() and context.resume() can be used to pause and play
+var synth; //this can be used to implement Pause and Play features with synth.stopPlayer() and synth.playPlayer(). Implementing this feature would require changing the loop code from a "while true" loop to a recursive named function.
+(async function(){
+	let response = await fetch('/Blog/2024-6-18/A320U.sf3') // I used the linux program "sf3convert" to compress to sf3.
+	sfontBuffer = await response.arrayBuffer()
+	response = await fetch("/Blog/2024-6-18/untamed-heart-X-area-zero-4.mid")
+	smfBuffer = await response.arrayBuffer()
+})();
+
+JSSynth.waitForReady().then(loadSynthesizer);
+
+async function loadSynthesizer() {
+	context = new AudioContext();
+	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js')
+	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.worklet.min.js');
+	// Create the synthesizer instance for AudioWorkletNode
+	synth = new JSSynth.AudioWorkletNodeSynthesizer();
+	synth.init(context.sampleRate);
+	// You must create AudioWorkletNode before using other methods
+	// (This is because the message port is not available until the
+	// AudioWorkletNode is created)
+	var audioNode = synth.createAudioNode(context);
+	audioNode.connect(context.destination); // or another node...
+	// After node creation, you can use Synthesizer methods
+	await synth.loadSFont(sfontBuffer)
+	await synth.addSMFDataToPlayer(smfBuffer);
+	//let tempelem=document.getElementById('bopmoth')
+	await synth.playPlayer();
+	//tempelem.style.animation="0.63157894736842105263157894736842s step-end infinite bop"
+}
+}
+</script>
+<p>Whenever I notice a vague similarity between two songs, I add them to a list of mashup ideas. I was looking back at old entries in my list, and I saw "Beginning of Tera Raid Battle X Beginning of Untamed Heart". I wrote this entry before hearing the Area Zero theme, and upon reading it again I realized that Area Zero and Untamed Heart might go quite well together. I made a little musical sketch in <a href=https://signal.vercel.app/ target=_blank>Signal</a> of how a mashup of these two songs might sound; I'll probably never finish it, but I hope you enjoy it. If you want to, feel free to take this idea and finish it (credit to me would be appreciated). <a href=untamed-heart-X-area-zero-4.mid>Download midi</a>. The soundfont I used is <a href=https://github.com/denemo/denemo/blob/master/soundfonts/A320U.sf2 target=_blank>A320U.sf2</a>, the default soundfont in Signal midi editor.
+<p>Thank you to <a href=https://www.youtube.com/watch?v=-W9RG4LvL0E&lc=Ugy4NJqX-aZypm6lE_V4AaABAg target=_blank>YouTube@cactusowo1835 for Untamed Heart's chords</a>, and <a href=https://www.youtube.com/watch?v=61_WIElP1Xc target=_blank>bran for the visualizer in his Area Zero cover that shows the chords</a>.
+
+	</article>
+<article>
 			<h1><a href=/Blog/2024-5-22/Ska-Cha-Cha-(Sonic-Rush)-Sega-Mega-Drive-Genesis-and-32X-Cover>Ska Cha Cha (Sonic Rush) Sega Mega Drive/Genesis and 32X Cover</a></h1>
 			<time datetime=2024-05-22 >22 May 2024</time>
 			<script async src=/js/lite-yt-embed.js></script>
@@ -98,13 +145,6 @@ If the forms were publicly available, maybe the open-source community would make
 			<a href=/Blog/2024-4-26/Figma-is-Very-Good tabindex=-1><img src=/Blog/2024-4-26/Figma.svg alt="Figma logo." class="restrictsize fri" style=--w:10rem width=1667 height=2500></a>
 <p><a href=https://www.figma.com target=_blank>Figma</a> is great for designing user interfaces. This is mainly because of its excellent auto-alignment features, which aren't instrusive and are great at guessing what I want. For example, if you copy and immediately paste an object, the copy will be in the same place as the original; if you copy an object in one frame, then click another frame of the same size and paste, the position of the copy will be equivalent to the position of the original on its frame; etc. 
 <p>I love web apps because they can run on any computer and any browser. Figma is a webapp.
-	</article>
-<article>
-			<h1><a href=/Blog/2024-4-26/Google-Office-Suite-can-Replace-MS-Office-for-Most-Use-Cases>Google Office Suite can Replace MS Office for Most Use Cases</a></h1>
-			<time datetime=2024-04-26 >26 April 2024</time>
-			<a href=/Blog/2024-4-26/Google-Office-Suite-can-Replace-MS-Office-for-Most-Use-Cases tabindex=-1><img src=/Blog/2024-4-26/Google_Docs_icon_(2020).svg alt="Google Docs logo." class="restrictsize fri" style=--w:10rem width=64 height=88></a>
-<p>The Google Office Suite is useful for many use cases. You can quickly and easily make presentations with Google Slides. You can write papers with Google Docs.
-<p>There doesn't seem to be a landing page for learning about the suite, so I'll link to <a href=https://en.wikipedia.org/wiki/Google_Docs_Editors target=_blank>Wikipedia's article on Google Docs Editors</a>. It should have a landing page; a good landing page can quickly give someone an overview of a product.
 	</article>
 	<div class=pnav>
 	

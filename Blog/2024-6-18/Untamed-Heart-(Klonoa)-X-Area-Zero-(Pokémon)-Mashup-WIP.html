@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<title>Untamed Heart (Klonoa) X Area Zero (Pokémon) Mashup WIP - Thysbelon</title>
+<meta property="og:title" content="Untamed Heart (Klonoa) X Area Zero (Pokémon) Mashup WIP - Thysbelon">
+<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="color-scheme" content="dark light">
+<meta name=theme-color content=#ff4c60>
+<link rel=stylesheet href=/css/BlogStylesheet.css>
+ 
+
+<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+
+ 
+ 
+
+
+ 
+<!-- to do: og:image property here. make a universal eleventyConfig function to fetch the first image of a post. -->
+</head>
+<body>
+<header>
+<a href="/">
+<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>
+</a>
+</header>
+<nav><ul > 
+
+		<li><a href=/New-Media-Projects/>New Media Projects</a></li>
+<li><a href=/About/>About</a></li>
+<li><a href=/Archive/>Archive</a></li>
+<li><a href=/Portfolio/>Portfolio</a></li>
+<li><a href=/Subscribe/>Subscribe</a></li>
+		<li>
+				<details>
+				<summary>
+				Art
+				</summary>
+				<ul>
+				<li><a href=/Digital-Art/>Digital Art</a></li>
+<li><a href=/Photography/>Photography</a></li>
+<li><a href=/Programs/>Programs</a></li>
+				</ul>
+				</details>
+			</li>
+		
+	
+</ul></nav>
+<main> 
+
+
+<h1 itemprop=headline>Untamed Heart (Klonoa) X Area Zero (Pokémon) Mashup WIP</h1>
+<time itemprop=datePublished datetime=2024-06-18>18 June 2024</time>
+<script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js></script><script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js></script>
+<button id=untamed-heart-area-zero>Play</button>
+<script>
+document.getElementById('untamed-heart-area-zero').addEventListener('click', startUHAZ, {once:true}) // this should activate on keyboard interact as well.
+function startUHAZ(){
+console.log('startjams')
+var sfontBuffer;
+var smfBuffer;
+var context; //context.suspend() and context.resume() can be used to pause and play
+var synth; //this can be used to implement Pause and Play features with synth.stopPlayer() and synth.playPlayer(). Implementing this feature would require changing the loop code from a "while true" loop to a recursive named function.
+(async function(){
+	let response = await fetch('A320U.sf3') // I used the linux program "sf3convert" to compress to sf3.
+	sfontBuffer = await response.arrayBuffer()
+	response = await fetch("untamed-heart-X-area-zero-4.mid")
+	smfBuffer = await response.arrayBuffer()
+})();
+
+JSSynth.waitForReady().then(loadSynthesizer);
+
+async function loadSynthesizer() {
+	context = new AudioContext();
+	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js')
+	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.worklet.min.js');
+	// Create the synthesizer instance for AudioWorkletNode
+	synth = new JSSynth.AudioWorkletNodeSynthesizer();
+	synth.init(context.sampleRate);
+	// You must create AudioWorkletNode before using other methods
+	// (This is because the message port is not available until the
+	// AudioWorkletNode is created)
+	var audioNode = synth.createAudioNode(context);
+	audioNode.connect(context.destination); // or another node...
+	// After node creation, you can use Synthesizer methods
+	await synth.loadSFont(sfontBuffer)
+	await synth.addSMFDataToPlayer(smfBuffer);
+	//let tempelem=document.getElementById('bopmoth')
+	await synth.playPlayer();
+	//tempelem.style.animation="0.63157894736842105263157894736842s step-end infinite bop"
+}
+}
+</script>
+<p>Whenever I notice a vague similarity between two songs, I add them to a list of mashup ideas. I was looking back at old entries in my list, and I saw "Beginning of Tera Raid Battle X Beginning of Untamed Heart". I wrote this entry before hearing the Area Zero theme, and upon reading it again I realized that Area Zero and Untamed Heart might go quite well together. I made a little musical sketch in <a href=https://signal.vercel.app/ target=_blank>Signal</a> of how a mashup of these two songs might sound; I'll probably never finish it, but I hope you enjoy it. If you want to, feel free to take this idea and finish it (credit to me would be appreciated). <a href=untamed-heart-X-area-zero-4.mid>Download midi</a>. The soundfont I used is <a href=https://github.com/denemo/denemo/blob/master/soundfonts/A320U.sf2 target=_blank>A320U.sf2</a>, the default soundfont in Signal midi editor.
+<p>Thank you to <a href=https://www.youtube.com/watch?v=-W9RG4LvL0E&lc=Ugy4NJqX-aZypm6lE_V4AaABAg target=_blank>YouTube@cactusowo1835 for Untamed Heart's chords</a>, and <a href=https://www.youtube.com/watch?v=61_WIElP1Xc target=_blank>bran for the visualizer in his Area Zero cover that shows the chords</a>.
+
+<div class=tags>Tags:<ul>
+	<li><a href=/Tags/Midi rel=tag>Midi</a>
+
+	<li><a href=/Tags/Mashup rel=tag>Mashup</a>
+
+	<li><a href=/Tags/Pokémon rel=tag>Pokémon</a>
+
+	<li><a href=/Tags/Klonoa rel=tag>Klonoa</a>
+</ul></div>
+<div class=tags>Categories:<ul>
+	<li><a href=/Categories/Music rel=category>Music</a>
+</ul></div>
+
+</main>
+<!-- test of afterMain. Related posts will be placed here when they are ready -->
+<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+</body></html>
