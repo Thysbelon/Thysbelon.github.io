@@ -4,11 +4,19 @@
 	<subtitle>My personal blog where I post about whatever interests me.</subtitle>
 	<link href="https://thysbelon.github.io/feed/feed-en.xml" rel="self"/>
 	<link href="https://thysbelon.github.io/"/>
-	<updated>2024-06-19T00:59:36Z</updated>
+	<updated>2024-08-01T03:38:49Z</updated>
 	<id>https://thysbelon.github.io/</id>
 	<author>
 		<name>Thysbelon</name>
 	</author>
+	
+	<entry>
+		<title>Kirby Canvas Curse Music May Be IDM</title>
+		<link href="https://thysbelon.github.io/Blog/2024-7-31/Kirby-Canvas-Curse-Music-May-Be-IDM.html"/>
+		<updated>2024-07-31T00:00:00Z</updated>
+		<id>https://thysbelon.github.io/Blog/2024-7-31/Kirby-Canvas-Curse-Music-May-Be-IDM.html</id>
+		<content type="html">I love the aesthetics of Kirby: Canvas Curse. One might think that a game about travelling into a world of...</content>
+	</entry>
 	
 	<entry>
 		<title>Untamed Heart (Klonoa) X Area Zero (Pokémon) Mashup WIP</title>

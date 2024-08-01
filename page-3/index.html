@@ -52,6 +52,13 @@
 
 
 	<article>
+			<h1><a href=/Blog/2024-4-25/I-Wish-there-was-a-Free-Open-Source-Tool-to-Convert-PDFs-to-Digital-Forms>I Wish there was a Free, Open Source Tool to Convert PDFs to Digital Forms</a></h1>
+			<time datetime=2024-04-25 >25 April 2024</time>
+			<a href=/Blog/2024-4-25/I-Wish-there-was-a-Free-Open-Source-Tool-to-Convert-PDFs-to-Digital-Forms tabindex=-1><img src=/Blog/2024-4-25/PDF_file_icon.svg alt="PDF file icon." class=fri width=267 height=328></a>
+<p>Many non-profit organizations stick to paper records because they don't have the budget to transition to digital. 
+<p>Paper records are like open source software in that anyone can use them without needing to pay for a subscription, or worry about a company shutting down their service. In order for every organization in the world to switch to digital, there needs to be a suite of open source software that can fulfill all their transitional, record-keeping, and data entry needs; only open source software can compete with the ease of paper.
+	</article>
+<article>
 			<h1><a href=/Blog/2024-4-24/Did-You-Know-Styluses-for-Capacitive-Screens-Don't-Have-to-be-Expensive>Did You Know Styluses for Capacitive Screens Don't Have to be Expensive?</a></h1>
 			<time datetime=2024-04-24 >24 April 2024</time>
 			<a href=/Blog/2024-4-24/Did-You-Know-Styluses-for-Capacitive-Screens-Don't-Have-to-be-Expensive tabindex=-1><img src=/Blog/2024-4-24/passive-stylus.jpg alt="Photo of a hand drawing on a tablet with a passive stylus." width=2048 height=1366></a>
@@ -87,53 +94,6 @@ When I do academic research I usually use <a href=https://www.jstor.org target=_
 	<li>Save your workbook
 	<li>Close and reopen Excel. This is necessary because Excel will automatically fill the Find field with whatever was last used, and it is impossible to delete line break characters from the Find field, so Find will be broken until Excel is restarted.
 </ol>
-	</article>
-<article>
-			<h1><a href=/Blog/2024-4-14/Peepy's-Secret-Midi-(Almost-Finished)>Peepy's Secret Midi (Almost Finished)</a></h1>
-			<time datetime=2024-04-14 >14 April 2024</time>
-			<script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js></script><script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js></script>
-<button id=peepys-secret>Play</button>
-<script>
-document.getElementById('peepys-secret').addEventListener('click', startPeepysSecret, {once:true}) // this should activate on keyboard interact as well.
-function startPeepysSecret(){
-console.log('startjams')
-var sfontBuffer;
-var smfBuffer;
-var context; //context.suspend() and context.resume() can be used to pause and play
-var synth; //this can be used to implement Pause and Play features with synth.stopPlayer() and synth.playPlayer(). Implementing this feature would require changing the loop code from a "while true" loop to a recursive named function.
-(async function(){
-	let response = await fetch('/Blog/2024-4-14/TimGM6mb.sf3') // I used the linux program "sf3convert" to compress to sf3.
-	sfontBuffer = await response.arrayBuffer()
-	response = await fetch("/Blog/2024-4-14/peepy's-secret-almost-finished.mid")
-	smfBuffer = await response.arrayBuffer()
-})();
-
-JSSynth.waitForReady().then(loadSynthesizer);
-
-async function loadSynthesizer() {
-	context = new AudioContext();
-	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js')
-	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.worklet.min.js');
-	// Create the synthesizer instance for AudioWorkletNode
-	synth = new JSSynth.AudioWorkletNodeSynthesizer();
-	synth.init(context.sampleRate);
-	// You must create AudioWorkletNode before using other methods
-	// (This is because the message port is not available until the
-	// AudioWorkletNode is created)
-	var audioNode = synth.createAudioNode(context);
-	audioNode.connect(context.destination); // or another node...
-	// After node creation, you can use Synthesizer methods
-	await synth.loadSFont(sfontBuffer)
-	await synth.addSMFDataToPlayer(smfBuffer);
-	//let tempelem=document.getElementById('bopmoth')
-	await synth.playPlayer();
-	//tempelem.style.animation="0.63157894736842105263157894736842s step-end infinite bop"
-}
-}
-</script>
-<p>Emamouse's songs for ItemLabel use a lot of complex harmonies that remind me of the classical piano music I've been playing lately. The song "Peepy's Secret" has a lot of buzzing sound effects that make the song trippy and surreal, but it also makes the notes a little hard to hear; so to understand the song better, I decided to transcribe a midi version of it. I didn't finish transcribing the end of the song because I was getting a bit tired, but I hope you still find my midi useful. Feel free to download this <a href="peepy's-secret-almost-finished.mid">Peepy's Secret midi</a> and adapt it into sheet music or reference it for covers (credit to me would be appreciated).
-<p>This transcription would not have been possible without <a href=https://vocalremover.org/splitter-ai target=_blank>this stem splitter AI</a> and <a href=https://www.hooktheory.com/theorytab/view/emamouse/peepys-secret target=_blank>this transcription of the chords and melody of the verse and chorus by mathyfurret</a>. If you plan on finishing this midi, please <a href=https://www.mediafire.com/file/hvy6r0pb95xl8ot/20210926_Peepy%2527s_Secret%255Brebalanced%255D.7z/file target=_blank>download the stems I split with the AI</a>.
-<p>As I was writing this post, I just realized that the entire time I was transcribing the song, I accidently had all the stems set to a bass-boosted EQ. <a href=/Blog/2024-4-14/Peepy's-Secret-Midi-(Almost-Finished) tabindex=-1><img src=/emoji/😅.svg alt=😅></a>
 	</article>
 	<div class=pnav>
 	<a class="btnlink fli" href=/page-2/>Newer Posts</a>
