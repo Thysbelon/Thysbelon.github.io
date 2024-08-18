@@ -4,7 +4,7 @@
 	<subtitle>My personal blog where I post about whatever interests me.</subtitle>
 	<link href="https://thysbelon.github.io/feed/feed-en.xml" rel="self"/>
 	<link href="https://thysbelon.github.io/"/>
-	<updated>2024-08-01T03:38:49Z</updated>
+	<updated>2024-08-18T00:49:42Z</updated>
 	<id>https://thysbelon.github.io/</id>
 	<author>
 		<name>Thysbelon</name>
@@ -367,7 +367,7 @@
 		<link href="https://thysbelon.github.io/Blog/2022-11-4/How-to-Convert-from-WebP-or-SVG-to-Formats-like-PNG-and-GIF.html"/>
 		<updated>2022-11-04T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-11-4/How-to-Convert-from-WebP-or-SVG-to-Formats-like-PNG-and-GIF.html</id>
-		<content type="html">Online Converters: webp WebUtils (webp/avif to png/jpeg, animation not supported, files converted in bulk but downloaded one at a time) WebPtoPNG (animation not...</content>
+		<content type="html">Online Converters: WebpSvg2common. This is a webapp that I created on August 16th 2024. It supports WebP (both static and animated)...</content>
 	</entry>
 	
 	<entry>

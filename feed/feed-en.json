@@ -366,7 +366,7 @@
 			"id": "https://thysbelon.github.io/Blog/2022-11-4/How-to-Convert-from-WebP-or-SVG-to-Formats-like-PNG-and-GIF.html",
 			"url": "https://thysbelon.github.io/Blog/2022-11-4/How-to-Convert-from-WebP-or-SVG-to-Formats-like-PNG-and-GIF.html",
 			"title": "How to Convert from WebP or SVG to Formats like PNG and GIF",
-			"content_html": "Online Converters: webp WebUtils (webp/avif to png/jpeg, animation not supported, files converted in bulk but downloaded one at a time) WebPtoPNG (animation not...",
+			"content_html": "Online Converters: WebpSvg2common. This is a webapp that I created on August 16th 2024. It supports WebP (both static and animated)...",
 			"date_published": "2022-11-04T00:00:00Z"
 		}
 		,
