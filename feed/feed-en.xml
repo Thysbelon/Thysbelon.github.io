@@ -4,11 +4,19 @@
 	<subtitle>My personal blog where I post about whatever interests me.</subtitle>
 	<link href="https://thysbelon.github.io/feed/feed-en.xml" rel="self"/>
 	<link href="https://thysbelon.github.io/"/>
-	<updated>2024-08-18T00:49:42Z</updated>
+	<updated>2024-08-30T23:28:34Z</updated>
 	<id>https://thysbelon.github.io/</id>
 	<author>
 		<name>Thysbelon</name>
 	</author>
+	
+	<entry>
+		<title>You Can Use FamiStudio to Make High Quality Rips</title>
+		<link href="https://thysbelon.github.io/Blog/2024-8-30/You-Can-Use-FamiStudio-to-Make-High-Quality-Rips.html"/>
+		<updated>2024-08-30T00:00:00Z</updated>
+		<id>https://thysbelon.github.io/Blog/2024-8-30/You-Can-Use-FamiStudio-to-Make-High-Quality-Rips.html</id>
+		<content type="html">Many guides on how to create SiIvagunner-style &quot;high quality rips&quot; for Famicom/NES games state to use FamiTracker. A &quot;tracker&quot; is...</content>
+	</entry>
 	
 	<entry>
 		<title>Kirby Canvas Curse Music May Be IDM</title>
