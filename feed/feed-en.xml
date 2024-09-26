@@ -4,11 +4,19 @@
 	<subtitle>My personal blog where I post about whatever interests me.</subtitle>
 	<link href="https://thysbelon.github.io/feed/feed-en.xml" rel="self"/>
 	<link href="https://thysbelon.github.io/"/>
-	<updated>2024-08-30T23:28:34Z</updated>
+	<updated>2024-09-26T02:30:17Z</updated>
 	<id>https://thysbelon.github.io/</id>
 	<author>
 		<name>Thysbelon</name>
 	</author>
+	
+	<entry>
+		<title>My Attempts to Improve GBA Music Romhacking and SiIva-Style &quot;Ripping&quot;</title>
+		<link href="https://thysbelon.github.io/Blog/2024-9-24/My-Attempts-to-Improve-GBA-Music-Romhacking-and-SiIva-Style-Ripping.html"/>
+		<updated>2024-09-24T00:00:00Z</updated>
+		<id>https://thysbelon.github.io/Blog/2024-9-24/My-Attempts-to-Improve-GBA-Music-Romhacking-and-SiIva-Style-Ripping.html</id>
+		<content type="html">(Whenever I talk about &quot;ripping&quot; in the below post, I am referring to a style of mashup made popular by...</content>
+	</entry>
 	
 	<entry>
 		<title>You Can Use FamiStudio to Make High Quality Rips</title>
