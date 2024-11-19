@@ -73,9 +73,7 @@
 <dt><code>-rc</code></dt>
 	<dd>Rearranges the channels of the output midi in order to avoid channel 10, which midi synthesizers read as the percussion channel. Some synthesizers will respect the midi file's request to treat channel 10 as an ordinary tone channel, but some like fluidsynth do not, so <code>-rc</code> is necessary for these cases.</dd>
 <dt><code>-raw</code></dt>
-	<dd>A mode that focuses more on dumping raw GBA sequence data than sounding like the original. Using <code>-raw</code> is most useful for people who plan on injecting their edited midi back into the game.
-	<br>Even though the non-raw mode is meant to *sound* like the original, there are some bugs in the code that prevent it from accomplishing this; my focus for this release was to improve GBA_Mus_Ripper as a tool for editing and injecting music into GBA games, so I didn't try to improve the non-raw mode, but I will look into improving it in a future version.
-	<br>Because I did my best to make <code>-raw</code> mode sound accurate for this release, I recommend that everyone use the <code>-raw</code> mode. Currently, the only downside of <code>-raw</code> mode is that volume levels will sound different than on GBA, but I'll try to fix this in the future.</dd>
+	<dd>A mode that focuses on dumping raw GBA sequence data. Using <code>-raw</code> is most useful for people who plan on injecting their edited midi back into the game, but I recommend that all users use it because I've updated this mode to sound as accurate to real hardware as possible.
 <dt><code>-xg</code></dt>
 	<dd>May not be necessary, but I've never tested the program without it, and I don't think it has any downsides. <code>-xg</code> tells the program to use the extended general midi standard when outputting midis.</dd>
 </dl>
