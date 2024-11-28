@@ -4,11 +4,19 @@
 	<subtitle>My personal blog where I post about whatever interests me.</subtitle>
 	<link href="https://thysbelon.github.io/feed/feed-en.xml" rel="self"/>
 	<link href="https://thysbelon.github.io/"/>
-	<updated>2024-11-19T02:31:34Z</updated>
+	<updated>2024-11-28T00:55:16Z</updated>
 	<id>https://thysbelon.github.io/</id>
 	<author>
 		<name>Thysbelon</name>
 	</author>
+	
+	<entry>
+		<title>I Tried to Improve Nintendo DS Music Romhacking</title>
+		<link href="https://thysbelon.github.io/Blog/2024-11-27/I-Tried-to-Improve-Nintendo-DS-Music-Romhacking.html"/>
+		<updated>2024-11-27T00:00:00Z</updated>
+		<id>https://thysbelon.github.io/Blog/2024-11-27/I-Tried-to-Improve-Nintendo-DS-Music-Romhacking.html</id>
+		<content type="html">Hello! Over the last two months, I spent a lot of time improving my fork of GBA_Mus_Ripper. I fixed bugs,...</content>
+	</entry>
 	
 	<entry>
 		<title>My Attempts to Improve GBA Music Romhacking and SiIva-Style &quot;Ripping&quot;</title>

@@ -11,6 +11,14 @@
 	},
 	"items": [
 		{
+			"id": "https://thysbelon.github.io/Blog/2024-11-27/I-Tried-to-Improve-Nintendo-DS-Music-Romhacking.html",
+			"url": "https://thysbelon.github.io/Blog/2024-11-27/I-Tried-to-Improve-Nintendo-DS-Music-Romhacking.html",
+			"title": "I Tried to Improve Nintendo DS Music Romhacking",
+			"content_html": "Hello! Over the last two months, I spent a lot of time improving my fork of GBA_Mus_Ripper. I fixed bugs,...",
+			"date_published": "2024-11-27T00:00:00Z"
+		}
+		,
+		{
 			"id": "https://thysbelon.github.io/Blog/2024-9-24/My-Attempts-to-Improve-GBA-Music-Romhacking-and-SiIva-Style-Ripping.html",
 			"url": "https://thysbelon.github.io/Blog/2024-9-24/My-Attempts-to-Improve-GBA-Music-Romhacking-and-SiIva-Style-Ripping.html",
 			"title": "My Attempts to Improve GBA Music Romhacking and SiIva-Style &quot;Ripping&quot;",
