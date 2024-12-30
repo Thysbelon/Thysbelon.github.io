@@ -51,6 +51,15 @@
 
 
 	<article>
+			<h1><a href=/Blog/2024-12-30/Yule-Log-Layer-Cake-(Yule-Stump)-Recipe>Yule Log Layer Cake (Yule Stump) Recipe</a></h1>
+			<time datetime=2024-12-30 >30 December 2024</time>
+			<a href=/Blog/2024-12-30/Yule-Log-Layer-Cake-(Yule-Stump)-Recipe tabindex=-1><img src=/Blog/2024-12-30/yule-stump.webp alt="A cake coated in ganache with vertical lines down the side, and topped with chopped walnuts."></a>
+<p>Hello!
+<p>I enjoyed my Christmas. I took a little break from programming to spend time with family, and bake sweets!
+<p>This year, I wanted to bake a Yule Log, but the whole rolling process felt too fussy, and I wanted the sponge cake and whipped cream filling to be more flavorful without just turning it into a chocolate cake.
+<br>So I decided to take a <a href=https://sallysbakingaddiction.com/buche-de-noel-yule-log/ target=_blank>standard Yule Log recipe from Sally's Baking Addiction</a> and modify it! I added cinnamon and nutmeg to the...
+	</article>
+<article>
 			<h1><a href=/Blog/2024-11-27/I-Tried-to-Improve-Nintendo-DS-Music-Romhacking>I Tried to Improve Nintendo DS Music Romhacking</a></h1>
 			<time datetime=2024-11-27 >27 November 2024</time>
 			<p>Hello! Over the last two months, I spent a lot of time improving <a href=https://thysbelon.github.io/Blog/2024-9-24/My-Attempts-to-Improve-GBA-Music-Romhacking-and-SiIva-Style-Ripping>my fork of GBA_Mus_Ripper</a>. I fixed bugs, made the outputted midi and sf2 sound more accurate to the GBA, made it compatible with more GBA games, and updated the documentation.
@@ -82,53 +91,6 @@
 <br>I haven't heard much music like it (though I don't often go out of my way to listen to new music). However, there's one song I've heard that strongly reminds me of Canvas Curse's music: <a href=https://patriciataxxon.bandcamp.com/track/techdog target=_blank>TECHDOG by Patricia Taxxon</a> from the album <a href=https://patriciataxxon.bandcamp.com/album/techdog-1 target=_blank>TECHDOG 1</a>. TECHDOG is very different from Canvas Curse music, it's much more atonal for example, but the instruments have that tinniness and wetness. Patricia Taxxon is very good at making intricate and lovely soundscapes.
 <br>TECHDOG 1 is tagged as "IDM" and "Glitch" on Bandcamp. Maybe the Canvas Curse soundtrack can also be described as IDM? Most of Canvas Curse's music doesn't fall into the Glitch genre, except for Drawcia Soul.
 <p>I hope you enjoyed reading this post. I recommend <a href=https://patriciataxxon.bandcamp.com/album/techdog-1-7 target=_blank>listening to the TECHDOG anthology</a>, it's very good. Have a nice day <a href=/Blog/2024-7-31/Kirby-Canvas-Curse-Music-May-Be-IDM tabindex=-1><img src=/emoji/😃.svg alt="😃"></a>.
-
-	</article>
-<article>
-			<h1><a href=/Blog/2024-6-18/Untamed-Heart-(Klonoa)-X-Area-Zero-(Pokémon)-Mashup-WIP>Untamed Heart (Klonoa) X Area Zero (Pokémon) Mashup WIP</a></h1>
-			<time datetime=2024-06-18 >18 June 2024</time>
-			<script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js></script><script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js></script>
-<button id=untamed-heart-area-zero>Play</button>
-<script>
-document.getElementById('untamed-heart-area-zero').addEventListener('click', startUHAZ, {once:true}) // this should activate on keyboard interact as well.
-function startUHAZ(){
-console.log('startjams')
-var sfontBuffer;
-var smfBuffer;
-var context; //context.suspend() and context.resume() can be used to pause and play
-var synth; //this can be used to implement Pause and Play features with synth.stopPlayer() and synth.playPlayer(). Implementing this feature would require changing the loop code from a "while true" loop to a recursive named function.
-(async function(){
-	let response = await fetch('/Blog/2024-6-18/A320U.sf3') // I used the linux program "sf3convert" to compress to sf3.
-	sfontBuffer = await response.arrayBuffer()
-	response = await fetch("/Blog/2024-6-18/untamed-heart-X-area-zero-4.mid")
-	smfBuffer = await response.arrayBuffer()
-})();
-
-JSSynth.waitForReady().then(loadSynthesizer);
-
-async function loadSynthesizer() {
-	context = new AudioContext();
-	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js')
-	await context.audioWorklet.addModule('https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.worklet.min.js');
-	// Create the synthesizer instance for AudioWorkletNode
-	synth = new JSSynth.AudioWorkletNodeSynthesizer();
-	synth.init(context.sampleRate);
-	// You must create AudioWorkletNode before using other methods
-	// (This is because the message port is not available until the
-	// AudioWorkletNode is created)
-	var audioNode = synth.createAudioNode(context);
-	audioNode.connect(context.destination); // or another node...
-	// After node creation, you can use Synthesizer methods
-	await synth.loadSFont(sfontBuffer)
-	await synth.addSMFDataToPlayer(smfBuffer);
-	//let tempelem=document.getElementById('bopmoth')
-	await synth.playPlayer();
-	//tempelem.style.animation="0.63157894736842105263157894736842s step-end infinite bop"
-}
-}
-</script>
-<p>Whenever I notice a vague similarity between two songs, I add them to a list of mashup ideas. I was looking back at old entries in my list, and I saw "Beginning of Tera Raid Battle X Beginning of Untamed Heart". I wrote this entry before hearing the Area Zero theme, and upon reading it again I realized that Area Zero and Untamed Heart might go quite well together. I made a little musical sketch in <a href=https://signal.vercel.app/ target=_blank>Signal</a> of how a mashup of these two songs might sound; I'll probably never finish it, but I hope you enjoy it. If you want to, feel free to take this idea and finish it (credit to me would be appreciated). <a href=untamed-heart-X-area-zero-4.mid>Download midi</a>. The soundfont I used is <a href=https://github.com/denemo/denemo/blob/master/soundfonts/A320U.sf2 target=_blank>A320U.sf2</a>, the default soundfont in Signal midi editor.
-<p>Thank you to <a href=https://www.youtube.com/watch?v=-W9RG4LvL0E&lc=Ugy4NJqX-aZypm6lE_V4AaABAg target=_blank>YouTube@cactusowo1835 for Untamed Heart's chords</a>, and <a href=https://www.youtube.com/watch?v=61_WIElP1Xc target=_blank>bran for the visualizer in his Area Zero cover that shows the chords</a>.
 
 	</article>
 	<div class=pnav>

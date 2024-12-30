@@ -4,11 +4,19 @@
 	<subtitle>My personal blog where I post about whatever interests me.</subtitle>
 	<link href="https://thysbelon.github.io/feed/feed-en.xml" rel="self"/>
 	<link href="https://thysbelon.github.io/"/>
-	<updated>2024-12-21T03:00:49Z</updated>
+	<updated>2024-12-30T19:43:27Z</updated>
 	<id>https://thysbelon.github.io/</id>
 	<author>
 		<name>Thysbelon</name>
 	</author>
+	
+	<entry>
+		<title>Yule Log Layer Cake (Yule Stump) Recipe</title>
+		<link href="https://thysbelon.github.io/Blog/2024-12-30/Yule-Log-Layer-Cake-(Yule-Stump)-Recipe.html"/>
+		<updated>2024-12-30T00:00:00Z</updated>
+		<id>https://thysbelon.github.io/Blog/2024-12-30/Yule-Log-Layer-Cake-(Yule-Stump)-Recipe.html</id>
+		<content type="html">Hello! I enjoyed my Christmas. I took a little break from programming to spend time with family, and bake sweets! This year,...</content>
+	</entry>
 	
 	<entry>
 		<title>I Tried to Improve Nintendo DS Music Romhacking</title>
