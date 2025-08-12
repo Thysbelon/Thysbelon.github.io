@@ -1,0 +1,19 @@
+---
+tags:
+ - Mashup
+ - Game Boy
+ - Midi
+categories:
+ - Music
+ - Video Game
+short: true
+---
+<p>It always seemed strange to me that the most popular way for music mashup artists to modify Game Boy music is to import it into FamiTracker, a program that is designed for Famicom music, <em>not</em> Game Boy music!
+<p>At first, I considered just modifying the program that people were already using, as I have done many times in the past. I noticed that this program converted Game Boy APU register writes into FamiTracker commands; but the fact that it just converted right from one format to another, and the fact that the Game Boy registers were unlabeled in the code, would have made it difficult to modify.
+<p>So I decided to make my own program, to convert Game Boy APU register writes into an editable format.
+<p>At first, I converted the Game Boy music into Furnace tracker files, because Furnace already has a Game Boy sound synthesis engine.
+<p>However, after I finished the program, I realized that a tracker format was a suboptimal format to convert to.
+<p>In order to be easy to work with, a tracker file shouldn't play any faster than 60 rows per second; but many Game Boy songs have effects happening faster than 60 times a second. This made songs sound very inaccurate after being converted.
+<p>In order to convert the songs accurately, I had to use midi. Thus, I created <a href=https://github.com/Thysbelon/gbs2midi>gbs2midi</a>.
+<p>And, in order to synthesize the midi, I created <a href=https://thysbelon.github.io/Nelly-GB-synth/>Nelly GB</a>.
+<p>I hope you find my programs useful. <img src=/emoji/😊.svg alt=😊>
