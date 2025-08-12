@@ -4,11 +4,19 @@
 	<subtitle>My personal blog where I post about whatever interests me.</subtitle>
 	<link href="https://thysbelon.github.io/feed/feed-en.xml" rel="self"/>
 	<link href="https://thysbelon.github.io/"/>
-	<updated>2025-01-04T22:50:16Z</updated>
+	<updated>2025-08-12T19:47:29Z</updated>
 	<id>https://thysbelon.github.io/</id>
 	<author>
 		<name>Thysbelon</name>
 	</author>
+	
+	<entry>
+		<title>Perfecting the Modification of Game Boy Music</title>
+		<link href="https://thysbelon.github.io/Blog/2025-8-12/Perfecting-the-Modification-of-Game-Boy-Music.html"/>
+		<updated>2025-08-12T00:00:00Z</updated>
+		<id>https://thysbelon.github.io/Blog/2025-8-12/Perfecting-the-Modification-of-Game-Boy-Music.html</id>
+		<content type="html">It always seemed strange to me that the most popular way for music mashup artists to modify Game Boy music...</content>
+	</entry>
 	
 	<entry>
 		<title>Yule Log Layer Cake (Yule Stump) Recipe</title>
