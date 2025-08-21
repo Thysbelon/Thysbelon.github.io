@@ -28,21 +28,21 @@ function displayImage(modalImg, modal, elem) {
 		modalImg.style.removeProperty('width'); 
 		modalImg.style.height="100%"
 	}
-	modal.style.display="flex"
 	modal.showModal()
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+	console.log('DOMContentLoaded event listener ran.');
 	//if (phone) {return} // turn off script for mobile, the modals are not useful there.
-	let elementsArray = document.querySelectorAll(".gallery img, section > img");
-	document.querySelector("nav").outerHTML+="<dialog id=imgmodal><img></dialog>"
+	let elementsArray = document.querySelectorAll(".image-gallery img");
+	const mainElem = document.querySelector("main");
+	mainElem.insertAdjacentHTML("beforebegin", "<dialog id=imgmodal><img></dialog>");
 	var modal = document.getElementById("imgmodal");
 	var modalImg = document.querySelector("#imgmodal img");
 	modal.addEventListener("click",function(){
 		modal.close()
 	})
 	modal.addEventListener("close",function(){
-		modal.style.removeProperty('display')
 		modalImg.src=''
 		modal.style.removeProperty('aspect-ratio'); 
 		modalImg.style.removeProperty('aspect-ratio'); 
@@ -64,18 +64,24 @@ document.addEventListener('DOMContentLoaded', function() {
 		align-items:center;
 		justify-content:center
 	}
-	.gallery img{
+	#imgmodal[open]{
+		display:flex;
+	}
+	.image-gallery img{
 		cursor:pointer
 	}
-	.gallery img,.gallery>div{
-		transition-duration:.4s
+	.image-gallery > div, .image-gallery > figure, .image-gallery > img{
+		transition-duration:.4s;
+		transition-property: border-color;
 	}
-	.gallery>img:hover, .gallery>img:focus-visible, .gallery>div:has(img:hover), .gallery>div:has(img:focus-visible){
-		border-color:var(--pink)
+	.image-gallery > img:hover, .image-gallery > img:focus-visible, .image-gallery > div:has(img:hover), .image-gallery > div:has(img:focus-visible), .image-gallery > figure:has(img:hover), .image-gallery > figure:has(img:focus-visible){
+		border-color: var(--pink);
 	}
 	#imgmodal img {
 		background-color:white;
 		height:100%
+		display:block;
+		max-width:100%;
 	}
 	dialog{
 		background-color:white;
