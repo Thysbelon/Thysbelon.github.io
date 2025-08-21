@@ -168,11 +168,15 @@ h1 + time, article time {
 }
 button,a{
 	transition-duration:.4s;
-	transition-property: background-color, color; /* the transition-duration of .4s will only apply to these two properties */
 }
 button:active,a:active {
 	transition-duration:.1s;
-	transition-property: background-color, color;
+}
+a {
+	transition-property: color;
+}
+button, a.btnlink, header + nav > ul > li > a, button:active,a.btnlink:active{
+	transition-property: background-color, color; /* the transition-duration of .4s will only apply to these two properties */
 }
 a:hover, a:focus-visible {
 	color:var(--pink);
