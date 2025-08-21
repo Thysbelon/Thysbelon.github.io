@@ -20,7 +20,6 @@ render(data) {
 //	</a>`).join('\n') }
 //</ul>`;
 //sortedPosts=data.collections.posts.toSorted() // I want posts to be sorted by initial upload date, not when they were last updated.
-// TODO: use postsInComputedDateOrder collection
 return this.generateArchiveHTMLfromCollection(data.collections.enPostsInComputedDateOrder)
 }
 }

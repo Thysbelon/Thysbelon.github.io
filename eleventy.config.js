@@ -185,7 +185,7 @@ module.exports = function(eleventyConfig) {
 		//		<p>${ eleventyConfig.javascriptFunctions.makeExcerpt(post.content, 20).replaceAll("</p><p>"," ").replace(/(<([^>]+)>)/gi, "")/*remove HTML*/ }</p>
 		//	</a>`).join('\n') }
 		//</ul>`;
-		return `<ul class="gallery padt fullwidth">
+		return `<ul class="post-gallery fullwidth">
 			${ collection.map(post =>
 				`<li><a href="${post.url.replace(/\.html$/, '')}">
 				${ post.data.customHeader ? post.data.customHeader : (post.data.title ? post.data.title : eleventyConfig.javascriptFunctions.titleFromURL(post.url)) }<br>

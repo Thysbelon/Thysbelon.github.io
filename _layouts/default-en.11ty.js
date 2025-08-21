@@ -41,6 +41,7 @@ function generateToCmarkup(content /*data.content*/){
 		<summary>
 			Contents
 		</summary>
+		<span id=toc-top><a href=#>Top</a></span>
 		<ol>`
 	for (let i=0, l=headArray.length; i<l; i++) {
 		switch (headArray[i]?.name) {

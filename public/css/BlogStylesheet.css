@@ -1,55 +1,45 @@
-/*@font-face {
-	font-family:space;
-	src: local('Verdana');
-	unicode-range: U+20;
-}*/
+/* TODO: refactor the entire stylesheet */
 @font-face {
-	font-family:Compagnon2;
+	font-family:Compagnon-JP;
 	font-style:normal;
 	unicode-range:U+0041—007A;
-	/*font-display:fallback; causes layout shift issues */
-	font-display:optional; /* "font-display: optional can avoid a re-layout as the web font is only used if it is available by the time of initial layout." */
+	font-display:fallback; /*causes layout shift issues*/
+	/*font-display:optional; /* "font-display: optional can avoid a re-layout as the web font is only used if it is available by the time of initial layout." */
 	src:url(/font/Compagnon-Roman.woff2);
 }
 @font-face {
 	font-family:Kaisei Decol;
 	font-weight:bold;
 	unicode-range:U+3041—309F;
-	font-display:optional;
+	font-display:fallback; /*with optional, sometimes the font fails to load when the page loads instantly*/
 	src:url(/font/kaisei-decol-japanese.woff2);
 }
-/*@font-face {
-	font-family:Compagnon2;
-	font-weight:900;
-	unicode-range:U+0041—007A;
-	src:url(Compagnon-Roman.woff2);
-}*/
 @font-face {
 	font-family:Compagnon;
 	font-style:italic;
 	font-weight:900;
-	font-display:optional;
+	font-display:fallback;
 	src:url(/font/Compagnon-Italic-bold-thinSpace2.woff2);
 }
 @font-face {
 	font-family:Compagnon;
 	font-style:normal;
 	font-weight:normal;
-	font-display:optional;
+	font-display:fallback;
 	src:url(/font/Compagnon-Roman.woff2);
 }
 @font-face {
-	font-family:Kiwi Maru;
+	font-family:Kiwi Maru JP;
 	font-style:normal;
 	unicode-range:U+3041—309F;
-	font-display:optional;
+	font-display:fallback;
 	src:url(/font/kiwi-maru-japanese.woff2);
 }
 @font-face {
-	font-family:Kiwi-Maru;
+	font-family:Kiwi Maru EN;
 	font-style:normal;
 	/*unicode-range:U+0041—007A;*/
-	font-display:optional;
+	font-display:fallback;
 	src:url(/font/KiwiMaru-en-ext3.woff2);
 }
 :root {
@@ -59,12 +49,16 @@
 	--blue:#0165FF;
 	--robin:#01a6ff;
 	--link:var(--blue);
+	--reverse-bg-link:var(--robin);
 	--bg:var(--sky);
 	--txt:var(--purple);
 }
 ::selection {
 	background-color:var(--pink);
 	color:var(--bg);
+}
+html {
+	scrollbar-color:var(--pink) var(--txt);
 }
 @media screen and (forced-colors: none) {
 	::-webkit-scrollbar {
@@ -88,577 +82,372 @@
 		background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%2340006B'><line x1='0' y1='0' x2='100' y2='0' style='stroke:rgb(73,0,120);stroke-width:16'></line><line x1='0' y1='50' x2='100' y2='50' style='stroke:rgb(73,0,120);stroke-width:10'></line><line x1='0' y1='100' x2='100' y2='100' style='stroke:rgb(73,0,120);stroke-width:16'></line></svg>");
 	}
 }
-/*@media screen and (forced-colors: active) {
-
-}*/
 
 body {
 	background-color:var(--bg);
 	color:var(--txt);
 	margin:0;
-	min-height:100vh;
+	min-height:100svh;
 	position:relative;
-	font-family:Kiwi Maru,American Typewriter,Hiragino Maru Gothic Pro,Arial Rounded MT,UD Digi Kyokasho N-B;
+	font-family:Kiwi Maru JP,American Typewriter,Hiragino Maru Gothic Pro,Arial Rounded MT,UD Digi Kyokasho N-B;
 	overflow-x:clip;
-	/* may 29 2024 */
-	/*position: relative;*/
-	width:100vi;
-	max-width:100vi;
+	width:100vw;
+	
+	/* properties that I want all elements to inherit */
+	text-decoration-thickness:from-font;
+	text-underline-position:from-font;
+	font-size: 1.3rem; /* font size of body text. Other text will have a small size of 1 rem. Value here is in rem because, even though default rem and em are usually the same size, <pre> has a smaller font size by default, so rem is the best way to ensure all text is the same size.*/
 }
-*:lang(en)/* I hope this change didn't break anything */ span:lang(ja){font-family:Kiwi Maru}
-* {text-decoration-thickness:from-font;text-underline-position:from-font}
-button,a{transition-duration:.4s}
-a>*{transition-duration:0s} /* fixes webkit bug (found in Epiphany browser) */
-a>code{transition-duration:.4s}
-button:active,a:active {transition-duration:.1s}
 body:lang(en) {
-	font-family:Kiwi-Maru,American Typewriter,Hiragino Maru Gothic Pro,Arial Rounded MT,UD Digi Kyokasho N-B;
+	font-family:Kiwi Maru EN,American Typewriter,Hiragino Maru Gothic Pro,Arial Rounded MT,UD Digi Kyokasho N-B;
 }
-em:lang(ja) {font-style:normal;font-weight:bold}
-q:lang(en):before {content:"“"} q:lang(en):after {content:"”"} 
-header, header a, header h1 {
-	padding:0;
-	margin:0;
-	display:flex;
-	justify-content:center;
-	align-items:center;
+header, header + nav, main, .pnav {
+	margin-left: auto;
+	margin-right: auto;
+	max-width:50ch; /* optimal line length is 50-75 characters. Because many characters are more narrow than "0", 50ch often ends up with lines that are between 50-75 characters */
+}
+main{
+	/*padding-bottom: 3.5lh;*/
+	/*padding-bottom: 3lh;*/
+	padding-bottom: 1.5lh;
 }
 header {
-	padding-top:2vh;
-	margin-bottom:1vh;
+	display:flex;
+	justify-content: center;
+	max-height:4lh;
+	/*max-height:7lh;*/
+	padding-top:1cap;
+	margin-bottom: 1ex;
+	transition-duration:.4s;
+	transition-property:filter;
+}
+.pnav{
+	position: absolute;
+	bottom: 2em;
+	left:0;
+	right:0;
+	padding:0;
+}
+footer{
+	font-size:.7rem;
+	position:absolute;
+	bottom:1ex;
+	left:1ch;
+	right:1ch;
+	background-color:var(--pink);
+	color:var(--purple);
+}
+header a {
+	display: contents; /* "These elements don't produce a specific box by themselves." */
+	max-height:inherit;
 }
 header img {
-	float:none;
-	width:100%;
-	height:100%;
-	max-width:7rem;
-	flex-basis:7rem;
-	margin:0;
-	background-color:initial;
-}
-#blogtitle {
-	max-width:30rem;
-	flex-basis:30rem;
-	padding-right:0;
-}
-header a, header h1 {
-	max-width:37.5rem;
-	flex-grow:1;
-}
-header a:hover, header a:focus-visible {
-	filter:hue-rotate(-80deg) brightness(58%) contrast(128%);
-}
-header a:active {
-	filter:none;
-}
-nav > ul, nav > ul > li {
-	display:flex;
-}
-nav, nav > ul {
-	text-align:center;
-	justify-content:flex-end;
-	max-width:44rem;
-	margin-left:auto;
-	margin-right:auto;
-	position:relative;
-}
-nav > ul {
-	margin:0;
-	padding:0;
-	list-style-type:none;
-}
-nav > ul > li {
-	margin-left:0.4%;
-	cursor:initial;
-	display:flex;
-}
-nav > ul > li > a, nav details, button, .nxt, .btnlink, button:hover:disabled, button:active:disabled {
-	background-color:var(--txt);
-	border-radius:0.4rem;
-	font-size:clamp(.1rem,3vw,.9rem);
-	padding:.3rem;
-	text-decoration-color:transparent;
-	display:flex;
-	align-items:center;
-	border:.1rem solid transparent; /*for borders in high contrast mode*/
-	/*make sure all navlinks display at any screen size*/
-	align-self:flex-start
-}
-[rel=next]{float:right}
-nav details, button:lang(en), nav li > a:lang(en), .nxt:lang(en), .btnlink:lang(en) {
-	font-weight:bold;
-}
-nav a:hover, button:hover, .nxt:hover, .btnlink:hover, nav a:focus-visible, button:focus-visible, .nxt:focus-visible, .btnlink:focus-visible {
-	background-color:var(--pink);
-	color:white;
-	cursor:pointer;
-}
-nav a:active, button:active, .nxt:active, .btnlink:active {
-	background-color:var(--txt);
-	color:var(--bg);
-}
-nav details ul {
-	list-style-type:none;
-	margin:0;
-	padding:0;
-	text-align:right
-}
-nav details {
-	color:var(--bg);
-	align-self:flex-start;
-}
-nav details ul a{text-decoration-color:transparent}
-nav details /*ul*/ a:hover,nav details /*ul*/ a:focus-visible {
-	background-color:transparent;
-	color:var(--pink)
-}
-.toc {
-	width: fit-content;
-	position: fixed;
-	top: 1rem;
-	right: 1rem;
-	z-index:99;
-}
-.toc, .toc * {
-	text-align: unset;
-}
-.toc summary {
-	text-align: right;
-}
-/* modified from https://stackoverflow.com/a/26245056/20697953 */
-.toc ol {
-  list-style-type: none;
-  counter-reset: item;
-	padding-left:1rem;
-	padding-right:1rem;
-}
-
-.toc ol > li {
-  counter-increment: item;
-}
-
-.toc ol > li:before {
-  content: counters(item, ".") ". ";
-}
-
-.toc li ol > li:before {
-  content: counters(item, ".") " ";
-}
-
-article, section, .tags, .pnav, div.section, main /*new addition Feb 18 2024*/ {
-	margin-left:auto;
-	margin-right:auto;
-	max-width:calc(35rem * 1.3); /*1.3 compensates for the difference between the root font size and p's font size*/
-	padding-bottom:4vh;
-	display:flow-root;
-}
-.fullwidth { /* used to set main (or any arbitrary element) to the full width of the page, and center it. */
-	width:100vi;
-	max-width:100vi;
-	/*https://stackoverflow.com/questions/5581034/is-there-a-way-to-make-a-child-divs-width-wider-than-the-parent-div-using-css*/
-	position: relative;
-  left: calc(-50vw + 50%);
-}
-.no-padding-bottom { /* used to remove the padding-bottom that is set on main by default */
-	padding-bottom:initial;
-}
-section.nospace {
-	padding-bottom:0;
 	display:block;
+	height:100%;
+	width: 100%;
+	max-height: inherit; /* ! */
+	min-width:0; /*webkit fix*/
+	min-height:0;
+	flex-basis:content; /* this doesn't work because the heights of the two images like to change at two different arbitrary rates */
 }
-hr.invisible-pause{ /* This will replace all instances of </section><section> to denote a semantic pause without a header. */
-	opacity:0;
-	height:1rem;
+/* stupid hardcoded flex-basis values. I didn't want to do this but flex-basis:content doesn't work with height:100% */
+header img {
+	flex-basis:9ch; 
 }
-body>article:last-of-type{padding-bottom:10vh}
-.pnav {position:absolute;bottom:2rem;left:0;right:0;padding:0}
-.tags ul, .gallery {
-	margin:0;
-	padding:0;
+header img#blogtitle{
+	flex-basis:32ch;
 }
-.tags ul li, .gallery li {
-	display:inline;
-}
-.tags ul li:not(.tags ul li:last-child)::after {
-	content:" / "
+header:has(a:hover), header:has(a:focus-visible) { /* light */
+	filter:hue-rotate(-80deg) brightness(58%) contrast(128%);
 }
 h1 + time, article time {
 	display:block;
 	text-align:right;
 	width:100%;
+	font-size:1rem;
 }
-.sidebyside {
-	display:flex;
-	flex-wrap:wrap;
+button,a{
+	transition-duration:.4s;
+	transition-property: background-color, color; /* the transition-duration of .4s will only apply to these two properties */
 }
-.sidebyside > section:first-child {
-	margin-right:1vw;
+button:active,a:active {
+	transition-duration:.1s;
+	transition-property: background-color, color;
 }
-.sidebyside > section:last-child {
-	padding-bottom:3rem;
-}
-.sidebyside > section {
-	flex:100px;
-}
-button, button:hover, button:active {
-	font-family:inherit;
-	/*border-style:hidden;*/ /*why did i add this?*/
-}
-h2, /*h2 *,*/ h1, /*h1 * this breaks hover colors,*/ h1 a, h2 a {
-	font-family:Compagnon2,Kaisei Decol,American Typewriter, Hiragino Mincho Pro,Maiandra GD,BIZ UDPMincho;
-	color:var(--pink); 
-	margin-top:1rem;
-	margin-bottom:1rem;
-}
-h2:lang(en), h2 *:lang(en), h1:lang(en), h1 *:lang(en) {
-	font-family:Compagnon,Curlz MT,Forte,Pilgiche,Apple Chancery,Blackadder ITC,Lucida Calligraphy,Segoe Script,Brush Script MT;
-	/*-webkit-text-stroke:0.08rem;*/
-	/*word-spacing:-0.5rem;*/
-	/*font-weight:normal;*/
-	font-style: italic;
-}
-h2:lang(en) i, h2 a:lang(en) i, h1:lang(en) i, h1 a:lang(en) i {
-	font-style: normal;
-}
-h2 a:active, h1 a:active{
+a:hover, a:focus-visible {
 	color:var(--pink);
 }
-h2[itemprop], h1[itemprop], article > h1, article>a:first-child, article>a>h1 {
-	margin-bottom:0;
+a, a:active {
+	color:var(--link)
 }
-.gallery {
-	display:flex;
-	flex-wrap:wrap;
-	justify-content:center;
-}
-.gridlery {
-	display:grid;
-	grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-	gap:1rem
-}
-.siximagegrid {
-	display:grid;
-	gap:1vw;
-	grid-template-columns: auto auto
-}
-.padt {
-	padding-top:1rem;
-}
-.padb {
-	padding-bottom:4vh;
-}
-.fs {
-	align-items:flex-start;
-}
-.gallery, .gallery > li > a > p {
-	font-size:.8rem;
-}
-.gallery > div {
-	flex:200px;
-}
-.gallery > img {
-	flex:170px;
-}
-.gallery article, .gallery article > p, .gallery article > h2 {
-	float:none;
-	margin:0;
-	word-spacing:normal;
-	-webkit-text-stroke:initial;
-	font-weight:bold;
-}
-html:lang(en) .gallery article > p, html:lang(en) .gallery article > h2 {
-	font:bold 0.8rem Kiwi-Maru; /**/
-}
-.gallery article {
-	padding-bottom:0;
-}
-.gallery > li {
-	display:flex;
-	flex:200px;
-}
-.gallery > li > a {
-	padding:0.1rem;
-	color:var(--pink);
-	text-decoration:none;
-	width:100%;
-}
-.gallery > li > a:lang(en) {
-	font-weight:bold;
-}
-.gallery > li > a > p, .gallery > li > a > time /* p and time */ {
-	color:var(--txt);
-	font-weight:initial;
-}
-.gallery > li > a > time {
-	float: right;
-}
-.gallery > li > a:hover, .gallery > li > a:focus-visible {
-	color:var(--pink);
-}
-.gallery>li>a:hover, .gallery>li>a:focus-visible {
-	border-color:var(--pink);
-}
-.gallery img {
-	float:none;
-	margin:0;
-}
-.gallery p {
-	margin:0;
-	margin-top:0.1rem;
-	float:left;
-}
-.gallery div, .gallery > li > a, .gallery > img {
-	margin:0.5rem;
-	margin-top:0;
-	border:solid;
-	border-radius:0.4rem;
-	position:relative;
-	border-color:var(--txt);
-}
-.gridlery div, .gridlery > li > a, .gridlery > img {margin:0;box-sizing:border-box}
-.gallery > div > a {
-	padding:2px;
-	float:right;
-}
-.slideshow {height:80vh;width:80vw;position:relative;margin-left:auto;margin-right:auto;background-color:white;border: solid 2vmax white;border-radius:1rem;}
-.slideshow>*{
-	max-height:100%;
-	float:none;
-	margin:0;
-	visibility: hidden; position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	animation-iteration-count:infinite;
-	animation-play-state: running;
-}
-.threeslides > * {animation-name: threeslideshow; animation-duration:12s;} /*DO NOT USE NUMBERS FOR CLASS NAMES*/
-.threeslides > *:nth-child(2) {animation-delay: 4s}
-.threeslides > *:nth-child(3) {animation-delay: 8s}
-
-@keyframes threeslideshow {
-	0% {visibility: visible; opacity:0}
-	3% {opacity:1}
-	30%{opacity:1}
-	33.33% {visibility: hidden; opacity:0}
-}
-section>details,section>details>summary{margin-bottom:1rem}
-blockquote {
-	margin-left:3vw;
-	margin-right:3vw;
-}
-p {
-	margin-top:0;
-}
-a, button, button:disabled:hover, button:disabled:active, a>code {
-	color:var(--link);
-}
-a:hover, a:focus-visible, a:hover>code {
-	color:var(--txt);
-}
-a:active {
-	color:var(--link);
-}
-a[target="_blank"]::after{
-	content: " [opens in new tab]";
-	position:absolute;
-	left:-9999px
-}
-a.yt {
-	background:url(https://www.youtube.com/s/desktop/cafdf09f/img/favicon_144x144.png) center/4.5rem auto no-repeat, var(--ytimgurl) center/100% no-repeat;
-	display:block;
-	width:100%;
-	max-width:var(--w);
-	aspect-ratio:16/9;
-	/*color:black;
-	-webkit-text-stroke:.9px white;*/
-	font-size:clamp(1rem,4vw,1.5rem)
-}
-a.yt>span{
-	color:white;
-	background-color:#000c;
-}
-a.yt>span::before{
-	content: "YouTube video: ";
-	position:absolute;
-	left:-9999px
-}
-span.nowrap {white-space:nowrap}
-span[title] {text-decoration: underline dotted}
-abbr {
-	text-decoration:none;
-}
-strong, h3, b.color {
+nav.toc a:hover, nav.table-of-contents a:hover, header + nav details a:hover {
 	color: var(--pink);
 }
-.uppercase {
-	text-transform: uppercase;
+nav.toc a, nav.table-of-contents a, header + nav details a, nav.toc a:active, nav.table-of-contents a:active, header + nav details a:active {
+	color: var(--reverse-bg-link);
 }
-h3 {
-	font-size:1.35rem;
+em:lang(ja) {
+	font-style:normal;
+	font-weight:bold
 }
-h3:lang(en) {
+summary{
+	cursor:pointer;
+}
+.tags {
+	font-size:1rem;
+	margin-bottom:1.5lh;
+}
+.tags ul {
+	margin:0;
+	padding:0;
+}
+.tags ul li {
+	display: inline;
+}
+.tags ul li:not(.tags ul li:last-child)::after {
+	content: " / ";
+}
+h1, h2 {
+	color:var(--pink); 
+	font-size: 2rem;
+}
+h1:lang(ja), h2:lang(ja){
+	font-family:Compagnon-JP,Kaisei Decol,American Typewriter, Hiragino Mincho Pro,Maiandra GD,BIZ UDPMincho;
+}
+h2:lang(en), h1:lang(en){
+	font-family:Compagnon,Curlz MT,Forte,Pilgiche,Apple Chancery,Blackadder ITC,Lucida Calligraphy,Segoe Script,Brush Script MT;
 	font-style: italic;
 }
-code {
-	background:black;
-	color:white;
-	padding:.1rem;
-	border-radius:.4rem
+h2:lang(en) i, h1:lang(en) i {
+	font-style: normal;
 }
-footer {
-	bottom:.4rem;
-	position:absolute;
-	background-color:var(--pink);
-	left:.8%;
-	right:.8%;
-	color:var(--purple);
-	font-size:.6rem;
-	min-height:.6rem;
+h1 a:hover, h2 a:hover {
+	color:var(--link);
 }
-footer a, footer a:hover, footer a:active, footer a:focus-visible {
-	color:var(--purple);
+h1 a, h2 a, h1 a:active, h2 a:active {
+	color:inherit; /* make links inside headings be pink like the headings instead of blue */
 }
-img, canvas, video {
+h1:has(+ time) { /* selects a heading element ONLY if it is followed by a time element. */
+	margin-bottom:0;
+}
+article:has(h1 + time) p:first-of-type, main:has(h1 + time) p:first-of-type /*h1 + time + p*/ { /* removes space between the post's body text and the post timestamp */
+	margin-top:0;
+}
+article {
+	margin-bottom:2lh;
+}
+footer a, footer a:hover, footer a:active {
+	color: inherit; /* use the same color as all text in the footer (var(--bg)) */
+}
+header + nav > ul { /* TODO: should the main nav have a unique ID identifying it? */
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	display:flex;
+	justify-content:flex-end;
+	align-items:baseline; /* currently only has an effect on the vib-ribbon theme. */
+}
+header + nav > ul > li {
+	margin-left:0.2rem;
+}
+header + nav > ul > li > a, header + nav > ul > li > details, nav.toc > details, nav.table-of-contents > details, a.button-style-link, a.btnlink, button {
 	display:block;
-	max-width:100%;
-	height:auto;
-	object-fit:contain;
-	min-width:0;
-	min-height:0;
+	font-size:0.9rem;
 	background-color:var(--txt);
+	border-radius:0.4rem;
+	padding:0.3rem;
+	text-decoration-color:transparent;
 	color:var(--bg);
+	border:.1rem solid transparent; /*for borders in high contrast mode*/
+	font-family: inherit; /* buttons don't inherit the body font by default */
 }
-.fri {float:right;margin-left:0.5vw}
-.fli {float:left;margin-right:0.5vw}
-.c, .c * {margin:auto;text-align:center}
-img[src$=".svg"], .trans, video {
-	background-color:initial;
-	color:var(--robin)
+header + nav > ul > li > a:lang(en), header + nav > ul > li > details:lang(en), nav.toc:lang(en), nav.table-of-contents:lang(en), a.button-style-link:lang(en), a.btnlink:lang(en), button:lang(en) {
+	font-weight:bold;
 }
-.restrictsize {
-	max-width:var(--w);
+header + nav > ul > li > a:hover, a.button-style-link:hover, a.btnlink:hover, button:hover {
+	color:var(--bg);
+	background-color:var(--pink);
+}
+header + nav > ul > li > a:active, a.button-style-link:active, a.btnlink:active, button:active {
+	color:var(--bg);
+	background-color:var(--txt);
+}
+header + nav > ul > li summary{
+	text-align: center;
+}
+header + nav > ul > li ul {
+	list-style-type:none;
+	padding:0;
+}
+header + nav > ul > li ul a {
+	text-decoration-color:transparent;
+}
+nav.toc, nav.table-of-contents {
+	position: fixed;
+	top:1rem;
+	right:1rem;
+	z-index:99; /* it's hard to click on it when it's not above everything else */
+}
+nav.toc summary, nav.table-of-contents summary { /* makes sure that the "Contents" text doesn't move when clicked on */
+	text-align: right;
+}
+nav.toc ol, nav.table-of-contents ol {
+	list-style-type: none;
+	counter-reset: section;
+	padding-left: 1.5ch;
+	padding-right: 1.5ch;
+}
+nav.toc ol li, nav.table-of-contents ol li {
+	counter-increment: section;
+}
+nav.toc ol li::before, nav.table-of-contents ol li::before {
+	content: counters(section, ".") ". ";
+}
+nav.toc ol li ol li::before, nav.table-of-contents ol li ol li::before {
+	content: counters(section, ".") " ";
+}
+nav.toc #toc-top {
+	display:block;
+	/*padding-left:1.5ch;*/
+	text-align:center;
+}
+nav.toc #toc-top a {
 	width:100%;
-	--w:403px;
+	display:block;
+}
+main img {
+	max-width:100%; /*TODO: should this be the default for all <img>?*/
+	display:block;
+	height:auto; /* prevents issues with float */
 }
 article img {
-	width:auto;
-	height:100%;
-	max-height:20rem;
+	display:block;
+	width: auto; /*by default, img elements use the absolute length of the src image, not "auto".*/
+	height:auto;
+	max-width: 100%; /* the width must never be any greater than the containing <article> element. In other words: the image must never be wider than the browser window */
+	max-height:11lh;
 	float:right;
-	margin-left:.5vw
+	margin-left:1ch;
 }
-.imageWidth100perc img {
-	width:100%;
-}
-
-.pixl {
-	image-rendering:pixelated;
-	width:100%;
-	object-fit:fill;
-	aspect-ratio:calc(var(--w)*8)/calc(var(--h)*7);
-	--w:nothing;
-	--h:nothing;
-}
-article img.pixl { /* apply properties like these to all .pixl images? */
-	max-width:calc(20rem * calc(var(--w)*8)/calc(var(--h)*7) );
-	max-height:20rem;
-}
-.websitecolor {
-	background-color:initial;
-}
-iframe[title~=Youtube] {
-	width:100%;
-	height:100%;
-	aspect-ratio:16/9;
-	border:none
-}
-figure {
-	margin-inline:3vw
-}
-figure>img,figure>video,figure>iframe{
-	margin:auto
-}
-figure>img+figcaption,figure>video+figcaption,figure>iframe+figcaption{
-	text-align:center
-}
-#pixfriends {
-	display:flex;
-	align-items:flex-end;
+.fri, .float-right-image /*a.btnlink[rel="next"]*/{
 	float:right;
-	margin-left:0.5vw;
+	margin-left:1ch;
+}
+.fli, .float-left-image{
+	float:left;
+	margin-right:1ch;
+}
+.restrictsize, .restrict-size{
+	max-width: var(--w);
 	width:100%;
-	max-width:400px;
+	/*--w: 25rem; /* previous default was 403px. This is 403px in rem if the size of rem is 16px (the default) */
+	--w: 28ch /* equivalent to 403 px if 1 rem = 16px, font-size = 1.3rem */
 }
-#pixfriends img {
-	float:none;
-	margin-left:0;
-	background-color:initial;
-}
-#imgmodal {
-	
-}
-#imgmodal img {
-	
-}
-#modal {
-	position:fixed;
-	z-index:1;
-	display:none;
-	width:100%;
-	height:100%;
-	background-color: rgb(255 255 255 / 50%);
-	top:0;
-	justify-content:center;
-	align-items:center;
-}
-#modal p {
-	position:fixed;
-	bottom:5%;
-	right:10%;
-	color:var(--purple);
-}
-#modal img {
-	width:80%;
-	height:80%;
-	float:none;
-	background-color:white;
-	padding:3%;
-	border-radius:1rem;
-	margin:0;
+.fullwidth, .full-page-width{
+	width: 100svw;
+	/*https://stackoverflow.com/questions/5581034/is-there-a-way-to-make-a-child-divs-width-wider-than-the-parent-div-using-css*/
+	position: relative;
+	left: calc(-50svw + 50%);
 }
 img[src^="/emoji/"]{
 	width:1.2em;
 	height:1.2em;
-	display:inline-block;
+	display:inline;
 	float:none;
 	margin:0;
-	vertical-align:-15%
+	vertical-align:text-bottom;
 }
-summary{cursor:pointer}
-table {
-	border-collapse: collapse;
-	border: 2px solid var(--txt);
-	/*font-size: 0.8rem;*/
+img.pixl, img.pixel, img.pixel-art{
+	image-rendering:pixelated;
+	width:100%;
+	object-fit:fill;
+	aspect-ratio:calc(var(--w)*8)/calc(var(--h)*7); /*TODO: make it possible to alter stretching ratio?*/
+	--w:nothing;
+	--h:nothing;
 }
-th, td {
-	border: 1px solid var(--txt);
-	padding: .7rem .8rem;
+.imageWidth100perc img, .image-width-100-percent img {
+	width:100%;
 }
+.websitecolor { /*light mode. Takes an all black image and recolors it to the text color.*/
+	filter:invert(17%) sepia(26%) saturate(7023%) hue-rotate(266deg) brightness(78%) contrast(128%);
+}
+.image-gallery {
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(18ch,1fr));
+	gap:1ch;
+	align-items:flex-start;
+}
+.image-gallery > div, .image-gallery > figure, .image-gallery > img{
+	border: solid var(--txt);
+	border-radius: 0.4rem;
+	box-sizing:border-box; /*some large images can overflow the grid*/
+	/*
+	transition-duration:.4s;
+	transition-property: border-color;
+	*/
+}
+/*
+.image-gallery > img:hover, .image-gallery > div:has(img:hover), .image-gallery > figure:has(img:hover){
+	border-color: var(--pink);
+}
+*/
+.image-gallery p, .image-gallery figcaption{
+	margin:0;
+}
+.post-gallery {
+	font-size:1rem;
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(25ch,1fr));
+	gap:1ch;
+	list-style-type:none;
+	padding:1ex; /*remove default left padding. make it so full-width post-gallery is not touching the edge of the screen*/
+	box-sizing:border-box;
+}
+.post-gallery > li {
+	border: solid var(--txt);
+	border-radius: 0.4rem;
+	transition-duration:.4s;
+	transition-property: border-color;
+}
+.post-gallery > li { /* post title style */
+	color: var(--pink);
+}
+.post-gallery > li:lang(en) {
+	font-weight:bold;
+}
+.post-gallery > li > a {
+	text-decoration-color:transparent;
+	color:inherit;
+	display:block;
+	width:100%;
+	height:100%;
+	padding:0.5ch; /*add some space between the text and the border*/
+	box-sizing:border-box;
+}
+.post-gallery > li:has(a:hover){
+	border-color: var(--pink);
+}
+.post-gallery > li time, .post-gallery > li p {
+	font-weight: initial;
+	color: var(--txt);
+}
+.post-gallery > li time {
+	width:100%;
+	display:block;
+	text-align:right;
+	/*float:right;*/
+}
+.post-gallery > li p {
+	margin:0;
+	/*clear:left;*/
+}
+
 @media (prefers-color-scheme:dark) /*assuming that this media query will not activate if forced-colors is on*/ {
 	:root {
 		--bg:var(--purple);
 		--txt:var(--sky);
 		--link:var(--robin);
-	}
-	/*nav > ul > li a*/ nav a, button, .btnlink, .nxt {
-		color:var(--blue);
-	}
-	.websitecolor {
-		filter:invert(87%) sepia(98%) saturate(3651%) hue-rotate(173deg) brightness(116%) contrast(103%);
-	}
-	header a:hover, header a:focus-visible {
-		filter:brightness(290%) hue-rotate(-110deg)
+		--reverse-bg-link:var(--blue);
 	}
 	::-webkit-scrollbar-button:vertical:decrement {
 	  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%2340006B'><polygon points='0,50 100,50 50,0'/></svg>");
@@ -666,64 +455,10 @@ th, td {
 	::-webkit-scrollbar-button:vertical:increment {
 	  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%2340006B'><polygon points='0,0 100,0 50,50'/></svg>");
 	}
-}
-@media (prefers-color-scheme:light) {
-	nav /*> ul > li*/ a, button, .btnlink, .nxt {
-		color:white;
-	}
 	.websitecolor {
-		filter:invert(17%) sepia(26%) saturate(7023%) hue-rotate(266deg) brightness(78%) contrast(128%);
+		filter:invert(87%) sepia(98%) saturate(3651%) hue-rotate(173deg) brightness(116%) contrast(103%);
 	}
-}
-html {
-	scrollbar-color:var(--pink) var(--txt);
-}
-@media (orientation: landscape) {
-	/*article, section, .tags, .pnav {
-		max-width:initial;
-		width:46vw
-	}*/
-	body {font-size:1rem}
-	nav > ul > li > a, nav details{align-self:flex-start}
-	h2, h2 a, h1, h1 a {font-size:2rem}
-	p, figcaption, blockquote, pre, section>ul,article>ul,section>ol,article>ol,section>details,section>details>*, main>ul,article>ul,main>ol,article>ol,main>details,main>details>*,.reg-size-text,.thysbelon-lty-title {
-		font-size:1.3rem
+	header:has(a:hover), header:has(a:focus-visible) {
+		filter:brightness(290%) hue-rotate(-110deg)
 	}
-	nav > ul > li > a, nav details, button, .nxt, .btnlink, button:hover:disabled, button:active:disabled {
-		border-radius:0.4rem;
-		font-size:.9rem;
-		padding:.3rem;
-		border:.1rem solid transparent;
-	}
-}
-@media (orientation: portrait) {
-	/*article, section, .tags, .pnav {
-		width:100%;
-		max-width:initial
-	}*/
-	body {font-size:clamp(.8rem,2.5vw,1rem)}
-	h2, h2 a, h1, h1 a {font-size:clamp(1.5rem,5vw,2rem)}
-	h3{font-size:clamp(1.05rem,3vw,1.35rem)}
-	p, figcaption, blockquote, pre, section>ul,article>ul,section>ol,article>ol,section>details,section>details>*, main>ul,article>ul,main>ol,article>ol,main>details,main>details>*,.reg-size-text,.thysbelon-lty-title {
-		font-size:clamp(1rem,3vw,1.3rem)
-	}
-	nav > ul > li > a, nav details, button, .nxt, .btnlink, button:hover:disabled, button:active:disabled {
-		border-radius:clamp(.2rem,1vw,.4rem);
-		font-size:clamp(.1rem,3vw,.9rem);
-		padding:.3rem clamp(.01rem,.2vw,.3rem);
-		border:clamp(.01rem,.2vw,.1rem) solid transparent;
-	}
-	nav details /*ul*/ li {
-		margin:1rem 0;
-	}
-	nav details li:last-of-type {
-		margin-bottom:0;
-	}
-}
-@media (min-width: 1930px) { /*4k television*/
-	article, section, .tags, .pnav, div.section, main {
-		max-width:initial;
-		width:46vw
-	}
-	html {font-size:1vw}
 }

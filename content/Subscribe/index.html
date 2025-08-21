@@ -1,16 +1,17 @@
 ---
 noindex: true
 internalStyle: |
-  .btnlink{
+  a.btnlink{
   	display: inline-block;
   }
   #atom{
-  	background:var(--txt) url('Feed-icon.svg') no-repeat 10%/20%;
+  	background-image:url('Feed-icon.svg');
+  	background-repeat:no-repeat;
+  	background-position-x:10%;
+  	background-position-y:center;
+  	background-size:20%;
   	text-align:right;
   	width:4.4em;
-  }
-  #atom:hover{
-  	background:var(--pink) url('Feed-icon.svg') no-repeat 10%/20%;
   }
 altLang: /購読する/
 ---
