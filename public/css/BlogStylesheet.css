@@ -1,4 +1,3 @@
-/* TODO: refactor the entire stylesheet */
 @font-face {
 	font-family:Compagnon-JP;
 	font-style:normal;
@@ -189,6 +188,19 @@ nav.toc a:hover, nav.table-of-contents a:hover, header + nav details a:hover {
 }
 nav.toc a, nav.table-of-contents a, header + nav details a, nav.toc a:active, nav.table-of-contents a:active, header + nav details a:active {
 	color: var(--reverse-bg-link);
+}
+ins {
+	display: block;
+	text-decoration-color:transparent;
+	border: 0.25ch solid var(--txt);
+	padding: 1ch;
+	margin-bottom:1lh;
+}
+ins::before{
+	content: "Text inserted " attr(datetime, 'at an unknown date') ":";
+}
+ins>p:last-child {
+	margin-bottom:0;
 }
 em:lang(ja) {
 	font-style:normal;
