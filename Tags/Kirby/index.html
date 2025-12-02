@@ -123,24 +123,23 @@ Kirby and the Forgotten Land released last friday, and it's a lot of fun so far.
 }
 @keyframes giffy{
 	0%{object-position:0}
-	46.153%{object-position:calc(-30px * 2)}
-	53.846%{object-position:calc(-60px * 2)}
-	92.307%{object-position:calc(-30px * 2)}
+	46.153%{object-position:calc(-32px * 2)}
+	53.846%{object-position:calc(-64px * 2)}
+	92.307%{object-position:calc(-32px * 2)}
 }
 </style>
 <img src=../chip.gif alt="A gif of a fox droplet." class="trans pixl" style="position:absolute;bottom:.6rem;right:.4rem;width:4rem">
-<div id=normalMarx style="position:absolute;bottom:calc(1rem + calc(24px * 2));left:135px;width:calc(30px * 2);height:calc(39px * 2);animation:.35s cubic-bezier(.23,1,.32,1) infinite alternate bounce;--bh:calc(-9px * 2)">
-	<img src=../normalMarxBounce.png class="trans pixl" style="object-fit:cover;height:100%;animation:1.4s step-end -0.85s infinite giffy">
+<div id=normalMarx style="position:absolute;bottom:calc(1rem + calc(24px * 2));left:135px;width:calc(32px * 2);height:calc(39px * 2);animation:.35s cubic-bezier(.23,1,.32,1) infinite alternate bounce;--bh:calc(-9px * 2)">
+	<img src=../puzzle-swap-marx.png class="trans pixl" style="object-fit:cover;height:100%;animation:1.4s step-end -0.85s infinite giffy">
 </div>
-<img src=../ball.gif class="trans pixl" style="position:absolute;bottom:1rem;left:calc(135px + 6px);width:calc(24px * 2);animation:.35s cubic-bezier(.23,1,.32,1) infinite alternate bounce;--bh:calc(-3px * 2)">
-<!--https://www.deviantart.com/megatoon1234/art/Kirby-Super-Star-Regular-Marx-Sprites-Colored-767435785 -->
+<img src=../ball.apng class="trans pixl" style="position:absolute;bottom:1rem;left:calc(135px + 8px);width:calc(24px * 2);animation:.35s cubic-bezier(.23,1,.32,1) infinite alternate bounce;--bh:calc(-3px * 2)">
 <div id=marx style="position:absolute;bottom:4rem;left:10px;width:calc(158px * 2);animation:0.5s ease-in-out -0.3s infinite alternate-reverse paused bounce;--bh:-1rem;display:none">
 <img src=../marxSpriteGif2.gif class="trans pixl" style="position:relative;z-index:1">
 <img src=../crystals3.gif class="trans pixl" style="position:absolute;bottom:.3rem;width:calc(147px * 2);height:calc(46px * 2);left:0;right:0;margin:auto">
 </div>
 <script>
 let normalMarx=document.querySelector("#normalMarx")
-document.querySelector("img[src='../ball.gif']").addEventListener("click", function(){
+document.querySelector("img[src='../ball.apng']").addEventListener("click", function(){
 	normalMarx.style.animation=""
 	normalMarx.style.bottom="calc(1rem + calc(33px * 2))"
 	normalMarx.addEventListener("animationend",function(){
