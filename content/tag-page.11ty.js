@@ -67,7 +67,7 @@ switch (data.page.url) {
 }
 </style>
 <img src=../chip.gif alt="A gif of a fox droplet." class="trans pixl" style="position:absolute;bottom:.6rem;right:.4rem;width:4rem">
-<div id=normalMarx style="position:absolute;bottom:calc(1rem + calc(24px * 2));left:135px;width:calc(32px * 2);height:calc(39px * 2);animation:.35s cubic-bezier(.23,1,.32,1) infinite alternate bounce;--bh:calc(-9px * 2)">
+<div id=normalMarx style="position:absolute;bottom:calc(1rem + calc(21px * 2));left:135px;width:calc(32px * 2);height:calc(39px * 2);animation:.35s cubic-bezier(.23,1,.32,1) infinite alternate bounce;--bh:calc(-12px * 2)">
 	<img src=../puzzle-swap-marx.png class="trans pixl" style="object-fit:cover;height:100%;animation:1.4s step-end -0.85s infinite giffy">
 </div>
 <img src=../ball.apng class="trans pixl" style="position:absolute;bottom:1rem;left:calc(135px + 8px);width:calc(24px * 2);animation:.35s cubic-bezier(.23,1,.32,1) infinite alternate bounce;--bh:calc(-3px * 2)">
