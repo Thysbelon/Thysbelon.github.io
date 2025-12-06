@@ -66,7 +66,13 @@ switch (data.page.url) {
 	92.307%{object-position:calc(-32px * 2)}
 }
 </style>
-<img src=../chip.gif alt="A gif of a fox droplet." class="trans pixl" style="position:absolute;bottom:.6rem;right:.4rem;width:4rem">
+<img src=../chip.gif alt="A gif of a fox droplet." class="trans pixl" style="position:absolute;bottom:1rem;right:.4rem;width:calc(27 * 0.12rem)">
+<img src=../magolor.apng alt="A pixellated animation of Magolor." class="trans pixl" style="position:absolute;bottom:2rem;left:0.5rem;width:5rem">
+<img src=../noddy.apng alt="Animation of noddy from the flagship games." class="trans pixl" style="position:absolute;bottom:1.4rem;right:5rem;width:calc(22 * 0.12rem)">
+<div style="position:absolute;bottom:6rem;right:1rem;width:3rem;animation:0.5s ease-in-out infinite alternate-reverse bounce;--bh:1rem;">
+<img src=../kssu-scarfy.apng alt="Animation of scarfy from KSSU." class="trans pixl" style="transform:scaleX(-1)">
+</div>
+<!-- kssu scarfy, AM noddy, AM batafire, AM Roly-Poly, kdl3 bouncy, kndl needlous, AM Minny, SS gaw gaw -->
 <div id=normalMarx style="position:absolute;bottom:calc(1rem + calc(21px * 2));left:135px;width:calc(32px * 2);height:calc(39px * 2);animation:.35s cubic-bezier(.23,1,.32,1) infinite alternate bounce;--bh:calc(-12px * 2)">
 	<img src=../puzzle-swap-marx.png class="trans pixl" style="object-fit:cover;height:100%;animation:1.4s step-end -0.85s infinite giffy">
 </div>
