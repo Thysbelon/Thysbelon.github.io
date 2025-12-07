@@ -331,7 +331,7 @@ nav.toc #toc-top a {
 	width:100%;
 	display:block;
 }
-main img {
+main img, main video /*new addition*/ {
 	max-width:100%; /*TODO: should this be the default for all <img>?*/
 	display:block;
 	height:auto; /* prevents issues with float */
