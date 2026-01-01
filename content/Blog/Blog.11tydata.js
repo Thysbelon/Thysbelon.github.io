@@ -32,7 +32,8 @@ module.exports = {
 	tags: [
 		"posts"
 	],
-	"layout": "post-en.11ty.js",
+	//"layout": "post.11ty.js",
+	"layout": "post-en.html", // posts are in english by default.
 	//"permalink": "{% setPermalink page.filePathStem, page.url %}"
 	"permalink": data => `${ setPermalink(data.page.inputPath, data.page.filePathStem) }.html`,
 	"eleventyComputed": {

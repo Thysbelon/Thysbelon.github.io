@@ -4,7 +4,7 @@ module.exports = {
 
 data() {
 	return {
-		layout: "default-en.11ty.js",
+		layout: "default-en.html",
 		description: "My personal blog where I post about whatever interests me.",
 		altLang: "/ホーム/",
 		//script: "<script src=/ytvideoactivate.js></script>",

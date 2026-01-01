@@ -10,6 +10,7 @@ data() {
 			filter: ['all', 'post', 'posts', 'tagList'],
 			addAllPagesToCollections: true,
 		},
+		/*
 		customThemes: {
 			"Vib-Ribbon": {
 				customLogo: "<img id=blogtitle src=/css/vib-ribbon-theme/thystitle2-min.gif alt=Thysbelon. width=484 height=154><img src=/css/vib-ribbon-theme/thyslogo5-min.gif alt=\"Logo of a Hummingbird moth drawn with angular lines.\" width=281 height=281>",
@@ -18,12 +19,13 @@ data() {
 				customFooter: " "
 			}
 		},
+		*/
 		eleventyComputed: {
 			title: data => `${ data.tag } Tag`,
-			customLogo: function(data){return data.customThemes[data.tag]?.customLogo},
-			customIcon: function(data){return data.customThemes[data.tag]?.customIcon},
-			extraStylesheet: function(data){return data.customThemes[data.tag]?.extraStylesheet},
-			customFooter: function(data){return data.customThemes[data.tag]?.customFooter},
+			customLogo: function(data){return data.customThemes?.[data.tag]?.customLogo},
+			customIcon: function(data){return data.customThemes?.[data.tag]?.customIcon},
+			extraStylesheet: function(data){return data.customThemes?.[data.tag]?.extraStylesheet},
+			customFooter: function(data){return data.customThemes?.[data.tag]?.customFooter},
 		},
 		permalink: function(data){return `/Tags/${ this.prettySlug(data.tag) }/`}
 	}
@@ -39,6 +41,9 @@ switch (data.page.url) {
 @keyframes walk{
 	0%{transform:translateX(42vw)}
 	100%{transform:translateX(-100vw)}
+}
+img {
+	width:auto;
 }
 </style>
 <div style=height:13rem class=fullwidth></div>
@@ -62,7 +67,7 @@ switch (data.page.url) {
 		break;
 	case '/Tags/Kirby/':
 		uniquePageDecoration=`
-<div style=height:120px class=fullwidth></div>
+<div id=deco-padding class=fullwidth></div>
 <style>
 @keyframes bounce{
 	0%{transform:translateY(0)}
@@ -70,9 +75,12 @@ switch (data.page.url) {
 }
 @keyframes giffy{
 	0%{object-position:0}
-	46.153%{object-position:calc(-32px * 2)}
-	53.846%{object-position:calc(-64px * 2)}
-	92.307%{object-position:calc(-32px * 2)}
+	46.153%{object-position:calc((var(--natural-width) / 3) * -1 * 0.125rem)}
+	53.846%{object-position:calc((var(--natural-width) / 1.5) * -1 * 0.125rem)}
+	92.307%{object-position:calc((var(--natural-width) / 3) * -1 * 0.125rem)}
+}
+#deco-padding {
+	height:calc(120 * 0.0625rem);
 }
 </style>
 <img src=../chip.gif alt="A gif of a fox droplet." class="trans pixl" style="position:absolute;bottom:1rem;right:.4rem;width:calc(27 * 0.12rem)">
@@ -82,28 +90,39 @@ switch (data.page.url) {
 <img src=../kssu-scarfy.apng alt="Animation of scarfy from KSSU." class="trans pixl" style="transform:scaleX(-1)">
 </div>
 <!-- kssu scarfy, AM noddy, AM batafire, AM Roly-Poly, kdl3 bouncy, kndl needlous, AM Minny, SS gaw gaw -->
-<div id=normalMarx style="position:absolute;bottom:calc(1rem + calc(21px * 2));left:135px;width:calc(32px * 2);height:calc(39px * 2);animation:.35s cubic-bezier(.23,1,.32,1) infinite alternate bounce;--bh:calc(-12px * 2)">
-	<img src=../puzzle-swap-marx.png class="trans pixl" style="object-fit:cover;height:100%;animation:1.4s step-end -0.85s infinite giffy">
+<div id=normalMarx style="position:absolute;bottom:calc(1rem + calc(21 * 0.125rem));left:calc(135 * 0.0625rem);animation:.35s cubic-bezier(.23,1,.32,1) infinite alternate bounce;--bh:calc(-12 * 0.125rem)">
+	<img src=../puzzle-swap-marx.png class="trans pixl" style="
+		width:calc((var(--natural-width) / 3) * 0.125rem);
+		height:calc(var(--natural-height) * 0.125rem); 
+		object-fit:cover;
+		animation:1.4s step-end -0.85s infinite giffy">
 </div>
-<img src=../ball.apng class="trans pixl" style="position:absolute;bottom:1rem;left:calc(135px + 8px);width:calc(24px * 2);animation:.35s cubic-bezier(.23,1,.32,1) infinite alternate bounce;--bh:calc(-3px * 2)">
-<div id=marx style="position:absolute;bottom:4rem;left:10px;width:calc(158px * 2);animation:0.5s ease-in-out -0.3s infinite alternate-reverse paused bounce;--bh:-1rem;display:none">
+<img src=../ball.apng class="trans pixl" 
+	style="
+		position:absolute;
+		bottom:1rem;
+		left:calc((135 + 8) * 0.0625rem);
+		width:calc(var(--natural-width) * 0.125rem);
+		animation:.35s cubic-bezier(.23,1,.32,1) infinite alternate bounce;
+		--bh:calc(-3 * 0.125rem);">
+<div id=marx style="position:absolute;bottom:4rem;left:calc(10 * 0.0625rem);width:calc(158 * 0.125rem);animation:0.5s ease-in-out -0.3s infinite alternate-reverse paused bounce;--bh:-1rem;display:none">
 <img src=../marxSpriteGif2.gif class="trans pixl" style="position:relative;z-index:1">
-<img src=../crystals3.gif class="trans pixl" style="position:absolute;bottom:.3rem;width:calc(147px * 2);height:calc(46px * 2);left:0;right:0;margin:auto">
+<img src=../crystals3.gif class="trans pixl" style="position:absolute;bottom:.3rem;width:calc(147 * 0.125rem);height:calc(46 * 0.125rem);left:0;right:0;margin:auto">
 </div>
 <script>
 let normalMarx=document.querySelector("#normalMarx")
 document.querySelector("img[src='../ball.apng']").addEventListener("click", function(){
 	normalMarx.style.animation=""
-	normalMarx.style.bottom="calc(1rem + calc(33px * 2))"
+	normalMarx.style.bottom="calc(1rem + calc(33 * 0.125rem))"
 	normalMarx.addEventListener("animationend",function(){
 		normalMarx.style.animation=""
-		normalMarx.style.setProperty("--bh","calc(-4px * 2)");
+		normalMarx.style.setProperty("--bh","calc(-4 * 0.125rem)");
 		setTimeout(function(){normalMarx.style.animation=".2s cubic-bezier(.23,1,.32,1) 2 alternate bounce"},10)
 	},{once:true})
 	setTimeout(function(){
-		normalMarx.style.setProperty("--bh","calc(-33px * 2)")
+		normalMarx.style.setProperty("--bh","calc(-33 * 0.125rem)")
 		normalMarx.style.animation=".5s cubic-bezier(.23,1,.32,1) reverse bounce"
-		normalMarx.style.bottom="calc(1rem - calc(3px * 2))"
+		normalMarx.style.bottom="calc(1rem - calc(3 * 0.125rem))"
 	},10)
 	this.remove();
 	//normalMarx.src="normalMarx2.png"
@@ -111,7 +130,7 @@ document.querySelector("img[src='../ball.apng']").addEventListener("click", func
 	let marx=document.querySelector("#marx")
 	setTimeout(function(){normalMarx.style.animation=""},2000)
 	setTimeout(function(){
-		normalMarx.style.setProperty("--bh","calc(-39px * 2)");
+		normalMarx.style.setProperty("--bh","calc(-39 * 0.125rem)");
 		marx.children[0].src="../marxTransform.gif";
 		normalMarx.addEventListener("animationend",function(){
 			marx.children[1].style.display="none";
@@ -134,8 +153,39 @@ document.querySelector("img[src='../ball.apng']").addEventListener("click", func
 	case '/Tags/Kirby-Triple-Deluxe/':
 		uniquePageDecoration=`<img src=../ringle3.webp alt="A gif of Ringle." class=trans style="position:absolute;bottom:.4rem;left:.4rem;width:6rem">`
 		break;
-	case "/Tags/Kirby's-Epic-Yarn/":
-		uniquePageDecoration=`<img src=../yarnkirby.apng alt="Yarn Kirby waving." class=trans style="position:absolute;bottom:1rem;left:1rem;width:6rem"><img src=../princefluff.apng alt="Prince Fluff waving." class=trans style="position:absolute;bottom:1rem;right:1rem;width:6rem">`
+	case "/Tags/Kirby's-Epic-Yarn/": // TODO: make all these html elements a part of the yarn-kirby theme.
+		uniquePageDecoration=`
+		<div style="height:13rem" class="fullwidth"></div> <!-- padding -->
+		<div id=floorParent>
+			<div id=floor>
+			</div>
+		</div>
+		<div id=furniture>
+			<div id=furniture-left>
+				<img src=/css/yarn-kirby-theme/KEY_Furniture_Clef_Tree.png>
+				<img src=/css/yarn-kirby-theme/KEY_Furniture_Choco_Ottoman.png>
+				<img src=/css/yarn-kirby-theme/KEY_Furniture_Toy_Piano.png>
+			</div>
+			<div id=furniture-center-left>
+				<img src=/css/yarn-kirby-theme/KEY_Furniture_Bell_Hanging.png>
+				<img src=/css/yarn-kirby-theme/KEY_Furniture_Chocolate_Bar.png>
+			</div>
+			<div id=furniture-center-right> <!--optional-->
+				<img src=/css/yarn-kirby-theme/KEY_Furniture_Tree-Stump_Bed.png>
+				<img src=/css/yarn-kirby-theme/KEY_Furniture_Dangler_Light.png>
+				<img src=/css/yarn-kirby-theme/KEY_Furniture_Frog_Umbrella_Stand.png>
+				<img src=/css/yarn-kirby-theme/KEY_Furniture_Log_Cake.png>
+			</div>
+			<div id=furniture-right>
+				<img src=/css/yarn-kirby-theme/KEY_Furniture_Moon_Clock.png>
+				<img src=/css/yarn-kirby-theme/KEY_Furniture_Flower_Sofa.png>
+				<img src=/css/yarn-kirby-theme/KEY_Furniture_Scarfy.png>
+			</div>
+		</div>
+		
+		<img src=/css/yarn-kirby-theme/yarnkirby.apng alt="Yarn Kirby waving." class=trans>
+		<img src=/css/yarn-kirby-theme/princefluff.apng alt="Prince Fluff waving." class=trans>
+		`
 		break;
 	case '/Tags/Kirby-Mass-Attack/':
 		uniquePageDecoration=`

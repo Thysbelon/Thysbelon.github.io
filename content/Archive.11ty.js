@@ -2,7 +2,7 @@ module.exports = {
 
 data() {
 	return {
-		layout: "default-en.11ty.js",
+		layout: "default-en.html",
 		altLang: "/アーカイブ/",
 		noindex: true,
 		//navbar: "test",

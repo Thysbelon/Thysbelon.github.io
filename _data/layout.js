@@ -1,1 +1,1 @@
-module.exports = "default-en.11ty.js"
+module.exports = "default.11ty.js"
