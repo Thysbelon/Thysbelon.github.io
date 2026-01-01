@@ -1,17 +1,14 @@
-
-<!DOCTYPE html>
-<html lang=en>
-<head>
-<meta charset=UTF-8>
+<html lang="en"><head>
+<meta charset="UTF-8">
 <title>I Migrated From Jekyll to Eleventy - Thysbelon</title>
 <meta property="og:title" content="I Migrated From Jekyll to Eleventy - Thysbelon">
-<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="color-scheme" content="dark light">
-<meta name=theme-color content=#ff4c60>
-<link rel=stylesheet href=/css/BlogStylesheet.css>
+<meta name="theme-color" content="#ff4c60">
+<link rel="stylesheet" href="/css/BlogStylesheet.css">
  
 
-<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+<link rel="icon" type="image/x-icon" href="/img/thysbelonicon.svg">
 
  
  
@@ -23,24 +20,24 @@
 <body>
 <header>
 <a href="/">
-<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>
+<img id="blogtitle" src="/img/ThysbelonTitle.svg" alt="Thysbelon." width="1002" height="272" style="--natural-width: 1002; --natural-height: 272;"><img src="/img/thysbelonicon.svg" alt="Logo of a Hummingbird moth." width="58" height="58" style="--natural-width: 58; --natural-height: 58;">
 </a>
 </header>
-<nav><ul > 
+<nav><ul> 
 
-		<li><a href=/About/>About</a></li>
-<li><a href=/Archive/>Archive</a></li>
-<li><a href=/Portfolio/>Portfolio</a></li>
-<li><a href=/Subscribe/>Subscribe</a></li>
+		<li><a href="/About/">About</a></li>
+<li><a href="/Archive/">Archive</a></li>
+<li><a href="/Portfolio/">Portfolio</a></li>
+<li><a href="/Subscribe/">Subscribe</a></li>
 		<li>
 				<details>
 				<summary>
 				Art
 				</summary>
 				<ul>
-				<li><a href=/Digital-Art/>Digital Art</a></li>
-<li><a href=/Photography/>Photography</a></li>
-<li><a href=/Programs/>Programs</a></li>
+				<li><a href="/Digital-Art/">Digital Art</a></li>
+<li><a href="/Photography/">Photography</a></li>
+<li><a href="/Programs/">Programs</a></li>
 				</ul>
 				</details>
 			</li>
@@ -50,36 +47,38 @@
 <main> 
 
 
-<h1 itemprop=headline>I Migrated From Jekyll to Eleventy</h1>
-<time itemprop=datePublished datetime=2024-02-23>23 February 2024</time>
+<h1 itemprop="headline">I Migrated From Jekyll to Eleventy</h1>
+<time itemprop="datePublished" datetime="2024-02-23">23 February 2024</time>
 <p>I spent about two weeks migrating my website from Jekyll to Eleventy. Jekyll is probably very good for simple websites, but I added a lot of complicated features to my website, so the Liquid code was a mess. Now that all that complicated code is in JavaScript, I feel like it'll be much easier to maintain.
-<p>I'm not sure I can write a good post about my experiences, so I'll just make a big list of tips and links. (make sure to also read the <a href=https://www.11ty.dev/docs/ target=_blank>Eleventy docs!</a>)
-<ul>
-<li id=global-default-layout><a href=https://github.com/11ty/eleventy/issues/380#issuecomment-932851369 target=_blank>Globally set default layout</a> (I used method 2)
-<li>Use the <a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter target=_blank><code>Array.prototype.filter()</code></a> method to grab only certain pages
-<li>The slugify filter, used in the eleventy-base-blog repo, throws an error and halts the build when used with multi-byte languages like Japanese. You can always <a href=https://www.11ty.dev/docs/filters/ target=_blank>make your own slug filter</a>
-<li>Jekyll post templates set their date variable using a date string in the filename of the template. Eleventy's <code>date</code> key doesn't work quite the same. You can use <a href=https://www.11ty.dev/docs/data-computed/ target=_blank>computed data</a> to control exactly how variables are calculated, but you can't overwrite the default <code>date</code> variable this way, which will cause undesired results when sorting posts by date. <a href=https://github.com/11ty/eleventy/issues/2514 target=_blank>You can make a collection sorted by the computed date as a workaround</a>
-<li><a href=https://globster.xyz/ target=_blank>Globster</a> is a good website for learning about and testing globs
-<li><a href=https://stackoverflow.com/questions/39296057/glob-for-all-folders-within-a-folder-except-one-named-folder target=_blank>Glob for all folders within a folder except one named folder</a>
-<li>You can use Passthrough File Copy to copy non-template files to the output directory unaltered. If you're trying to use the <code>rename</code> option to map the input directory to the output directory, make sure to <a href=https://github.com/11ty/eleventy/issues/3010#issuecomment-1661392357 target=_blank>put all globs in the <code>filter</code> option</a>
-<li><a href=https://github.com/11ty/eleventy/issues/637 target=_blank>&ldquo;How can I filter a collection by a frontmatter field?&rdquo;</a> (Useful for managing Jekyll's <code>categories</code> in Eleventy. <a href=https://github.com/Thysbelon/Thysbelon.github.io/blob/main/eleventy.config.js#L202 target=_blank>I use something slightly different</a> than what is linked because my <code>categories</code> are an array)
-<li><a href=https://github.com/Thysbelon/Thysbelon.github.io/blob/main/eleventy.config.js#L197 target=_blank>Strip <code>&lt;script&gt;</code> tags and their contents from a string</a>
-<li><a href=https://css-tricks.com/snippets/javascript/strip-html-tags-in-javascript/ target=_blank>Strip HTML Tags in JavaScript</a> (Doesn't remove contents of <code>&lt;script&gt;</code> tags. Use the above regex to strip <code>&lt;script&gt;</code> tags before stripping all HTML tags)
-<li><a href=https://stackoverflow.com/questions/10712555/gitignore-all-files-of-extension-in-directory target=_blank>gitignore all files of extension in directory</a> (files in .gitignore are also ignored by Eleventy)
-<li><a href=https://stackoverflow.com/questions/5581034/is-there-a-way-to-make-a-child-divs-width-wider-than-the-parent-div-using-css target=_blank>&ldquo;Is there a way to make a child DIV's width wider than the parent DIV using CSS?&rdquo;</a>
-<li><a href=https://github.com/Thysbelon/Thysbelon.github.io/blob/main/content/404.html>Re-use the sitemap to grab a list of all pages in client-side JavaScript</a> (this JavaScript runs in the browser, <em>not</em> when Eleventy is generating the site)
-<li>If you have <a href=#global-default-layout>set a default layout</a>, make sure to <a href=https://github.com/Thysbelon/Thysbelon.github.io/blob/main/_layouts/default-en.11ty.js#L144 target=_blank>code the layout so it skips rendering for pages with "permalink: false"</a> (or else every build that hides draft posts, and manipulates post URLs with string functions, will fail)
-</ul>
-<div class=tags>Tags:<ul>
-	<li><a href=/Tags/Eleventy rel=tag>Eleventy</a>
+</p><p>I'm not sure I can write a good post about my experiences, so I'll just make a big list of tips and links. (make sure to also read the <a href="https://www.11ty.dev/docs/" target="_blank">Eleventy docs!</a>)
+</p><ul>
+<li id="global-default-layout"><a href="https://github.com/11ty/eleventy/issues/380#issuecomment-932851369" target="_blank">Globally set default layout</a> (I used method 2)
+</li><li>Use the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank"><code>Array.prototype.filter()</code></a> method to grab only certain pages
+</li><li>The slugify filter, used in the eleventy-base-blog repo, throws an error and halts the build when used with multi-byte languages like Japanese. You can always <a href="https://www.11ty.dev/docs/filters/" target="_blank">make your own slug filter</a>
+</li><li>Jekyll post templates set their date variable using a date string in the filename of the template. Eleventy's <code>date</code> key doesn't work quite the same. You can use <a href="https://www.11ty.dev/docs/data-computed/" target="_blank">computed data</a> to control exactly how variables are calculated, but you can't overwrite the default <code>date</code> variable this way, which will cause undesired results when sorting posts by date. <a href="https://github.com/11ty/eleventy/issues/2514" target="_blank">You can make a collection sorted by the computed date as a workaround</a>
+</li><li><a href="https://globster.xyz/" target="_blank">Globster</a> is a good website for learning about and testing globs
+</li><li><a href="https://stackoverflow.com/questions/39296057/glob-for-all-folders-within-a-folder-except-one-named-folder" target="_blank">Glob for all folders within a folder except one named folder</a>
+</li><li>You can use Passthrough File Copy to copy non-template files to the output directory unaltered. If you're trying to use the <code>rename</code> option to map the input directory to the output directory, make sure to <a href="https://github.com/11ty/eleventy/issues/3010#issuecomment-1661392357" target="_blank">put all globs in the <code>filter</code> option</a>
+</li><li><a href="https://github.com/11ty/eleventy/issues/637" target="_blank">“How can I filter a collection by a frontmatter field?”</a> (Useful for managing Jekyll's <code>categories</code> in Eleventy. <a href="https://github.com/Thysbelon/Thysbelon.github.io/blob/main/eleventy.config.js#L202" target="_blank">I use something slightly different</a> than what is linked because my <code>categories</code> are an array)
+</li><li><a href="https://github.com/Thysbelon/Thysbelon.github.io/blob/main/eleventy.config.js#L197" target="_blank">Strip <code>&lt;script&gt;</code> tags and their contents from a string</a>
+</li><li><a href="https://css-tricks.com/snippets/javascript/strip-html-tags-in-javascript/" target="_blank">Strip HTML Tags in JavaScript</a> (Doesn't remove contents of <code>&lt;script&gt;</code> tags. Use the above regex to strip <code>&lt;script&gt;</code> tags before stripping all HTML tags)
+</li><li><a href="https://stackoverflow.com/questions/10712555/gitignore-all-files-of-extension-in-directory" target="_blank">gitignore all files of extension in directory</a> (files in .gitignore are also ignored by Eleventy)
+</li><li><a href="https://stackoverflow.com/questions/5581034/is-there-a-way-to-make-a-child-divs-width-wider-than-the-parent-div-using-css" target="_blank">“Is there a way to make a child DIV's width wider than the parent DIV using CSS?”</a>
+</li><li><a href="https://github.com/Thysbelon/Thysbelon.github.io/blob/main/content/404.html">Re-use the sitemap to grab a list of all pages in client-side JavaScript</a> (this JavaScript runs in the browser, <em>not</em> when Eleventy is generating the site)
+</li><li>If you have <a href="#global-default-layout">set a default layout</a>, make sure to <a href="https://github.com/Thysbelon/Thysbelon.github.io/blob/main/_layouts/default-en.11ty.js#L144" target="_blank">code the layout so it skips rendering for pages with "permalink: false"</a> (or else every build that hides draft posts, and manipulates post URLs with string functions, will fail)
+</li></ul>
 
-	<li><a href=/Tags/Jekyll rel=tag>Jekyll</a>
-</ul></div>
-<div class=tags>Categories:<ul>
-	<li><a href=/Categories/Web-Development rel=category>Web Development</a>
-</ul></div>
+<div class="tags">Tags:<ul>
+	<li><a href="/Tags/Eleventy" rel="tag">Eleventy</a>
+
+	</li><li><a href="/Tags/Jekyll" rel="tag">Jekyll</a>
+</li></ul></div>
+<div class="tags">Categories:<ul>
+	<li><a href="/Categories/Web-Development" rel="category">Web Development</a>
+</li></ul></div>
 
 </main>
-<!-- test of afterMain. Related posts will be placed here when they are ready -->
-<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+
+<footer>Header font from <a href="http://velvetyne.fr/fonts/compagnon/" target="_blank">Velvetyne</a></footer>
+
 </body></html>

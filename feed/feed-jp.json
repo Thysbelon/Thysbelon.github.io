@@ -1,4 +1,4 @@
-{
+<html><head></head><body>{
 	"version": "https://jsonfeed.org/version/1.1",
 	"title": "シズビロン",
 	"language": "ja",
@@ -68,3 +68,4 @@
 		
 	]
 }
+</body></html>

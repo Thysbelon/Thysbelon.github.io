@@ -1,17 +1,14 @@
-
-<!DOCTYPE html>
-<html lang=en>
-<head>
-<meta charset=UTF-8>
+<html lang="en"><head>
+<meta charset="UTF-8">
 <title>I Tried to Improve Nintendo DS Music Romhacking - Thysbelon</title>
 <meta property="og:title" content="I Tried to Improve Nintendo DS Music Romhacking - Thysbelon">
-<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="color-scheme" content="dark light">
-<meta name=theme-color content=#ff4c60>
-<link rel=stylesheet href=/css/BlogStylesheet.css>
+<meta name="theme-color" content="#ff4c60">
+<link rel="stylesheet" href="/css/BlogStylesheet.css">
  
 
-<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+<link rel="icon" type="image/x-icon" href="/img/thysbelonicon.svg">
 
  
  
@@ -23,24 +20,24 @@
 <body>
 <header>
 <a href="/">
-<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>
+<img id="blogtitle" src="/img/ThysbelonTitle.svg" alt="Thysbelon." width="1002" height="272" style="--natural-width: 1002; --natural-height: 272;"><img src="/img/thysbelonicon.svg" alt="Logo of a Hummingbird moth." width="58" height="58" style="--natural-width: 58; --natural-height: 58;">
 </a>
 </header>
-<nav><ul > 
+<nav><ul> 
 
-		<li><a href=/About/>About</a></li>
-<li><a href=/Archive/>Archive</a></li>
-<li><a href=/Portfolio/>Portfolio</a></li>
-<li><a href=/Subscribe/>Subscribe</a></li>
+		<li><a href="/About/">About</a></li>
+<li><a href="/Archive/">Archive</a></li>
+<li><a href="/Portfolio/">Portfolio</a></li>
+<li><a href="/Subscribe/">Subscribe</a></li>
 		<li>
 				<details>
 				<summary>
 				Art
 				</summary>
 				<ul>
-				<li><a href=/Digital-Art/>Digital Art</a></li>
-<li><a href=/Photography/>Photography</a></li>
-<li><a href=/Programs/>Programs</a></li>
+				<li><a href="/Digital-Art/">Digital Art</a></li>
+<li><a href="/Photography/">Photography</a></li>
+<li><a href="/Programs/">Programs</a></li>
 				</ul>
 				</details>
 			</li>
@@ -48,64 +45,66 @@
 	
 </ul></nav>
 <main> 
-<nav class=toc>
+<nav class="toc">
 	<details>
 		<summary>
 			Contents
 		</summary>
-		<span id=toc-top><a href=#>Top</a></span>
-		<ol><li><a href=#sseq2mid>sseq2mid</a><li><a href=#midi2sseq>midi2sseq</a><li><a href=#SDATTool>SDATTool</a><li><a href=#ndstool>ndstool</a></ol></details></nav>
+		<span id="toc-top"><a href="#">Top</a></span>
+		<ol><li><a href="#sseq2mid">sseq2mid</a></li><li><a href="#midi2sseq">midi2sseq</a></li><li><a href="#SDATTool">SDATTool</a></li><li><a href="#ndstool">ndstool</a></li></ol></details></nav>
 
-<h1 itemprop=headline>I Tried to Improve Nintendo DS Music Romhacking</h1>
-<time itemprop=datePublished datetime=2024-11-27>27 November 2024</time>
-<p>Hello! Over the last two months, I spent a lot of time improving <a href=https://thysbelon.github.io/Blog/2024-9-24/My-Attempts-to-Improve-GBA-Music-Romhacking-and-SiIva-Style-Ripping>my fork of GBA_Mus_Ripper</a>. I fixed bugs, made the outputted midi and sf2 sound more accurate to the GBA, made it compatible with more GBA games, and updated the documentation.
-<p>Unless users find more bugs (I may not always fix bugs right away, but I always appreciate it when users inform me of bugs!), or that one infinite loop bug I found ends up affecting more songs than just the "Unknown Item Jingle" from Metroid: Zero Mission (Japan), GBA_Mus_Ripper is complete!
-<p>With GBA_Mus_Ripper finished, I was curious to see if there was anything I could do to improve Nintendo DS music romhacking. 
-<p>My main goals were to allow users to convert to and from sseq (DS sequenced music format) and midi mostly losslessly, inject these sseq files into a DS rom, and to do all this on Linux. That last goal was important to me, and I'm happy to say I achieved it. (all of these programs should work on Windows as well. Please politely let me know if they don't!)
-<p><!--Keep in mind that all this hasn't been tested rigorously.-->I was able to extract a song from <i>Kirby: Canvas Curse</i>, modify it, then inject it back into the game and run it on <a href=https://melonds.kuribo64.net/ target=_blank>MelonDS 0.9.5</a>.<!--but the song I tested didn't use many different sequence commands, so there could still be bugs that I missed.--> I've also done some tests with <i>Castlevania: Dawn of Sorrow</i>, Tottoko Hamutaro - Nazo Nazo Q, and <i>New Super Mario Bros.</i>. Politely letting me know about bugs in the issues tab on GitHub is always appreciated!
+<h1 itemprop="headline">I Tried to Improve Nintendo DS Music Romhacking</h1>
+<time itemprop="datePublished" datetime="2024-11-27">27 November 2024</time>
+<p>Hello! Over the last two months, I spent a lot of time improving <a href="https://thysbelon.github.io/Blog/2024-9-24/My-Attempts-to-Improve-GBA-Music-Romhacking-and-SiIva-Style-Ripping">my fork of GBA_Mus_Ripper</a>. I fixed bugs, made the outputted midi and sf2 sound more accurate to the GBA, made it compatible with more GBA games, and updated the documentation.
+</p><p>Unless users find more bugs (I may not always fix bugs right away, but I always appreciate it when users inform me of bugs!), or that one infinite loop bug I found ends up affecting more songs than just the "Unknown Item Jingle" from Metroid: Zero Mission (Japan), GBA_Mus_Ripper is complete!
+</p><p>With GBA_Mus_Ripper finished, I was curious to see if there was anything I could do to improve Nintendo DS music romhacking. 
+</p><p>My main goals were to allow users to convert to and from sseq (DS sequenced music format) and midi mostly losslessly, inject these sseq files into a DS rom, and to do all this on Linux. That last goal was important to me, and I'm happy to say I achieved it. (all of these programs should work on Windows as well. Please politely let me know if they don't!)
+</p><p>I was able to extract a song from <i>Kirby: Canvas Curse</i>, modify it, then inject it back into the game and run it on <a href="https://melonds.kuribo64.net/" target="_blank">MelonDS 0.9.5</a>. I've also done some tests with <i>Castlevania: Dawn of Sorrow</i>, Tottoko Hamutaro - Nazo Nazo Q, and <i>New Super Mario Bros.</i>. Politely letting me know about bugs in the issues tab on GitHub is always appreciated!
 
-<section>
-<h2 id=sseq2mid><a href=https://github.com/Thysbelon/sseq2mid target=_blank>sseq2mid</a></h2>
-<p>This program was originally written by <a href=https://github.com/loveemu/loveemu-lab/tree/master/nds/sseq2mid target=_blank>loveemu</a>. It was the best simple sseq-to-midi program I could find, so I decided I would try to do my best to improve it. I went through the list of sseq commands, and implemented midi conversions for the sseq commands that didn't have them.
-<p>Keep in mind that most of the midi conversions I implemented are completely inaudible in the exported midi. sseq has a lot of commands that don't have an equivalent in midi. One day, I might create a DS-sound-bank-2-sf2 converter that uses modulators to make these commands audible, but that won't be anytime soon because it would be a lot of work; the GBA_Mus_Ripper suite already had sound_font_ripper, a simple program that I could modify to add modulators to the soundfonts, but I don't think a simple DS-sound-bank-2-sf2 program currently exists that I could modify.
-<p>The reason I implemented all these commands, even though they're inaudible in the midi, is because I designed my fork of midi2sseq to read these commands and convert them back to their sseq equivalent, preserving all of the effects used in the song.
-</section>
-
-<section>
-<h2 id=midi2sseq><a href=https://github.com/Thysbelon/midi2sseq target=_blank>midi2sseq</a></h2>
-<p>This program was originally written by <a href=https://github.com/fincs/midi2sseq target=_blank>fincs</a>. <a href=https://github.com/perallard/midi2sseq target=_blank>perallard made a fork</a> of fincs's program with a few improvements, so I decided to fork perallard's fork. Like with sseq2mid, I did my best to implement conversions for every sseq command.
-</section>
+</p><section>
+<h2 id="sseq2mid"><a href="https://github.com/Thysbelon/sseq2mid" target="_blank">sseq2mid</a></h2>
+<p>This program was originally written by <a href="https://github.com/loveemu/loveemu-lab/tree/master/nds/sseq2mid" target="_blank">loveemu</a>. It was the best simple sseq-to-midi program I could find, so I decided I would try to do my best to improve it. I went through the list of sseq commands, and implemented midi conversions for the sseq commands that didn't have them.
+</p><p>Keep in mind that most of the midi conversions I implemented are completely inaudible in the exported midi. sseq has a lot of commands that don't have an equivalent in midi. One day, I might create a DS-sound-bank-2-sf2 converter that uses modulators to make these commands audible, but that won't be anytime soon because it would be a lot of work; the GBA_Mus_Ripper suite already had sound_font_ripper, a simple program that I could modify to add modulators to the soundfonts, but I don't think a simple DS-sound-bank-2-sf2 program currently exists that I could modify.
+</p><p>The reason I implemented all these commands, even though they're inaudible in the midi, is because I designed my fork of midi2sseq to read these commands and convert them back to their sseq equivalent, preserving all of the effects used in the song.
+</p></section>
 
 <section>
-<h2 id=SDATTool><a href=https://github.com/froggestspirit/SDATTool target=_blank>SDATTool</a></h2>
+<h2 id="midi2sseq"><a href="https://github.com/Thysbelon/midi2sseq" target="_blank">midi2sseq</a></h2>
+<p>This program was originally written by <a href="https://github.com/fincs/midi2sseq" target="_blank">fincs</a>. <a href="https://github.com/perallard/midi2sseq" target="_blank">perallard made a fork</a> of fincs's program with a few improvements, so I decided to fork perallard's fork. Like with sseq2mid, I did my best to implement conversions for every sseq command.
+</p></section>
+
+<section>
+<h2 id="SDATTool"><a href="https://github.com/froggestspirit/SDATTool" target="_blank">SDATTool</a></h2>
 <p>I did not write this program, nor did I make any modifications to it. I am including it in this blog post because it's a very good program that allowed me to achieve my goal of injecting modified songs into DS games.
-<p>SDATTool is a python3 program written by <a href=https://github.com/froggestspirit target=_blank>froggestspirit</a>. It can both unpack and re-pack SDAT files. And because it's a python program, it can run on any platform that can run python!
-</section>
+</p><p>SDATTool is a python3 program written by <a href="https://github.com/froggestspirit" target="_blank">froggestspirit</a>. It can both unpack and re-pack SDAT files. And because it's a python program, it can run on any platform that can run python!
+</p></section>
 
 <section>
-<h2 id=ndstool><a href=https://wii.leseratte10.de/devkitPro/other-stuff/ndstool/ target=_blank>ndstool</a></h2>
-<p>I also did not write or modify this program. ndstool is a program that can dump the files of a DS rom, then rebuild the rom with your modified files. The author is the organization <a href=https://devkitpro.org/ target=_blank>devkitPro</a>; they only provide this program as a bundle with the rest of their <a href=https://devkitpro.org/wiki/Getting_Started target=_blank>great Nintendo DS software development toolchain</a>, but for people like SiIva-style-high-quality-rippers who just want to mess around with music, it's more convenient to just download one of the portable copies that Leseratte provides.
-</section>
+<h2 id="ndstool"><a href="https://wii.leseratte10.de/devkitPro/other-stuff/ndstool/" target="_blank">ndstool</a></h2>
+<p>I also did not write or modify this program. ndstool is a program that can dump the files of a DS rom, then rebuild the rom with your modified files. The author is the organization <a href="https://devkitpro.org/" target="_blank">devkitPro</a>; they only provide this program as a bundle with the rest of their <a href="https://devkitpro.org/wiki/Getting_Started" target="_blank">great Nintendo DS software development toolchain</a>, but for people like SiIva-style-high-quality-rippers who just want to mess around with music, it's more convenient to just download one of the portable copies that Leseratte provides.
+</p></section>
 
-<p>I wrote a <a href=https://github.com/Thysbelon/midi2sseq?tab=readme-ov-file#how-to-edit-nds-music target=_blank>guide on how to use all of these tools to modify DS music</a>.
-<div class=tags>Tags:<ul>
-	<li><a href=/Tags/Mashup rel=tag>Mashup</a>
+<p>I wrote a <a href="https://github.com/Thysbelon/midi2sseq?tab=readme-ov-file#how-to-edit-nds-music" target="_blank">guide on how to use all of these tools to modify DS music</a>.
 
-	<li><a href=/Tags/DS rel=tag>DS</a>
+</p><div class="tags">Tags:<ul>
+	<li><a href="/Tags/Mashup" rel="tag">Mashup</a>
 
-	<li><a href=/Tags/Midi rel=tag>Midi</a>
+	</li><li><a href="/Tags/DS" rel="tag">DS</a>
 
-	<li><a href=/Tags/Modding rel=tag>Modding</a>
+	</li><li><a href="/Tags/Midi" rel="tag">Midi</a>
 
-	<li><a href=/Tags/Guide rel=tag>Guide</a>
-</ul></div>
-<div class=tags>Categories:<ul>
-	<li><a href=/Categories/Music rel=category>Music</a>
+	</li><li><a href="/Tags/Modding" rel="tag">Modding</a>
 
-	<li><a href=/Categories/Video-Game rel=category>Video Game</a>
-</ul></div>
+	</li><li><a href="/Tags/Guide" rel="tag">Guide</a>
+</li></ul></div>
+<div class="tags">Categories:<ul>
+	<li><a href="/Categories/Music" rel="category">Music</a>
+
+	</li><li><a href="/Categories/Video-Game" rel="category">Video Game</a>
+</li></ul></div>
 
 </main>
-<!-- test of afterMain. Related posts will be placed here when they are ready -->
-<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+
+<footer>Header font from <a href="http://velvetyne.fr/fonts/compagnon/" target="_blank">Velvetyne</a></footer>
+
 </body></html>

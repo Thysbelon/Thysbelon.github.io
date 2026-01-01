@@ -1,0 +1,152 @@
+body{
+	background-image:url('/css/yarn-kirby-theme/KEY_Fabric_Baby_Stars.png');
+}
+@media (prefers-color-scheme:dark) {
+	body{
+		background-image:url('/css/yarn-kirby-theme/KEY_Fabric_Space_Land.png');
+	}
+	.post-gallery li {
+		background-color: color-mix(in hsl, var(--purple) 70%, transparent)
+	}
+	h1 {
+		text-shadow: 
+			0.1rem 0.1rem var(--purple),
+			-0.1rem -0.1rem var(--purple),
+			-0.1rem 0.1rem var(--purple),
+			0.1rem -0.1rem var(--purple),
+			0.1rem 0 var(--purple),
+			-0.1rem 0 var(--purple),
+			0 0.1rem var(--purple),
+			0 -0.1rem var(--purple);
+	}
+}
+/*
+@media (orientation: portrait){
+	
+}
+*/
+@media (width <= 60rem) {
+	#furniture-center-right {
+		display: none;
+	}
+}
+@media (width <= 40rem) {
+	#furniture-center-left {
+		display: none;
+	}
+}
+@media (width <= 28rem) {
+	#furniture-left {
+		display: none;
+	}
+}
+#floor {
+	position:absolute; bottom:-10rem; left:-100vw; background-image:url('/css/yarn-kirby-theme/KEY_Fabric_Pink_Argyle.png'); height:30rem; width: 300vw; rotate: 1 0 0 70deg;
+}
+#floorParent {
+	position:absolute; bottom:0; left:0; height:10rem; width: 100vw; perspective: 1500px /*this looks best in pixels*/; overflow: hidden;
+}
+#furniture {
+	display: flex;
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100vw;
+	height:20rem;
+	overflow: hidden;
+}
+
+/* I hate css specificity. "#furniture-center-right" SHOULD take priority over "#furniture > div" */
+
+#furniture img {
+	width: calc(var(--natural-width) * 0.0625rem);
+	height: calc(var(--natural-height) * 0.0625rem);
+	position:absolute;
+}
+[id="furniture"] > div {
+	flex-grow: 1;
+	flex-shrink: 0;
+	min-width:15rem;
+	position:relative;
+}
+#furniture-center-right {
+	min-width: 20rem;
+}
+#furniture-center-right > img[src*="Bed"] {
+	/*right:20%;*/
+	left:0; right:0;
+	margin-left: auto;
+	margin-right: auto;
+	top:0;
+}
+#furniture-center-right > img[src*="Light"] {
+	/*right:calc(1.9rem + 20%);*/
+	left:9rem; right:0;
+	margin-left: auto;
+	margin-right: auto;
+	bottom:10rem;
+}
+#furniture-center-right > img[src*="Frog"] {
+	/*right:calc(1.9rem + 20%);*/
+	left:0;
+	bottom:2rem;
+}
+#furniture-center-right > img[src*="Log"] {
+	/*right:calc(1.9rem + 20%);*/
+	left:-1rem;
+	bottom:5.7rem;
+}
+#furniture-center-left {
+	min-width: 12rem;
+}
+#furniture-left > img[src*="Piano"] {
+	left:5rem;
+	bottom:4.5rem;
+}
+#furniture-left > img[src*="Tree"] {
+	left:0;
+	bottom:4rem;
+}
+#furniture-left > img[src*="Ottoman"] {
+	left:6.8rem;
+	bottom:2rem;
+}
+#furniture-center-left > img[src*="Bell"] {
+	left:0;
+	/*
+	left:0; right:0;
+	margin-left: auto;
+	margin-right: auto;
+	*/
+	top:0;
+}
+#furniture-center-left > img[src*="Choco"] {
+	left:1.9rem;
+	/*
+	left:0; right:0;
+	margin-left: auto;
+	margin-right: auto;
+	*/
+	bottom:1rem;
+}
+#furniture-right > img[src*="Sofa"] {
+	right:0;
+	bottom:2.5rem;
+}
+#furniture-right > img[src*="Clock"] {
+	right:0;
+	top:0;
+}
+#furniture-right > img[src*="Scarfy"] {
+	right:6.75rem;
+	bottom:5.9rem;
+}
+img[src*="yarnkirby"], img[src*="princefluff"] {
+	position:absolute;bottom:1rem;width:6rem
+}
+img[src*="yarnkirby"] {
+	left:1rem;
+}
+img[src*="princefluff"] {
+	right:1rem;
+}

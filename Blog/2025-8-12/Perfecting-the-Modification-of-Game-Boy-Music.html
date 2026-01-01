@@ -1,17 +1,14 @@
-
-<!DOCTYPE html>
-<html lang=en>
-<head>
-<meta charset=UTF-8>
+<html lang="en"><head>
+<meta charset="UTF-8">
 <title>Perfecting the Modification of Game Boy Music - Thysbelon</title>
 <meta property="og:title" content="Perfecting the Modification of Game Boy Music - Thysbelon">
-<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="color-scheme" content="dark light">
-<meta name=theme-color content=#ff4c60>
-<link rel=stylesheet href=/css/BlogStylesheet.css>
+<meta name="theme-color" content="#ff4c60">
+<link rel="stylesheet" href="/css/BlogStylesheet.css">
  
 
-<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+<link rel="icon" type="image/x-icon" href="/img/thysbelonicon.svg">
 
  
  
@@ -23,24 +20,24 @@
 <body>
 <header>
 <a href="/">
-<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>
+<img id="blogtitle" src="/img/ThysbelonTitle.svg" alt="Thysbelon." width="1002" height="272" style="--natural-width: 1002; --natural-height: 272;"><img src="/img/thysbelonicon.svg" alt="Logo of a Hummingbird moth." width="58" height="58" style="--natural-width: 58; --natural-height: 58;">
 </a>
 </header>
-<nav><ul > 
+<nav><ul> 
 
-		<li><a href=/About/>About</a></li>
-<li><a href=/Archive/>Archive</a></li>
-<li><a href=/Portfolio/>Portfolio</a></li>
-<li><a href=/Subscribe/>Subscribe</a></li>
+		<li><a href="/About/">About</a></li>
+<li><a href="/Archive/">Archive</a></li>
+<li><a href="/Portfolio/">Portfolio</a></li>
+<li><a href="/Subscribe/">Subscribe</a></li>
 		<li>
 				<details>
 				<summary>
 				Art
 				</summary>
 				<ul>
-				<li><a href=/Digital-Art/>Digital Art</a></li>
-<li><a href=/Photography/>Photography</a></li>
-<li><a href=/Programs/>Programs</a></li>
+				<li><a href="/Digital-Art/">Digital Art</a></li>
+<li><a href="/Photography/">Photography</a></li>
+<li><a href="/Programs/">Programs</a></li>
 				</ul>
 				</details>
 			</li>
@@ -50,33 +47,35 @@
 <main> 
 
 
-<h1 itemprop=headline>Perfecting the Modification of Game Boy Music</h1>
-<time itemprop=datePublished datetime=2025-08-12>12 August 2025</time>
+<h1 itemprop="headline">Perfecting the Modification of Game Boy Music</h1>
+<time itemprop="datePublished" datetime="2025-08-12">12 August 2025</time>
 <p>It always seemed strange to me that the most popular way for music mashup artists to modify Game Boy music is to import it into FamiTracker, a program that is designed for Famicom music, <em>not</em> Game Boy music!
-<p>At first, I considered just modifying the program that people were already using, as I have done many times in the past. I noticed that this program converted Game Boy APU register writes into FamiTracker commands; but the fact that it just converted right from one format to another, and the fact that the Game Boy registers were unlabeled in the code, would have made it difficult to modify.
-<p>So I decided to make my own program, to convert Game Boy APU register writes into an editable format.
-<p>At first, I converted the Game Boy music into Furnace tracker files, because Furnace already has a Game Boy sound synthesis engine.
-<p>However, after I finished the program, I realized that a tracker format was a suboptimal format to convert to.
-<p>In order to be easy to work with, a tracker file shouldn't play any faster than 60 rows per second; but many Game Boy songs have effects happening faster than 60 times a second. This made songs sound very inaccurate after being converted.
-<p>In order to convert the songs accurately, I had to use midi. Thus, I created <a href=https://github.com/Thysbelon/gbs2midi>gbs2midi</a>.
-<p>And, in order to synthesize the midi, I created <a href=https://thysbelon.github.io/Nelly-GB-synth/>Nelly GB</a>.
-<p>I hope you find my programs useful. <img itemprop=image src=/emoji/😊.svg alt=😊>
-<div class=tags>Tags:<ul>
-	<li><a href=/Tags/Mashup rel=tag>Mashup</a>
+</p><p>At first, I considered just modifying the program that people were already using, as I have done many times in the past. I noticed that this program converted Game Boy APU register writes into FamiTracker commands; but the fact that it just converted right from one format to another, and the fact that the Game Boy registers were unlabeled in the code, would have made it difficult to modify.
+</p><p>So I decided to make my own program, to convert Game Boy APU register writes into an editable format.
+</p><p>At first, I converted the Game Boy music into Furnace tracker files, because Furnace already has a Game Boy sound synthesis engine.
+</p><p>However, after I finished the program, I realized that a tracker format was a suboptimal format to convert to.
+</p><p>In order to be easy to work with, a tracker file shouldn't play any faster than 60 rows per second; but many Game Boy songs have effects happening faster than 60 times a second. This made songs sound very inaccurate after being converted.
+</p><p>In order to convert the songs accurately, I had to use midi. Thus, I created <a href="https://github.com/Thysbelon/gbs2midi">gbs2midi</a>.
+</p><p>And, in order to synthesize the midi, I created <a href="https://thysbelon.github.io/Nelly-GB-synth/">Nelly GB</a>.
+</p><p>I hope you find my programs useful. <img itemprop="image" src="/emoji/😊.svg" alt="😊" width="128" style="--natural-width: 128; --natural-height: 128;" height="128">
 
-	<li><a href=/Tags/Game-Boy rel=tag>Game Boy</a>
+</p><div class="tags">Tags:<ul>
+	<li><a href="/Tags/Mashup" rel="tag">Mashup</a>
 
-	<li><a href=/Tags/Midi rel=tag>Midi</a>
+	</li><li><a href="/Tags/Game-Boy" rel="tag">Game Boy</a>
 
-	<li><a href=/Tags/Guide rel=tag>Guide</a>
-</ul></div>
-<div class=tags>Categories:<ul>
-	<li><a href=/Categories/Music rel=category>Music</a>
+	</li><li><a href="/Tags/Midi" rel="tag">Midi</a>
 
-	<li><a href=/Categories/Video-Game rel=category>Video Game</a>
-</ul></div>
+	</li><li><a href="/Tags/Guide" rel="tag">Guide</a>
+</li></ul></div>
+<div class="tags">Categories:<ul>
+	<li><a href="/Categories/Music" rel="category">Music</a>
+
+	</li><li><a href="/Categories/Video-Game" rel="category">Video Game</a>
+</li></ul></div>
 
 </main>
-<!-- test of afterMain. Related posts will be placed here when they are ready -->
-<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+
+<footer>Header font from <a href="http://velvetyne.fr/fonts/compagnon/" target="_blank">Velvetyne</a></footer>
+
 </body></html>

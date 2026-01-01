@@ -1,17 +1,14 @@
-
-<!DOCTYPE html>
-<html lang=en>
-<head>
-<meta charset=UTF-8>
+<html lang="en"><head>
+<meta charset="UTF-8">
 <title>Looping N64 Midi - Thysbelon</title>
 <meta property="og:title" content="Looping N64 Midi - Thysbelon">
-<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="color-scheme" content="dark light">
-<meta name=theme-color content=#ff4c60>
-<link rel=stylesheet href=/css/BlogStylesheet.css>
+<meta name="theme-color" content="#ff4c60">
+<link rel="stylesheet" href="/css/BlogStylesheet.css">
  
 
-<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+<link rel="icon" type="image/x-icon" href="/img/thysbelonicon.svg">
 
  
  
@@ -23,24 +20,24 @@
 <body>
 <header>
 <a href="/">
-<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>
+<img id="blogtitle" src="/img/ThysbelonTitle.svg" alt="Thysbelon." width="1002" height="272" style="--natural-width: 1002; --natural-height: 272;"><img src="/img/thysbelonicon.svg" alt="Logo of a Hummingbird moth." width="58" height="58" style="--natural-width: 58; --natural-height: 58;">
 </a>
 </header>
-<nav><ul > 
+<nav><ul> 
 
-		<li><a href=/About/>About</a></li>
-<li><a href=/Archive/>Archive</a></li>
-<li><a href=/Portfolio/>Portfolio</a></li>
-<li><a href=/Subscribe/>Subscribe</a></li>
+		<li><a href="/About/">About</a></li>
+<li><a href="/Archive/">Archive</a></li>
+<li><a href="/Portfolio/">Portfolio</a></li>
+<li><a href="/Subscribe/">Subscribe</a></li>
 		<li>
 				<details>
 				<summary>
 				Art
 				</summary>
 				<ul>
-				<li><a href=/Digital-Art/>Digital Art</a></li>
-<li><a href=/Photography/>Photography</a></li>
-<li><a href=/Programs/>Programs</a></li>
+				<li><a href="/Digital-Art/">Digital Art</a></li>
+<li><a href="/Photography/">Photography</a></li>
+<li><a href="/Programs/">Programs</a></li>
 				</ul>
 				</details>
 			</li>
@@ -50,13 +47,13 @@
 <main> 
 
 
-<h1 itemprop=headline>Looping N64 Midi</h1>
-<time itemprop=datePublished datetime=2023-01-23>23 January 2023</time>
-<link href=/misc/headbop.css rel=stylesheet>
-<img itemprop=image class=trans src=/misc/headbopsheet.png id=bopmoth4 alt="A hummingbird moth wearing headphones.">
-<button onclick=this.onclick=null;StartJams4() style=margin-bottom:1rem>Start Jams</button>
+<h1 itemprop="headline">Looping N64 Midi</h1>
+<time itemprop="datePublished" datetime="2023-01-23">23 January 2023</time>
+<link href="/misc/headbop.css" rel="stylesheet">
+<img itemprop="image" class="trans" src="/misc/headbopsheet.png" id="bopmoth4" alt="A hummingbird moth wearing headphones.">
+<button onclick="this.onclick=null;StartJams4()" style="margin-bottom:1rem">Start Jams</button>
 <p>The previous two N64 midis had blank space after the end of the loop, so I cut off the blank space so I could cleanly loop the song when the player stopped. However, I learned today that N64SoundbankTool exported midis will have their loop start and end points marked by a CC 102 and 103 event. I used js-synthesizer's hook midi method to automatically loop the song at those positions; it was easy to do and it turned out great!
-<script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js></script><script src=https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js></script>
+<script src="https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/externals/libfluidsynth-2.3.0-with-libsndfile.js"></script><script src="https://cdn.jsdelivr.net/npm/js-synthesizer@1.8.5/dist/js-synthesizer.min.js"></script>
 <script>
 var sfontBuffer;
 var smfBuffer;
@@ -121,22 +118,24 @@ async function loadSynthesizer() {
 
 }
 </script>
-<div class=tags>Tags:<ul>
-	<li><a href=/Tags/Kirby rel=tag>Kirby</a>
 
-	<li><a href=/Tags/Kirby-64 rel=tag>Kirby 64</a>
+</p><div class="tags">Tags:<ul>
+	<li><a href="/Tags/Kirby" rel="tag">Kirby</a>
 
-	<li><a href=/Tags/N64 rel=tag>N64</a>
+	</li><li><a href="/Tags/Kirby-64" rel="tag">Kirby 64</a>
 
-	<li><a href=/Tags/Midi rel=tag>Midi</a>
-</ul></div>
-<div class=tags>Categories:<ul>
-	<li><a href=/Categories/Web-Development rel=category>Web Development</a>
+	</li><li><a href="/Tags/N64" rel="tag">N64</a>
 
-	<li><a href=/Categories/Video-Game rel=category>Video Game</a>
-</ul></div>
+	</li><li><a href="/Tags/Midi" rel="tag">Midi</a>
+</li></ul></div>
+<div class="tags">Categories:<ul>
+	<li><a href="/Categories/Web-Development" rel="category">Web Development</a>
+
+	</li><li><a href="/Categories/Video-Game" rel="category">Video Game</a>
+</li></ul></div>
 
 </main>
-<!-- test of afterMain. Related posts will be placed here when they are ready -->
-<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+
+<footer>Header font from <a href="http://velvetyne.fr/fonts/compagnon/" target="_blank">Velvetyne</a></footer>
+
 </body></html>

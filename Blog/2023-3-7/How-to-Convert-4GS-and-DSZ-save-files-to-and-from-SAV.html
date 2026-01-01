@@ -1,19 +1,16 @@
-
-<!DOCTYPE html>
-<html lang=en>
-<head>
-<meta charset=UTF-8>
+<html lang="en"><head>
+<meta charset="UTF-8">
 <title>How to Convert 4GS and DSZ save files to and from SAV - Thysbelon</title>
 <meta property="og:title" content="How to Convert 4GS and DSZ save files to and from SAV - Thysbelon">
-<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="color-scheme" content="dark light">
-<meta name=theme-color content=#ff4c60>
-<link rel=stylesheet href=/css/BlogStylesheet.css>
+<meta name="theme-color" content="#ff4c60">
+<link rel="stylesheet" href="/css/BlogStylesheet.css">
  
 
-<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+<link rel="icon" type="image/x-icon" href="/img/thysbelonicon.svg">
 
-<link rel=alternate hreflang=ja href="https://thysbelon.github.io/Blog/2023-3-7/4GSとDSZのセーブファイルをSAVにおよびSAVから変換方"> <link rel=alternate hreflang=en href="https://thysbelon.github.io/Blog/2023-3-7/How-to-Convert-4GS-and-DSZ-save-files-to-and-from-SAV"> 
+<link rel="alternate" hreflang="ja" href="https://thysbelon.github.io/Blog/2023-3-7/4GSとDSZのセーブファイルをSAVにおよびSAVから変換方"> <link rel="alternate" hreflang="en" href="https://thysbelon.github.io/Blog/2023-3-7/How-to-Convert-4GS-and-DSZ-save-files-to-and-from-SAV"> 
  
 
 
@@ -23,92 +20,94 @@
 <body>
 <header>
 <a href="/">
-<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>
+<img id="blogtitle" src="/img/ThysbelonTitle.svg" alt="Thysbelon." width="1002" height="272" style="--natural-width: 1002; --natural-height: 272;"><img src="/img/thysbelonicon.svg" alt="Logo of a Hummingbird moth." width="58" height="58" style="--natural-width: 58; --natural-height: 58;">
 </a>
 </header>
-<nav><ul > 
+<nav><ul> 
 
-		<li><a href=/About/>About</a></li>
-<li><a href=/Archive/>Archive</a></li>
-<li><a href=/Portfolio/>Portfolio</a></li>
-<li><a href=/Subscribe/>Subscribe</a></li>
+		<li><a href="/About/">About</a></li>
+<li><a href="/Archive/">Archive</a></li>
+<li><a href="/Portfolio/">Portfolio</a></li>
+<li><a href="/Subscribe/">Subscribe</a></li>
 		<li>
 				<details>
 				<summary>
 				Art
 				</summary>
 				<ul>
-				<li><a href=/Digital-Art/>Digital Art</a></li>
-<li><a href=/Photography/>Photography</a></li>
-<li><a href=/Programs/>Programs</a></li>
+				<li><a href="/Digital-Art/">Digital Art</a></li>
+<li><a href="/Photography/">Photography</a></li>
+<li><a href="/Programs/">Programs</a></li>
 				</ul>
 				</details>
 			</li>
-		<li><a href=/Blog/2023-3-7/4GSとDSZのセーブファイルをSAVにおよびSAVから変換方>Language/<span lang=ja>言語</span></a></li>
+		<li><a href="/Blog/2023-3-7/4GSとDSZのセーブファイルをSAVにおよびSAVから変換方">Language/<span lang="ja">言語</span></a></li>
 	
 </ul></nav>
 <main> 
-<nav class=toc>
+<nav class="toc">
 	<details>
 		<summary>
 			Contents
 		</summary>
-		<span id=toc-top><a href=#>Top</a></span>
-		<ol><li><a href=#4GS>4GS</a><ol><li><a href=#Convert-4GS-to-SAV>Convert 4GS to SAV</a><li><a href=#Convert-SAV-to-4GS>Convert SAV to 4GS</a></ol><li><a href=#DSZ>DSZ</a><ol><li><a href=#Convert-DSZ-to-SAV>Convert DSZ to SAV</a><li><a href=#Convert-SAV-to-DSZ>Convert SAV to DSZ</a></ol><li><a href=#About-4DSAZ,-4GZ,-and-44GBASAV-files>About 4DSAZ, 4GZ, and 44GBASAV files</a></ol></details></nav>
+		<span id="toc-top"><a href="#">Top</a></span>
+		<ol><li><a href="#4GS">4GS</a><ol><li><a href="#Convert-4GS-to-SAV">Convert 4GS to SAV</a></li><li><a href="#Convert-SAV-to-4GS">Convert SAV to 4GS</a></li></ol></li><li><a href="#DSZ">DSZ</a><ol><li><a href="#Convert-DSZ-to-SAV">Convert DSZ to SAV</a></li><li><a href="#Convert-SAV-to-DSZ">Convert SAV to DSZ</a></li></ol></li><li><a href="#About-4DSAZ,-4GZ,-and-44GBASAV-files">About 4DSAZ, 4GZ, and 44GBASAV files</a></li></ol></details></nav>
 
-<h1 itemprop=headline>How to Convert 4GS and DSZ save files to and from SAV</h1>
-<time itemprop=datePublished datetime=2023-03-07>07 March 2023</time>
-<!--to do: update jp translation-->
-<p>44670's two great web emulator ports: <a href=https://gba.44670.org/ target=_blank>44VBA</a> and <a href=https://ds.44670.org/ target=_blank>DS Player</a>, both use a completely unique file extension for their save files; Here's how to convert these formats to .sav, and convert .sav to these formats:
-<section class=nospace>
-<h2 id=4GS>4GS</h2>
+<h1 itemprop="headline">How to Convert 4GS and DSZ save files to and from SAV</h1>
+<time itemprop="datePublished" datetime="2023-03-07">07 March 2023</time>
+
+<p>44670's two great web emulator ports: <a href="https://gba.44670.org/" target="_blank">44VBA</a> and <a href="https://ds.44670.org/" target="_blank">DS Player</a>, both use a completely unique file extension for their save files; Here's how to convert these formats to .sav, and convert .sav to these formats:
+</p><section class="nospace">
+<h2 id="4GS">4GS</h2>
 <p>This is just a renamed version of the emulator VBA-Next's srm save format.
-<p><a href=https://emulation.gametechwiki.com/index.php/Game_Boy_Advance_emulators#Save_formats target=_blank>More details on VBA's save format can be found on emugen wiki</a>.
-<h3 id=Convert-4GS-to-SAV>Convert 4GS to SAV</h3>
-<p>To convert it to sav: just use <a href=https://thysbelon.github.io/gbaconv-web/>gbaconv-web</a>.
-<h3 id=Convert-SAV-to-4GS>Convert SAV to 4GS</h3>
-<p>Run the sav file through <a href=https://thysbelon.github.io/gbaconv-web/>gbaconv-web</a>, then rename the output from ".srm" to ".4gs".
-</section>
-<section class=nospace>
-<h2 id=DSZ>DSZ</h2>
+</p><p><a href="https://emulation.gametechwiki.com/index.php/Game_Boy_Advance_emulators#Save_formats" target="_blank">More details on VBA's save format can be found on emugen wiki</a>.
+</p><h3 id="Convert-4GS-to-SAV">Convert 4GS to SAV</h3>
+<p>To convert it to sav: just use <a href="https://thysbelon.github.io/gbaconv-web/">gbaconv-web</a>.
+</p><h3 id="Convert-SAV-to-4GS">Convert SAV to 4GS</h3>
+<p>Run the sav file through <a href="https://thysbelon.github.io/gbaconv-web/">gbaconv-web</a>, then rename the output from ".srm" to ".4gs".
+</p></section>
+<section class="nospace">
+<h2 id="DSZ">DSZ</h2>
 <p>This is Desmume's dsv save format compressed to gzip.
-<h3 id=Convert-DSZ-to-SAV>Convert DSZ to SAV</h3>
+</p><h3 id="Convert-DSZ-to-SAV">Convert DSZ to SAV</h3>
 <ol>
-<li><a href=https://ublockorigin.com/>Install an adblocker if possible</a>. Android users can install extensions with <a href=https://kiwibrowser.com/ target=_blank>Kiwi Browser</a> or <a href=https://www.mozilla.org/en-US/firefox/new/ target=_blank>Firefox</a>
-<li>Extract the uncompressed save file with <a href=https://www.7-zip.org/ target=_blank>7-Zip</a> or <a href=https://gzip.swimburger.net/ target=_blank>this online extractor</a>.
-<li>The extracted save file wont have an extension, but it is still a dsv file. <a href=https://www.save-editor.com/tools/wse_ds_save_converter.html target=_blank>Use this website to convert it to sav (many ads; if you don't have adblock, be careful. You need to click the grey "convert" button)</a>.
-</ol>
-<!--<ins datetime="2023-03-19">--><p>Desmume uses dsv files, and MelonDS can use dsv files by clicking "File > import savefile"; so if you plan to use your save file with either of these emulators, you can skip step 3.
-<h3 id=Convert-SAV-to-DSZ>Convert SAV to DSZ</h3>
-<!--<ins datetime="2023-08-20">--><p>DS Player is capable of loading .sav files, so the below steps may not be neccessary.
-<ol>
-<li>If your save file is not a dsv, <a href=https://www.save-editor.com/tools/wse_ds_save_converter.html target=_blank>convert it to dsv using this website (many ads; if you don't have adblock, be careful. You need to click the grey "convert" button)</a>
-<li>Compress the dsv file to gzip using <a href=https://www.7-zip.org/ target=_blank>7-Zip</a> or <a href=https://gzip.swimburger.net/ target=_blank>this online compressor</a>.
-<li>Rename the gzipped file to ".dsz" and load it into DS Player.
-</ol>
+<li><a href="https://ublockorigin.com/">Install an adblocker if possible</a>. Android users can install extensions with <a href="https://kiwibrowser.com/" target="_blank">Kiwi Browser</a> or <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a>
+</li><li>Extract the uncompressed save file with <a href="https://www.7-zip.org/" target="_blank">7-Zip</a> or <a href="https://gzip.swimburger.net/" target="_blank">this online extractor</a>.
+</li><li>The extracted save file wont have an extension, but it is still a dsv file. <a href="https://www.save-editor.com/tools/wse_ds_save_converter.html" target="_blank">Use this website to convert it to sav (many ads; if you don't have adblock, be careful. You need to click the grey "convert" button)</a>.
+</li></ol>
+<p>Desmume uses dsv files, and MelonDS can use dsv files by clicking "File &gt; import savefile"; so if you plan to use your save file with either of these emulators, you can skip step 3.
+</p><h3 id="Convert-SAV-to-DSZ">Convert SAV to DSZ</h3>
+<p>DS Player is capable of loading .sav files, so the below steps may not be neccessary.
+</p><ol>
+<li>If your save file is not a dsv, <a href="https://www.save-editor.com/tools/wse_ds_save_converter.html" target="_blank">convert it to dsv using this website (many ads; if you don't have adblock, be careful. You need to click the grey "convert" button)</a>
+</li><li>Compress the dsv file to gzip using <a href="https://www.7-zip.org/" target="_blank">7-Zip</a> or <a href="https://gzip.swimburger.net/" target="_blank">this online compressor</a>.
+</li><li>Rename the gzipped file to ".dsz" and load it into DS Player.
+</li></ol>
 <p><strong>Even after following these steps, it may still be impossible to import your save into DS Player</strong>. DS Player, being a fork of Desmume, has the same issues with guessing save file size. In Desmume, this is not a problem because the user can choose the correct file size when importing .sav files; however, DS Player has no such option, so any .sav (or .dsz) that is a greater size than what DS Player expects will always fail to load.
-</section>
-<section class=nospace>
-<h2 id=About-4DSAZ,-4GZ,-and-44GBASAV-files>About 4DSAZ, 4GZ, and 44GBASAV files</h2>
+</p></section>
+<section class="nospace">
+<h2 id="About-4DSAZ,-4GZ,-and-44GBASAV-files">About 4DSAZ, 4GZ, and 44GBASAV files</h2>
 <p>44670's web emulators use even more unique file types if you connect the web app to Dropbox. These Dropbox-exclusive file types, 4DSAZ and 4GZ, are <em>even harder</em> to convert to and from sav, so <strong>please do not use save files from Dropbox, only use the save backup options in the emulator menu (which is accessed with esc on keyboard)</strong>.
-<p>The 44GBASAV file type is identical to srm and 4gs.
-</section>
+</p><p>The 44GBASAV file type is identical to srm and 4gs.
+</p></section>
 <hr class="invisible-pause">
-<p><a href=https://emulation.gametechwiki.com target=_blank>Check Emulation General Wiki to see the best emulators for each console</a>.
-<div class=tags>Tags:<ul>
-	<li><a href=/Tags/Guide rel=tag>Guide</a>
+<p><a href="https://emulation.gametechwiki.com" target="_blank">Check Emulation General Wiki to see the best emulators for each console</a>.
 
-	<li><a href=/Tags/DS rel=tag>DS</a>
+</p><div class="tags">Tags:<ul>
+	<li><a href="/Tags/Guide" rel="tag">Guide</a>
 
-	<li><a href=/Tags/GBA rel=tag>GBA</a>
+	</li><li><a href="/Tags/DS" rel="tag">DS</a>
 
-	<li><a href=/Tags/Emulator rel=tag>Emulator</a>
-</ul></div>
-<div class=tags>Categories:<ul>
-	<li><a href=/Categories/Video-Game rel=category>Video Game</a>
-</ul></div>
+	</li><li><a href="/Tags/GBA" rel="tag">GBA</a>
+
+	</li><li><a href="/Tags/Emulator" rel="tag">Emulator</a>
+</li></ul></div>
+<div class="tags">Categories:<ul>
+	<li><a href="/Categories/Video-Game" rel="category">Video Game</a>
+</li></ul></div>
 
 </main>
-<!-- test of afterMain. Related posts will be placed here when they are ready -->
-<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+
+<footer>Header font from <a href="http://velvetyne.fr/fonts/compagnon/" target="_blank">Velvetyne</a></footer>
+
 </body></html>

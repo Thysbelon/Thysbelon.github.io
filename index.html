@@ -1,19 +1,16 @@
-
-<!DOCTYPE html>
-<html lang=en>
-<head>
-<meta charset=UTF-8>
+<html lang="en"><head>
+<meta charset="UTF-8">
 <title>Thysbelon</title>
 <meta property="og:title" content="Thysbelon">
-<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="color-scheme" content="dark light">
-<meta name=theme-color content=#ff4c60>
-<link rel=stylesheet href=/css/BlogStylesheet.css>
-<link rel=stylesheet href=/css/lite-yt-embed.css> 
+<meta name="theme-color" content="#ff4c60">
+<link rel="stylesheet" href="/css/BlogStylesheet.css">
+<link rel="stylesheet" href="/css/lite-yt-embed.css"> 
 
-<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+<link rel="icon" type="image/x-icon" href="/img/thysbelonicon.svg">
 
-<link rel=alternate hreflang=ja href="https://thysbelon.github.io/ホーム/"> <link rel=alternate hreflang=en href="https://thysbelon.github.io/"> 
+<link rel="alternate" hreflang="ja" href="https://thysbelon.github.io/ホーム/"> <link rel="alternate" hreflang="en" href="https://thysbelon.github.io/"> 
  
 
 
@@ -23,85 +20,86 @@
 <body>
 <header>
 
-<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>
+<img id="blogtitle" src="/img/ThysbelonTitle.svg" alt="Thysbelon." width="1002" height="272" style="--natural-width: 1002; --natural-height: 272;"><img src="/img/thysbelonicon.svg" alt="Logo of a Hummingbird moth." width="58" height="58" style="--natural-width: 58; --natural-height: 58;">
 
 </header>
-<nav><ul > 
+<nav><ul> 
 
-		<li><a href=/About/>About</a></li>
-<li><a href=/Archive/>Archive</a></li>
-<li><a href=/Portfolio/>Portfolio</a></li>
-<li><a href=/Subscribe/>Subscribe</a></li>
+		<li><a href="/About/">About</a></li>
+<li><a href="/Archive/">Archive</a></li>
+<li><a href="/Portfolio/">Portfolio</a></li>
+<li><a href="/Subscribe/">Subscribe</a></li>
 		<li>
 				<details>
 				<summary>
 				Art
 				</summary>
 				<ul>
-				<li><a href=/Digital-Art/>Digital Art</a></li>
-<li><a href=/Photography/>Photography</a></li>
-<li><a href=/Programs/>Programs</a></li>
+				<li><a href="/Digital-Art/">Digital Art</a></li>
+<li><a href="/Photography/">Photography</a></li>
+<li><a href="/Programs/">Programs</a></li>
 				</ul>
 				</details>
 			</li>
-		<li><a href=/ホーム/>Language/<span lang=ja>言語</span></a></li>
+		<li><a href="/ホーム/">Language/<span lang="ja">言語</span></a></li>
 	
 </ul></nav>
 <main> 
 
 
 	<article>
-			<h1><a href=/Blog/2025-8-12/Perfecting-the-Modification-of-Game-Boy-Music>Perfecting the Modification of Game Boy Music</a></h1>
-			<time datetime=2025-08-12 >12 August 2025</time>
+			<h1><a href="/Blog/2025-8-12/Perfecting-the-Modification-of-Game-Boy-Music">Perfecting the Modification of Game Boy Music</a></h1>
+			<time datetime="2025-08-12">12 August 2025</time>
 			<p>It always seemed strange to me that the most popular way for music mashup artists to modify Game Boy music is to import it into FamiTracker, a program that is designed for Famicom music, <em>not</em> Game Boy music!
-<p>At first, I considered just modifying the program that people were already using, as I have done many times in the past. I noticed that this program converted Game Boy APU register writes into FamiTracker commands; but the fact that it just converted right from one format to another, and the fact that the Game Boy registers were unlabeled in the code, would have made it difficult to modify.
-<p>So I decided to make my own program, to convert Game Boy APU register writes into an editable format.
-<p>At first, I converted the Game Boy music into Furnace tracker files, because Furnace already has a Game Boy sound synthesis engine.
-<p>However, after I finished the program, I realized that a tracker format was a suboptimal format to convert to.
-<p>In order to be easy to work with, a tracker file shouldn't play any faster than 60 rows per second; but many Game Boy songs have effects happening faster than 60 times a second. This made songs sound very inaccurate after being converted.
-<p>In order to convert the songs accurately, I had to use midi. Thus, I created <a href=https://github.com/Thysbelon/gbs2midi>gbs2midi</a>.
-<p>And, in order to synthesize the midi, I created <a href=https://thysbelon.github.io/Nelly-GB-synth/>Nelly GB</a>.
-<p>I hope you find my programs useful. <a href=/Blog/2025-8-12/Perfecting-the-Modification-of-Game-Boy-Music tabindex=-1><img src=/emoji/😊.svg alt=😊></a>
-	</article>
+</p><p>At first, I considered just modifying the program that people were already using, as I have done many times in the past. I noticed that this program converted Game Boy APU register writes into FamiTracker commands; but the fact that it just converted right from one format to another, and the fact that the Game Boy registers were unlabeled in the code, would have made it difficult to modify.
+</p><p>So I decided to make my own program, to convert Game Boy APU register writes into an editable format.
+</p><p>At first, I converted the Game Boy music into Furnace tracker files, because Furnace already has a Game Boy sound synthesis engine.
+</p><p>However, after I finished the program, I realized that a tracker format was a suboptimal format to convert to.
+</p><p>In order to be easy to work with, a tracker file shouldn't play any faster than 60 rows per second; but many Game Boy songs have effects happening faster than 60 times a second. This made songs sound very inaccurate after being converted.
+</p><p>In order to convert the songs accurately, I had to use midi. Thus, I created <a href="https://github.com/Thysbelon/gbs2midi">gbs2midi</a>.
+</p><p>And, in order to synthesize the midi, I created <a href="https://thysbelon.github.io/Nelly-GB-synth/">Nelly GB</a>.
+</p><p>I hope you find my programs useful. <a href="/Blog/2025-8-12/Perfecting-the-Modification-of-Game-Boy-Music" tabindex="-1"><img src="/emoji/😊.svg" alt="😊" width="128" style="--natural-width: 128; --natural-height: 128;" height="128"></a>
+	</p></article>
 <article>
-			<h1><a href=/Blog/2024-12-30/Yule-Log-Layer-Cake-(Yule-Stump)-Recipe>Yule Log Layer Cake (Yule Stump) Recipe</a></h1>
-			<time datetime=2024-12-30 >30 December 2024</time>
-			<a href=/Blog/2024-12-30/Yule-Log-Layer-Cake-(Yule-Stump)-Recipe tabindex=-1><img src=/Blog/2024-12-30/yule-stump.webp alt="A cake coated in ganache with vertical lines down the side, and topped with chopped walnuts."></a>
+			<h1><a href="/Blog/2024-12-30/Yule-Log-Layer-Cake-(Yule-Stump)-Recipe">Yule Log Layer Cake (Yule Stump) Recipe</a></h1>
+			<time datetime="2024-12-30">30 December 2024</time>
+			<a href="/Blog/2024-12-30/Yule-Log-Layer-Cake-(Yule-Stump)-Recipe" tabindex="-1"><img src="/Blog/2024-12-30/yule-stump.webp" alt="A cake coated in ganache with vertical lines down the side, and topped with chopped walnuts." width="842" style="--natural-width: 842; --natural-height: 754;" height="754"></a>
 <p>Hello!
-<p>I enjoyed my Christmas. I took a little break from programming to spend time with family, and bake sweets!
-<p>This year, I wanted to bake a Yule Log, but the whole rolling process felt too fussy, and I wanted the sponge cake and whipped cream filling to be more flavorful without just turning it into a chocolate cake.
-<br>So I decided to take a <a href=https://sallysbakingaddiction.com/buche-de-noel-yule-log/ target=_blank>standard Yule Log recipe from Sally's Baking Addiction</a> and modify it! I added cinnamon and nutmeg to the...
-	</article>
+</p><p>I enjoyed my Christmas. I took a little break from programming to spend time with family, and bake sweets!
+</p><p>This year, I wanted to bake a Yule Log, but the whole rolling process felt too fussy, and I wanted the sponge cake and whipped cream filling to be more flavorful without just turning it into a chocolate cake.
+<br>So I decided to take a <a href="https://sallysbakingaddiction.com/buche-de-noel-yule-log/" target="_blank">standard Yule Log recipe from Sally's Baking Addiction</a> and modify it! I added cinnamon and nutmeg to the...
+	</p></article>
 <article>
-			<h1><a href=/Blog/2024-11-27/I-Tried-to-Improve-Nintendo-DS-Music-Romhacking>I Tried to Improve Nintendo DS Music Romhacking</a></h1>
-			<time datetime=2024-11-27 >27 November 2024</time>
-			<p>Hello! Over the last two months, I spent a lot of time improving <a href=https://thysbelon.github.io/Blog/2024-9-24/My-Attempts-to-Improve-GBA-Music-Romhacking-and-SiIva-Style-Ripping>my fork of GBA_Mus_Ripper</a>. I fixed bugs, made the outputted midi and sf2 sound more accurate to the GBA, made it compatible with more GBA games, and updated the documentation.
-<p>Unless users find more bugs (I may not always fix bugs right away, but I always appreciate it when users inform me of bugs!), or that one infinite loop bug I found ends up affecting more songs than...
-	</article>
+			<h1><a href="/Blog/2024-11-27/I-Tried-to-Improve-Nintendo-DS-Music-Romhacking">I Tried to Improve Nintendo DS Music Romhacking</a></h1>
+			<time datetime="2024-11-27">27 November 2024</time>
+			<p>Hello! Over the last two months, I spent a lot of time improving <a href="https://thysbelon.github.io/Blog/2024-9-24/My-Attempts-to-Improve-GBA-Music-Romhacking-and-SiIva-Style-Ripping">my fork of GBA_Mus_Ripper</a>. I fixed bugs, made the outputted midi and sf2 sound more accurate to the GBA, made it compatible with more GBA games, and updated the documentation.
+</p><p>Unless users find more bugs (I may not always fix bugs right away, but I always appreciate it when users inform me of bugs!), or that one infinite loop bug I found ends up affecting more songs than...
+	</p></article>
 <article>
-			<h1><a href=/Blog/2024-9-24/My-Attempts-to-Improve-GBA-Music-Romhacking-and-SiIva-Style-Ripping>My Attempts to Improve GBA Music Romhacking and SiIva-Style "Ripping"</a></h1>
-			<time datetime=2024-09-24 >24 September 2024</time>
-			<p>(Whenever I talk about "ripping" in the below post, I am referring to a <a href=https://siivagunner.fandom.com/wiki/Rip target=_blank>style of mashup made popular by SiIvagunner</a>.)
-<p>Hello! Working on <a href=/Blog/2024-8-30/You-Can-Use-FamiStudio-to-Make-High-Quality-Rips>my last post</a> made me think about how, even though GBA ripping is very easy and reliable especially compared to other consoles, the process could still be improved. For example, GBA_Mus_Ripper has a bug that causes the generated soundfonts to sound horrible in fluidsynth, and it often adds vibrato to songs that aren't supposed to have vibrato.
+			<h1><a href="/Blog/2024-9-24/My-Attempts-to-Improve-GBA-Music-Romhacking-and-SiIva-Style-Ripping">My Attempts to Improve GBA Music Romhacking and SiIva-Style "Ripping"</a></h1>
+			<time datetime="2024-09-24">24 September 2024</time>
+			<p>(Whenever I talk about "ripping" in the below post, I am referring to a <a href="https://siivagunner.fandom.com/wiki/Rip" target="_blank">style of mashup made popular by SiIvagunner</a>.)
+</p><p>Hello! Working on <a href="/Blog/2024-8-30/You-Can-Use-FamiStudio-to-Make-High-Quality-Rips">my last post</a> made me think about how, even though GBA ripping is very easy and reliable especially compared to other consoles, the process could still be improved. For example, GBA_Mus_Ripper has a bug that causes the generated soundfonts to sound horrible in fluidsynth, and it often adds vibrato to songs that aren't supposed to have vibrato.
 <br>I...
-	</article>
+	</p></article>
 <article>
-			<h1><a href=/Blog/2024-8-30/You-Can-Use-FamiStudio-to-Make-High-Quality-Rips>You Can Use FamiStudio to Make High Quality Rips</a></h1>
-			<time datetime=2024-08-30 >30 August 2024</time>
-			<p>Many guides on how to create <a href=https://siivagunner.fandom.com/wiki/Rip target=_blank>SiIvagunner-style "high quality rips"</a> for Famicom/NES games state to use <a href=http://famitracker.com/ target=_blank>FamiTracker</a>. A "tracker" is an unconventional music editor in which notes are typed into rows of text.
-<br>Did you know that a more conventional side-scrolling music editor for Famicom music exists? It is <a href=https://famistudio.org target=_blank>FamiStudio</a>.
-<p>In FamiStudio, you can import <a href=https://www.vgmpf.com/Wiki/index.php?title=NSF target=_blank>NSF or NSFe files</a> containing chiptune music, and then freely edit the chiptune music.
-<p><a href=https://docs.google.com/document/d/1dka7s2sbwuJuTcs3BxupaXlTWERYuCwPNQi2_HwpGfs/ target=_blank>overcast07's guide "Obtaining sources for creating a high quality rip"</a>, which is one of many helpful documents that the <a href=https://siivagunner.fandom.com/wiki/Ripping target=_blank>"Ripping" page of the SiIvagunner Wiki</a> links to, also mentions that FamiStudio can be used to create rips. 
+			<h1><a href="/Blog/2024-8-30/You-Can-Use-FamiStudio-to-Make-High-Quality-Rips">You Can Use FamiStudio to Make High Quality Rips</a></h1>
+			<time datetime="2024-08-30">30 August 2024</time>
+			<p>Many guides on how to create <a href="https://siivagunner.fandom.com/wiki/Rip" target="_blank">SiIvagunner-style "high quality rips"</a> for Famicom/NES games state to use <a href="http://famitracker.com/" target="_blank">FamiTracker</a>. A "tracker" is an unconventional music editor in which notes are typed into rows of text.
+<br>Did you know that a more conventional side-scrolling music editor for Famicom music exists? It is <a href="https://famistudio.org" target="_blank">FamiStudio</a>.
+</p><p>In FamiStudio, you can import <a href="https://www.vgmpf.com/Wiki/index.php?title=NSF" target="_blank">NSF or NSFe files</a> containing chiptune music, and then freely edit the chiptune music.
+</p><p><a href="https://docs.google.com/document/d/1dka7s2sbwuJuTcs3BxupaXlTWERYuCwPNQi2_HwpGfs/" target="_blank">overcast07's guide "Obtaining sources for creating a high quality rip"</a>, which is one of many helpful documents that the <a href="https://siivagunner.fandom.com/wiki/Ripping" target="_blank">"Ripping" page of the SiIvagunner Wiki</a> links to, also mentions that FamiStudio can be used to create rips. 
 <br>He states that rips created in FamiStudio should be exported as NSF then rendered to an audio file using Game Emu Player and foobar2000, because FamiStudio's audio export has "substandard accuracy".
 <br>overcast07 stopped updating this document in February 2024, so FamiStudio's audio export may have improved since then; 
-<br>but if you wish to try this method, I believe the "download WAV" button on my <a href=/Web-Chiptune-Player/demo.html>Web-Chiptune-Player demo page</a> should render NSF files with the same accuracy as foobar2000 and Game Emu Player because they are both built off of the <a href=https://github.com/libgme/game-music-emu target=_blank>Game_Music_Emu</a> library; please export an NSFe file from FamiStudio so Web-Chiptune-Player knows how many seconds of audio to render!
-	</article>
-	<div class=pnav>
+<br>but if you wish to try this method, I believe the "download WAV" button on my <a href="/Web-Chiptune-Player/demo.html">Web-Chiptune-Player demo page</a> should render NSF files with the same accuracy as foobar2000 and Game Emu Player because they are both built off of the <a href="https://github.com/libgme/game-music-emu" target="_blank">Game_Music_Emu</a> library; please export an NSFe file from FamiStudio so Web-Chiptune-Player knows how many seconds of audio to render!
+	</p></article>
+	<div class="pnav">
 	
-	<a class="btnlink fri" href=/page-2/>Older Posts</a>
+	<a class="btnlink fri" href="/page-2/">Older Posts</a>
 	</div>
 
 </main>
 
-<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+<footer>Header font from <a href="http://velvetyne.fr/fonts/compagnon/" target="_blank">Velvetyne</a></footer>
+
 </body></html>

@@ -1,17 +1,14 @@
-
-<!DOCTYPE html>
-<html lang=en>
-<head>
-<meta charset=UTF-8>
+<html lang="en"><head>
+<meta charset="UTF-8">
 <title>How to Convert from WebP or SVG to Formats like PNG and GIF - Thysbelon</title>
 <meta property="og:title" content="How to Convert from WebP or SVG to Formats like PNG and GIF - Thysbelon">
-<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="color-scheme" content="dark light">
-<meta name=theme-color content=#ff4c60>
-<link rel=stylesheet href=/css/BlogStylesheet.css>
+<meta name="theme-color" content="#ff4c60">
+<link rel="stylesheet" href="/css/BlogStylesheet.css">
  
 
-<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+<link rel="icon" type="image/x-icon" href="/img/thysbelonicon.svg">
 
  
  
@@ -23,24 +20,24 @@
 <body>
 <header>
 <a href="/">
-<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>
+<img id="blogtitle" src="/img/ThysbelonTitle.svg" alt="Thysbelon." width="1002" height="272" style="--natural-width: 1002; --natural-height: 272;"><img src="/img/thysbelonicon.svg" alt="Logo of a Hummingbird moth." width="58" height="58" style="--natural-width: 58; --natural-height: 58;">
 </a>
 </header>
-<nav><ul > 
+<nav><ul> 
 
-		<li><a href=/About/>About</a></li>
-<li><a href=/Archive/>Archive</a></li>
-<li><a href=/Portfolio/>Portfolio</a></li>
-<li><a href=/Subscribe/>Subscribe</a></li>
+		<li><a href="/About/">About</a></li>
+<li><a href="/Archive/">Archive</a></li>
+<li><a href="/Portfolio/">Portfolio</a></li>
+<li><a href="/Subscribe/">Subscribe</a></li>
 		<li>
 				<details>
 				<summary>
 				Art
 				</summary>
 				<ul>
-				<li><a href=/Digital-Art/>Digital Art</a></li>
-<li><a href=/Photography/>Photography</a></li>
-<li><a href=/Programs/>Programs</a></li>
+				<li><a href="/Digital-Art/">Digital Art</a></li>
+<li><a href="/Photography/">Photography</a></li>
+<li><a href="/Programs/">Programs</a></li>
 				</ul>
 				</details>
 			</li>
@@ -48,61 +45,63 @@
 	
 </ul></nav>
 <main> 
-<nav class=toc>
+<nav class="toc">
 	<details>
 		<summary>
 			Contents
 		</summary>
-		<span id=toc-top><a href=#>Top</a></span>
-		<ol><li><a href=#How-to-Convert-SVGs>How to Convert SVGs</a><li><a href=#How-to-Use-ImageMagick-on-Android>How to Use ImageMagick on Android</a><li><a href=#Miscellaneous-Tips>Miscellaneous Tips</a></ol></details></nav>
+		<span id="toc-top"><a href="#">Top</a></span>
+		<ol><li><a href="#How-to-Convert-SVGs">How to Convert SVGs</a></li><li><a href="#How-to-Use-ImageMagick-on-Android">How to Use ImageMagick on Android</a></li><li><a href="#Miscellaneous-Tips">Miscellaneous Tips</a></li></ol></details></nav>
 
-<h1 itemprop=headline>How to Convert from WebP or SVG to Formats like PNG and GIF</h1>
-<time itemprop=datePublished datetime=2022-11-04>04 November 2022</time>
+<h1 itemprop="headline">How to Convert from WebP or SVG to Formats like PNG and GIF</h1>
+<time itemprop="datePublished" datetime="2022-11-04">04 November 2022</time>
 <p>Online Converters:
-<p><a href=https://thysbelon.github.io/WebpSvg2common/ target=_blank>WebpSvg2common</a>. This is a webapp that I created on August 16th 2024. It supports WebP (both static and animated) and SVG. The rest of the post has been left for those interested, but <strong>my webapp WebpSvg2common is now my most recommended way to convert WebP and SVG to PNG and GIF</strong>.
-<ul>
+</p><p><a href="https://thysbelon.github.io/WebpSvg2common/" target="_blank">WebpSvg2common</a>. This is a webapp that I created on August 16th 2024. It supports WebP (both static and animated) and SVG. The rest of the post has been left for those interested, but <strong>my webapp WebpSvg2common is now my most recommended way to convert WebP and SVG to PNG and GIF</strong>.
+</p><ul>
 <li>WebP<ul>
-	<li><a target=_blank href=https://www.webutils.app/image-compress>WebUtils (webp/avif to png/jpeg, animation not supported, files converted in bulk but downloaded one at a time)</a>
-	<li><a target=_blank href=https://webptopng.com/>WebPtoPNG (animation not supported, unclear if files are uploaded to server)</a>
-	<li><a target=_blank href=https://ezgif.com/webp-to-gif>ezgif (animated webp to animated gif, one at a time)</a>
-</ul></li>
+	<li><a target="_blank" href="https://www.webutils.app/image-compress">WebUtils (webp/avif to png/jpeg, animation not supported, files converted in bulk but downloaded one at a time)</a>
+	</li><li><a target="_blank" href="https://webptopng.com/">WebPtoPNG (animation not supported, unclear if files are uploaded to server)</a>
+	</li><li><a target="_blank" href="https://ezgif.com/webp-to-gif">ezgif (animated webp to animated gif, one at a time)</a>
+</li></ul></li>
 <li>SVG<ul>
-	<li><a target=_blank href=https://fffuel.co/rrrasterize/>rrrasterize (svg to png, one at a time)</a>
-	<li><a target=_blank href=https://svgtopng.com/>SVGtoPNG (use adblock)</a>
-	<li><a target=_blank href=https://svgconverter.com/svg-to-png>SVGconverter (use adblock)</a>
-</ul></li>
+	<li><a target="_blank" href="https://fffuel.co/rrrasterize/">rrrasterize (svg to png, one at a time)</a>
+	</li><li><a target="_blank" href="https://svgtopng.com/">SVGtoPNG (use adblock)</a>
+	</li><li><a target="_blank" href="https://svgconverter.com/svg-to-png">SVGconverter (use adblock)</a>
+</li></ul></li>
 </ul>
 <p>The best adblocking extension is uBlock Origin. To install extensions on Android, use either Firefox or Kiwi Browser.
-<p>Offline Converters:
-<p>Just use <a target=_blank href=https://imagemagick.org/>ImageMagick</a>. It's a command-line tool, but converting is easy.
-<p>The easiest way is to run <a href=https://github.com/Thysbelon/webp2common target=_blank>this webp2common script</a> in the same folder as the WebPs you want to convert (after installing imagemagick)
-<p>When installing ImageMagick on Windows, make sure you leave "add to system path" checked <img itemprop=image src=/emoji/✔.svg alt=✔>. This allows you to use the program without needing to type the full file explorer path to ImageMagick every time (and it allows the webp2common script to function)
-<p>I will also tell you how to use ImageMagick on its own. On Windows, you can open a terminal by navigating to the folder your WebPs are stored in using File Explorer, then shift + right-click on an empty spot, then click "Open in PowerShell" or "Open in Command Prompt".
-<p>To convert a single image: <code>magick input.webp output.png</code> or <code>convert input.webp output.png</code>
-<p>To convert all webp images in the directory to png: <br><code>mogrify -format png *.webp</code>
-<p>On Windows: <code>magick mogrify -format png *.webp</code>
-<p>Do note that <em>animated</em> WebPs converted to png will be output as many still png images, <em>not</em> an animated png. To convert animated webps to an animated image format, use <code>apng</code> or <code>gif</code>. Before converting to apng, check your version with <code>magick -version</code>, any below 7.1.10-20 will incorrectly speed up or slow down the output; the only workaround is to fiddle with the <code>-delay</code> option for each animated image.
-In order to batch convert many webp images to png for static images and gif for animated images, please use <a href=https://github.com/Thysbelon/webp2common target=_blank>the webp2common script</a>.
-<h2 id=How-to-Convert-SVGs>How to Convert SVGs</h2>
+</p><p>Offline Converters:
+</p><p>Just use <a target="_blank" href="https://imagemagick.org/">ImageMagick</a>. It's a command-line tool, but converting is easy.
+</p><p>The easiest way is to run <a href="https://github.com/Thysbelon/webp2common" target="_blank">this webp2common script</a> in the same folder as the WebPs you want to convert (after installing imagemagick)
+</p><p>When installing ImageMagick on Windows, make sure you leave "add to system path" checked <img itemprop="image" src="/emoji/✔.svg" alt="✔" width="128" style="--natural-width: 128; --natural-height: 128;" height="128">. This allows you to use the program without needing to type the full file explorer path to ImageMagick every time (and it allows the webp2common script to function)
+</p><p>I will also tell you how to use ImageMagick on its own. On Windows, you can open a terminal by navigating to the folder your WebPs are stored in using File Explorer, then shift + right-click on an empty spot, then click "Open in PowerShell" or "Open in Command Prompt".
+</p><p>To convert a single image: <code>magick input.webp output.png</code> or <code>convert input.webp output.png</code>
+</p><p>To convert all webp images in the directory to png: <br><code>mogrify -format png *.webp</code>
+</p><p>On Windows: <code>magick mogrify -format png *.webp</code>
+</p><p>Do note that <em>animated</em> WebPs converted to png will be output as many still png images, <em>not</em> an animated png. To convert animated webps to an animated image format, use <code>apng</code> or <code>gif</code>. Before converting to apng, check your version with <code>magick -version</code>, any below 7.1.10-20 will incorrectly speed up or slow down the output; the only workaround is to fiddle with the <code>-delay</code> option for each animated image.
+In order to batch convert many webp images to png for static images and gif for animated images, please use <a href="https://github.com/Thysbelon/webp2common" target="_blank">the webp2common script</a>.
+</p><h2 id="How-to-Convert-SVGs">How to Convert SVGs</h2>
 <p>To convert all SVG images to png with transparent backgrounds: <br><code>mogrify -background none -format png *.svg</code> (<strong>errors may appear even if the program works correctly</strong>). Remember that on Windows you need to add "magick" to the start of the command.
-<p>The quality of svg to png conversions can be improved by adding <code>-density 400</code> to the command (after "mogrify"). Play around with the amount of density until you are happy with the result.
-<h2 id=How-to-Use-ImageMagick-on-Android>How to Use ImageMagick on Android</h2>
-<p>ImageMagick can be used on Android via <a target=_blank href=https://termux.dev/en/>Termux</a>.
-<ul><li><a target=_blank href=https://wiki.termux.com/wiki/Termux-setup-storage>Follow this guide to allow Termux to access your phone's storage</a>
-<li>Run <code>apt update</code> and <code>apt upgrade</code> to make sure the list of installable apps and installed apps are up to date.
-<li>Run <code>apt install imagemagick</code>
-<li>Linux Terminal tips: use <code>ls</code> to view the contents of the current directory. Subdirectories will usually be in color. Use <code>pwd</code> to show the current directory. Use <code>cd directoryname</code> to navigate to a different directory. Use <code>cd ..</code> to back out of the current directory. Use just <code>cd</code> to return to the home directory.
-<li>You can use the <a href=https://github.com/Thysbelon/webp2common target=_blank>webp2common script</a> on Android.</ul>
-<h2 id=Miscellaneous-Tips>Miscellaneous Tips</h2>
+</p><p>The quality of svg to png conversions can be improved by adding <code>-density 400</code> to the command (after "mogrify"). Play around with the amount of density until you are happy with the result.
+</p><h2 id="How-to-Use-ImageMagick-on-Android">How to Use ImageMagick on Android</h2>
+<p>ImageMagick can be used on Android via <a target="_blank" href="https://termux.dev/en/">Termux</a>.
+</p><ul><li><a target="_blank" href="https://wiki.termux.com/wiki/Termux-setup-storage">Follow this guide to allow Termux to access your phone's storage</a>
+</li><li>Run <code>apt update</code> and <code>apt upgrade</code> to make sure the list of installable apps and installed apps are up to date.
+</li><li>Run <code>apt install imagemagick</code>
+</li><li>Linux Terminal tips: use <code>ls</code> to view the contents of the current directory. Subdirectories will usually be in color. Use <code>pwd</code> to show the current directory. Use <code>cd directoryname</code> to navigate to a different directory. Use <code>cd ..</code> to back out of the current directory. Use just <code>cd</code> to return to the home directory.
+</li><li>You can use the <a href="https://github.com/Thysbelon/webp2common" target="_blank">webp2common script</a> on Android.</li></ul>
+<h2 id="Miscellaneous-Tips">Miscellaneous Tips</h2>
 <p>Some Linux distributions only have ImageMagick-6 in their package repository. If you are using ImageMagick-6, svg conversions will have incorrect black strokes. This issue can be fixed by installing inkscape.
-<div class=tags>Tags:<ul>
-	<li><a href=/Tags/Guide rel=tag>Guide</a>
-</ul></div>
-<div class=tags>Categories:<ul>
-	<li><a href=/Categories/Web-Development rel=category>Web Development</a>
-</ul></div>
+
+</p><div class="tags">Tags:<ul>
+	<li><a href="/Tags/Guide" rel="tag">Guide</a>
+</li></ul></div>
+<div class="tags">Categories:<ul>
+	<li><a href="/Categories/Web-Development" rel="category">Web Development</a>
+</li></ul></div>
 
 </main>
-<!-- test of afterMain. Related posts will be placed here when they are ready -->
-<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+
+<footer>Header font from <a href="http://velvetyne.fr/fonts/compagnon/" target="_blank">Velvetyne</a></footer>
+
 </body></html>

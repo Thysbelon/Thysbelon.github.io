@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:base="en">
+<html><head></head><body><feed xmlns="http://www.w3.org/2005/Atom" xml:base="en">
 	<title>Thysbelon</title>
 	<subtitle>My personal blog where I post about whatever interests me.</subtitle>
-	<link href="https://thysbelon.github.io/feed/feed-en.xml" rel="self"/>
-	<link href="https://thysbelon.github.io/"/>
-	<updated>2025-12-15T15:58:50Z</updated>
+	<link href="https://thysbelon.github.io/feed/feed-en.xml" rel="self">
+	<link href="https://thysbelon.github.io/">
+	<updated>2026-01-01T22:28:47Z</updated>
 	<id>https://thysbelon.github.io/</id>
 	<author>
 		<name>Thysbelon</name>
@@ -12,7 +11,7 @@
 	
 	<entry>
 		<title>Perfecting the Modification of Game Boy Music</title>
-		<link href="https://thysbelon.github.io/Blog/2025-8-12/Perfecting-the-Modification-of-Game-Boy-Music.html"/>
+		<link href="https://thysbelon.github.io/Blog/2025-8-12/Perfecting-the-Modification-of-Game-Boy-Music.html">
 		<updated>2025-08-12T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2025-8-12/Perfecting-the-Modification-of-Game-Boy-Music.html</id>
 		<content type="html">It always seemed strange to me that the most popular way for music mashup artists to modify Game Boy music...</content>
@@ -20,7 +19,7 @@
 	
 	<entry>
 		<title>Yule Log Layer Cake (Yule Stump) Recipe</title>
-		<link href="https://thysbelon.github.io/Blog/2024-12-30/Yule-Log-Layer-Cake-(Yule-Stump)-Recipe.html"/>
+		<link href="https://thysbelon.github.io/Blog/2024-12-30/Yule-Log-Layer-Cake-(Yule-Stump)-Recipe.html">
 		<updated>2024-12-30T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2024-12-30/Yule-Log-Layer-Cake-(Yule-Stump)-Recipe.html</id>
 		<content type="html">Hello! I enjoyed my Christmas. I took a little break from programming to spend time with family, and bake sweets! This year,...</content>
@@ -28,39 +27,39 @@
 	
 	<entry>
 		<title>I Tried to Improve Nintendo DS Music Romhacking</title>
-		<link href="https://thysbelon.github.io/Blog/2024-11-27/I-Tried-to-Improve-Nintendo-DS-Music-Romhacking.html"/>
+		<link href="https://thysbelon.github.io/Blog/2024-11-27/I-Tried-to-Improve-Nintendo-DS-Music-Romhacking.html">
 		<updated>2024-11-27T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2024-11-27/I-Tried-to-Improve-Nintendo-DS-Music-Romhacking.html</id>
 		<content type="html">Hello! Over the last two months, I spent a lot of time improving my fork of GBA_Mus_Ripper. I fixed bugs,...</content>
 	</entry>
 	
 	<entry>
-		<title>My Attempts to Improve GBA Music Romhacking and SiIva-Style &quot;Ripping&quot;</title>
-		<link href="https://thysbelon.github.io/Blog/2024-9-24/My-Attempts-to-Improve-GBA-Music-Romhacking-and-SiIva-Style-Ripping.html"/>
+		<title>My Attempts to Improve GBA Music Romhacking and SiIva-Style "Ripping"</title>
+		<link href="https://thysbelon.github.io/Blog/2024-9-24/My-Attempts-to-Improve-GBA-Music-Romhacking-and-SiIva-Style-Ripping.html">
 		<updated>2024-09-24T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2024-9-24/My-Attempts-to-Improve-GBA-Music-Romhacking-and-SiIva-Style-Ripping.html</id>
-		<content type="html">(Whenever I talk about &quot;ripping&quot; in the below post, I am referring to a style of mashup made popular by...</content>
+		<content type="html">(Whenever I talk about "ripping" in the below post, I am referring to a style of mashup made popular by...</content>
 	</entry>
 	
 	<entry>
 		<title>You Can Use FamiStudio to Make High Quality Rips</title>
-		<link href="https://thysbelon.github.io/Blog/2024-8-30/You-Can-Use-FamiStudio-to-Make-High-Quality-Rips.html"/>
+		<link href="https://thysbelon.github.io/Blog/2024-8-30/You-Can-Use-FamiStudio-to-Make-High-Quality-Rips.html">
 		<updated>2024-08-30T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2024-8-30/You-Can-Use-FamiStudio-to-Make-High-Quality-Rips.html</id>
-		<content type="html">Many guides on how to create SiIvagunner-style &quot;high quality rips&quot; for Famicom/NES games state to use FamiTracker. A &quot;tracker&quot; is...</content>
+		<content type="html">Many guides on how to create SiIvagunner-style "high quality rips" for Famicom/NES games state to use FamiTracker. A "tracker" is...</content>
 	</entry>
 	
 	<entry>
-		<title>About the Genre of Kirby Canvas Curse&#39;s Music</title>
-		<link href="https://thysbelon.github.io/Blog/2024-7-31/About-the-Genre-of-Kirby-Canvas-Curse&amp;#39;s-Music.html"/>
+		<title>About the Genre of Kirby Canvas Curse's Music</title>
+		<link href="https://thysbelon.github.io/Blog/2024-7-31/About-the-Genre-of-Kirby-Canvas-Curse&amp;#39;s-Music.html">
 		<updated>2024-07-31T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2024-7-31/About-the-Genre-of-Kirby-Canvas-Curse&amp;#39;s-Music.html</id>
-		<content type="html">In the time since I wrote this blog post, Patricia Taxxon has expressed regret at labelling her music as &quot;IDM&quot;,...</content>
+		<content type="html">In the time since I wrote this blog post, Patricia Taxxon has expressed regret at labelling her music as "IDM",...</content>
 	</entry>
 	
 	<entry>
 		<title>Untamed Heart (Klonoa) X Area Zero (Pokémon) Mashup WIP</title>
-		<link href="https://thysbelon.github.io/Blog/2024-6-18/Untamed-Heart-(Klonoa)-X-Area-Zero-(Pok%C3%A9mon)-Mashup-WIP.html"/>
+		<link href="https://thysbelon.github.io/Blog/2024-6-18/Untamed-Heart-(Klonoa)-X-Area-Zero-(Pok%C3%A9mon)-Mashup-WIP.html">
 		<updated>2024-06-18T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2024-6-18/Untamed-Heart-(Klonoa)-X-Area-Zero-(Pok%C3%A9mon)-Mashup-WIP.html</id>
 		<content type="html">Play Whenever I notice a vague similarity between two songs, I add them to a list of mashup ideas. I was...</content>
@@ -68,7 +67,7 @@
 	
 	<entry>
 		<title>Ska Cha Cha (Sonic Rush) Sega Mega Drive/Genesis and 32X Cover</title>
-		<link href="https://thysbelon.github.io/Blog/2024-5-22/Ska-Cha-Cha-(Sonic-Rush)-Sega-Mega-Drive-Genesis-and-32X-Cover.html"/>
+		<link href="https://thysbelon.github.io/Blog/2024-5-22/Ska-Cha-Cha-(Sonic-Rush)-Sega-Mega-Drive-Genesis-and-32X-Cover.html">
 		<updated>2024-05-22T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2024-5-22/Ska-Cha-Cha-(Sonic-Rush)-Sega-Mega-Drive-Genesis-and-32X-Cover.html</id>
 		<content type="html">Play Video: Ska Cha Cha (Mega Drive/Genesis and 32X Cover) Sonic Rush I wanted to try covering Ska Cha Cha with...</content>
@@ -76,15 +75,15 @@
 	
 	<entry>
 		<title>Sendvid Might be a Good Alternative to YouTube and Vimeo for Video Hosting</title>
-		<link href="https://thysbelon.github.io/Blog/2024-4-26/Sendvid-Might-be-a-Good-Alternative-to-YouTube-and-Vimeo-for-Video-Hosting.html"/>
+		<link href="https://thysbelon.github.io/Blog/2024-4-26/Sendvid-Might-be-a-Good-Alternative-to-YouTube-and-Vimeo-for-Video-Hosting.html">
 		<updated>2024-04-26T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2024-4-26/Sendvid-Might-be-a-Good-Alternative-to-YouTube-and-Vimeo-for-Video-Hosting.html</id>
-		<content type="html">I&#39;ve heard that some companies host their videos on Vimeo rather than YouTube because they feel that YouTube&#39;s interface isn&#39;t...</content>
+		<content type="html">I've heard that some companies host their videos on Vimeo rather than YouTube because they feel that YouTube's interface isn't...</content>
 	</entry>
 	
 	<entry>
-		<title>Did You Know Styluses for Capacitive Screens Don&#39;t Have to be Expensive?</title>
-		<link href="https://thysbelon.github.io/Blog/2024-4-24/Did-You-Know-Styluses-for-Capacitive-Screens-Don&amp;#39;t-Have-to-be-Expensive.html"/>
+		<title>Did You Know Styluses for Capacitive Screens Don't Have to be Expensive?</title>
+		<link href="https://thysbelon.github.io/Blog/2024-4-24/Did-You-Know-Styluses-for-Capacitive-Screens-Don&amp;#39;t-Have-to-be-Expensive.html">
 		<updated>2024-04-24T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2024-4-24/Did-You-Know-Styluses-for-Capacitive-Screens-Don&amp;#39;t-Have-to-be-Expensive.html</id>
 		<content type="html">You may have heard of active styluses, which have lots of features and are battery operated; but did you know...</content>
@@ -92,39 +91,39 @@
 	
 	<entry>
 		<title>How to Remove Line Breaks in Excel</title>
-		<link href="https://thysbelon.github.io/Blog/2024-4-23/How-to-Remove-Line-Breaks-in-Excel.html"/>
+		<link href="https://thysbelon.github.io/Blog/2024-4-23/How-to-Remove-Line-Breaks-in-Excel.html">
 		<updated>2024-04-23T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2024-4-23/How-to-Remove-Line-Breaks-in-Excel.html</id>
 		<content type="html">Microsoft Forms responses can be downloaded as an Excel Spreadsheet; but the fields will often have unnecessary line breaks, which...</content>
 	</entry>
 	
 	<entry>
-		<title>Peepy&#39;s Secret Midi (Almost Finished)</title>
-		<link href="https://thysbelon.github.io/Blog/2024-4-14/Peepy&amp;#39;s-Secret-Midi-(Almost-Finished).html"/>
+		<title>Peepy's Secret Midi (Almost Finished)</title>
+		<link href="https://thysbelon.github.io/Blog/2024-4-14/Peepy&amp;#39;s-Secret-Midi-(Almost-Finished).html">
 		<updated>2024-04-14T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2024-4-14/Peepy&amp;#39;s-Secret-Midi-(Almost-Finished).html</id>
-		<content type="html">Play Emamouse&#39;s songs for ItemLabel use a lot of complex harmonies that remind me of the classical piano music I&#39;ve been...</content>
+		<content type="html">Play Emamouse's songs for ItemLabel use a lot of complex harmonies that remind me of the classical piano music I've been...</content>
 	</entry>
 	
 	<entry>
 		<title>Heartful Cry (Persona 3) 2A03 Cover (and Web-Chiptune-Player)</title>
-		<link href="https://thysbelon.github.io/Blog/2024-4-6/Heartful-Cry-(Persona-3)-2A03-Cover-(and-Web-Chiptune-Player).html"/>
+		<link href="https://thysbelon.github.io/Blog/2024-4-6/Heartful-Cry-(Persona-3)-2A03-Cover-(and-Web-Chiptune-Player).html">
 		<updated>2024-04-06T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2024-4-6/Heartful-Cry-(Persona-3)-2A03-Cover-(and-Web-Chiptune-Player).html</id>
-		<content type="html">With Persona 3 Reload having released recently, and &quot;The Answer&quot; being announced as DLC for it last March, the song...</content>
+		<content type="html">With Persona 3 Reload having released recently, and "The Answer" being announced as DLC for it last March, the song...</content>
 	</entry>
 	
 	<entry>
-		<title>MJ&#39;s Camera is a Panasonic Lumix LX100II</title>
-		<link href="https://thysbelon.github.io/Blog/2024-3-10/MJ&amp;#39;s-Camera-is-a-Panasonic-Lumix-LX100II.html"/>
+		<title>MJ's Camera is a Panasonic Lumix LX100II</title>
+		<link href="https://thysbelon.github.io/Blog/2024-3-10/MJ&amp;#39;s-Camera-is-a-Panasonic-Lumix-LX100II.html">
 		<updated>2024-03-10T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2024-3-10/MJ&amp;#39;s-Camera-is-a-Panasonic-Lumix-LX100II.html</id>
-		<content type="html">I was watching Snapcube&#39;s stream of Insomniac&#39;s Spider-Man, and I noticed that MJ&#39;s camera looked very familiar. In fact, it&#39;s...</content>
+		<content type="html">I was watching Snapcube's stream of Insomniac's Spider-Man, and I noticed that MJ's camera looked very familiar. In fact, it's...</content>
 	</entry>
 	
 	<entry>
 		<title>I Migrated From Jekyll to Eleventy</title>
-		<link href="https://thysbelon.github.io/Blog/2024-2-23/I-Migrated-From-Jekyll-to-Eleventy.html"/>
+		<link href="https://thysbelon.github.io/Blog/2024-2-23/I-Migrated-From-Jekyll-to-Eleventy.html">
 		<updated>2024-02-23T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2024-2-23/I-Migrated-From-Jekyll-to-Eleventy.html</id>
 		<content type="html">I spent about two weeks migrating my website from Jekyll to Eleventy. Jekyll is probably very good for simple websites,...</content>
@@ -132,7 +131,7 @@
 	
 	<entry>
 		<title>Famicom Two Square Pseudofilter</title>
-		<link href="https://thysbelon.github.io/Blog/2023-11-28/Famicom-Two-Square-Pseudofilter.html"/>
+		<link href="https://thysbelon.github.io/Blog/2023-11-28/Famicom-Two-Square-Pseudofilter.html">
 		<updated>2023-11-28T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2023-11-28/Famicom-Two-Square-Pseudofilter.html</id>
 		<content type="html">SquareWave has a 2A03 song that showcases a cool effect that can be achieved by playing two square waves with...</content>
@@ -140,47 +139,47 @@
 	
 	<entry>
 		<title>Pac-Man Championship Ed. and Blaster Master Area 4 &amp; Game Over Ribbit Triangle Effect</title>
-		<link href="https://thysbelon.github.io/Blog/2023-11-16/Pac-Man-Championship-and-Blaster-Master-Area-4-Game-Over-Ribbit-Triangle-Effect.html"/>
+		<link href="https://thysbelon.github.io/Blog/2023-11-16/Pac-Man-Championship-and-Blaster-Master-Area-4-Game-Over-Ribbit-Triangle-Effect.html">
 		<updated>2023-11-16T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2023-11-16/Pac-Man-Championship-and-Blaster-Master-Area-4-Game-Over-Ribbit-Triangle-Effect.html</id>
-		<content type="html">Pac-Man Championship Edition Famicom Version&#39;s Normal Mode music and Blaster Master&#39;s Area 4 and Game Over themes all use this...</content>
+		<content type="html">Pac-Man Championship Edition Famicom Version's Normal Mode music and Blaster Master's Area 4 and Game Over themes all use this...</content>
 	</entry>
 	
 	<entry>
 		<title>How to Create the Pokémon HeartGold/SoulSilver Xenophobia Rom from a Good Dump</title>
-		<link href="https://thysbelon.github.io/Blog/2023-10-15/How-to-Create-the-Pok%C3%A9mon-HeartGold-SoulSilver-Xenophobia-Rom-from-a-Good-Dump.html"/>
+		<link href="https://thysbelon.github.io/Blog/2023-10-15/How-to-Create-the-Pok%C3%A9mon-HeartGold-SoulSilver-Xenophobia-Rom-from-a-Good-Dump.html">
 		<updated>2023-10-15T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2023-10-15/How-to-Create-the-Pok%C3%A9mon-HeartGold-SoulSilver-Xenophobia-Rom-from-a-Good-Dump.html</id>
-		<content type="html">Once again, I have discovered an old (2012) romhack of Drayano&#39;s that requires a bad dump in order to patch...</content>
+		<content type="html">Once again, I have discovered an old (2012) romhack of Drayano's that requires a bad dump in order to patch...</content>
 	</entry>
 	
 	<entry>
 		<title>Drawcia Sorceress ZX Spectrum Beeper Cover</title>
-		<link href="https://thysbelon.github.io/Blog/2023-10-4/Drawcia-Sorceress-ZX-Spectrum-Beeper-Cover.html"/>
+		<link href="https://thysbelon.github.io/Blog/2023-10-4/Drawcia-Sorceress-ZX-Spectrum-Beeper-Cover.html">
 		<updated>2023-10-04T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2023-10-4/Drawcia-Sorceress-ZX-Spectrum-Beeper-Cover.html</id>
-		<content type="html">Play alternative In August, I was listening to Tim Follin&#39;s work. When I listened to Chronos on youtube, the suggested videos...</content>
+		<content type="html">Play alternative In August, I was listening to Tim Follin's work. When I listened to Chronos on youtube, the suggested videos...</content>
 	</entry>
 	
 	<entry>
 		<title>Ghost Trick 2023 Mod: Countdown (Arranged) Music Adjustment</title>
-		<link href="https://thysbelon.github.io/Blog/2023-8-24/Ghost-Trick-2023-mod-Countdown-Music-Adjustment.html"/>
+		<link href="https://thysbelon.github.io/Blog/2023-8-24/Ghost-Trick-2023-mod-Countdown-Music-Adjustment.html">
 		<updated>2023-08-24T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2023-8-24/Ghost-Trick-2023-mod-Countdown-Music-Adjustment.html</id>
-		<content type="html">The closest thing &quot;Countdown&quot; has to a melody is this odd harsh beeping instrument. It really drives the song&#39;s tense...</content>
+		<content type="html">The closest thing "Countdown" has to a melody is this odd harsh beeping instrument. It really drives the song's tense...</content>
 	</entry>
 	
 	<entry>
 		<title>How to Create the Pokémon Black/White SweeTnDs Rom from a Good Dump</title>
-		<link href="https://thysbelon.github.io/Blog/2023-6-17/How-to-Create-the-Pok%C3%A9mon-Black-White-SweeTnDs-Rom-from-a-Good-Dump.html"/>
+		<link href="https://thysbelon.github.io/Blog/2023-6-17/How-to-Create-the-Pok%C3%A9mon-Black-White-SweeTnDs-Rom-from-a-Good-Dump.html">
 		<updated>2023-06-17T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2023-6-17/How-to-Create-the-Pok%C3%A9mon-Black-White-SweeTnDs-Rom-from-a-Good-Dump.html</id>
 		<content type="html">I wrote this guide due to a wrong assumption I made about a romhack. I will still publish this guide...</content>
 	</entry>
 	
 	<entry>
-		<title>What to do if a Romhack Patch from Project Pokémon Doesn&#39;t Work</title>
-		<link href="https://thysbelon.github.io/Blog/2023-6-17/What-to-do-if-a-Romhack-Patch-from-Project-Pok%C3%A9mon-Doesn&amp;#39;t-Work.html"/>
+		<title>What to do if a Romhack Patch from Project Pokémon Doesn't Work</title>
+		<link href="https://thysbelon.github.io/Blog/2023-6-17/What-to-do-if-a-Romhack-Patch-from-Project-Pok%C3%A9mon-Doesn&amp;#39;t-Work.html">
 		<updated>2023-06-17T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2023-6-17/What-to-do-if-a-Romhack-Patch-from-Project-Pok%C3%A9mon-Doesn&amp;#39;t-Work.html</id>
 		<content type="html">I mistakenly thought that the most recent version of Blaze Black and Volt White and its sequels needed to be...</content>
@@ -188,15 +187,15 @@
 	
 	<entry>
 		<title>How to Create the Pokémon Black/White 2 frieNDS Rom from a Good Dump</title>
-		<link href="https://thysbelon.github.io/Blog/2023-6-12/How-to-Create-the-Pok%C3%A9mon-Black-White-2-frieNDS-Rom-from-a-Good-Dump.html"/>
+		<link href="https://thysbelon.github.io/Blog/2023-6-12/How-to-Create-the-Pok%C3%A9mon-Black-White-2-frieNDS-Rom-from-a-Good-Dump.html">
 		<updated>2023-06-12T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2023-6-12/How-to-Create-the-Pok%C3%A9mon-Black-White-2-frieNDS-Rom-from-a-Good-Dump.html</id>
-		<content type="html">It&#39;s funny how PokéCommunity and Project Pokémon each represent one extreme side to take on the same issue. On Project...</content>
+		<content type="html">It's funny how PokéCommunity and Project Pokémon each represent one extreme side to take on the same issue. On Project...</content>
 	</entry>
 	
 	<entry>
-		<title>How to Use the &quot;Nanashi no Geemu: Me&quot; English Patch</title>
-		<link href="https://thysbelon.github.io/Blog/2023-6-5/How-to-Use-the-Nanashi-no-Geemu-Me-English-Patch.html"/>
+		<title>How to Use the "Nanashi no Geemu: Me" English Patch</title>
+		<link href="https://thysbelon.github.io/Blog/2023-6-5/How-to-Use-the-Nanashi-no-Geemu-Me-English-Patch.html">
 		<updated>2023-06-05T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2023-6-5/How-to-Use-the-Nanashi-no-Geemu-Me-English-Patch.html</id>
 		<content type="html">There is only one english patch available for ナナシ ノ ゲエム 目, unfortunately that patch was made using a bad...</content>
@@ -204,7 +203,7 @@
 	
 	<entry>
 		<title>Liquid Sunshine (Splatoon 3) N163 Chiptune Cover</title>
-		<link href="https://thysbelon.github.io/Blog/2023-5-5/Liquid-Sunshine-(Splatoon-3)-N163-Chiptune-Cover.html"/>
+		<link href="https://thysbelon.github.io/Blog/2023-5-5/Liquid-Sunshine-(Splatoon-3)-N163-Chiptune-Cover.html">
 		<updated>2023-05-05T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2023-5-5/Liquid-Sunshine-(Splatoon-3)-N163-Chiptune-Cover.html</id>
 		<content type="html">Start Jams (This music cannot yet be played on the home page. Please click on the post link.) This cover would not...</content>
@@ -212,7 +211,7 @@
 	
 	<entry>
 		<title>Murders (Hawaii: Part II) VRC6 Chiptune Cover</title>
-		<link href="https://thysbelon.github.io/Blog/2023-3-13/Murders-(Hawaii-Part-II)-VRC6-Chiptune-Cover.html"/>
+		<link href="https://thysbelon.github.io/Blog/2023-3-13/Murders-(Hawaii-Part-II)-VRC6-Chiptune-Cover.html">
 		<updated>2023-03-13T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2023-3-13/Murders-(Hawaii-Part-II)-VRC6-Chiptune-Cover.html</id>
 		<content type="html">Start Jams (This music cannot yet be played on the home page. Please click on the post link.) Hello! Throughout the first 8...</content>
@@ -220,15 +219,15 @@
 	
 	<entry>
 		<title>How to Convert 4GS and DSZ save files to and from SAV</title>
-		<link href="https://thysbelon.github.io/Blog/2023-3-7/How-to-Convert-4GS-and-DSZ-save-files-to-and-from-SAV.html"/>
+		<link href="https://thysbelon.github.io/Blog/2023-3-7/How-to-Convert-4GS-and-DSZ-save-files-to-and-from-SAV.html">
 		<updated>2023-03-07T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2023-3-7/How-to-Convert-4GS-and-DSZ-save-files-to-and-from-SAV.html</id>
-		<content type="html">44670&#39;s two great web emulator ports: 44VBA and DS Player, both use a completely unique file extension for their save...</content>
+		<content type="html">44670's two great web emulator ports: 44VBA and DS Player, both use a completely unique file extension for their save...</content>
 	</entry>
 	
 	<entry>
 		<title>Looping N64 Midi</title>
-		<link href="https://thysbelon.github.io/Blog/2023-1-23/Looping-N64-Midi.html"/>
+		<link href="https://thysbelon.github.io/Blog/2023-1-23/Looping-N64-Midi.html">
 		<updated>2023-01-23T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2023-1-23/Looping-N64-Midi.html</id>
 		<content type="html">Start Jams The previous two N64 midis had blank space after the end of the loop, so I cut off the...</content>
@@ -236,7 +235,7 @@
 	
 	<entry>
 		<title>Redial</title>
-		<link href="https://thysbelon.github.io/Blog/2023-1-22/Redial.html"/>
+		<link href="https://thysbelon.github.io/Blog/2023-1-22/Redial.html">
 		<updated>2023-01-22T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2023-1-22/Redial.html</id>
 		<content type="html">Start Jams Today I put a midi of Redial on the web! :) To get it more accurate, I had to move...</content>
@@ -244,7 +243,7 @@
 	
 	<entry>
 		<title>Success with N64 Sequenced Music</title>
-		<link href="https://thysbelon.github.io/Blog/2023-1-19/Success-with-N64-Sequenced-Music.html"/>
+		<link href="https://thysbelon.github.io/Blog/2023-1-19/Success-with-N64-Sequenced-Music.html">
 		<updated>2023-01-19T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2023-1-19/Success-with-N64-Sequenced-Music.html</id>
 		<content type="html">Start Jams Remember when I said I would never attempt to embed N64 sequenced music on a webpage again? I lied....</content>
@@ -252,31 +251,31 @@
 	
 	<entry>
 		<title>Trouble with N64 Sequenced Music</title>
-		<link href="https://thysbelon.github.io/Blog/2023-1-18/Trouble-with-N64-Sequenced-Music.html"/>
+		<link href="https://thysbelon.github.io/Blog/2023-1-18/Trouble-with-N64-Sequenced-Music.html">
 		<updated>2023-01-18T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2023-1-18/Trouble-with-N64-Sequenced-Music.html</id>
-		<content type="html">DLS files are really tough to work with. The only thing that can convert them is Viena. I&#39;ve been extracting...</content>
+		<content type="html">DLS files are really tough to work with. The only thing that can convert them is Viena. I've been extracting...</content>
 	</entry>
 	
 	<entry>
 		<title>Can You Play Midi with SF2 on the Web?</title>
-		<link href="https://thysbelon.github.io/Blog/2023-1-16/Can-You-Play-Midi-with-SF2-on-the-Web.html"/>
+		<link href="https://thysbelon.github.io/Blog/2023-1-16/Can-You-Play-Midi-with-SF2-on-the-Web.html">
 		<updated>2023-01-16T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2023-1-16/Can-You-Play-Midi-with-SF2-on-the-Web.html</id>
 		<content type="html">Yes. Start Jams Thank you to jet2jet for making such an amazing tool! ...</content>
 	</entry>
 	
 	<entry>
-		<title>La Follia d&#39;amore Taiko no Tatsujin Chart</title>
-		<link href="https://thysbelon.github.io/Blog/2023-1-7/La-Follia-d&amp;#39;amore-Taiko-no-Tatsujin-Chart.html"/>
+		<title>La Follia d'amore Taiko no Tatsujin Chart</title>
+		<link href="https://thysbelon.github.io/Blog/2023-1-7/La-Follia-d&amp;#39;amore-Taiko-no-Tatsujin-Chart.html">
 		<updated>2023-01-07T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2023-1-7/La-Follia-d&amp;#39;amore-Taiko-no-Tatsujin-Chart.html</id>
-		<content type="html">I made a Taiko chart of Hyness&#39; phase 2 battle theme (Oni and Hard difficulty only)....</content>
+		<content type="html">I made a Taiko chart of Hyness' phase 2 battle theme (Oni and Hard difficulty only)....</content>
 	</entry>
 	
 	<entry>
 		<title>Kirby Star Allies Assignment: Elements</title>
-		<link href="https://thysbelon.github.io/Blog/2022-12-12/Kirby-Star-Allies-Assignment-Elements.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-12-12/Kirby-Star-Allies-Assignment-Elements.html">
 		<updated>2022-12-12T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-12-12/Kirby-Star-Allies-Assignment-Elements.html</id>
 		<content type="html">This post contains spoilers for Kirby Star Allies. When my professor spoke of what he wanted in this blog post, he...</content>
@@ -284,15 +283,15 @@
 	
 	<entry>
 		<title>How to Take a Screenshot of a YouTube Video</title>
-		<link href="https://thysbelon.github.io/Blog/2022-12-8/How-to-Take-a-Screenshot-of-a-YouTube-Video.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-12-8/How-to-Take-a-Screenshot-of-a-YouTube-Video.html">
 		<updated>2022-12-08T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-12-8/How-to-Take-a-Screenshot-of-a-YouTube-Video.html</id>
-		<content type="html">Use Firefox Right-click the video Right-click the video again to open Firefox&#39;s context menu Click &quot;Take Snapshot...&quot; This works on all videos on the...</content>
+		<content type="html">Use Firefox Right-click the video Right-click the video again to open Firefox's context menu Click "Take Snapshot..." This works on all videos on the...</content>
 	</entry>
 	
 	<entry>
 		<title>Kirby Star Allies Assignment: Art</title>
-		<link href="https://thysbelon.github.io/Blog/2022-12-6/Kirby-Star-Allies-Assignment-Art.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-12-6/Kirby-Star-Allies-Assignment-Art.html">
 		<updated>2022-12-06T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-12-6/Kirby-Star-Allies-Assignment-Art.html</id>
 		<content type="html">Kirby Star Allies uses high definition 3D models for characters and environments. User interface elements use flat vector art with...</content>
@@ -300,15 +299,15 @@
 	
 	<entry>
 		<title>Jekyll WSL2 localhost 0.0.0.0 View on Mobile Fix</title>
-		<link href="https://thysbelon.github.io/Blog/2022-11-29/Jekyll-WSL2-localhost-0.0.0.0-View-on-Mobile-Fix.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-11-29/Jekyll-WSL2-localhost-0.0.0.0-View-on-Mobile-Fix.html">
 		<updated>2022-11-29T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-11-29/Jekyll-WSL2-localhost-0.0.0.0-View-on-Mobile-Fix.html</id>
-		<content type="html">If you&#39;re making a website, you may want to test that website on smartphones. If you&#39;re making your website with...</content>
+		<content type="html">If you're making a website, you may want to test that website on smartphones. If you're making your website with...</content>
 	</entry>
 	
 	<entry>
 		<title>Kirby Star Allies Assignment: Audio</title>
-		<link href="https://thysbelon.github.io/Blog/2022-11-22/Kirby-Star-Allies-Assignment-Audio.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-11-22/Kirby-Star-Allies-Assignment-Audio.html">
 		<updated>2022-11-22T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-11-22/Kirby-Star-Allies-Assignment-Audio.html</id>
 		<content type="html">I was afraid that I would have nothing to say about the sound effects (interactive audio) in KSA. Unless a...</content>
@@ -316,7 +315,7 @@
 	
 	<entry>
 		<title>Kirby Star Allies Assignment: Production</title>
-		<link href="https://thysbelon.github.io/Blog/2022-11-15/Kirby-Star-Allies-Assignment-Production.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-11-15/Kirby-Star-Allies-Assignment-Production.html">
 		<updated>2022-11-15T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-11-15/Kirby-Star-Allies-Assignment-Production.html</id>
 		<content type="html">Kirby Star Allies was developed by HAL Laboratory and published by triple A game company Nintendo. Its game engine is...</content>
@@ -324,7 +323,7 @@
 	
 	<entry>
 		<title>How to Fix bsnes Black Screen, Glitches and Crashes when Using Shaders on a Laptop</title>
-		<link href="https://thysbelon.github.io/Blog/2022-11-8/How-to-Fix-bsnes-Black-Screen-Glitches-and-Crashes-when-Using-Shaders-on-a-Laptop.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-11-8/How-to-Fix-bsnes-Black-Screen-Glitches-and-Crashes-when-Using-Shaders-on-a-Laptop.html">
 		<updated>2022-11-08T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-11-8/How-to-Fix-bsnes-Black-Screen-Glitches-and-Crashes-when-Using-Shaders-on-a-Laptop.html</id>
 		<content type="html">Hello! When I used bsnes for the first time on my new laptop, I noticed that setting the shader to...</content>
@@ -332,7 +331,7 @@
 	
 	<entry>
 		<title>How to Convert from WebP or SVG to Formats like PNG and GIF</title>
-		<link href="https://thysbelon.github.io/Blog/2022-11-4/How-to-Convert-from-WebP-or-SVG-to-Formats-like-PNG-and-GIF.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-11-4/How-to-Convert-from-WebP-or-SVG-to-Formats-like-PNG-and-GIF.html">
 		<updated>2022-11-04T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-11-4/How-to-Convert-from-WebP-or-SVG-to-Formats-like-PNG-and-GIF.html</id>
 		<content type="html">Online Converters: WebpSvg2common. This is a webapp that I created on August 16th 2024. It supports WebP (both static and animated)...</content>
@@ -340,7 +339,7 @@
 	
 	<entry>
 		<title>Kirby Star Allies Assignment: Game Mechanics</title>
-		<link href="https://thysbelon.github.io/Blog/2022-11-1/Kirby-Star-Allies-Assignment-Game-Mechanics.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-11-1/Kirby-Star-Allies-Assignment-Game-Mechanics.html">
 		<updated>2022-11-01T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-11-1/Kirby-Star-Allies-Assignment-Game-Mechanics.html</id>
 		<content type="html">Kirby Star Allies follows the same formula established in Super Star and refined in the previous three Kirby games. In...</content>
@@ -348,7 +347,7 @@
 	
 	<entry>
 		<title>Kirby Star Allies Assignment: Narrative</title>
-		<link href="https://thysbelon.github.io/Blog/2022-10-25/Kirby-Star-Allies-Assignment-Narrative.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-10-25/Kirby-Star-Allies-Assignment-Narrative.html">
 		<updated>2022-10-25T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-10-25/Kirby-Star-Allies-Assignment-Narrative.html</id>
 		<content type="html">Kirby is a platforming series that focuses on being simple and fun. Story often takes a back seat. Many of...</content>
@@ -356,15 +355,15 @@
 	
 	<entry>
 		<title>Kirby Super Star Ultra Everything Unlocked Save File</title>
-		<link href="https://thysbelon.github.io/Blog/2022-10-24/Kirby-Super-Star-Ultra-Everything-Unlocked-Save-File.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-10-24/Kirby-Super-Star-Ultra-Everything-Unlocked-Save-File.html">
 		<updated>2022-10-24T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-10-24/Kirby-Super-Star-Ultra-Everything-Unlocked-Save-File.html</id>
-		<content type="html">I had trouble finding a 100% save file for this game online, so I&#39;m uploading mine! Actually, my save file is...</content>
+		<content type="html">I had trouble finding a 100% save file for this game online, so I'm uploading mine! Actually, my save file is...</content>
 	</entry>
 	
 	<entry>
 		<title>Updated Orchid Theme for WiiFlow Lite (and Wii U Icons)</title>
-		<link href="https://thysbelon.github.io/Blog/2022-10-7/Updated-Orchid-Theme-for-WiiFlow-Lite-(and-Wii-U-Icons).html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-10-7/Updated-Orchid-Theme-for-WiiFlow-Lite-(and-Wii-U-Icons).html">
 		<updated>2022-10-07T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-10-7/Updated-Orchid-Theme-for-WiiFlow-Lite-(and-Wii-U-Icons).html</id>
 		<content type="html">WiiFlow is an app that displays Wii and GameCube games in a pretty coverflow view. The app used to have...</content>
@@ -372,15 +371,15 @@
 	
 	<entry>
 		<title>Top 5 Games for Game Design Class</title>
-		<link href="https://thysbelon.github.io/Blog/2022-10-5/Top-5-Games-for-Game-Design-Class.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-10-5/Top-5-Games-for-Game-Design-Class.html">
 		<updated>2022-10-05T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-10-5/Top-5-Games-for-Game-Design-Class.html</id>
-		<content type="html">I don&#39;t spend a lot of time thinking about what makes the games I play good, so I&#39;m a bit...</content>
+		<content type="html">I don't spend a lot of time thinking about what makes the games I play good, so I'm a bit...</content>
 	</entry>
 	
 	<entry>
 		<title>Splatoon 3 Deletes Replays After an Update</title>
-		<link href="https://thysbelon.github.io/Blog/2022-9-29/Splatoon-3-Deletes-Replays-After-an-Update.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-9-29/Splatoon-3-Deletes-Replays-After-an-Update.html">
 		<updated>2022-09-29T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-9-29/Splatoon-3-Deletes-Replays-After-an-Update.html</id>
 		<content type="html">Fun fact: Just like Smash Ultimate and Smash 4, Splatoon 3 will delete all your replays after an update! And...</content>
@@ -388,7 +387,7 @@
 	
 	<entry>
 		<title>How to Change the Internal Name of a Wii or GameCube Disc</title>
-		<link href="https://thysbelon.github.io/Blog/2022-9-28/How-to-Change-the-Internal-Name-of-a-Wii-or-GameCube-Disc.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-9-28/How-to-Change-the-Internal-Name-of-a-Wii-or-GameCube-Disc.html">
 		<updated>2022-09-28T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-9-28/How-to-Change-the-Internal-Name-of-a-Wii-or-GameCube-Disc.html</id>
 		<content type="html">Those who use WiiFlow or other such USB loaders to play their Wii and GameCube games may wish to change...</content>
@@ -396,7 +395,7 @@
 	
 	<entry>
 		<title>The Best Mario Movie</title>
-		<link href="https://thysbelon.github.io/Blog/2022-9-21/The-Best-Mario-Movie.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-9-21/The-Best-Mario-Movie.html">
 		<updated>2022-09-21T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-9-21/The-Best-Mario-Movie.html</id>
 		<content type="html">Play Video: Cory Arcangel &amp; Paper Rad - Super Mario Movie - 2005 I saw this movie in game design class....</content>
@@ -404,7 +403,7 @@
 	
 	<entry>
 		<title>I Moved My Jekyll Website from Windows to WSL2 Ubuntu</title>
-		<link href="https://thysbelon.github.io/Blog/2022-9-17/I-Moved-My-Jekyll-Website-from-Windows-to-WSL2-Ubuntu.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-9-17/I-Moved-My-Jekyll-Website-from-Windows-to-WSL2-Ubuntu.html">
 		<updated>2022-09-17T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-9-17/I-Moved-My-Jekyll-Website-from-Windows-to-WSL2-Ubuntu.html</id>
 		<content type="html">Hello! I got a new laptop, and this one has Windows 11 on it, so I finally decided to stop...</content>
@@ -412,47 +411,47 @@
 	
 	<entry>
 		<title>NoScript Blocks the &amp;lt;object&amp;gt; Tag when it Blocks Scripts</title>
-		<link href="https://thysbelon.github.io/Blog/2022-9-6/NoScript-Blocks-the-Object-Tag-when-it-Blocks-Scripts.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-9-6/NoScript-Blocks-the-Object-Tag-when-it-Blocks-Scripts.html">
 		<updated>2022-09-06T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-9-6/NoScript-Blocks-the-Object-Tag-when-it-Blocks-Scripts.html</id>
-		<content type="html">NoScript has separate checkboxes for blocking &quot;scripts&quot; and &quot;objects&quot;. I assumed that unchecking &quot;scripts&quot; would only block &amp;lt;script&amp;gt; tags on...</content>
+		<content type="html">NoScript has separate checkboxes for blocking "scripts" and "objects". I assumed that unchecking "scripts" would only block &amp;lt;script&amp;gt; tags on...</content>
 	</entry>
 	
 	<entry>
 		<title>Animated SVGs Use High CPU and Freeze when used as an Image</title>
-		<link href="https://thysbelon.github.io/Blog/2022-7-13/Animated-SVGs-Use-High-CPU-and-Freeze-when-used-as-an-Image.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-7-13/Animated-SVGs-Use-High-CPU-and-Freeze-when-used-as-an-Image.html">
 		<updated>2022-07-13T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-7-13/Animated-SVGs-Use-High-CPU-and-Freeze-when-used-as-an-Image.html</id>
-		<content type="html">An SVG animated with CSS @keyframes defined in the SVG itself (not the page&#39;s CSS) will use high CPU on...</content>
+		<content type="html">An SVG animated with CSS @keyframes defined in the SVG itself (not the page's CSS) will use high CPU on...</content>
 	</entry>
 	
 	<entry>
-		<title>Origin of Every Photo from &quot;Mmm yes moth&quot; youtube video</title>
-		<link href="https://thysbelon.github.io/Blog/2022-7-13/Origin-of-Every-Photo-from-Mmm-yes-moth-youtube-video.html"/>
+		<title>Origin of Every Photo from "Mmm yes moth" youtube video</title>
+		<link href="https://thysbelon.github.io/Blog/2022-7-13/Origin-of-Every-Photo-from-Mmm-yes-moth-youtube-video.html">
 		<updated>2022-07-13T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-7-13/Origin-of-Every-Photo-from-Mmm-yes-moth-youtube-video.html</id>
 		<content type="html">Play Video: Mmm yes moth Every photo appears to be of the Rosy Maple Moth (Dryocampa rubicunda). Heather Burditt MCTRA Jozlyn_Moonlight Ann F. Author Unknown; highest...</content>
 	</entry>
 	
 	<entry>
-		<title>Taiko no Tatsujin Beatmap of &quot;... Vista&quot; by Guadalcanal Diary</title>
-		<link href="https://thysbelon.github.io/Blog/2022-7-1/Taiko-no-Tatsujin-Beatmap-of-Vista-by-Guadalcanal-Diary.html"/>
+		<title>Taiko no Tatsujin Beatmap of "... Vista" by Guadalcanal Diary</title>
+		<link href="https://thysbelon.github.io/Blog/2022-7-1/Taiko-no-Tatsujin-Beatmap-of-Vista-by-Guadalcanal-Diary.html">
 		<updated>2022-07-01T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-7-1/Taiko-no-Tatsujin-Beatmap-of-Vista-by-Guadalcanal-Diary.html</id>
-		<content type="html">Hello! Recently, I discovered a very cool web port of Taiko no Tatsujin called &quot;Taiko Web&quot;. You can play both...</content>
+		<content type="html">Hello! Recently, I discovered a very cool web port of Taiko no Tatsujin called "Taiko Web". You can play both...</content>
 	</entry>
 	
 	<entry>
 		<title>SplatHex displays Damage Up for All Gear</title>
-		<link href="https://thysbelon.github.io/Blog/2022-6-9/SplatHex-displays-Damage-Up-for-All-Gear.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-6-9/SplatHex-displays-Damage-Up-for-All-Gear.html">
 		<updated>2022-06-09T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-6-9/SplatHex-displays-Damage-Up-for-All-Gear.html</id>
-		<content type="html">Watch out for this SplatHex bug! Even though octoglasses&#39; main ability is last-ditch effort, SplatHex shows damage up as the...</content>
+		<content type="html">Watch out for this SplatHex bug! Even though octoglasses' main ability is last-ditch effort, SplatHex shows damage up as the...</content>
 	</entry>
 	
 	<entry>
 		<title>The Original Mew Glitch</title>
-		<link href="https://thysbelon.github.io/Blog/2022-6-6/The-Original-Mew-Glitch.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-6-6/The-Original-Mew-Glitch.html">
 		<updated>2022-06-06T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-6-6/The-Original-Mew-Glitch.html</id>
 		<content type="html">On November 6th 2021, Did You Know Gaming uploaded a video about the origins of Mew. This video made me...</content>
@@ -460,7 +459,7 @@
 	
 	<entry>
 		<title>How to Make Custom 3DS Mega Badges</title>
-		<link href="https://thysbelon.github.io/Blog/2022-5-27/How-to-Make-Custom-3DS-Mega-Badges.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-5-27/How-to-Make-Custom-3DS-Mega-Badges.html">
 		<updated>2022-05-27T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-5-27/How-to-Make-Custom-3DS-Mega-Badges.html</id>
 		<content type="html">Nintendo Badge Arcade is a free-to-play game for the 3DS in which you play a crane game to unlock badges...</content>
@@ -468,23 +467,23 @@
 	
 	<entry>
 		<title>The Origin Of Every Kirby Song on the Kirby or Touhou Song Title Quiz</title>
-		<link href="https://thysbelon.github.io/Blog/2022-4-16/The-Origin-Of-Every-Kirby-Song-on-the-Kirby-or-Touhou-Song-Title-Quiz.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-4-16/The-Origin-Of-Every-Kirby-Song-on-the-Kirby-or-Touhou-Song-Title-Quiz.html">
 		<updated>2022-04-16T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-4-16/The-Origin-Of-Every-Kirby-Song-on-the-Kirby-or-Touhou-Song-Title-Quiz.html</id>
-		<content type="html">Last week, I came across a quiz that asks the quizzee, &quot;Is this song title from Kirby or Touhou?&quot;. I...</content>
+		<content type="html">Last week, I came across a quiz that asks the quizzee, "Is this song title from Kirby or Touhou?". I...</content>
 	</entry>
 	
 	<entry>
 		<title>Android 5.0 Lollipop: the Best Emoji</title>
-		<link href="https://thysbelon.github.io/Blog/2022-4-9/Android-5.0-Lollipop-the-Best-Emoji.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-4-9/Android-5.0-Lollipop-the-Best-Emoji.html">
 		<updated>2022-04-09T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-4-9/Android-5.0-Lollipop-the-Best-Emoji.html</id>
-		<content type="html">I&#39;ve never been that big of a fan of most emoji. Apple popularized the the use of gradients in emoji,...</content>
+		<content type="html">I've never been that big of a fan of most emoji. Apple popularized the the use of gradients in emoji,...</content>
 	</entry>
 	
 	<entry>
 		<title>Trouble with Spacing Objects Evenly in Illustrator</title>
-		<link href="https://thysbelon.github.io/Blog/2022-4-3/Trouble-with-Spacing-Objects-Evenly-in-Illustrator.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-4-3/Trouble-with-Spacing-Objects-Evenly-in-Illustrator.html">
 		<updated>2022-04-03T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-4-3/Trouble-with-Spacing-Objects-Evenly-in-Illustrator.html</id>
 		<content type="html">Today, I was working on the social media ads for RCP and I needed to space out the numbers in...</content>
@@ -492,7 +491,7 @@
 	
 	<entry>
 		<title>New Color Scheme</title>
-		<link href="https://thysbelon.github.io/Blog/2022-3-29/New-Color-Scheme.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-3-29/New-Color-Scheme.html">
 		<updated>2022-03-29T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-3-29/New-Color-Scheme.html</id>
 		<content type="html">I spent a lot of time this week reading the web accessibility tutorials at MDN and trying to make my...</content>
@@ -500,23 +499,23 @@
 	
 	<entry>
 		<title>Kirby and the Lovely Colors</title>
-		<link href="https://thysbelon.github.io/Blog/2022-3-28/Kirby-and-the-Lovely-Colors.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-3-28/Kirby-and-the-Lovely-Colors.html">
 		<updated>2022-03-28T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-3-28/Kirby-and-the-Lovely-Colors.html</id>
-		<content type="html">Kirby and the Forgotten Land released last friday, and it&#39;s a lot of fun so far. I love the flat...</content>
+		<content type="html">Kirby and the Forgotten Land released last friday, and it's a lot of fun so far. I love the flat...</content>
 	</entry>
 	
 	<entry>
 		<title>Donut County and Other Games I Played Recently</title>
-		<link href="https://thysbelon.github.io/Blog/2022-3-1/Donut-County-and-Other-Games-I-Played-Recently.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-3-1/Donut-County-and-Other-Games-I-Played-Recently.html">
 		<updated>2022-03-01T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-3-1/Donut-County-and-Other-Games-I-Played-Recently.html</id>
-		<content type="html">Out of the new games I&#39;ve played recently (which isn&#39;t that many), Donut County probably has my favorite art direction....</content>
+		<content type="html">Out of the new games I've played recently (which isn't that many), Donut County probably has my favorite art direction....</content>
 	</entry>
 	
 	<entry>
-		<title>My Thoughts on Illustrator&#39;s Image Trace</title>
-		<link href="https://thysbelon.github.io/Blog/2022-2-28/My-Thoughts-on-Illustrator&amp;#39;s-Image-Trace.html"/>
+		<title>My Thoughts on Illustrator's Image Trace</title>
+		<link href="https://thysbelon.github.io/Blog/2022-2-28/My-Thoughts-on-Illustrator&amp;#39;s-Image-Trace.html">
 		<updated>2022-02-28T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-2-28/My-Thoughts-on-Illustrator&amp;#39;s-Image-Trace.html</id>
 		<content type="html">When I saw the Image Trace feature, I thought it would be an easy way to take low resolution art...</content>
@@ -524,7 +523,7 @@
 	
 	<entry>
 		<title>How to Play Custom Songs in Vib-Ribbon on an Emulator</title>
-		<link href="https://thysbelon.github.io/Blog/2022-2-19/How-to-Play-Custom-Songs-in-Vib-Ribbon-on-an-Emulator.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-2-19/How-to-Play-Custom-Songs-in-Vib-Ribbon-on-an-Emulator.html">
 		<updated>2022-02-19T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-2-19/How-to-Play-Custom-Songs-in-Vib-Ribbon-on-an-Emulator.html</id>
 		<content type="html">Vib-Ribbon is a game that released on the PS1 in 1999, and the PS3 and PS Vita in 2014. It...</content>
@@ -532,9 +531,10 @@
 	
 	<entry>
 		<title>Talking About Video Games Now Because I was too Scared to Earlier</title>
-		<link href="https://thysbelon.github.io/Blog/2022-2-8/Talking-About-Video-Games-Now-Because-I-was-too-Scared-to-Earlier.html"/>
+		<link href="https://thysbelon.github.io/Blog/2022-2-8/Talking-About-Video-Games-Now-Because-I-was-too-Scared-to-Earlier.html">
 		<updated>2022-02-08T00:00:00Z</updated>
 		<id>https://thysbelon.github.io/Blog/2022-2-8/Talking-About-Video-Games-Now-Because-I-was-too-Scared-to-Earlier.html</id>
 		<content type="html">Hello! There were a few times when I was writing my previous posts that I wanted to talk about video...</content>
 	</entry>
 </feed>
+</body></html>

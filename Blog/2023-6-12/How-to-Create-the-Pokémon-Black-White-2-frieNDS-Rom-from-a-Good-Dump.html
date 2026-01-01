@@ -1,17 +1,14 @@
-
-<!DOCTYPE html>
-<html lang=en>
-<head>
-<meta charset=UTF-8>
+<html lang="en"><head>
+<meta charset="UTF-8">
 <title>How to Create the Pokémon Black/White 2 frieNDS Rom from a Good Dump - Thysbelon</title>
 <meta property="og:title" content="How to Create the Pokémon Black/White 2 frieNDS Rom from a Good Dump - Thysbelon">
-<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="color-scheme" content="dark light">
-<meta name=theme-color content=#ff4c60>
-<link rel=stylesheet href=/css/BlogStylesheet.css>
+<meta name="theme-color" content="#ff4c60">
+<link rel="stylesheet" href="/css/BlogStylesheet.css">
  
 
-<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+<link rel="icon" type="image/x-icon" href="/img/thysbelonicon.svg">
 
  
  
@@ -23,24 +20,24 @@
 <body>
 <header>
 <a href="/">
-<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>
+<img id="blogtitle" src="/img/ThysbelonTitle.svg" alt="Thysbelon." width="1002" height="272" style="--natural-width: 1002; --natural-height: 272;"><img src="/img/thysbelonicon.svg" alt="Logo of a Hummingbird moth." width="58" height="58" style="--natural-width: 58; --natural-height: 58;">
 </a>
 </header>
-<nav><ul > 
+<nav><ul> 
 
-		<li><a href=/About/>About</a></li>
-<li><a href=/Archive/>Archive</a></li>
-<li><a href=/Portfolio/>Portfolio</a></li>
-<li><a href=/Subscribe/>Subscribe</a></li>
+		<li><a href="/About/">About</a></li>
+<li><a href="/Archive/">Archive</a></li>
+<li><a href="/Portfolio/">Portfolio</a></li>
+<li><a href="/Subscribe/">Subscribe</a></li>
 		<li>
 				<details>
 				<summary>
 				Art
 				</summary>
 				<ul>
-				<li><a href=/Digital-Art/>Digital Art</a></li>
-<li><a href=/Photography/>Photography</a></li>
-<li><a href=/Programs/>Programs</a></li>
+				<li><a href="/Digital-Art/">Digital Art</a></li>
+<li><a href="/Photography/">Photography</a></li>
+<li><a href="/Programs/">Programs</a></li>
 				</ul>
 				</details>
 			</li>
@@ -50,34 +47,36 @@
 <main> 
 
 
-<h1 itemprop=headline>How to Create the Pokémon Black/White 2 frieNDS Rom from a Good Dump</h1>
-<time itemprop=datePublished datetime=2023-06-12>12 June 2023</time>
-<p>It's funny how PokéCommunity and Project Pokémon each represent one extreme side to take on the same issue. On Project Pokémon, if a romhack contains even a <em>single</em> unaltered byte from the rom, it gets taken down. A lot of <a href=https://projectpokemon.org/home/forums/topic/46900-pokemon-super-mystery-dungeon-expanded target=_blank>Pokémon Super Mystery Dungeon hacks are lost forever</a> because of this. Meanwhile, PokéCommunity is on the other extreme; they have no problem allowing a <a href=https://www.pokecommunity.com/showthread.php?t=497199 target=_blank>romhack that asks users to pirate a bad dump of the game</a>. Romhacks like these are impossible for people who legitimately dump roms from their own cartridges to use... unless you are using this guide :)
-<p>Here's how to take your good dump of Pokémon Black 2 (CRC32 d4427fd1 when decrypted) or White 2 (777eb04f) and modify it to match the frieNDS bad scene dump (Black 2: 25ba3aa6, White 2: 95ab5437):
-<ol>
+<h1 itemprop="headline">How to Create the Pokémon Black/White 2 frieNDS Rom from a Good Dump</h1>
+<time itemprop="datePublished" datetime="2023-06-12">12 June 2023</time>
+<p>It's funny how PokéCommunity and Project Pokémon each represent one extreme side to take on the same issue. On Project Pokémon, if a romhack contains even a <em>single</em> unaltered byte from the rom, it gets taken down. A lot of <a href="https://projectpokemon.org/home/forums/topic/46900-pokemon-super-mystery-dungeon-expanded" target="_blank">Pokémon Super Mystery Dungeon hacks are lost forever</a> because of this. Meanwhile, PokéCommunity is on the other extreme; they have no problem allowing a <a href="https://www.pokecommunity.com/showthread.php?t=497199" target="_blank">romhack that asks users to pirate a bad dump of the game</a>. Romhacks like these are impossible for people who legitimately dump roms from their own cartridges to use... unless you are using this guide :)
+</p><p>Here's how to take your good dump of Pokémon Black 2 (CRC32 d4427fd1 when decrypted) or White 2 (777eb04f) and modify it to match the frieNDS bad scene dump (Black 2: 25ba3aa6, White 2: 95ab5437):
+</p><ol>
 <li>Open your rom in a hex editor.
-<li>
+</li><li>
 	<ul>
 	<li>Black 2: From address 0x11880000 to the end of the file, fill every byte with FF.
-	<li>White 2: From address 0x11800000 to the end of the file, fill every byte with FF.
-	</ul>
+	</li><li>White 2: From address 0x11800000 to the end of the file, fill every byte with FF.
+	</li></ul>
 </li>
 </ol>
-<p><a href=/2023/06/05/How-to-Use-the-Nanashi-no-Geemu-Me-English-Patch>The last time I made a post like this, I explained some things about hex editing.</a>
-<div class=tags>Tags:<ul>
-	<li><a href=/Tags/Guide rel=tag>Guide</a>
+<p><a href="/2023/06/05/How-to-Use-the-Nanashi-no-Geemu-Me-English-Patch">The last time I made a post like this, I explained some things about hex editing.</a>
 
-	<li><a href=/Tags/DS rel=tag>DS</a>
+</p><div class="tags">Tags:<ul>
+	<li><a href="/Tags/Guide" rel="tag">Guide</a>
 
-	<li><a href=/Tags/Romhacking rel=tag>Romhacking</a>
+	</li><li><a href="/Tags/DS" rel="tag">DS</a>
 
-	<li><a href=/Tags/Pokémon rel=tag>Pokémon</a>
-</ul></div>
-<div class=tags>Categories:<ul>
-	<li><a href=/Categories/Video-Game rel=category>Video Game</a>
-</ul></div>
+	</li><li><a href="/Tags/Romhacking" rel="tag">Romhacking</a>
+
+	</li><li><a href="/Tags/Pokémon" rel="tag">Pokémon</a>
+</li></ul></div>
+<div class="tags">Categories:<ul>
+	<li><a href="/Categories/Video-Game" rel="category">Video Game</a>
+</li></ul></div>
 
 </main>
-<!-- test of afterMain. Related posts will be placed here when they are ready -->
-<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+
+<footer>Header font from <a href="http://velvetyne.fr/fonts/compagnon/" target="_blank">Velvetyne</a></footer>
+
 </body></html>

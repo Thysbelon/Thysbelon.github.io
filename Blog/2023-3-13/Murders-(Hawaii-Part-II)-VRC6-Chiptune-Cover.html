@@ -1,17 +1,14 @@
-
-<!DOCTYPE html>
-<html lang=en>
-<head>
-<meta charset=UTF-8>
+<html lang="en"><head>
+<meta charset="UTF-8">
 <title>Murders (Hawaii: Part II) VRC6 Chiptune Cover - Thysbelon</title>
 <meta property="og:title" content="Murders (Hawaii: Part II) VRC6 Chiptune Cover - Thysbelon">
-<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="color-scheme" content="dark light">
-<meta name=theme-color content=#ff4c60>
-<link rel=stylesheet href=/css/BlogStylesheet.css>
+<meta name="theme-color" content="#ff4c60">
+<link rel="stylesheet" href="/css/BlogStylesheet.css">
  
 
-<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+<link rel="icon" type="image/x-icon" href="/img/thysbelonicon.svg">
 
  
  
@@ -23,24 +20,24 @@
 <body>
 <header>
 <a href="/">
-<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>
+<img id="blogtitle" src="/img/ThysbelonTitle.svg" alt="Thysbelon." width="1002" height="272" style="--natural-width: 1002; --natural-height: 272;"><img src="/img/thysbelonicon.svg" alt="Logo of a Hummingbird moth." width="58" height="58" style="--natural-width: 58; --natural-height: 58;">
 </a>
 </header>
-<nav><ul > 
+<nav><ul> 
 
-		<li><a href=/About/>About</a></li>
-<li><a href=/Archive/>Archive</a></li>
-<li><a href=/Portfolio/>Portfolio</a></li>
-<li><a href=/Subscribe/>Subscribe</a></li>
+		<li><a href="/About/">About</a></li>
+<li><a href="/Archive/">Archive</a></li>
+<li><a href="/Portfolio/">Portfolio</a></li>
+<li><a href="/Subscribe/">Subscribe</a></li>
 		<li>
 				<details>
 				<summary>
 				Art
 				</summary>
 				<ul>
-				<li><a href=/Digital-Art/>Digital Art</a></li>
-<li><a href=/Photography/>Photography</a></li>
-<li><a href=/Programs/>Programs</a></li>
+				<li><a href="/Digital-Art/">Digital Art</a></li>
+<li><a href="/Photography/">Photography</a></li>
+<li><a href="/Programs/">Programs</a></li>
 				</ul>
 				</details>
 			</li>
@@ -50,43 +47,45 @@
 <main> 
 
 
-<h1 itemprop=headline>Murders (Hawaii: Part II) VRC6 Chiptune Cover</h1>
-<time itemprop=datePublished datetime=2023-03-13>13 March 2023</time>
-<script src=/nsfplayer-wasm/assets/nsfplayer-mono-stereo.js></script>
-<script src=/nsfplayer-wasm/nsfplay-function.js></script>
+<h1 itemprop="headline">Murders (Hawaii: Part II) VRC6 Chiptune Cover</h1>
+<time itemprop="datePublished" datetime="2023-03-13">13 March 2023</time>
+<script src="/nsfplayer-wasm/assets/nsfplayer-mono-stereo.js"></script>
+<script src="/nsfplayer-wasm/nsfplay-function.js"></script>
 
 <script>
 function stratjams5() {
 	nsfplay('Murders.nsfe',0);
 }
 </script>
-<button onclick=stratjams5() style=margin-bottom:1rem>Start Jams</button>
+<button onclick="stratjams5()" style="margin-bottom:1rem">Start Jams</button>
 <p>(This music cannot yet be played on the home page. Please click on the post link.)
-<p>Hello!
-<p>Throughout the first 8 days of February, I worked on a cover of <span lang=ja>ミラクルミュージカル</span>'s <i>Murders</i>. I had discovered the excellent <a href=https://famistudio.org/ target=_blank>FamiStudio</a>, and I thought it would be fun to create a cover of Murders using the same chip used in <span lang=ja title="Akumajou Densetsu">悪魔城伝説</span>. I know these songs are popular, and they probably already have many covers, but I hope my cover is still enjoyed.
-<p>This cover would not have been possible without the <a href=https://musescore.com/user/13496311/scores/3076966 target=_blank>excellent sheet music transcription by punyidea</a>.
-<p>You may be wondering: "If you finished this cover on February 8th, why did you wait until March 13th to post it?" <br>Well, for my blog, I knew I had to synthesize the chiptune using JavaScript. Rendering it to an mp3 and embedding with <code>&lt;audio&gt;</code> would be too easy! And you may have noticed that I've been posting a lot of JavaScript synthesis of midi lately. The great thing about <span title="like midi, 8-bit and 16-bit video game music">sequenced</span> music compared to <span title="like mp3, wav, most music files">streamed</span> music is that it has a way smaller file size; and on the web, where large file sizes make the page take longer to load, that's great!
-<p>I thought there would already be JavaScript and WebAssembly programs out there to play NSF files on a webpage, and I did find a few, but they had crackles.
-<p>So I decided I would compile game-music-emu to WebAssembly myself. I didn't think it would be too hard...
-<p>Most of my struggles I was able to solve by looking at <a href=https://github.com/mmontag/chip-player-js target=_blank>Chip-Player-JS's code</a>. Thank you mmontag!
-<p>The biggest struggle was when I tried to make it so you could pass "true" or "false" to switch between stereo and mono (the famicom and NES never supported stereo); <del datetime=2023-05-05>I never did figure this out,</del> so I just made two copies of the entire program, one that only plays stereo and one that only plays mono. The total size of the two binaries is 349 KB, so I think being lazy is fine this time.
-<p>What made the stereo conundrum <em>very</em> frustrating was that it <em>looked</em> like the library, or other forks of it, already had methods to switch between stereo and mono; but these methods either didn't work or I couldn't figure out how to use them.
-<p><del datetime=2023-04-23>Anyway, I'm pretty happy with where <a href=https://github.com/Thysbelon/nsfplayer-wasm target=_blank>nsfplayer-wasm</a> is at now. The only problem left is that sometimes there are a few crackles when the song starts. I have no idea how to fix this.</del> <del datetime=2023-05-05><ins datetime=2023-04-23 cite=https://github.com/Thysbelon/nsfplayer-wasm/issues/3#issuecomment-1519184107>I never quite got nsfplayer-wasm in an acceptable state, because it has horrible performance on smartphones and low-power computers.</ins></del> <ins>Well, <a href=https://github.com/Thysbelon/nsfplayer-wasm target=_blank>nsfplayer-wasm</a> still isn't perfect, but it's finally acceptable! <img itemprop=image src=/emoji/😊.svg alt=😊></ins>
-<p><a href=https://www.mediafire.com/file/euowx4mfw4nch65/Murders.zip/file>Download project files</a>.
-<div class=tags>Tags:<ul>
-	<li><a href=/Tags/Famicom rel=tag>Famicom</a>
+</p><p>Hello!
+</p><p>Throughout the first 8 days of February, I worked on a cover of <span lang="ja">ミラクルミュージカル</span>'s <i>Murders</i>. I had discovered the excellent <a href="https://famistudio.org/" target="_blank">FamiStudio</a>, and I thought it would be fun to create a cover of Murders using the same chip used in <span lang="ja" title="Akumajou Densetsu">悪魔城伝説</span>. I know these songs are popular, and they probably already have many covers, but I hope my cover is still enjoyed.
+</p><p>This cover would not have been possible without the <a href="https://musescore.com/user/13496311/scores/3076966" target="_blank">excellent sheet music transcription by punyidea</a>.
+</p><p>You may be wondering: "If you finished this cover on February 8th, why did you wait until March 13th to post it?" <br>Well, for my blog, I knew I had to synthesize the chiptune using JavaScript. Rendering it to an mp3 and embedding with <code>&lt;audio&gt;</code> would be too easy! And you may have noticed that I've been posting a lot of JavaScript synthesis of midi lately. The great thing about <span title="like midi, 8-bit and 16-bit video game music">sequenced</span> music compared to <span title="like mp3, wav, most music files">streamed</span> music is that it has a way smaller file size; and on the web, where large file sizes make the page take longer to load, that's great!
+</p><p>I thought there would already be JavaScript and WebAssembly programs out there to play NSF files on a webpage, and I did find a few, but they had crackles.
+</p><p>So I decided I would compile game-music-emu to WebAssembly myself. I didn't think it would be too hard...
+</p><p>Most of my struggles I was able to solve by looking at <a href="https://github.com/mmontag/chip-player-js" target="_blank">Chip-Player-JS's code</a>. Thank you mmontag!
+</p><p>The biggest struggle was when I tried to make it so you could pass "true" or "false" to switch between stereo and mono (the famicom and NES never supported stereo); <del datetime="2023-05-05">I never did figure this out,</del> so I just made two copies of the entire program, one that only plays stereo and one that only plays mono. The total size of the two binaries is 349 KB, so I think being lazy is fine this time.
+</p><p>What made the stereo conundrum <em>very</em> frustrating was that it <em>looked</em> like the library, or other forks of it, already had methods to switch between stereo and mono; but these methods either didn't work or I couldn't figure out how to use them.
+</p><p><del datetime="2023-04-23">Anyway, I'm pretty happy with where <a href="https://github.com/Thysbelon/nsfplayer-wasm" target="_blank">nsfplayer-wasm</a> is at now. The only problem left is that sometimes there are a few crackles when the song starts. I have no idea how to fix this.</del> <del datetime="2023-05-05"><ins datetime="2023-04-23" cite="https://github.com/Thysbelon/nsfplayer-wasm/issues/3#issuecomment-1519184107">I never quite got nsfplayer-wasm in an acceptable state, because it has horrible performance on smartphones and low-power computers.</ins></del> <ins>Well, <a href="https://github.com/Thysbelon/nsfplayer-wasm" target="_blank">nsfplayer-wasm</a> still isn't perfect, but it's finally acceptable! <img itemprop="image" src="/emoji/😊.svg" alt="😊" width="128" style="--natural-width: 128; --natural-height: 128;" height="128"></ins>
+</p><p><a href="https://www.mediafire.com/file/euowx4mfw4nch65/Murders.zip/file">Download project files</a>.
 
-	<li><a href=/Tags/Emscripten rel=tag>Emscripten</a>
-</ul></div>
-<div class=tags>Categories:<ul>
-	<li><a href=/Categories/Web-Development rel=category>Web Development</a>
+</p><div class="tags">Tags:<ul>
+	<li><a href="/Tags/Famicom" rel="tag">Famicom</a>
 
-	<li><a href=/Categories/Video-Game rel=category>Video Game</a>
+	</li><li><a href="/Tags/Emscripten" rel="tag">Emscripten</a>
+</li></ul></div>
+<div class="tags">Categories:<ul>
+	<li><a href="/Categories/Web-Development" rel="category">Web Development</a>
 
-	<li><a href=/Categories/Music rel=category>Music</a>
-</ul></div>
+	</li><li><a href="/Categories/Video-Game" rel="category">Video Game</a>
+
+	</li><li><a href="/Categories/Music" rel="category">Music</a>
+</li></ul></div>
 
 </main>
-<!-- test of afterMain. Related posts will be placed here when they are ready -->
-<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+
+<footer>Header font from <a href="http://velvetyne.fr/fonts/compagnon/" target="_blank">Velvetyne</a></footer>
+
 </body></html>

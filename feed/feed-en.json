@@ -1,4 +1,4 @@
-{
+<html><head></head><body>{
 	"version": "https://jsonfeed.org/version/1.1",
 	"title": "Thysbelon",
 	"language": "en",
@@ -37,8 +37,8 @@
 		{
 			"id": "https://thysbelon.github.io/Blog/2024-9-24/My-Attempts-to-Improve-GBA-Music-Romhacking-and-SiIva-Style-Ripping.html",
 			"url": "https://thysbelon.github.io/Blog/2024-9-24/My-Attempts-to-Improve-GBA-Music-Romhacking-and-SiIva-Style-Ripping.html",
-			"title": "My Attempts to Improve GBA Music Romhacking and SiIva-Style &quot;Ripping&quot;",
-			"content_html": "(Whenever I talk about &quot;ripping&quot; in the below post, I am referring to a style of mashup made popular by...",
+			"title": "My Attempts to Improve GBA Music Romhacking and SiIva-Style "Ripping"",
+			"content_html": "(Whenever I talk about "ripping" in the below post, I am referring to a style of mashup made popular by...",
 			"date_published": "2024-09-24T00:00:00Z"
 		}
 		,
@@ -46,15 +46,15 @@
 			"id": "https://thysbelon.github.io/Blog/2024-8-30/You-Can-Use-FamiStudio-to-Make-High-Quality-Rips.html",
 			"url": "https://thysbelon.github.io/Blog/2024-8-30/You-Can-Use-FamiStudio-to-Make-High-Quality-Rips.html",
 			"title": "You Can Use FamiStudio to Make High Quality Rips",
-			"content_html": "Many guides on how to create SiIvagunner-style &quot;high quality rips&quot; for Famicom/NES games state to use FamiTracker. A &quot;tracker&quot; is...",
+			"content_html": "Many guides on how to create SiIvagunner-style "high quality rips" for Famicom/NES games state to use FamiTracker. A "tracker" is...",
 			"date_published": "2024-08-30T00:00:00Z"
 		}
 		,
 		{
-			"id": "https://thysbelon.github.io/Blog/2024-7-31/About-the-Genre-of-Kirby-Canvas-Curse&#39;s-Music.html",
-			"url": "https://thysbelon.github.io/Blog/2024-7-31/About-the-Genre-of-Kirby-Canvas-Curse&#39;s-Music.html",
-			"title": "About the Genre of Kirby Canvas Curse&#39;s Music",
-			"content_html": "In the time since I wrote this blog post, Patricia Taxxon has expressed regret at labelling her music as &quot;IDM&quot;,...",
+			"id": "https://thysbelon.github.io/Blog/2024-7-31/About-the-Genre-of-Kirby-Canvas-Curse's-Music.html",
+			"url": "https://thysbelon.github.io/Blog/2024-7-31/About-the-Genre-of-Kirby-Canvas-Curse's-Music.html",
+			"title": "About the Genre of Kirby Canvas Curse's Music",
+			"content_html": "In the time since I wrote this blog post, Patricia Taxxon has expressed regret at labelling her music as "IDM",...",
 			"date_published": "2024-07-31T00:00:00Z"
 		}
 		,
@@ -78,14 +78,14 @@
 			"id": "https://thysbelon.github.io/Blog/2024-4-26/Sendvid-Might-be-a-Good-Alternative-to-YouTube-and-Vimeo-for-Video-Hosting.html",
 			"url": "https://thysbelon.github.io/Blog/2024-4-26/Sendvid-Might-be-a-Good-Alternative-to-YouTube-and-Vimeo-for-Video-Hosting.html",
 			"title": "Sendvid Might be a Good Alternative to YouTube and Vimeo for Video Hosting",
-			"content_html": "I&#39;ve heard that some companies host their videos on Vimeo rather than YouTube because they feel that YouTube&#39;s interface isn&#39;t...",
+			"content_html": "I've heard that some companies host their videos on Vimeo rather than YouTube because they feel that YouTube's interface isn't...",
 			"date_published": "2024-04-26T00:00:00Z"
 		}
 		,
 		{
-			"id": "https://thysbelon.github.io/Blog/2024-4-24/Did-You-Know-Styluses-for-Capacitive-Screens-Don&#39;t-Have-to-be-Expensive.html",
-			"url": "https://thysbelon.github.io/Blog/2024-4-24/Did-You-Know-Styluses-for-Capacitive-Screens-Don&#39;t-Have-to-be-Expensive.html",
-			"title": "Did You Know Styluses for Capacitive Screens Don&#39;t Have to be Expensive?",
+			"id": "https://thysbelon.github.io/Blog/2024-4-24/Did-You-Know-Styluses-for-Capacitive-Screens-Don't-Have-to-be-Expensive.html",
+			"url": "https://thysbelon.github.io/Blog/2024-4-24/Did-You-Know-Styluses-for-Capacitive-Screens-Don't-Have-to-be-Expensive.html",
+			"title": "Did You Know Styluses for Capacitive Screens Don't Have to be Expensive?",
 			"content_html": "You may have heard of active styluses, which have lots of features and are battery operated; but did you know...",
 			"date_published": "2024-04-24T00:00:00Z"
 		}
@@ -99,10 +99,10 @@
 		}
 		,
 		{
-			"id": "https://thysbelon.github.io/Blog/2024-4-14/Peepy&#39;s-Secret-Midi-(Almost-Finished).html",
-			"url": "https://thysbelon.github.io/Blog/2024-4-14/Peepy&#39;s-Secret-Midi-(Almost-Finished).html",
-			"title": "Peepy&#39;s Secret Midi (Almost Finished)",
-			"content_html": "Play Emamouse&#39;s songs for ItemLabel use a lot of complex harmonies that remind me of the classical piano music I&#39;ve been...",
+			"id": "https://thysbelon.github.io/Blog/2024-4-14/Peepy's-Secret-Midi-(Almost-Finished).html",
+			"url": "https://thysbelon.github.io/Blog/2024-4-14/Peepy's-Secret-Midi-(Almost-Finished).html",
+			"title": "Peepy's Secret Midi (Almost Finished)",
+			"content_html": "Play Emamouse's songs for ItemLabel use a lot of complex harmonies that remind me of the classical piano music I've been...",
 			"date_published": "2024-04-14T00:00:00Z"
 		}
 		,
@@ -110,15 +110,15 @@
 			"id": "https://thysbelon.github.io/Blog/2024-4-6/Heartful-Cry-(Persona-3)-2A03-Cover-(and-Web-Chiptune-Player).html",
 			"url": "https://thysbelon.github.io/Blog/2024-4-6/Heartful-Cry-(Persona-3)-2A03-Cover-(and-Web-Chiptune-Player).html",
 			"title": "Heartful Cry (Persona 3) 2A03 Cover (and Web-Chiptune-Player)",
-			"content_html": "With Persona 3 Reload having released recently, and &quot;The Answer&quot; being announced as DLC for it last March, the song...",
+			"content_html": "With Persona 3 Reload having released recently, and "The Answer" being announced as DLC for it last March, the song...",
 			"date_published": "2024-04-06T00:00:00Z"
 		}
 		,
 		{
-			"id": "https://thysbelon.github.io/Blog/2024-3-10/MJ&#39;s-Camera-is-a-Panasonic-Lumix-LX100II.html",
-			"url": "https://thysbelon.github.io/Blog/2024-3-10/MJ&#39;s-Camera-is-a-Panasonic-Lumix-LX100II.html",
-			"title": "MJ&#39;s Camera is a Panasonic Lumix LX100II",
-			"content_html": "I was watching Snapcube&#39;s stream of Insomniac&#39;s Spider-Man, and I noticed that MJ&#39;s camera looked very familiar. In fact, it&#39;s...",
+			"id": "https://thysbelon.github.io/Blog/2024-3-10/MJ's-Camera-is-a-Panasonic-Lumix-LX100II.html",
+			"url": "https://thysbelon.github.io/Blog/2024-3-10/MJ's-Camera-is-a-Panasonic-Lumix-LX100II.html",
+			"title": "MJ's Camera is a Panasonic Lumix LX100II",
+			"content_html": "I was watching Snapcube's stream of Insomniac's Spider-Man, and I noticed that MJ's camera looked very familiar. In fact, it's...",
 			"date_published": "2024-03-10T00:00:00Z"
 		}
 		,
@@ -142,7 +142,7 @@
 			"id": "https://thysbelon.github.io/Blog/2023-11-16/Pac-Man-Championship-and-Blaster-Master-Area-4-Game-Over-Ribbit-Triangle-Effect.html",
 			"url": "https://thysbelon.github.io/Blog/2023-11-16/Pac-Man-Championship-and-Blaster-Master-Area-4-Game-Over-Ribbit-Triangle-Effect.html",
 			"title": "Pac-Man Championship Ed. and Blaster Master Area 4 &amp; Game Over Ribbit Triangle Effect",
-			"content_html": "Pac-Man Championship Edition Famicom Version&#39;s Normal Mode music and Blaster Master&#39;s Area 4 and Game Over themes all use this...",
+			"content_html": "Pac-Man Championship Edition Famicom Version's Normal Mode music and Blaster Master's Area 4 and Game Over themes all use this...",
 			"date_published": "2023-11-16T00:00:00Z"
 		}
 		,
@@ -150,7 +150,7 @@
 			"id": "https://thysbelon.github.io/Blog/2023-10-15/How-to-Create-the-Pok%C3%A9mon-HeartGold-SoulSilver-Xenophobia-Rom-from-a-Good-Dump.html",
 			"url": "https://thysbelon.github.io/Blog/2023-10-15/How-to-Create-the-Pok%C3%A9mon-HeartGold-SoulSilver-Xenophobia-Rom-from-a-Good-Dump.html",
 			"title": "How to Create the Pokémon HeartGold/SoulSilver Xenophobia Rom from a Good Dump",
-			"content_html": "Once again, I have discovered an old (2012) romhack of Drayano&#39;s that requires a bad dump in order to patch...",
+			"content_html": "Once again, I have discovered an old (2012) romhack of Drayano's that requires a bad dump in order to patch...",
 			"date_published": "2023-10-15T00:00:00Z"
 		}
 		,
@@ -158,7 +158,7 @@
 			"id": "https://thysbelon.github.io/Blog/2023-10-4/Drawcia-Sorceress-ZX-Spectrum-Beeper-Cover.html",
 			"url": "https://thysbelon.github.io/Blog/2023-10-4/Drawcia-Sorceress-ZX-Spectrum-Beeper-Cover.html",
 			"title": "Drawcia Sorceress ZX Spectrum Beeper Cover",
-			"content_html": "Play alternative In August, I was listening to Tim Follin&#39;s work. When I listened to Chronos on youtube, the suggested videos...",
+			"content_html": "Play alternative In August, I was listening to Tim Follin's work. When I listened to Chronos on youtube, the suggested videos...",
 			"date_published": "2023-10-04T00:00:00Z"
 		}
 		,
@@ -166,7 +166,7 @@
 			"id": "https://thysbelon.github.io/Blog/2023-8-24/Ghost-Trick-2023-mod-Countdown-Music-Adjustment.html",
 			"url": "https://thysbelon.github.io/Blog/2023-8-24/Ghost-Trick-2023-mod-Countdown-Music-Adjustment.html",
 			"title": "Ghost Trick 2023 Mod: Countdown (Arranged) Music Adjustment",
-			"content_html": "The closest thing &quot;Countdown&quot; has to a melody is this odd harsh beeping instrument. It really drives the song&#39;s tense...",
+			"content_html": "The closest thing "Countdown" has to a melody is this odd harsh beeping instrument. It really drives the song's tense...",
 			"date_published": "2023-08-24T00:00:00Z"
 		}
 		,
@@ -179,9 +179,9 @@
 		}
 		,
 		{
-			"id": "https://thysbelon.github.io/Blog/2023-6-17/What-to-do-if-a-Romhack-Patch-from-Project-Pok%C3%A9mon-Doesn&#39;t-Work.html",
-			"url": "https://thysbelon.github.io/Blog/2023-6-17/What-to-do-if-a-Romhack-Patch-from-Project-Pok%C3%A9mon-Doesn&#39;t-Work.html",
-			"title": "What to do if a Romhack Patch from Project Pokémon Doesn&#39;t Work",
+			"id": "https://thysbelon.github.io/Blog/2023-6-17/What-to-do-if-a-Romhack-Patch-from-Project-Pok%C3%A9mon-Doesn't-Work.html",
+			"url": "https://thysbelon.github.io/Blog/2023-6-17/What-to-do-if-a-Romhack-Patch-from-Project-Pok%C3%A9mon-Doesn't-Work.html",
+			"title": "What to do if a Romhack Patch from Project Pokémon Doesn't Work",
 			"content_html": "I mistakenly thought that the most recent version of Blaze Black and Volt White and its sequels needed to be...",
 			"date_published": "2023-06-17T00:00:00Z"
 		}
@@ -190,14 +190,14 @@
 			"id": "https://thysbelon.github.io/Blog/2023-6-12/How-to-Create-the-Pok%C3%A9mon-Black-White-2-frieNDS-Rom-from-a-Good-Dump.html",
 			"url": "https://thysbelon.github.io/Blog/2023-6-12/How-to-Create-the-Pok%C3%A9mon-Black-White-2-frieNDS-Rom-from-a-Good-Dump.html",
 			"title": "How to Create the Pokémon Black/White 2 frieNDS Rom from a Good Dump",
-			"content_html": "It&#39;s funny how PokéCommunity and Project Pokémon each represent one extreme side to take on the same issue. On Project...",
+			"content_html": "It's funny how PokéCommunity and Project Pokémon each represent one extreme side to take on the same issue. On Project...",
 			"date_published": "2023-06-12T00:00:00Z"
 		}
 		,
 		{
 			"id": "https://thysbelon.github.io/Blog/2023-6-5/How-to-Use-the-Nanashi-no-Geemu-Me-English-Patch.html",
 			"url": "https://thysbelon.github.io/Blog/2023-6-5/How-to-Use-the-Nanashi-no-Geemu-Me-English-Patch.html",
-			"title": "How to Use the &quot;Nanashi no Geemu: Me&quot; English Patch",
+			"title": "How to Use the "Nanashi no Geemu: Me" English Patch",
 			"content_html": "There is only one english patch available for ナナシ ノ ゲエム 目, unfortunately that patch was made using a bad...",
 			"date_published": "2023-06-05T00:00:00Z"
 		}
@@ -222,7 +222,7 @@
 			"id": "https://thysbelon.github.io/Blog/2023-3-7/How-to-Convert-4GS-and-DSZ-save-files-to-and-from-SAV.html",
 			"url": "https://thysbelon.github.io/Blog/2023-3-7/How-to-Convert-4GS-and-DSZ-save-files-to-and-from-SAV.html",
 			"title": "How to Convert 4GS and DSZ save files to and from SAV",
-			"content_html": "44670&#39;s two great web emulator ports: 44VBA and DS Player, both use a completely unique file extension for their save...",
+			"content_html": "44670's two great web emulator ports: 44VBA and DS Player, both use a completely unique file extension for their save...",
 			"date_published": "2023-03-07T00:00:00Z"
 		}
 		,
@@ -254,7 +254,7 @@
 			"id": "https://thysbelon.github.io/Blog/2023-1-18/Trouble-with-N64-Sequenced-Music.html",
 			"url": "https://thysbelon.github.io/Blog/2023-1-18/Trouble-with-N64-Sequenced-Music.html",
 			"title": "Trouble with N64 Sequenced Music",
-			"content_html": "DLS files are really tough to work with. The only thing that can convert them is Viena. I&#39;ve been extracting...",
+			"content_html": "DLS files are really tough to work with. The only thing that can convert them is Viena. I've been extracting...",
 			"date_published": "2023-01-18T00:00:00Z"
 		}
 		,
@@ -267,10 +267,10 @@
 		}
 		,
 		{
-			"id": "https://thysbelon.github.io/Blog/2023-1-7/La-Follia-d&#39;amore-Taiko-no-Tatsujin-Chart.html",
-			"url": "https://thysbelon.github.io/Blog/2023-1-7/La-Follia-d&#39;amore-Taiko-no-Tatsujin-Chart.html",
-			"title": "La Follia d&#39;amore Taiko no Tatsujin Chart",
-			"content_html": "I made a Taiko chart of Hyness&#39; phase 2 battle theme (Oni and Hard difficulty only)....",
+			"id": "https://thysbelon.github.io/Blog/2023-1-7/La-Follia-d'amore-Taiko-no-Tatsujin-Chart.html",
+			"url": "https://thysbelon.github.io/Blog/2023-1-7/La-Follia-d'amore-Taiko-no-Tatsujin-Chart.html",
+			"title": "La Follia d'amore Taiko no Tatsujin Chart",
+			"content_html": "I made a Taiko chart of Hyness' phase 2 battle theme (Oni and Hard difficulty only)....",
 			"date_published": "2023-01-07T00:00:00Z"
 		}
 		,
@@ -286,7 +286,7 @@
 			"id": "https://thysbelon.github.io/Blog/2022-12-8/How-to-Take-a-Screenshot-of-a-YouTube-Video.html",
 			"url": "https://thysbelon.github.io/Blog/2022-12-8/How-to-Take-a-Screenshot-of-a-YouTube-Video.html",
 			"title": "How to Take a Screenshot of a YouTube Video",
-			"content_html": "Use Firefox Right-click the video Right-click the video again to open Firefox&#39;s context menu Click &quot;Take Snapshot...&quot; This works on all videos on the...",
+			"content_html": "Use Firefox Right-click the video Right-click the video again to open Firefox's context menu Click "Take Snapshot..." This works on all videos on the...",
 			"date_published": "2022-12-08T00:00:00Z"
 		}
 		,
@@ -302,7 +302,7 @@
 			"id": "https://thysbelon.github.io/Blog/2022-11-29/Jekyll-WSL2-localhost-0.0.0.0-View-on-Mobile-Fix.html",
 			"url": "https://thysbelon.github.io/Blog/2022-11-29/Jekyll-WSL2-localhost-0.0.0.0-View-on-Mobile-Fix.html",
 			"title": "Jekyll WSL2 localhost 0.0.0.0 View on Mobile Fix",
-			"content_html": "If you&#39;re making a website, you may want to test that website on smartphones. If you&#39;re making your website with...",
+			"content_html": "If you're making a website, you may want to test that website on smartphones. If you're making your website with...",
 			"date_published": "2022-11-29T00:00:00Z"
 		}
 		,
@@ -358,7 +358,7 @@
 			"id": "https://thysbelon.github.io/Blog/2022-10-24/Kirby-Super-Star-Ultra-Everything-Unlocked-Save-File.html",
 			"url": "https://thysbelon.github.io/Blog/2022-10-24/Kirby-Super-Star-Ultra-Everything-Unlocked-Save-File.html",
 			"title": "Kirby Super Star Ultra Everything Unlocked Save File",
-			"content_html": "I had trouble finding a 100% save file for this game online, so I&#39;m uploading mine! Actually, my save file is...",
+			"content_html": "I had trouble finding a 100% save file for this game online, so I'm uploading mine! Actually, my save file is...",
 			"date_published": "2022-10-24T00:00:00Z"
 		}
 		,
@@ -374,7 +374,7 @@
 			"id": "https://thysbelon.github.io/Blog/2022-10-5/Top-5-Games-for-Game-Design-Class.html",
 			"url": "https://thysbelon.github.io/Blog/2022-10-5/Top-5-Games-for-Game-Design-Class.html",
 			"title": "Top 5 Games for Game Design Class",
-			"content_html": "I don&#39;t spend a lot of time thinking about what makes the games I play good, so I&#39;m a bit...",
+			"content_html": "I don't spend a lot of time thinking about what makes the games I play good, so I'm a bit...",
 			"date_published": "2022-10-05T00:00:00Z"
 		}
 		,
@@ -414,7 +414,7 @@
 			"id": "https://thysbelon.github.io/Blog/2022-9-6/NoScript-Blocks-the-Object-Tag-when-it-Blocks-Scripts.html",
 			"url": "https://thysbelon.github.io/Blog/2022-9-6/NoScript-Blocks-the-Object-Tag-when-it-Blocks-Scripts.html",
 			"title": "NoScript Blocks the &amp;lt;object&amp;gt; Tag when it Blocks Scripts",
-			"content_html": "NoScript has separate checkboxes for blocking &quot;scripts&quot; and &quot;objects&quot;. I assumed that unchecking &quot;scripts&quot; would only block &amp;lt;script&amp;gt; tags on...",
+			"content_html": "NoScript has separate checkboxes for blocking "scripts" and "objects". I assumed that unchecking "scripts" would only block &amp;lt;script&amp;gt; tags on...",
 			"date_published": "2022-09-06T00:00:00Z"
 		}
 		,
@@ -422,14 +422,14 @@
 			"id": "https://thysbelon.github.io/Blog/2022-7-13/Animated-SVGs-Use-High-CPU-and-Freeze-when-used-as-an-Image.html",
 			"url": "https://thysbelon.github.io/Blog/2022-7-13/Animated-SVGs-Use-High-CPU-and-Freeze-when-used-as-an-Image.html",
 			"title": "Animated SVGs Use High CPU and Freeze when used as an Image",
-			"content_html": "An SVG animated with CSS @keyframes defined in the SVG itself (not the page&#39;s CSS) will use high CPU on...",
+			"content_html": "An SVG animated with CSS @keyframes defined in the SVG itself (not the page's CSS) will use high CPU on...",
 			"date_published": "2022-07-13T00:00:00Z"
 		}
 		,
 		{
 			"id": "https://thysbelon.github.io/Blog/2022-7-13/Origin-of-Every-Photo-from-Mmm-yes-moth-youtube-video.html",
 			"url": "https://thysbelon.github.io/Blog/2022-7-13/Origin-of-Every-Photo-from-Mmm-yes-moth-youtube-video.html",
-			"title": "Origin of Every Photo from &quot;Mmm yes moth&quot; youtube video",
+			"title": "Origin of Every Photo from "Mmm yes moth" youtube video",
 			"content_html": "Play Video: Mmm yes moth Every photo appears to be of the Rosy Maple Moth (Dryocampa rubicunda). Heather Burditt MCTRA Jozlyn_Moonlight Ann F. Author Unknown; highest...",
 			"date_published": "2022-07-13T00:00:00Z"
 		}
@@ -437,8 +437,8 @@
 		{
 			"id": "https://thysbelon.github.io/Blog/2022-7-1/Taiko-no-Tatsujin-Beatmap-of-Vista-by-Guadalcanal-Diary.html",
 			"url": "https://thysbelon.github.io/Blog/2022-7-1/Taiko-no-Tatsujin-Beatmap-of-Vista-by-Guadalcanal-Diary.html",
-			"title": "Taiko no Tatsujin Beatmap of &quot;... Vista&quot; by Guadalcanal Diary",
-			"content_html": "Hello! Recently, I discovered a very cool web port of Taiko no Tatsujin called &quot;Taiko Web&quot;. You can play both...",
+			"title": "Taiko no Tatsujin Beatmap of "... Vista" by Guadalcanal Diary",
+			"content_html": "Hello! Recently, I discovered a very cool web port of Taiko no Tatsujin called "Taiko Web". You can play both...",
 			"date_published": "2022-07-01T00:00:00Z"
 		}
 		,
@@ -446,7 +446,7 @@
 			"id": "https://thysbelon.github.io/Blog/2022-6-9/SplatHex-displays-Damage-Up-for-All-Gear.html",
 			"url": "https://thysbelon.github.io/Blog/2022-6-9/SplatHex-displays-Damage-Up-for-All-Gear.html",
 			"title": "SplatHex displays Damage Up for All Gear",
-			"content_html": "Watch out for this SplatHex bug! Even though octoglasses&#39; main ability is last-ditch effort, SplatHex shows damage up as the...",
+			"content_html": "Watch out for this SplatHex bug! Even though octoglasses' main ability is last-ditch effort, SplatHex shows damage up as the...",
 			"date_published": "2022-06-09T00:00:00Z"
 		}
 		,
@@ -470,7 +470,7 @@
 			"id": "https://thysbelon.github.io/Blog/2022-4-16/The-Origin-Of-Every-Kirby-Song-on-the-Kirby-or-Touhou-Song-Title-Quiz.html",
 			"url": "https://thysbelon.github.io/Blog/2022-4-16/The-Origin-Of-Every-Kirby-Song-on-the-Kirby-or-Touhou-Song-Title-Quiz.html",
 			"title": "The Origin Of Every Kirby Song on the Kirby or Touhou Song Title Quiz",
-			"content_html": "Last week, I came across a quiz that asks the quizzee, &quot;Is this song title from Kirby or Touhou?&quot;. I...",
+			"content_html": "Last week, I came across a quiz that asks the quizzee, "Is this song title from Kirby or Touhou?". I...",
 			"date_published": "2022-04-16T00:00:00Z"
 		}
 		,
@@ -478,7 +478,7 @@
 			"id": "https://thysbelon.github.io/Blog/2022-4-9/Android-5.0-Lollipop-the-Best-Emoji.html",
 			"url": "https://thysbelon.github.io/Blog/2022-4-9/Android-5.0-Lollipop-the-Best-Emoji.html",
 			"title": "Android 5.0 Lollipop: the Best Emoji",
-			"content_html": "I&#39;ve never been that big of a fan of most emoji. Apple popularized the the use of gradients in emoji,...",
+			"content_html": "I've never been that big of a fan of most emoji. Apple popularized the the use of gradients in emoji,...",
 			"date_published": "2022-04-09T00:00:00Z"
 		}
 		,
@@ -502,7 +502,7 @@
 			"id": "https://thysbelon.github.io/Blog/2022-3-28/Kirby-and-the-Lovely-Colors.html",
 			"url": "https://thysbelon.github.io/Blog/2022-3-28/Kirby-and-the-Lovely-Colors.html",
 			"title": "Kirby and the Lovely Colors",
-			"content_html": "Kirby and the Forgotten Land released last friday, and it&#39;s a lot of fun so far. I love the flat...",
+			"content_html": "Kirby and the Forgotten Land released last friday, and it's a lot of fun so far. I love the flat...",
 			"date_published": "2022-03-28T00:00:00Z"
 		}
 		,
@@ -510,14 +510,14 @@
 			"id": "https://thysbelon.github.io/Blog/2022-3-1/Donut-County-and-Other-Games-I-Played-Recently.html",
 			"url": "https://thysbelon.github.io/Blog/2022-3-1/Donut-County-and-Other-Games-I-Played-Recently.html",
 			"title": "Donut County and Other Games I Played Recently",
-			"content_html": "Out of the new games I&#39;ve played recently (which isn&#39;t that many), Donut County probably has my favorite art direction....",
+			"content_html": "Out of the new games I've played recently (which isn't that many), Donut County probably has my favorite art direction....",
 			"date_published": "2022-03-01T00:00:00Z"
 		}
 		,
 		{
-			"id": "https://thysbelon.github.io/Blog/2022-2-28/My-Thoughts-on-Illustrator&#39;s-Image-Trace.html",
-			"url": "https://thysbelon.github.io/Blog/2022-2-28/My-Thoughts-on-Illustrator&#39;s-Image-Trace.html",
-			"title": "My Thoughts on Illustrator&#39;s Image Trace",
+			"id": "https://thysbelon.github.io/Blog/2022-2-28/My-Thoughts-on-Illustrator's-Image-Trace.html",
+			"url": "https://thysbelon.github.io/Blog/2022-2-28/My-Thoughts-on-Illustrator's-Image-Trace.html",
+			"title": "My Thoughts on Illustrator's Image Trace",
 			"content_html": "When I saw the Image Trace feature, I thought it would be an easy way to take low resolution art...",
 			"date_published": "2022-02-28T00:00:00Z"
 		}
@@ -540,3 +540,4 @@
 		
 	]
 }
+</body></html>

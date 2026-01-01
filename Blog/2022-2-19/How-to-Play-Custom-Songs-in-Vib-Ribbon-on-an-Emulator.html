@@ -1,20 +1,17 @@
-
-<!DOCTYPE html>
-<html lang=en>
-<head>
-<meta charset=UTF-8>
+<html lang="en"><head>
+<meta charset="UTF-8">
 <title>How to Play Custom Songs in Vib-Ribbon on an Emulator - Thysbelon</title>
 <meta property="og:title" content="How to Play Custom Songs in Vib-Ribbon on an Emulator - Thysbelon">
-<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="color-scheme" content="dark light">
-<meta name=theme-color content=#ff4c60>
-<link rel=stylesheet href=/css/BlogStylesheet.css>
-<link rel=stylesheet href=/css/vib-ribbon-theme/vib-ribbon.css> 
+<meta name="theme-color" content="#ff4c60">
+<link rel="stylesheet" href="/css/BlogStylesheet.css">
+<link rel="stylesheet" href="/css/vib-ribbon-theme/vib-ribbon.css"> 
 <style> #vibspeech{position:relative;max-width:640px;aspect-ratio:640/480;overflow:clip;} #vibspeech img,#vibspeech video[loop]{margin:0;} #vibspeech video:not(video[loop]), svg, #vibspeech button{padding:0;margin:0;position:absolute;top:25%;right:20%;width:45%;height:30%;border-radius:initial;} ::cue{font-family:Vibri;font-size:clamp(.1rem,5vw,2.4rem);background-color:transparent;} body{overflow-anchor:none;}/*if scroll anchoring is on, the page will jump down when the video is played, putting the video out of view. Ironic*/ </style> <noscript><style>::cue{font-size:clamp(.1rem,1.8vw,1.5rem);}</style></noscript>
 
-<link rel=icon type=image/x-icon href=/css/vib-ribbon-theme/thyslogo5-min.gif>
+<link rel="icon" type="image/x-icon" href="/css/vib-ribbon-theme/thyslogo5-min.gif">
 
-<link rel=alternate hreflang=ja href="https://thysbelon.github.io/Blog/2022-2-19/ビブリボンにエミュレータでお好み音楽で遊び方"> <link rel=alternate hreflang=en href="https://thysbelon.github.io/Blog/2022-2-19/How-to-Play-Custom-Songs-in-Vib-Ribbon-on-an-Emulator"> 
+<link rel="alternate" hreflang="ja" href="https://thysbelon.github.io/Blog/2022-2-19/ビブリボンにエミュレータでお好み音楽で遊び方"> <link rel="alternate" hreflang="en" href="https://thysbelon.github.io/Blog/2022-2-19/How-to-Play-Custom-Songs-in-Vib-Ribbon-on-an-Emulator"> 
  
 
 
@@ -24,93 +21,94 @@
 <body>
 <header>
 <a href="/">
-<img id=blogtitle src=/css/vib-ribbon-theme/thystitle2-min.gif alt=Thysbelon. width=484 height=154><img src=/css/vib-ribbon-theme/thyslogo5-min.gif alt="Logo of a Hummingbird moth drawn with angular lines." width=281 height=281>
+<img id="blogtitle" src="/css/vib-ribbon-theme/thystitle2-min.gif" alt="Thysbelon." width="484" height="154" style="--natural-width: 484; --natural-height: 154;"><img src="/css/vib-ribbon-theme/thyslogo5-min.gif" alt="Logo of a Hummingbird moth drawn with angular lines." width="281" height="242" style="--natural-width: 281; --natural-height: 242;">
 </a>
 </header>
-<nav><ul > 
+<nav><ul> 
 
-		<li><a href=/About/>About</a></li>
-<li><a href=/Archive/>Archive</a></li>
-<li><a href=/Portfolio/>Portfolio</a></li>
-<li><a href=/Subscribe/>Subscribe</a></li>
+		<li><a href="/About/">About</a></li>
+<li><a href="/Archive/">Archive</a></li>
+<li><a href="/Portfolio/">Portfolio</a></li>
+<li><a href="/Subscribe/">Subscribe</a></li>
 		<li>
 				<details>
 				<summary>
 				Art
 				</summary>
 				<ul>
-				<li><a href=/Digital-Art/>Digital Art</a></li>
-<li><a href=/Photography/>Photography</a></li>
-<li><a href=/Programs/>Programs</a></li>
+				<li><a href="/Digital-Art/">Digital Art</a></li>
+<li><a href="/Photography/">Photography</a></li>
+<li><a href="/Programs/">Programs</a></li>
 				</ul>
 				</details>
 			</li>
-		<li><a href=/Blog/2022-2-19/ビブリボンにエミュレータでお好み音楽で遊び方>Language/<span lang=ja>言語</span></a></li>
+		<li><a href="/Blog/2022-2-19/ビブリボンにエミュレータでお好み音楽で遊び方">Language/<span lang="ja">言語</span></a></li>
 	
 </ul></nav>
 <main> 
-<nav class=toc>
+<nav class="toc">
 	<details>
 		<summary>
 			Contents
 		</summary>
-		<span id=toc-top><a href=#>Top</a></span>
-		<ol><li><a href=#Audio-CD-Format:-the-Cue-File>Audio CD Format: the Cue File</a><li><a href=#Audio-CD-Format:-Audio-Files>Audio CD Format: Audio Files</a><li><a href=#Compressing-Music-With-chdman>Compressing Music With chdman</a><li><a href=#Tools-to-Automatically-Convert-Audio-Files-to-Audio-CD-Format>Tools to Automatically Convert Audio Files to Audio CD Format</a></ol></details></nav>
+		<span id="toc-top"><a href="#">Top</a></span>
+		<ol><li><a href="#Audio-CD-Format:-the-Cue-File">Audio CD Format: the Cue File</a></li><li><a href="#Audio-CD-Format:-Audio-Files">Audio CD Format: Audio Files</a></li><li><a href="#Compressing-Music-With-chdman">Compressing Music With chdman</a></li><li><a href="#Tools-to-Automatically-Convert-Audio-Files-to-Audio-CD-Format">Tools to Automatically Convert Audio Files to Audio CD Format</a></li></ol></details></nav>
 
-<h1 itemprop=headline>How to Play Custom Songs in <span class=nowrap>Vib-Ribbon</span> on an Emulator</h1>
-<time itemprop=datePublished datetime=2022-02-19>19 February 2022</time>
-<!--TODO: put all front matter that is specific to the vib-ribbon theme, but *not* the post, in a vib-ribbon layout. NOTE: layout idea has been scrapped, it makes it difficult to apply the theme to posts and tag pages -->
-<img itemprop=image src=Vibriasciimonospace.svg style=margin:0; title="This acii art appears at the end of my batch script." alt="Vibri, a rabbit character made of straight lines.">
+<h1 itemprop="headline">How to Play Custom Songs in <span class="nowrap">Vib-Ribbon</span> on an Emulator</h1>
+<time itemprop="datePublished" datetime="2022-02-19">19 February 2022</time>
+
+<img itemprop="image" src="Vibriasciimonospace.svg" style="margin: 0px; --natural-width: 530; --natural-height: 240;" title="This acii art appears at the end of my batch script." alt="Vibri, a rabbit character made of straight lines." width="530" height="240">
 <p>Vib-Ribbon is a game that released on the PS1 in 1999, and the PS3 and PS Vita in 2014. It has an innovative feature that allows players to insert their own Music CD into their PlayStation, and play a level generated from that CD. Players occasionally use a PC emulator to play their copy of the game so they can see 4K graphics, among other things, but the available guides on how to play custom songs on an emulator tell the reader to download disc burning software, which is completely uneccessary, because the Audio CD format is more simple than they think.</p>
-<object inert title="star-filled background." type=image/svg+xml data="data:image/svg+xml,%3Csvg width='1940' height='1080' viewBox='0 0 1940 1080' xmlns='http://www.w3.org/2000/svg' style='background-color:black' stroke='white' stroke-width='3'%3E%3Cdefs%3E%3Cstyle%3E@keyframes b {0%{transform:scale(0)}5%{transform:scale(var(--j))}10%{transform:scale(0)}100%{transform:scale(0)}}use{animation:var(--e) var(--g) infinite both b%3Btransform-origin:var(--h) var(--i)}%3C/style%3E%3C/defs%3E%3Cg style='display:none'%3E%3Cg id='a'%3E%3Cpath d='M10 0 V20'/%3E%3Cpath d='M2 4 L18 16'/%3E%3Cpath d='M2 16 L18 4'/%3E%3C/g%3E%3C/g%3E%3Cuse href='%23a' style='--e:5s%3B--g:2s%3B--h:287px%3B--i:192px%3B--j:2' id='tl' x='277' y='183'/%3E%3Cuse href='%23a' style='--e:5.2s%3B--g:1s%3B--h:328px%3B--i:908px%3B--j:2' id='bl' x='318' y='899'/%3E%3Cuse href='%23a' style='--e:5.4s%3B--g:3s%3B--h:90px%3B--i:539px%3B--j:1' id='ml' x='80' y='530'/%3E%3Cuse href='%23a' style='--e:5.6s%3B--g:4s%3B--h:1598px%3B--i:103px%3B--j:1' id='tr' x='1588' y='94'/%3E%3Cuse href='%23a' style='--e:5.8s%3B--g:5s%3B--h:1864px%3B--i:463px%3B--j:2' id='mr' x='1854' y='454'/%3E%3Cuse href='%23a' style='--e:6s%3B--g:6s%3B--h:1599px%3B--i:979px%3B--j:1' id='br' x='1589' y='970'/%3E%3C/svg%3E"></object>
-<p>I have <a href=#Tools-to-Automatically-Convert-Audio-Files-to-Audio-CD-Format>tools to convert an audio file to an Audio CD format automatically</a>, but first I would like to teach you about the Audio CD format.
-<h2 id=Audio-CD-Format:-the-Cue-File>Audio CD Format: the Cue File</h2>
+<object inert="" title="star-filled background." type="image/svg+xml" data="data:image/svg+xml,%3Csvg width='1940' height='1080' viewBox='0 0 1940 1080' xmlns='http://www.w3.org/2000/svg' style='background-color:black' stroke='white' stroke-width='3'%3E%3Cdefs%3E%3Cstyle%3E@keyframes b {0%{transform:scale(0)}5%{transform:scale(var(--j))}10%{transform:scale(0)}100%{transform:scale(0)}}use{animation:var(--e) var(--g) infinite both b%3Btransform-origin:var(--h) var(--i)}%3C/style%3E%3C/defs%3E%3Cg style='display:none'%3E%3Cg id='a'%3E%3Cpath d='M10 0 V20'/%3E%3Cpath d='M2 4 L18 16'/%3E%3Cpath d='M2 16 L18 4'/%3E%3C/g%3E%3C/g%3E%3Cuse href='%23a' style='--e:5s%3B--g:2s%3B--h:287px%3B--i:192px%3B--j:2' id='tl' x='277' y='183'/%3E%3Cuse href='%23a' style='--e:5.2s%3B--g:1s%3B--h:328px%3B--i:908px%3B--j:2' id='bl' x='318' y='899'/%3E%3Cuse href='%23a' style='--e:5.4s%3B--g:3s%3B--h:90px%3B--i:539px%3B--j:1' id='ml' x='80' y='530'/%3E%3Cuse href='%23a' style='--e:5.6s%3B--g:4s%3B--h:1598px%3B--i:103px%3B--j:1' id='tr' x='1588' y='94'/%3E%3Cuse href='%23a' style='--e:5.8s%3B--g:5s%3B--h:1864px%3B--i:463px%3B--j:2' id='mr' x='1854' y='454'/%3E%3Cuse href='%23a' style='--e:6s%3B--g:6s%3B--h:1599px%3B--i:979px%3B--j:1' id='br' x='1589' y='970'/%3E%3C/svg%3E"></object>
+<p>I have <a href="#Tools-to-Automatically-Convert-Audio-Files-to-Audio-CD-Format">tools to convert an audio file to an Audio CD format automatically</a>, but first I would like to teach you about the Audio CD format.
+</p><h2 id="Audio-CD-Format:-the-Cue-File">Audio CD Format: the Cue File</h2>
 <section>
 <p><b>The Audio CD format consists of multiple files</b>: one audio file for each song on the disc, and a cue sheet file containing text that states where on the cd each song is located; this cue file allows CD players to play the disc, and it is also the file you load when you want to load a digital CD image in an emulator. Converting an audio file to Audio CD format could be as simple as typing a cue sheet for it (if the audio file is already in the correct format).</p>
-<figure><pre>
-FILE "music.wav" BINARY
+<figure><pre>FILE "music.wav" BINARY
   TRACK 01 AUDIO
     INDEX 01 00:00:00
 </pre></figure>
 <p>Here is an example cue sheet. "music.wav" is the name of the audio file. The Audio CD format allows the audio formats BINARY (which is usually .bin), WAVE (.wav or .flac), MP3, AIFF, and MOTOROLA; However, DuckStation will only read cue files that use BINARY. If you want to put multiple audio files on the same "CD", simply repeat the first three lines, change music.wav to your file name, and change TRACK 01 AUDIO to TRACK 02 AUDIO. You can add as many tracks as you want as long as the total file size of all the audio files combined is less than 700 MB (the maximum storage of a physical CD).</p>
 </section>
-<h2 id=Audio-CD-Format:-Audio-Files>Audio CD Format: Audio Files</h2>
+<h2 id="Audio-CD-Format:-Audio-Files">Audio CD Format: Audio Files</h2>
 <section>
-<p>Different emulators support different file types. As stated previously, DuckStation only supports Audio CD wav files that are marked as BINARY in the .cue. A wav file needs to have its properties set to the exact ones specified by the Audio CD wav format in order to work (the codec: PCM, signed 16-bit little endian; a sample rate of 44100Hz; and stereo). One way to convert an audio file to an Audio CD wav is to use <a target=_blank href=https://www.videolan.org/vlc/>VLC Media Player</a> (Media > Convert / Save... > Add files > Profile > Audio - CD). I also have a <a href=https://thysbelon.github.io/Convert2VibFormat/ target=_blank>webapp that can take any input audio file and convert it to a wav + cue pair</a>.</p>
+<p>Different emulators support different file types. As stated previously, DuckStation only supports Audio CD wav files that are marked as BINARY in the .cue. A wav file needs to have its properties set to the exact ones specified by the Audio CD wav format in order to work (the codec: PCM, signed 16-bit little endian; a sample rate of 44100Hz; and stereo). One way to convert an audio file to an Audio CD wav is to use <a target="_blank" href="https://www.videolan.org/vlc/">VLC Media Player</a> (Media &gt; Convert / Save... &gt; Add files &gt; Profile &gt; Audio - CD). I also have a <a href="https://thysbelon.github.io/Convert2VibFormat/" target="_blank">webapp that can take any input audio file and convert it to a wav + cue pair</a>.</p>
 </section>
-<h2 id=Compressing-Music-With-chdman>Compressing Music With chdman</h2>
+<h2 id="Compressing-Music-With-chdman">Compressing Music With chdman</h2>
 <section>
-<p>If you're converting all your files to wav, you may find yourself quickly losing space on your hard drive because wav is an uncompressed format. If you want to compress your songs while still being able to play them in DuckStation, you can use chdman, a command-line program that comes with <a target=_blank href=https://www.mamedev.org/>MAME</a>, to compress them to chd (a file format that can compress each wav + cue pair to a single .chd file).
-<p>The official chdman executable is for Windows. Linux users can install chdman by installing the "mame-tools" package. MacOS users can <a href=https://wiki.recalbox.com/en/tutorials/utilities/rom-conversion/chdman target=_blank>install chdman using brew</a>. <a href=https://www.reddit.com/r/EmulationOnAndroid/comments/riqu81/guidedefinitiveconvert_your_games_with_chdman_on/ target=_blank>Android users can use chdman by following this guide</a>.
-<p>I once <a href=https://github.com/Thysbelon/Convert2VibFormat/tree/webapp target=_blank>attempted to compile chdman to a webapp</a> so that anyone could use it, but I was unsuccessful.
-</section>
-<h2 id=Tools-to-Automatically-Convert-Audio-Files-to-Audio-CD-Format>Tools to Automatically Convert Audio Files to Audio CD Format</h2>
+<p>If you're converting all your files to wav, you may find yourself quickly losing space on your hard drive because wav is an uncompressed format. If you want to compress your songs while still being able to play them in DuckStation, you can use chdman, a command-line program that comes with <a target="_blank" href="https://www.mamedev.org/">MAME</a>, to compress them to chd (a file format that can compress each wav + cue pair to a single .chd file).
+</p><p>The official chdman executable is for Windows. Linux users can install chdman by installing the "mame-tools" package. MacOS users can <a href="https://wiki.recalbox.com/en/tutorials/utilities/rom-conversion/chdman" target="_blank">install chdman using brew</a>. <a href="https://www.reddit.com/r/EmulationOnAndroid/comments/riqu81/guidedefinitiveconvert_your_games_with_chdman_on/" target="_blank">Android users can use chdman by following this guide</a>.
+</p><p>I once <a href="https://github.com/Thysbelon/Convert2VibFormat/tree/webapp" target="_blank">attempted to compile chdman to a webapp</a> so that anyone could use it, but I was unsuccessful.
+</p></section>
+<h2 id="Tools-to-Automatically-Convert-Audio-Files-to-Audio-CD-Format">Tools to Automatically Convert Audio Files to Audio CD Format</h2>
 <section>
-<p>Manually converting many audio files to Audio CD format then compressing them to chd will take a lot of time, so I wrote a script to speed up the process. You will still need to install VLC and (optionally) chdman to use this script, because it's nothing more than a shortcut to do the steps I already told you about. You can <a target=_blank href=https://github.com/Thysbelon/Convert2VibFormat>download the script at my GitHub repository.</a></p>
-<p>If you cannot or do not want to use the script, you can use the previously mentioned <a href=https://thysbelon.github.io/Convert2VibFormat/ target=_blank>webapp to convert any input audio file to a wav + cue pair</a>; however, the webapp cannot compress the wav + cue pair to chd.
-</section>
-<p><a href=https://fontstruct.com/fontstructions/show/1732589/vibri-1 target=_blank>Vibri font by SonicFontsHD</a>
+<p>Manually converting many audio files to Audio CD format then compressing them to chd will take a lot of time, so I wrote a script to speed up the process. You will still need to install VLC and (optionally) chdman to use this script, because it's nothing more than a shortcut to do the steps I already told you about. You can <a target="_blank" href="https://github.com/Thysbelon/Convert2VibFormat">download the script at my GitHub repository.</a></p>
+<p>If you cannot or do not want to use the script, you can use the previously mentioned <a href="https://thysbelon.github.io/Convert2VibFormat/" target="_blank">webapp to convert any input audio file to a wav + cue pair</a>; however, the webapp cannot compress the wav + cue pair to chd.
+</p></section>
+<p><a href="https://fontstruct.com/fontstructions/show/1732589/vibri-1" target="_blank">Vibri font by SonicFontsHD</a>
 
-<div class=tags>Tags:<ul>
-	<li><a href=/Tags/Guide rel=tag>Guide</a>
 
-	<li><a href=/Tags/Vib-Ribbon rel=tag>Vib-Ribbon</a>
+</p><div class="tags">undefined:<ul>
+	<li><a href="/undefined/Guide" rel="tag">Guide</a>
 
-	<li><a href=/Tags/Rhythm-Game rel=tag>Rhythm Game</a>
+	</li><li><a href="/undefined/Vib-Ribbon" rel="tag">Vib-Ribbon</a>
 
-	<li><a href=/Tags/PSX rel=tag>PSX</a>
+	</li><li><a href="/undefined/Rhythm-Game" rel="tag">Rhythm Game</a>
 
-	<li><a href=/Tags/Emulator rel=tag>Emulator</a>
+	</li><li><a href="/undefined/PSX" rel="tag">PSX</a>
 
-	<li><a href=/Tags/DuckStation rel=tag>DuckStation</a>
-</ul></div>
-<div class=tags>Categories:<ul>
-	<li><a href=/Categories/Video-Game rel=category>Video Game</a>
+	</li><li><a href="/undefined/Emulator" rel="tag">Emulator</a>
 
-	<li><a href=/Categories/Digital-Design rel=category>Digital Design</a>
-</ul></div>
+	</li><li><a href="/undefined/DuckStation" rel="tag">DuckStation</a>
+</li></ul></div>
+<div class="tags">undefined:<ul>
+	<li><a href="/undefined/Video-Game" rel="category">Video Game</a>
+
+	</li><li><a href="/undefined/Digital-Design" rel="category">Digital Design</a>
+</li></ul></div>
 
 </main>
-<!-- test of afterMain. Related posts will be placed here when they are ready -->
+
  
+
 </body></html>

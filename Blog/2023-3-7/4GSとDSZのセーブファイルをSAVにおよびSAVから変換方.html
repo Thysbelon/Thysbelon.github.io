@@ -1,19 +1,16 @@
-
-<!DOCTYPE html>
-<html lang=ja>
-<head>
-<meta charset=UTF-8>
+<html lang="ja"><head>
+<meta charset="UTF-8">
 <title>4GSとDSZのセーブファイルをSAVにおよびSAVから変換方【シズビロン】</title>
 <meta property="og:title" content="4GSとDSZのセーブファイルをSAVにおよびSAVから変換方【シズビロン】">
-<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="color-scheme" content="dark light">
-<meta name=theme-color content=#ff4c60>
-<link rel=stylesheet href=/css/BlogStylesheet.css>
+<meta name="theme-color" content="#ff4c60">
+<link rel="stylesheet" href="/css/BlogStylesheet.css">
  
 
-<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+<link rel="icon" type="image/x-icon" href="/img/thysbelonicon.svg">
 
-<link rel=alternate hreflang=en href="https://thysbelon.github.io/Blog/2023-3-7/How-to-Convert-4GS-and-DSZ-save-files-to-and-from-SAV"> <link rel=alternate hreflang=ja href="https://thysbelon.github.io/Blog/2023-3-7/4GSとDSZのセーブファイルをSAVにおよびSAVから変換方"> 
+<link rel="alternate" hreflang="en" href="https://thysbelon.github.io/Blog/2023-3-7/How-to-Convert-4GS-and-DSZ-save-files-to-and-from-SAV"> <link rel="alternate" hreflang="ja" href="https://thysbelon.github.io/Blog/2023-3-7/4GSとDSZのセーブファイルをSAVにおよびSAVから変換方"> 
  
 
 
@@ -23,78 +20,79 @@
 <body>
 <header>
 <a href="/ホーム/">
-<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="スズメガのロゴ。" width=280 height=280>
+<img id="blogtitle" src="/img/ThysbelonTitle.svg" alt="Thysbelon." width="1002" height="272" style="--natural-width: 1002; --natural-height: 272;"><img src="/img/thysbelonicon.svg" alt="スズメガのロゴ。" width="58" height="58" style="--natural-width: 58; --natural-height: 58;">
 </a>
 </header>
-<nav><ul > 
+<nav><ul> 
 
-		<li><a href=/アーカイブ/>アーカイブ</a></li>
-<li><a href=/僕について/>僕について</a></li>
-<li><a href=/購読する/>購読する</a></li>
+		<li><a href="/アーカイブ/">アーカイブ</a></li>
+<li><a href="/僕について/">僕について</a></li>
+<li><a href="/購読する/">購読する</a></li>
 		
-		<li><a href=/Blog/2023-3-7/How-to-Convert-4GS-and-DSZ-save-files-to-and-from-SAV>言語/<span lang=en>Language</span></a></li>
+		<li><a href="/Blog/2023-3-7/How-to-Convert-4GS-and-DSZ-save-files-to-and-from-SAV">言語/<span lang="en">Language</span></a></li>
 	
 </ul></nav>
 <main> 
-<nav class=toc>
+<nav class="toc">
 	<details>
 		<summary>
 			Contents
 		</summary>
-		<span id=toc-top><a href=#>Top</a></span>
-		<ol><li><a href=#4GS>4GS</a><ol><li><a href=#４ＧＳをＳＡＶに変換する>４ＧＳをＳＡＶに変換する</a><li><a href=#ＳＡＶを４ＧＳに変換する>ＳＡＶを４ＧＳに変換する</a></ol><li><a href=#DSZ>DSZ</a><ol><li><a href=#ＤＳＺをＳＡＶに変換する>ＤＳＺをＳＡＶに変換する</a><li><a href=#ＳＡＶをＤＳＺに変換する>ＳＡＶをＤＳＺに変換する</a></ol><li><a href=#4DSAZ、4GZ、44GBASAVのファイルについて>4DSAZ、4GZ、44GBASAVのファイルについて</a></ol></details></nav>
+		<span id="toc-top"><a href="#">Top</a></span>
+		<ol><li><a href="#4GS">4GS</a><ol><li><a href="#４ＧＳをＳＡＶに変換する">４ＧＳをＳＡＶに変換する</a></li><li><a href="#ＳＡＶを４ＧＳに変換する">ＳＡＶを４ＧＳに変換する</a></li></ol></li><li><a href="#DSZ">DSZ</a><ol><li><a href="#ＤＳＺをＳＡＶに変換する">ＤＳＺをＳＡＶに変換する</a></li><li><a href="#ＳＡＶをＤＳＺに変換する">ＳＡＶをＤＳＺに変換する</a></li></ol></li><li><a href="#4DSAZ、4GZ、44GBASAVのファイルについて">4DSAZ、4GZ、44GBASAVのファイルについて</a></li></ol></details></nav>
 
-<h1 itemprop=headline>4GSとDSZのセーブファイルをSAVにおよびSAVから変換方</h1>
-<time itemprop=datePublished datetime=2023-03-07>07 March 2023</time>
-<p>44670さんの二つのエミュレータのウェブのいい移植：<a href=https://gba.44670.org/ target=_blank>44VBA</a>と<a href=https://ds.44670.org/ target=_blank>DS Player</a>は一向に異色なファイル拡張子をセーブファイルに使う。これらのフォーマットを「.sav」に変換するおよび「.sav」をこれらのフォーマットに変換する方<!--more-->：
-<section class=nospace>
-<h2 id=4GS>4GS</h2>
+<h1 itemprop="headline">4GSとDSZのセーブファイルをSAVにおよびSAVから変換方</h1>
+<time itemprop="datePublished" datetime="2023-03-07">07 March 2023</time>
+<p>44670さんの二つのエミュレータのウェブのいい移植：<a href="https://gba.44670.org/" target="_blank">44VBA</a>と<a href="https://ds.44670.org/" target="_blank">DS Player</a>は一向に異色なファイル拡張子をセーブファイルに使う。これらのフォーマットを「.sav」に変換するおよび「.sav」をこれらのフォーマットに変換する方：
+</p><section class="nospace">
+<h2 id="4GS">4GS</h2>
 <p>これはエミュレータVBA-Nextのsrmのセーブのフォーマットのリネームした版だけだ。
-<p><a href=https://emulation-gametechwiki-com.translate.goog/index.php/Game_Boy_Advance_emulators?_x_tr_sl=auto&_x_tr_tl=ja&_x_tr_hl=ja-JP#Save_formats target=_blank>Emulation General WikiにＶＢＡのセーブのフォーマットについての知識がある（機械翻訳）</a>。
-<h3 id=４ＧＳをＳＡＶに変換する>４ＧＳをＳＡＶに変換する</h3>
-<p>savに変換する方：<a href=https://thysbelon.github.io/gbaconv-web/>gbaconv-web</a>を使うだけ。
-<h3 id=ＳＡＶを４ＧＳに変換する>ＳＡＶを４ＧＳに変換する</h3>
+</p><p><a href="https://emulation-gametechwiki-com.translate.goog/index.php/Game_Boy_Advance_emulators?_x_tr_sl=auto&amp;_x_tr_tl=ja&amp;_x_tr_hl=ja-JP#Save_formats" target="_blank">Emulation General WikiにＶＢＡのセーブのフォーマットについての知識がある（機械翻訳）</a>。
+</p><h3 id="４ＧＳをＳＡＶに変換する">４ＧＳをＳＡＶに変換する</h3>
+<p>savに変換する方：<a href="https://thysbelon.github.io/gbaconv-web/">gbaconv-web</a>を使うだけ。
+</p><h3 id="ＳＡＶを４ＧＳに変換する">ＳＡＶを４ＧＳに変換する</h3>
 <p>gbaconv-webを通じてsavのファイルを実行して、出力を「.srm」から「.4gs」にリネームして。
-</section>
-<section class=nospace>
-<h2 id=DSZ>DSZ</h2>
+</p></section>
+<section class="nospace">
+<h2 id="DSZ">DSZ</h2>
 <p>これはgzipに圧縮したDesmumeのｄｓｖのセーブのフォーマットだ。
-<h3 id=ＤＳＺをＳＡＶに変換する>ＤＳＺをＳＡＶに変換する</h3>
+</p><h3 id="ＤＳＺをＳＡＶに変換する">ＤＳＺをＳＡＶに変換する</h3>
 <ol>
-<li><a href=https://ublockorigin.com/>なるべくアドのブロッカーを入れてください</a>。アンドロイドのユーザは<a href=https://kiwibrowser.com/ target=_blank>Kiwi Browser</a>か<a href=https://www.mozilla.org/en-US/firefox/new/ target=_blank>Firefox</a>で拡張機能を入れられる。
-<li>ｄｓｚのアーカイブを<a href=https://www.7-zip.org/ target=_blank>7-zip</a>か<a href=https://gzip.swimburger.net/ target=_blank>ウェブの解凍ソフト</a>で解凍してｄｓｖを受けて。
-<li>解凍したファイルが拡張子がないが、まだｄｓｖファイルです。<a href=https://www.save-editor.com/tools/wse_ds_save_converter.html target=_blank>このウェブサイトを使ってsavに変換して（多いアド。あなたはアドのブロッカーがないなら気を付けて。灰色の「CONVERT」のボタンをクリックしないといけない）</a>。
-</ol>
+<li><a href="https://ublockorigin.com/">なるべくアドのブロッカーを入れてください</a>。アンドロイドのユーザは<a href="https://kiwibrowser.com/" target="_blank">Kiwi Browser</a>か<a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a>で拡張機能を入れられる。
+</li><li>ｄｓｚのアーカイブを<a href="https://www.7-zip.org/" target="_blank">7-zip</a>か<a href="https://gzip.swimburger.net/" target="_blank">ウェブの解凍ソフト</a>で解凍してｄｓｖを受けて。
+</li><li>解凍したファイルが拡張子がないが、まだｄｓｖファイルです。<a href="https://www.save-editor.com/tools/wse_ds_save_converter.html" target="_blank">このウェブサイトを使ってsavに変換して（多いアド。あなたはアドのブロッカーがないなら気を付けて。灰色の「CONVERT」のボタンをクリックしないといけない）</a>。
+</li></ol>
 <p>Desmumeはｄｓｖのファイルを使って、MelonDSは「File」／「Import savefile」をクリックするのでｄｓｖファイルを使える。それで、あなたはセーブのファイルをこれらのエミュレータで使うつもりなら、ステップ３を抜かせる。
-<h3 id=ＳＡＶをＤＳＺに変換する>ＳＡＶをＤＳＺに変換する</h3>
+</p><h3 id="ＳＡＶをＤＳＺに変換する">ＳＡＶをＤＳＺに変換する</h3>
 <ol>
-<li>あなたのセーブファイルがｄｓｖじゃないなら、<a href=https://www.save-editor.com/tools/wse_ds_save_converter.html target=_blank>このウェブサイトでｄｓｖに変換して（多いアドです。灰色の「CONVERT」のボタンが本物です）</a>
-<li><a href=https://www.7-zip.org/ target=_blank>7-Zip</a>か<a href=https://gzip.swimburger.net/ target=_blank>ウェブの圧縮ソフト</a>でｄｓｖファイルをｇｚｉｐに圧縮して。
-<li>ｇｚｉｐのファイルを「.dsz」にリネームして、DS Playerにロードして。
-</ol>
+<li>あなたのセーブファイルがｄｓｖじゃないなら、<a href="https://www.save-editor.com/tools/wse_ds_save_converter.html" target="_blank">このウェブサイトでｄｓｖに変換して（多いアドです。灰色の「CONVERT」のボタンが本物です）</a>
+</li><li><a href="https://www.7-zip.org/" target="_blank">7-Zip</a>か<a href="https://gzip.swimburger.net/" target="_blank">ウェブの圧縮ソフト</a>でｄｓｖファイルをｇｚｉｐに圧縮して。
+</li><li>ｇｚｉｐのファイルを「.dsz」にリネームして、DS Playerにロードして。
+</li></ol>
 </section>
-<section class=nospace>
-<h2 id=4DSAZ、4GZ、44GBASAVのファイルについて>4DSAZ、4GZ、44GBASAVのファイルについて</h2>
+<section class="nospace">
+<h2 id="4DSAZ、4GZ、44GBASAVのファイルについて">4DSAZ、4GZ、44GBASAVのファイルについて</h2>
 <p>44670さんのウェブのエミュレータはDropboxにつなぐなら異色なファイルのタイプをもっと使う。これらのDropboxに専用のファイルのタイプ、４ＤＳＡＺと４ＧＺ、はsavにおよびsavから変換するのがもっと難しいです。それで、<strong>Dropboxからセーブのファイルを使わないでください、エミュレータのメニュでセーブのバックアップのボタンだけを使って（キーボードでescでアクセスできる）</strong>。
-<p>４４ＧＢＡＳＡＶのファイルのタイプはｓｒｍと４ｇｓと同じ。
-</section>
+</p><p>４４ＧＢＡＳＡＶのファイルのタイプはｓｒｍと４ｇｓと同じ。
+</p></section>
 <hr class="invisible-pause">
-<p><a href=https://emulation-gametechwiki-com.translate.goog?_x_tr_sl=auto&_x_tr_tl=ja&_x_tr_hl=ja-JP target=_blank>Emulation General Wikiで最高なエミュレータを調べてください（機械翻訳）</a>。
+<p><a href="https://emulation-gametechwiki-com.translate.goog?_x_tr_sl=auto&amp;_x_tr_tl=ja&amp;_x_tr_hl=ja-JP" target="_blank">Emulation General Wikiで最高なエミュレータを調べてください（機械翻訳）</a>。
 
-<div class=tags>Tags:<ul>
-	<li><a href=/Tags/ガイド rel=tag>ガイド</a>
+</p><div class="tags">タグ:<ul>
+	<li><a href="/タグ/ガイド" rel="tag">ガイド</a>
 
-	<li><a href=/Tags/DS rel=tag>DS</a>
+	</li><li><a href="/タグ/DS" rel="tag">DS</a>
 
-	<li><a href=/Tags/GBA rel=tag>GBA</a>
+	</li><li><a href="/タグ/GBA" rel="tag">GBA</a>
 
-	<li><a href=/Tags/エミュレータ rel=tag>エミュレータ</a>
-</ul></div>
-<div class=tags>Categories:<ul>
-	<li><a href=/Categories/ゲーム rel=category>ゲーム</a>
-</ul></div>
+	</li><li><a href="/タグ/エミュレータ" rel="tag">エミュレータ</a>
+</li></ul></div>
+<div class="tags">カテゴリ:<ul>
+	<li><a href="/カテゴリ/ゲーム" rel="category">ゲーム</a>
+</li></ul></div>
 
 </main>
-<!-- test of afterMain. Related posts will be placed here when they are ready -->
-<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+
+<footer>Header font from <a href="http://velvetyne.fr/fonts/compagnon/" target="_blank">Velvetyne</a></footer>
+
 </body></html>

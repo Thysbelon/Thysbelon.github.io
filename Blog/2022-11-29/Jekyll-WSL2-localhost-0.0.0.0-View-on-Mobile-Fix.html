@@ -1,17 +1,14 @@
-
-<!DOCTYPE html>
-<html lang=en>
-<head>
-<meta charset=UTF-8>
+<html lang="en"><head>
+<meta charset="UTF-8">
 <title>Jekyll WSL2 localhost 0.0.0.0 View on Mobile Fix - Thysbelon</title>
 <meta property="og:title" content="Jekyll WSL2 localhost 0.0.0.0 View on Mobile Fix - Thysbelon">
-<meta name=viewport content=width=device-width,initial-scale=1.0>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="color-scheme" content="dark light">
-<meta name=theme-color content=#ff4c60>
-<link rel=stylesheet href=/css/BlogStylesheet.css>
+<meta name="theme-color" content="#ff4c60">
+<link rel="stylesheet" href="/css/BlogStylesheet.css">
  
 
-<link rel=icon type=image/x-icon href=/img/thysbelonicon.svg>
+<link rel="icon" type="image/x-icon" href="/img/thysbelonicon.svg">
 
  
  
@@ -23,24 +20,24 @@
 <body>
 <header>
 <a href="/">
-<img id=blogtitle src=/img/ThysbelonTitle.svg alt=Thysbelon. width=1002 height=272><img src=/img/thysbelonicon.svg alt="Logo of a Hummingbird moth." width=280 height=280>
+<img id="blogtitle" src="/img/ThysbelonTitle.svg" alt="Thysbelon." width="1002" height="272" style="--natural-width: 1002; --natural-height: 272;"><img src="/img/thysbelonicon.svg" alt="Logo of a Hummingbird moth." width="58" height="58" style="--natural-width: 58; --natural-height: 58;">
 </a>
 </header>
-<nav><ul > 
+<nav><ul> 
 
-		<li><a href=/About/>About</a></li>
-<li><a href=/Archive/>Archive</a></li>
-<li><a href=/Portfolio/>Portfolio</a></li>
-<li><a href=/Subscribe/>Subscribe</a></li>
+		<li><a href="/About/">About</a></li>
+<li><a href="/Archive/">Archive</a></li>
+<li><a href="/Portfolio/">Portfolio</a></li>
+<li><a href="/Subscribe/">Subscribe</a></li>
 		<li>
 				<details>
 				<summary>
 				Art
 				</summary>
 				<ul>
-				<li><a href=/Digital-Art/>Digital Art</a></li>
-<li><a href=/Photography/>Photography</a></li>
-<li><a href=/Programs/>Programs</a></li>
+				<li><a href="/Digital-Art/">Digital Art</a></li>
+<li><a href="/Photography/">Photography</a></li>
+<li><a href="/Programs/">Programs</a></li>
 				</ul>
 				</details>
 			</li>
@@ -50,24 +47,26 @@
 <main> 
 
 
-<h1 itemprop=headline>Jekyll WSL2 localhost 0.0.0.0 View on Mobile Fix</h1>
-<time itemprop=datePublished datetime=2022-11-29>29 November 2022</time>
+<h1 itemprop="headline">Jekyll WSL2 localhost 0.0.0.0 View on Mobile Fix</h1>
+<time itemprop="datePublished" datetime="2022-11-29">29 November 2022</time>
 <p>If you're making a website, you may want to test that website on smartphones. If you're making your website with Jekyll, you may want to run it in WSL2 to avoid any Windows compatibility issues. But what if you want to do both of these things? You may run into trouble.
-<p>Unlike WSL1, WSL2 is a Virtual Machine. A consequence of this is that the virtual Linux machine in WSL2 has a different IP address from the host Windows machine. So if you run <code>jekyll serve --host 0.0.0.0</code>, then try to connect to your Windows machine's IP using your phone browser, it won't connect. If you use a tool like <code>ifconfig</code> in the Linux machine to find <em>its</em> IP address, then navigate to that in your phone, it <em>still</em> won't work, because the only device that can access your virtual Linux machine's IP is the host machine.
-<p>There are <em>many</em> different ways to solve this, one of which is to just ditch WSL2 and use either WSL1 or Ruby for Windows; if you only use Jekyll, it may be worth it. I didn't want to change my setup that drastically (because I'm lazy), and I didn't want to install any new software either (like an <a href=https://stackoverflow.com/questions/49835559/access-a-web-server-which-is-running-on-wsl-windows-subsystem-for-linux-from-l/73690504#73690504>SSH server</a>). My quick fix was to download the Python Windows embeddable package, shift + right-click python.exe to copy the path, run <code>jekyll serve</code> on the Linux machine, navigate to the <code>_site</code> folder of my Jekyll project in Powershell, then paste the python path and run <code>-m http.server</code> (make sure to remove the quotes from the python.exe path or it won't work for some reason! Powershell is weird, but CMD can't navigate to the WSL2 filesystem).
-<p><a href=https://learn.microsoft.com/en-us/windows/wsl/compare-versions#exceptions-for-using-wsl-1-rather-than-wsl-2 target=_blank>Microsoft's official website mentions this IP address issue, and links to a Powershell script that sets port forwarding rules for WSL2 whenever its IP changes.</a> I'll probably use this.
-<div class=tags>Tags:<ul>
-	<li><a href=/Tags/Guide rel=tag>Guide</a>
+</p><p>Unlike WSL1, WSL2 is a Virtual Machine. A consequence of this is that the virtual Linux machine in WSL2 has a different IP address from the host Windows machine. So if you run <code>jekyll serve --host 0.0.0.0</code>, then try to connect to your Windows machine's IP using your phone browser, it won't connect. If you use a tool like <code>ifconfig</code> in the Linux machine to find <em>its</em> IP address, then navigate to that in your phone, it <em>still</em> won't work, because the only device that can access your virtual Linux machine's IP is the host machine.
+</p><p>There are <em>many</em> different ways to solve this, one of which is to just ditch WSL2 and use either WSL1 or Ruby for Windows; if you only use Jekyll, it may be worth it. I didn't want to change my setup that drastically (because I'm lazy), and I didn't want to install any new software either (like an <a href="https://stackoverflow.com/questions/49835559/access-a-web-server-which-is-running-on-wsl-windows-subsystem-for-linux-from-l/73690504#73690504">SSH server</a>). My quick fix was to download the Python Windows embeddable package, shift + right-click python.exe to copy the path, run <code>jekyll serve</code> on the Linux machine, navigate to the <code>_site</code> folder of my Jekyll project in Powershell, then paste the python path and run <code>-m http.server</code> (make sure to remove the quotes from the python.exe path or it won't work for some reason! Powershell is weird, but CMD can't navigate to the WSL2 filesystem).
+</p><p><a href="https://learn.microsoft.com/en-us/windows/wsl/compare-versions#exceptions-for-using-wsl-1-rather-than-wsl-2" target="_blank">Microsoft's official website mentions this IP address issue, and links to a Powershell script that sets port forwarding rules for WSL2 whenever its IP changes.</a> I'll probably use this.
 
-	<li><a href=/Tags/Jekyll rel=tag>Jekyll</a>
+</p><div class="tags">Tags:<ul>
+	<li><a href="/Tags/Guide" rel="tag">Guide</a>
 
-	<li><a href=/Tags/WSL2 rel=tag>WSL2</a>
-</ul></div>
-<div class=tags>Categories:<ul>
-	<li><a href=/Categories/Web-Development rel=category>Web Development</a>
-</ul></div>
+	</li><li><a href="/Tags/Jekyll" rel="tag">Jekyll</a>
+
+	</li><li><a href="/Tags/WSL2" rel="tag">WSL2</a>
+</li></ul></div>
+<div class="tags">Categories:<ul>
+	<li><a href="/Categories/Web-Development" rel="category">Web Development</a>
+</li></ul></div>
 
 </main>
-<!-- test of afterMain. Related posts will be placed here when they are ready -->
-<footer>Header font from <a href=http://velvetyne.fr/fonts/compagnon/ target=_blank>Velvetyne</a></footer>
+
+<footer>Header font from <a href="http://velvetyne.fr/fonts/compagnon/" target="_blank">Velvetyne</a></footer>
+
 </body></html>
