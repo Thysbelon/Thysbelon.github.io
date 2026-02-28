@@ -3,11 +3,19 @@
 	<subtitle>My personal blog where I post about whatever interests me.</subtitle>
 	<link href="https://thysbelon.github.io/feed/feed-en.xml" rel="self">
 	<link href="https://thysbelon.github.io/">
-	<updated>2026-01-01T22:28:47Z</updated>
+	<updated>2026-02-28T03:23:39Z</updated>
 	<id>https://thysbelon.github.io/</id>
 	<author>
 		<name>Thysbelon</name>
 	</author>
+	
+	<entry>
+		<title>Kirby: Canvas Curse / Power Paintbrush All Instruments Soundfont</title>
+		<link href="https://thysbelon.github.io/Blog/2026-2-27/Kirby-Canvas-Curse-Power-Paintbrush-All-Instruments-Soundfont.html">
+		<updated>2026-02-27T00:00:00Z</updated>
+		<id>https://thysbelon.github.io/Blog/2026-2-27/Kirby-Canvas-Curse-Power-Paintbrush-All-Instruments-Soundfont.html</id>
+		<content type="html">Download the Kirby: Canvas Curse / Power Paintbrush All Instruments Soundfont I used VGMTrans 1.3 (the latest version as of writing...</content>
+	</entry>
 	
 	<entry>
 		<title>Perfecting the Modification of Game Boy Music</title>
