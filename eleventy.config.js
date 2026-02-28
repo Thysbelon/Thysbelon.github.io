@@ -173,7 +173,7 @@ module.exports = function(eleventyConfig) {
 	})
 	
 	// Transforms. Applied to html after the template has been rendered
-	eleventyConfig.addTransform("addWidthHeightToAllImg", async function(content) { // TODO
+	eleventyConfig.addTransform("addWidthHeightToAllImg", async function(content) {
 		const doc = eleventyConfig.javascriptFunctions.HTMLstringToDOM(content).window.document;
 		const imgElemArray = doc.querySelectorAll("img");
 		for (img of imgElemArray) {
@@ -338,8 +338,9 @@ module.exports = function(eleventyConfig) {
 		postResourcesURL.pop()
 		postResourcesURL=postResourcesURL.join('/')+'/'
 		//postBody = postBody.replace(/(<img .*src="?'?)([^/].+? )(.*>)/, '$1'+postResourcesURL+'$2$3') // fix relative image links. TODO: apply this to all resources, like videos
-		postBody = postBody.replaceAll(/(src="?'?)(?!https:\/)([^/].+?"?'?)([ >])/g, '$1'+postResourcesURL+'$2$3') // fix relative anchor links
-		postBody = postBody.replaceAll(/(srcset="?'?)(?!https:\/)([^/].+?"?'?)([ >])/g, '$1'+postResourcesURL+'$2$3')
+		postBody = postBody.replaceAll(/(src="?'?)(?!https:\/)([^\/].+?"?'?)([ >])/g, '$1'+postResourcesURL+'$2$3') // fix relative anchor links
+		postBody = postBody.replaceAll(/(srcset="?'?)(?!https:\/)([^\/].+?"?'?)([ >])/g, '$1'+postResourcesURL+'$2$3')
+		postBody = postBody.replaceAll(/(href="?'?)(?!https:\/)([^\/].+?"?'?)([ >])/g, '$1'+postResourcesURL+'$2$3') // new
 		postBody = postBody.replaceAll('{rel}', postResourcesURL) // '{rel}' is a meaningless string used to mark relative urls in javascript (which cannot be automatically detected)
 		return postBody
 	})
