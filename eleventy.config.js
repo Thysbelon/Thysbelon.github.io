@@ -174,8 +174,11 @@ module.exports = function(eleventyConfig) {
 	
 	// Transforms. Applied to html after the template has been rendered
 	eleventyConfig.addTransform("addWidthHeightToAllImg", async function(content) {
-		if (content.includes(`"version": "https://jsonfeed.org/version/1.1"`) || content.includes(`<?xml`))
-			return content; // quick fix to exclude feeds from the transform.
+		if (content == undefined)
+			return content;
+		else if (content != undefined)
+			if (content.includes(`"version": "https://jsonfeed.org/version/1.1"`) || content.includes(`<?xml`))
+				return content; // quick fix to exclude feeds from the transform.
 		const doc = eleventyConfig.javascriptFunctions.HTMLstringToDOM(content).window.document;
 		const imgElemArray = doc.querySelectorAll("img");
 		for (img of imgElemArray) {
