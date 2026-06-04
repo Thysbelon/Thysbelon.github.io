@@ -12,8 +12,8 @@ render(data) {
 //console.log(data.computedDate)
 	
 const translationKey = {
-	Tags: {"en": "Tags", "jp": "タグ"},
-	Categories: {"en": "Categories", "jp": "カテゴリ"},
+	Tags: {"en": "Tags", "en_US": "Tags", "jp": "タグ"},
+	Categories: {"en": "Categories", "en_US": "Categories", "jp": "カテゴリ"}, // en_US is a locale that is only here to prevent my old pages from breaking.
 }
 	
 return `

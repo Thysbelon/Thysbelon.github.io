@@ -221,10 +221,10 @@ img[src^="../kirbyMA"]{
 		break;
 	case '/Tags/Pokémon-Legends-Arceus/':
 		uniquePageDecoration=`
-<img src=typhlosion-hisui.gif class=trans style=position:absolute;bottom:1.3rem;left:.25rem;transform:scaleX(-1);height:7rem;z-index:2>
-<img src=sneasler.gif class=trans style=position:absolute;bottom:1.3rem;right:.5rem;height:7rem;z-index:2>
-<img src=zoroark-hisui.gif class=trans style=position:absolute;bottom:1.3rem;left:5.75rem;transform:scaleX(-1);height:7rem;z-index:2>
-<img src=lilligant-hisui.gif class=trans style=position:absolute;bottom:1.3rem;right:4.5rem;height:7rem;z-index:2>
+<img src=typhlosion-hisui.gif class=trans style=position:absolute;bottom:1.3rem;left:.25rem;transform:scaleX(-1);height:7rem;width:auto;z-index:2 alt="Animated gif of Hisuian Typhlosion.">
+<img src=sneasler.gif class=trans style=position:absolute;bottom:1.3rem;right:.5rem;height:7rem;width:auto;z-index:2 alt="Animated gif of Sneasler.">
+<img src=zoroark-hisui.gif class=trans style=position:absolute;bottom:1.3rem;left:5.75rem;transform:scaleX(-1);height:7rem;width:auto;z-index:2 alt="Animated gif of Hisuian Zoroark.">
+<img src=lilligant-hisui.gif class=trans style=position:absolute;bottom:1.3rem;right:4.5rem;height:7rem;width:auto;z-index:2 alt="Animated gif of Hisuian Lilligant.">
 `
 		break;
 	case '/Tags/Klonoa/':
