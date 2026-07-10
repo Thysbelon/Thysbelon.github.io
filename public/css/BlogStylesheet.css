@@ -174,6 +174,9 @@ button:active,a:active {
 a {
 	transition-property: color;
 }
+span.nowrap {
+	white-space: nowrap;
+}
 button, a.btnlink, header + nav > ul > li > a, button:active,a.btnlink:active{
 	transition-property: background-color, color; /* the transition-duration of .4s will only apply to these two properties */
 }

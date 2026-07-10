@@ -1,0 +1,40 @@
+---
+tags:
+ - Mashup
+ - Midi
+ - Guide
+categories:
+ - Music
+ - Video Game
+---
+<p>I'm Thysbelon. I make <a href=https://siivagunner.wiki/wiki/Rip target=_blank>SiIvagunner rips</a> as a hobby. So far, two <a href=https://siivagunner.wiki/wiki/Category:Thysbelon target=_blank>rips I've made</a> have been accepted and uploaded onto the SiIvagunner channel. I want to share my methods and personal preferences when making SiIvagunner rips.
+<p>My methods are different from the popular ones. I'll first start with some brief paragraphs on my background in music and tech and my preferences for music software, to explain why I use the ripping methods that I do.
+
+<h2>My Music and Tech Background</h2>
+<h3>Music</h3>
+<p>I first learned music by receiving piano lessons at a young age, and I still take weekly piano lessons in the present. In high school, I was in a music production class for one year where I learned how to use the DAW GarageBand. I don't own a Mac, so I then taught myself how to use <a href=https://www.reaper.fm/ target=_blank>the DAW Reaper</a> on my own computer.
+<h3>Tech</h3>
+<p>I have a lot of experience with using computers throughout my life. I first started to learn programming in my last year of high school.
+<p>I used Windows for most of my life, but in January 2024 I started using Ubuntu (one of the most popular distros of Linux). Yes, there are some times when I have to troubleshoot a difficult issue, but the fact that Ubuntu is so much faster and clutter-free than my laptop's Windows makes using Ubuntu day-to-day much less stressful than using Windows, for me.
+<br>All of the ripping software that I use is available on both Windows and Linux.
+
+<h2>My Preferences for Music-Making Software</h2>
+<p>I like <a href=https://en.wikipedia.org/wiki/Piano_roll#In_digital_audio_workstations target=_blank>piano rolls</a> because they are similar to sheet music, the first form of music notation I ever learned.
+<p>I dislike trackers because I find their grid system too restrictive. If the composer picks a slow row speed to start with, it becomes difficult to add complex rhythms like fast trills and tuplets unless the composer manually rewrites the entire song for a higher row speed; and row speeds that are too high (e.g. 60 rows per second or greater) make it difficult to read the music.
+
+
+<h2>My Ripping Software</h2>
+<p>When I'm working with video game sequenced music converted into midi, I strongly dislike the idea of manually recreating by ear any notes or effects that were in the original song. I like going to great lengths to make it so that I do not have to manually recreate anything for accuracy. When an existing piece of ripping software does not preserve certain effects, I try to use my programming skills to modify the software or make my own software that converts all effects perfectly.
+<p>If you're also someone who dislikes manually recreating parts of a song, then I hope you'll find my software useful.
+
+<h3>Software that Injects Modified Music into ROM</h3>
+<p>Some of my software injects modified sequenced music back into the original game rom, so that the SiIvagunner rip can be recorded with the highest possible accuracy by running the modified rom on a real game console then recording it with an audio cable (recording from an emulator is also highly accurate and acceptable).
+<p>Examples of my software that do this are <a href=https://github.com/Thysbelon/gba-mus-ripper target=_blank>my fork of <span class=nowrap>GBA Mus Ripper</span></a> and its accompanying software, and <a href=https://github.com/Thysbelon/sseq2mid target=_blank>my fork of sseq2mid</a> and its accompanying software.
+<p>Both of these softwares rely on the target game rom using a specific music engine in their code in order to work. In both cases, the specific music engine required is very common, but you may run into DS and GBA games that cannot be ripped using these methods.
+
+<h3>Software that Emulates a Soundchip</h3>
+<p>Some of my software functions by taking a list of soundchip register writes, then converts them to a special midi file; this special midi file can be read by one of my soundchip-emulating virtual instruments to render the midi with near-perfect console accuracy.
+<p>Examples of my software that do this are <a href=https://github.com/Thysbelon/gbs2midi target=_blank>gbs2midi</a>, <a href=https://github.com/Thysbelon/vgm-to-midi-converter target=_blank><span class=nowrap>vgm-to-midi-converter</span></a>, and the virtual instrument <a href=https://github.com/Thysbelon/Thaumoc target=_blank>Thaumoc</a>.
+<p>Because this software works with low-level register writes, they should work with all games that use the target soundchip. gbs2midi should work with every Game Boy game. vgm-to-midi-converter should work with every Sharp X68k game, as well every arcade game that uses the YM2151 (a.k.a. OPM) soundchip.
+<p>The downside of this software is that, unlike the <a href=#Software-that-Injects-Modified-Music-into-ROM>"Software that Injects Modified Music into ROM"</a>, my software that works with low-level register writes cannot include the correct BPM in the output midi because it is impossible to obtain the correct BPM from low-level register writes. The README of the software states <a href=https://github.com/Thysbelon/gbs2midi#tempo target=_blank>how to set the correct Tempo BPM in the DAW Reaper</a> without needing to move any notes around.
+<p>For an example of how to make a rip with this kind of software, please see <a href=https://www.youtube.com/watch?v=nB5xkJSd_8M target=_blank>my video "How to Edit Music from a Game Boy Game"</a>. This video uses the virtual instrument Nelly GB, but I now recommend Thaumoc instead because it is slightly more polished.

@@ -54,11 +54,11 @@ function generateToCmarkup(content /*data.content*/){
 				tocMarkup+=`<li><a href=#${headArray[i].id}>${headArray[i].text}</a>`
 				break;
 			case 'h3':
-				if (headArray[i-1].name=='h2') {
+				if (headArray[i-1]?.name=='h2') {
 					tocMarkup+='<ol>'
 				}
 				tocMarkup+=`<li><a href=#${headArray[i].id}>${headArray[i].text}</a>`
-				if (headArray[i+1].name=='h2') {
+				if (headArray[i+1]?.name=='h2' || i==l-1) {
 					tocMarkup+='</ol>'
 				}
 				break;
