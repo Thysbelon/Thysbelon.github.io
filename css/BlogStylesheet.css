@@ -100,6 +100,9 @@ body {
 body:lang(en) {
 	font-family:Kiwi Maru EN,American Typewriter,Hiragino Maru Gothic Pro,Arial Rounded MT,UD Digi Kyokasho N-B;
 }
+span:lang(ja){
+	font-family:Kiwi Maru JP,American Typewriter,Hiragino Maru Gothic Pro,Arial Rounded MT,UD Digi Kyokasho N-B;
+}
 header, header + nav, main, .pnav {
 	margin-left: auto;
 	margin-right: auto;
