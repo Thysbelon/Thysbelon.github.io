@@ -4,12 +4,15 @@ function removeHTMLcomments(content){
 }
 
 function addIDtoHeaders(content){
-	content=content.replaceAll(/<h([2-6])(?! ?id)(.*?)>(.+?)<\/h[2-6]>/g, '<h$1 id="$3"$2>$3</h$1>')
-	content=content.replaceAll(/id="(.+?)"/g, 'id="\uE000$1\uE000"')
+	content=content.replaceAll(/<h([2-6])(?! ?id)(.*?)>(.+?)<\/h[2-6]>/g, '<h$1 id="\uE000$3\uE000"$2>$3</h$1>')
+	//content=content.replaceAll(/id="(.+?)"/g, 'id="\uE000$1\uE000"')
 	var contentArray=content.split('\uE000')
 	for (i=1, l=contentArray.length; i<l; i+=2) {
-		contentArray[i]=contentArray[i].replaceAll(/<.+?>/g, '')
-		contentArray[i]=contentArray[i].replaceAll(' ','-')
+		contentArray[i]=contentArray[i].replaceAll(/<.+?>/g, '') // remove HTML tags from id
+		contentArray[i]=contentArray[i].replaceAll(' - ','-') // change a hyphen surrounded by spaces into just one hyphen.
+		contentArray[i]=contentArray[i].replaceAll(' ','-') // change spaces into hyphens
+		contentArray[i]=contentArray[i].replaceAll('"','') // remove quotes
+		contentArray[i]=contentArray[i].replaceAll('/','slash') // change "/" into the word "slash"
 	}
 	content=contentArray.join('')
 	content=content.replaceAll(/id="(.+?)"/g, 'id=$1')
